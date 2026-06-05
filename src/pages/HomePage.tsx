@@ -10,25 +10,32 @@ export function HomePage() {
   );
 
   return (
-    <div className="p-6">
-      <h1 className="mb-1 text-2xl font-bold">codedev.tools</h1>
-      <p className="mb-6 text-sm text-muted-foreground">
-        Everything runs in your browser. No data is ever sent to a server.
-        <span className="ml-2 opacity-70">(Press Cmd/Ctrl + K to search)</span>
-      </p>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto max-w-5xl px-6 py-10">
+      <header className="mb-10">
+        <h1 className="text-3xl font-semibold tracking-tight">codedev.tools</h1>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Formatters, parsers and converters for developers. Everything runs in your browser —
+          no data is ever sent to a server.
+          <span className="ml-1.5 opacity-70">Press ⌘K to search.</span>
+        </p>
+      </header>
+
+      <div className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((t) => {
           const Icon = t.icon;
           return (
             <Link
               key={t.id}
               to={`/tool/${t.id}`}
-              className="rounded-lg border p-4 hover:bg-muted"
+              className="group flex flex-col gap-2 bg-background p-5 transition-colors hover:bg-muted/40"
             >
-              <div className="mb-1 flex items-center gap-2 font-medium">
-                <Icon className="size-4" /> {t.title}
+              <div className="flex items-center gap-2.5 font-medium">
+                <span className="flex size-8 items-center justify-center rounded-lg border bg-muted/40 text-muted-foreground transition-colors group-hover:text-foreground">
+                  <Icon className="size-4" />
+                </span>
+                {t.title}
               </div>
-              <div className="text-sm text-muted-foreground">{t.description}</div>
+              <div className="text-sm leading-relaxed text-muted-foreground">{t.description}</div>
             </Link>
           );
         })}
