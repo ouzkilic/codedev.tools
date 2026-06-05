@@ -1,9 +1,13 @@
 import { lazy } from 'react';
 import { meta as jsonFormatter } from './json-formatter/meta';
+import { meta as jsonMinify } from './json-minify/meta';
+import { meta as jsonSort } from './json-sort/meta';
+import { meta as jsonFlatten } from './json-flatten/meta';
+import { meta as jsonToJsonl } from './json-to-jsonl/meta';
 import { meta as jsonToZod } from './json-to-zod/meta';
 // For each new tool, add one import here and one entry to the array.
 
-const metas = [jsonFormatter, jsonToZod];
+const metas = [jsonFormatter, jsonMinify, jsonSort, jsonFlatten, jsonToJsonl, jsonToZod];
 
 export const tools = metas.map((m) => ({
   ...m,
