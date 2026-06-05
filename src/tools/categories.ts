@@ -1,6 +1,6 @@
 import {
   Braces, Shield, GitCompare, Code2, Table2, FileText, Lock,
-  Type, Clock, Hash, Palette, Globe, Sparkles, Boxes,
+  Type, Clock, Hash, Palette, Globe, BookText, Sparkles, Boxes,
 } from 'lucide-react';
 import type { ToolCategory } from './types';
 
@@ -21,6 +21,7 @@ export const CATEGORIES: Record<
   number:      { label: 'Numbers & Units', icon: Hash,     order: 9.5 },
   color:       { label: 'Color & Design',  icon: Palette,  order: 9.7 },
   web:         { label: 'Web & Frontend',  icon: Globe,    order: 9.8 },
+  markdown:    { label: 'Markdown & Docs', icon: BookText, order: 9.9 },
   format:      { label: 'Format & Code',   icon: Code2,    order: 10 },
   generate:    { label: 'Generators',      icon: Sparkles, order: 11 },
   misc:        { label: 'Misc',            icon: Boxes,    order: 12 },

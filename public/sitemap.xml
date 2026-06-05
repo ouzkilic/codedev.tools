@@ -61,6 +61,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/html-to-markdown</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-diff</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -121,6 +126,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-to-toml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-to-ts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -167,6 +177,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/lorem</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/markdown-to-html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -222,6 +237,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/timestamp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/toml-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -23,10 +23,15 @@ import { meta as xmlFormatter } from './xml-formatter/meta';
 import { meta as xmlMinify } from './xml-minify/meta';
 import { meta as xmlToJson } from './xml-to-json/meta';
 import { meta as jsonToXml } from './json-to-xml/meta';
-// YAML
+// YAML / TOML
 import { meta as yamlToJson } from './yaml-to-json/meta';
 import { meta as jsonToYaml } from './json-to-yaml/meta';
 import { meta as yamlValidate } from './yaml-validate/meta';
+import { meta as tomlToJson } from './toml-to-json/meta';
+import { meta as jsonToToml } from './json-to-toml/meta';
+// Markdown
+import { meta as markdownToHtml } from './markdown-to-html/meta';
+import { meta as htmlToMarkdown } from './html-to-markdown/meta';
 // CSV
 import { meta as csvToJson } from './csv-to-json/meta';
 import { meta as jsonToCsv } from './json-to-csv/meta';
@@ -69,7 +74,8 @@ const metas = [
   jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema,
   textDiff, jsonDiff,
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
-  yamlToJson, jsonToYaml, yamlValidate,
+  yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
+  markdownToHtml, htmlToMarkdown,
   csvToJson, jsonToCsv,
   base64, urlEncode, htmlEntities, hex, jwtDecode,
   hash, hmac, md5,
