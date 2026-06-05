@@ -31,6 +31,12 @@ import { meta as urlEncode } from './url-encode/meta';
 import { meta as htmlEntities } from './html-entities/meta';
 import { meta as hex } from './hex/meta';
 import { meta as jwtDecode } from './jwt-decode/meta';
+// Text
+import { meta as textCase } from './text-case/meta';
+import { meta as sortLines } from './sort-lines/meta';
+import { meta as dedupeLines } from './dedupe-lines/meta';
+import { meta as textStats } from './text-stats/meta';
+import { meta as slugify } from './slugify/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -41,6 +47,7 @@ const metas = [
   yamlToJson, jsonToYaml, yamlValidate,
   csvToJson, jsonToCsv,
   base64, urlEncode, htmlEntities, hex, jwtDecode,
+  textCase, sortLines, dedupeLines, textStats, slugify,
 ];
 
 export const tools = metas.map((m) => ({
