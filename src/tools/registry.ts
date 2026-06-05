@@ -40,6 +40,11 @@ import { meta as sortLines } from './sort-lines/meta';
 import { meta as dedupeLines } from './dedupe-lines/meta';
 import { meta as textStats } from './text-stats/meta';
 import { meta as slugify } from './slugify/meta';
+// Generators
+import { meta as uuid } from './uuid/meta';
+import { meta as nanoid } from './nanoid/meta';
+import { meta as password } from './password/meta';
+import { meta as lorem } from './lorem/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -52,6 +57,7 @@ const metas = [
   csvToJson, jsonToCsv,
   base64, urlEncode, htmlEntities, hex, jwtDecode,
   textCase, sortLines, dedupeLines, textStats, slugify,
+  uuid, nanoid, password, lorem,
 ];
 
 export const tools = metas.map((m) => ({

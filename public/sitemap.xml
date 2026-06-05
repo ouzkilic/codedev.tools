@@ -126,6 +126,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/lorem</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/nanoid</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/password</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/slugify</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -152,6 +167,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/url-encode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/uuid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
