@@ -70,6 +70,13 @@ import { meta as queryString } from './query-string/meta';
 import { meta as urlParser } from './url-parser/meta';
 import { meta as cssUnits } from './css-units/meta';
 import { meta as sqlFormatter } from './sql-formatter/meta';
+// Network
+import { meta as subnet } from './subnet/meta';
+import { meta as userAgent } from './user-agent/meta';
+// Reference (misc)
+import { meta as httpStatus } from './http-status/meta';
+import { meta as mimeTypes } from './mime-types/meta';
+import { meta as charInfo } from './char-info/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -87,6 +94,8 @@ const metas = [
   uuid, nanoid, password, lorem,
   timestamp, cron, baseConvert, colorConvert,
   queryString, urlParser, cssUnits, sqlFormatter,
+  subnet, userAgent,
+  httpStatus, mimeTypes, charInfo,
 ];
 
 export const tools = metas.map((m) => ({
