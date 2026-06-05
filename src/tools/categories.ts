@@ -1,5 +1,5 @@
 import {
-  Braces, Shield, Code2, Table2, FileText, Lock,
+  Braces, Shield, GitCompare, Code2, Table2, FileText, Lock,
   Type, Clock, Sparkles, Boxes,
 } from 'lucide-react';
 import type { ToolCategory } from './types';
@@ -8,9 +8,10 @@ export const CATEGORIES: Record<
   ToolCategory,
   { label: string; icon: typeof Braces; order: number }
 > = {
-  json:        { label: 'JSON',            icon: Braces,   order: 1 },
-  schema:      { label: 'Schema & Types',  icon: Shield,   order: 2 },
-  xml:         { label: 'XML',             icon: Code2,    order: 3 },
+  json:        { label: 'JSON',            icon: Braces,     order: 1 },
+  schema:      { label: 'Schema & Types',  icon: Shield,     order: 2 },
+  compare:     { label: 'Compare & Diff',  icon: GitCompare, order: 2.5 },
+  xml:         { label: 'XML',             icon: Code2,      order: 3 },
   'csv-excel': { label: 'CSV & Excel',     icon: Table2,   order: 4 },
   yaml:        { label: 'YAML & TOML',     icon: FileText, order: 5 },
   encode:      { label: 'Encode/Decode',   icon: Type,     order: 6 },

@@ -8,6 +8,7 @@ interface Props {
   onChange?: (v: string) => void;
   readOnly?: boolean;
   placeholder?: string;
+  minHeight?: number;
 }
 
 // Minimal theme so the editor blends into the surrounding panel (monochrome look).
@@ -20,14 +21,14 @@ const blendTheme = EditorView.theme({
   '.cm-scroller': { fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace' },
 });
 
-export function CodeEditor({ value, onChange, readOnly, placeholder }: Props) {
+export function CodeEditor({ value, onChange, readOnly, placeholder, minHeight = 320 }: Props) {
   const { theme } = useTheme();
   const extensions = useMemo(() => [json(), blendTheme, EditorView.lineWrapping], []);
 
   return (
     <div
       className="h-full overflow-hidden rounded-md border bg-transparent focus-within:ring-2 focus-within:ring-ring/40"
-      style={{ minHeight: 320 }}
+      style={{ minHeight }}
     >
       <CodeMirror
         value={value}
@@ -37,7 +38,7 @@ export function CodeEditor({ value, onChange, readOnly, placeholder }: Props) {
         placeholder={placeholder}
         theme={theme}
         height="100%"
-        minHeight="320px"
+        minHeight={`${minHeight}px`}
         style={{ height: '100%' }}
         extensions={extensions}
         basicSetup={{

@@ -13,6 +13,9 @@ import { meta as jsonMerge } from './json-merge/meta';
 import { meta as jsonToJsonl } from './json-to-jsonl/meta';
 import { meta as jsonlToJson } from './jsonl-to-json/meta';
 import { meta as jsonToZod } from './json-to-zod/meta';
+// Compare
+import { meta as textDiff } from './text-diff/meta';
+import { meta as jsonDiff } from './json-diff/meta';
 // XML
 import { meta as xmlFormatter } from './xml-formatter/meta';
 import { meta as xmlMinify } from './xml-minify/meta';
@@ -43,6 +46,7 @@ const metas = [
   jsonFormatter, jsonMinify, jsonValidate, jsonViewer, jsonRepair, jsonSort,
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
   jsonlToJson, jsonToZod,
+  textDiff, jsonDiff,
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
   yamlToJson, jsonToYaml, yamlValidate,
   csvToJson, jsonToCsv,
