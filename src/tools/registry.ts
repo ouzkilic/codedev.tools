@@ -42,6 +42,8 @@ import { meta as htmlEntities } from './html-entities/meta';
 import { meta as hex } from './hex/meta';
 import { meta as jwtDecode } from './jwt-decode/meta';
 import { meta as binary } from './binary/meta';
+import { meta as base32 } from './base32/meta';
+import { meta as unicodeEscape } from './unicode-escape/meta';
 // Hash / Crypto
 import { meta as hash } from './hash/meta';
 import { meta as hmac } from './hmac/meta';
@@ -55,6 +57,7 @@ import { meta as slugify } from './slugify/meta';
 import { meta as stringEscape } from './string-escape/meta';
 import { meta as reverse } from './reverse/meta';
 import { meta as whitespace } from './whitespace/meta';
+import { meta as wordFreq } from './word-freq/meta';
 // Generators
 import { meta as uuid } from './uuid/meta';
 import { meta as nanoid } from './nanoid/meta';
@@ -65,6 +68,8 @@ import { meta as timestamp } from './timestamp/meta';
 import { meta as cron } from './cron/meta';
 import { meta as baseConvert } from './base-convert/meta';
 import { meta as colorConvert } from './color-convert/meta';
+import { meta as byteSize } from './byte-size/meta';
+import { meta as roman } from './roman/meta';
 // Web / Frontend, Code
 import { meta as queryString } from './query-string/meta';
 import { meta as urlParser } from './url-parser/meta';
@@ -88,11 +93,11 @@ const metas = [
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
   markdownToHtml, htmlToMarkdown,
   csvToJson, jsonToCsv,
-  base64, urlEncode, htmlEntities, hex, jwtDecode, binary,
+  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, unicodeEscape,
   hash, hmac, md5,
-  textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace,
+  textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq,
   uuid, nanoid, password, lorem,
-  timestamp, cron, baseConvert, colorConvert,
+  timestamp, cron, baseConvert, colorConvert, byteSize, roman,
   queryString, urlParser, cssUnits, sqlFormatter,
   subnet, userAgent,
   httpStatus, mimeTypes, charInfo,

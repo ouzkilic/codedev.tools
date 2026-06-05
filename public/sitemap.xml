@@ -11,12 +11,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/base32</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/base64</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codedev.tools/tool/binary</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/byte-size</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -231,6 +241,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/roman</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/slugify</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -281,6 +296,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/unicode-escape</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/url-encode</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -302,6 +322,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/whitespace</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/word-freq</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
