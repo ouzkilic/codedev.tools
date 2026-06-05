@@ -25,6 +25,12 @@ import { meta as yamlValidate } from './yaml-validate/meta';
 // CSV
 import { meta as csvToJson } from './csv-to-json/meta';
 import { meta as jsonToCsv } from './json-to-csv/meta';
+// Encode / Decode
+import { meta as base64 } from './base64/meta';
+import { meta as urlEncode } from './url-encode/meta';
+import { meta as htmlEntities } from './html-entities/meta';
+import { meta as hex } from './hex/meta';
+import { meta as jwtDecode } from './jwt-decode/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -34,6 +40,7 @@ const metas = [
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
   yamlToJson, jsonToYaml, yamlValidate,
   csvToJson, jsonToCsv,
+  base64, urlEncode, htmlEntities, hex, jwtDecode,
 ];
 
 export const tools = metas.map((m) => ({
