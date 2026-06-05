@@ -13,12 +13,27 @@ import { meta as jsonMerge } from './json-merge/meta';
 import { meta as jsonToJsonl } from './json-to-jsonl/meta';
 import { meta as jsonlToJson } from './jsonl-to-json/meta';
 import { meta as jsonToZod } from './json-to-zod/meta';
+// XML
+import { meta as xmlFormatter } from './xml-formatter/meta';
+import { meta as xmlMinify } from './xml-minify/meta';
+import { meta as xmlToJson } from './xml-to-json/meta';
+import { meta as jsonToXml } from './json-to-xml/meta';
+// YAML
+import { meta as yamlToJson } from './yaml-to-json/meta';
+import { meta as jsonToYaml } from './json-to-yaml/meta';
+import { meta as yamlValidate } from './yaml-validate/meta';
+// CSV
+import { meta as csvToJson } from './csv-to-json/meta';
+import { meta as jsonToCsv } from './json-to-csv/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
   jsonFormatter, jsonMinify, jsonValidate, jsonViewer, jsonRepair, jsonSort,
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
   jsonlToJson, jsonToZod,
+  xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
+  yamlToJson, jsonToYaml, yamlValidate,
+  csvToJson, jsonToCsv,
 ];
 
 export const tools = metas.map((m) => ({
