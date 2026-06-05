@@ -56,7 +56,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/csv-to-markdown</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/csv-to-sql</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/dedupe-lines</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/find-replace</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -232,6 +247,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/query-string</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/regex-tester</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

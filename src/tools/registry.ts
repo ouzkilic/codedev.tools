@@ -35,6 +35,8 @@ import { meta as htmlToMarkdown } from './html-to-markdown/meta';
 // CSV
 import { meta as csvToJson } from './csv-to-json/meta';
 import { meta as jsonToCsv } from './json-to-csv/meta';
+import { meta as csvToMarkdown } from './csv-to-markdown/meta';
+import { meta as csvToSql } from './csv-to-sql/meta';
 // Encode / Decode
 import { meta as base64 } from './base64/meta';
 import { meta as urlEncode } from './url-encode/meta';
@@ -58,6 +60,9 @@ import { meta as stringEscape } from './string-escape/meta';
 import { meta as reverse } from './reverse/meta';
 import { meta as whitespace } from './whitespace/meta';
 import { meta as wordFreq } from './word-freq/meta';
+import { meta as findReplace } from './find-replace/meta';
+// Regex
+import { meta as regexTester } from './regex-tester/meta';
 // Generators
 import { meta as uuid } from './uuid/meta';
 import { meta as nanoid } from './nanoid/meta';
@@ -92,10 +97,11 @@ const metas = [
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
   markdownToHtml, htmlToMarkdown,
-  csvToJson, jsonToCsv,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, unicodeEscape,
   hash, hmac, md5,
-  textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq,
+  textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
+  regexTester,
   uuid, nanoid, password, lorem,
   timestamp, cron, baseConvert, colorConvert, byteSize, roman,
   queryString, urlParser, cssUnits, sqlFormatter,
