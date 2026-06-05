@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>codedev.tools — Developer tools that run in your browser</title>
+    <meta
+      name="description"
+      content="JSON, XML, CSV, Excel and YAML formatters and converters; JSON→Zod and JSON→TypeScript schema generators. Everything runs in your browser — no data is ever sent to a server."
+    />
+    <link rel="canonical" href="https://codedev.tools/" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="codedev.tools" />
+    <meta property="og:title" content="codedev.tools — Developer tools" />
+    <meta
+      property="og:description"
+      content="Formatters, parsers and converters. Runs entirely in your browser, no data leaves your device. Open source."
+    />
+    <meta property="og:url" content="https://codedev.tools/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="codedev.tools — Developer tools" />
+    <meta
+      name="twitter:description"
+      content="Formatters, parsers and converters. Runs entirely in your browser. Open source."
+    />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "codedev.tools",
+        "url": "https://codedev.tools/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any (web)",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Developer formatters, parsers and converters that run in the browser. No data is ever sent to a server."
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

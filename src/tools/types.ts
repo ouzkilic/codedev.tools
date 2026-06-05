@@ -1,0 +1,17 @@
+import type { LucideIcon } from 'lucide-react';
+import type { ComponentType } from 'react';
+
+export type ToolCategory =
+  | 'json' | 'schema' | 'xml' | 'csv-excel' | 'yaml'
+  | 'encode' | 'crypto' | 'text' | 'datetime'
+  | 'format' | 'generate' | 'misc';
+
+export interface ToolMeta {
+  id: string;
+  title: string;
+  description: string;
+  category: ToolCategory;
+  keywords: string[];
+  icon: LucideIcon;
+  load: () => Promise<{ default: ComponentType }>;
+}
