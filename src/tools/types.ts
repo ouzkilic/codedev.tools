@@ -3,7 +3,7 @@ import type { ComponentType } from 'react';
 
 export type ToolCategory =
   | 'json' | 'schema' | 'compare' | 'xml' | 'csv-excel' | 'yaml'
-  | 'encode' | 'crypto' | 'text' | 'datetime'
+  | 'encode' | 'crypto' | 'text' | 'datetime' | 'number' | 'color'
   | 'format' | 'generate' | 'misc';
 
 export interface ToolMeta {
