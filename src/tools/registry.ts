@@ -13,6 +13,8 @@ import { meta as jsonMerge } from './json-merge/meta';
 import { meta as jsonToJsonl } from './json-to-jsonl/meta';
 import { meta as jsonlToJson } from './jsonl-to-json/meta';
 import { meta as jsonToZod } from './json-to-zod/meta';
+import { meta as jsonToTs } from './json-to-ts/meta';
+import { meta as jsonToJsonSchema } from './json-to-jsonschema/meta';
 // Compare
 import { meta as textDiff } from './text-diff/meta';
 import { meta as jsonDiff } from './json-diff/meta';
@@ -64,7 +66,7 @@ import { meta as sqlFormatter } from './sql-formatter/meta';
 const metas = [
   jsonFormatter, jsonMinify, jsonValidate, jsonViewer, jsonRepair, jsonSort,
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
-  jsonlToJson, jsonToZod,
+  jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema,
   textDiff, jsonDiff,
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
   yamlToJson, jsonToYaml, yamlValidate,
