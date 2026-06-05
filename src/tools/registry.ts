@@ -34,6 +34,10 @@ import { meta as urlEncode } from './url-encode/meta';
 import { meta as htmlEntities } from './html-entities/meta';
 import { meta as hex } from './hex/meta';
 import { meta as jwtDecode } from './jwt-decode/meta';
+// Hash / Crypto
+import { meta as hash } from './hash/meta';
+import { meta as hmac } from './hmac/meta';
+import { meta as md5 } from './md5/meta';
 // Text
 import { meta as textCase } from './text-case/meta';
 import { meta as sortLines } from './sort-lines/meta';
@@ -56,6 +60,7 @@ const metas = [
   yamlToJson, jsonToYaml, yamlValidate,
   csvToJson, jsonToCsv,
   base64, urlEncode, htmlEntities, hex, jwtDecode,
+  hash, hmac, md5,
   textCase, sortLines, dedupeLines, textStats, slugify,
   uuid, nanoid, password, lorem,
 ];
