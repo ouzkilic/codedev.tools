@@ -41,6 +41,7 @@ import { meta as urlEncode } from './url-encode/meta';
 import { meta as htmlEntities } from './html-entities/meta';
 import { meta as hex } from './hex/meta';
 import { meta as jwtDecode } from './jwt-decode/meta';
+import { meta as binary } from './binary/meta';
 // Hash / Crypto
 import { meta as hash } from './hash/meta';
 import { meta as hmac } from './hmac/meta';
@@ -51,6 +52,9 @@ import { meta as sortLines } from './sort-lines/meta';
 import { meta as dedupeLines } from './dedupe-lines/meta';
 import { meta as textStats } from './text-stats/meta';
 import { meta as slugify } from './slugify/meta';
+import { meta as stringEscape } from './string-escape/meta';
+import { meta as reverse } from './reverse/meta';
+import { meta as whitespace } from './whitespace/meta';
 // Generators
 import { meta as uuid } from './uuid/meta';
 import { meta as nanoid } from './nanoid/meta';
@@ -77,9 +81,9 @@ const metas = [
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
   markdownToHtml, htmlToMarkdown,
   csvToJson, jsonToCsv,
-  base64, urlEncode, htmlEntities, hex, jwtDecode,
+  base64, urlEncode, htmlEntities, hex, jwtDecode, binary,
   hash, hmac, md5,
-  textCase, sortLines, dedupeLines, textStats, slugify,
+  textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace,
   uuid, nanoid, password, lorem,
   timestamp, cron, baseConvert, colorConvert,
   queryString, urlParser, cssUnits, sqlFormatter,
