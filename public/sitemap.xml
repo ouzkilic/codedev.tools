@@ -26,6 +26,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/css-units</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/csv-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -171,12 +176,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/query-string</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/slugify</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codedev.tools/tool/sort-lines</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/sql-formatter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -202,6 +217,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/url-encode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/url-parser</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

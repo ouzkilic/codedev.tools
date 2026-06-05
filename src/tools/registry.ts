@@ -54,6 +54,11 @@ import { meta as timestamp } from './timestamp/meta';
 import { meta as cron } from './cron/meta';
 import { meta as baseConvert } from './base-convert/meta';
 import { meta as colorConvert } from './color-convert/meta';
+// Web / Frontend, Code
+import { meta as queryString } from './query-string/meta';
+import { meta as urlParser } from './url-parser/meta';
+import { meta as cssUnits } from './css-units/meta';
+import { meta as sqlFormatter } from './sql-formatter/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -69,6 +74,7 @@ const metas = [
   textCase, sortLines, dedupeLines, textStats, slugify,
   uuid, nanoid, password, lorem,
   timestamp, cron, baseConvert, colorConvert,
+  queryString, urlParser, cssUnits, sqlFormatter,
 ];
 
 export const tools = metas.map((m) => ({
