@@ -40,6 +40,7 @@ import { meta as csvToJson } from './csv-to-json/meta';
 import { meta as jsonToCsv } from './json-to-csv/meta';
 import { meta as csvToMarkdown } from './csv-to-markdown/meta';
 import { meta as csvToSql } from './csv-to-sql/meta';
+import { meta as csvTsv } from './csv-tsv/meta';
 // Encode / Decode
 import { meta as base64 } from './base64/meta';
 import { meta as urlEncode } from './url-encode/meta';
@@ -73,6 +74,7 @@ import { meta as password } from './password/meta';
 import { meta as lorem } from './lorem/meta';
 // Date / Time, Number, Color
 import { meta as timestamp } from './timestamp/meta';
+import { meta as dateDiff } from './date-diff/meta';
 import { meta as cron } from './cron/meta';
 import { meta as baseConvert } from './base-convert/meta';
 import { meta as colorConvert } from './color-convert/meta';
@@ -90,6 +92,8 @@ import { meta as userAgent } from './user-agent/meta';
 import { meta as httpStatus } from './http-status/meta';
 import { meta as mimeTypes } from './mime-types/meta';
 import { meta as charInfo } from './char-info/meta';
+import { meta as envToJson } from './env-to-json/meta';
+import { meta as jsonToEnv } from './json-to-env/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -100,16 +104,16 @@ const metas = [
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
   markdownToHtml, htmlToMarkdown,
-  csvToJson, jsonToCsv, csvToMarkdown, csvToSql,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, unicodeEscape,
   hash, hmac, md5,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   regexTester,
   uuid, nanoid, password, lorem,
-  timestamp, cron, baseConvert, colorConvert, byteSize, roman,
+  timestamp, dateDiff, cron, baseConvert, colorConvert, byteSize, roman,
   queryString, urlParser, cssUnits, sqlFormatter,
   subnet, userAgent,
-  httpStatus, mimeTypes, charInfo,
+  httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv,
 ];
 
 export const tools = metas.map((m) => ({
