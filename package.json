@@ -15,10 +15,13 @@
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",
+    "ajv": "^8.20.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "json-to-zod": "^1.1.2",
+    "jsonpath-plus": "^10.4.0",
+    "jsonrepair": "^3.14.0",
     "lucide-react": "^1.17.0",
     "radix-ui": "^1.4.3",
     "react": "^19.2.6",
@@ -31,8 +34,8 @@
   "optionalDependencies": {
     "@rolldown/binding-darwin-arm64": "1.0.3",
     "@rolldown/binding-darwin-x64": "1.0.3",
-    "@rolldown/binding-linux-x64-gnu": "1.0.3",
     "@rolldown/binding-linux-arm64-gnu": "1.0.3",
+    "@rolldown/binding-linux-x64-gnu": "1.0.3",
     "@rolldown/binding-win32-x64-msvc": "1.0.3"
   },
   "devDependencies": {

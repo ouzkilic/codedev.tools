@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-escape</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-flatten</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -16,7 +21,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-merge</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-minify</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/json-path</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/json-repair</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -32,6 +52,26 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/json-to-zod</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/json-unflatten</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/json-validate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/json-viewer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/jsonl-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
