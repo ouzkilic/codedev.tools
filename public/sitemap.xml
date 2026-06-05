@@ -216,6 +216,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/list-compare</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/lorem</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -351,6 +356,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/xml-diff</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/xml-formatter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -362,6 +372,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/xml-to-json</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/yaml-diff</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
