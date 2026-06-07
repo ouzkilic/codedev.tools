@@ -86,6 +86,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/faker</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/find-replace</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -267,6 +272,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/password</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/qr</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

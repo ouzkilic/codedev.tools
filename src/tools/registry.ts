@@ -72,6 +72,8 @@ import { meta as uuid } from './uuid/meta';
 import { meta as nanoid } from './nanoid/meta';
 import { meta as password } from './password/meta';
 import { meta as lorem } from './lorem/meta';
+import { meta as qr } from './qr/meta';
+import { meta as faker } from './faker/meta';
 // Date / Time, Number, Color
 import { meta as timestamp } from './timestamp/meta';
 import { meta as dateDiff } from './date-diff/meta';
@@ -109,7 +111,7 @@ const metas = [
   hash, hmac, md5,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   regexTester,
-  uuid, nanoid, password, lorem,
+  uuid, nanoid, password, lorem, qr, faker,
   timestamp, dateDiff, cron, baseConvert, colorConvert, byteSize, roman,
   queryString, urlParser, cssUnits, sqlFormatter,
   subnet, userAgent,

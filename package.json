@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@codemirror/lang-json": "^6.0.2",
+    "@faker-js/faker": "^10.4.0",
     "@fontsource-variable/geist": "^5.2.9",
     "@uiw/react-codemirror": "^4.25.10",
     "ajv": "^8.20.0",
@@ -32,6 +33,7 @@
     "lucide-react": "^1.17.0",
     "marked": "^18.0.5",
     "papaparse": "^5.5.3",
+    "qrcode": "^1.5.4",
     "radix-ui": "^1.4.3",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
@@ -59,6 +61,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.12.3",
     "@types/papaparse": "^5.5.2",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/turndown": "^5.0.6",
