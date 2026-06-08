@@ -11,6 +11,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/aes</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/argon2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/aspect-ratio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -47,6 +57,16 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/base64url</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/basic-auth</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/bcrypt</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -97,6 +117,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/cron</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/crontab-cheatsheet</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -196,6 +221,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/emoji</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/entity-reference</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/env-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -226,6 +261,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/git-cheatsheet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/gitignore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -237,6 +277,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/hash</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/hash-id</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -281,6 +326,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/http-headers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/http-status</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -292,6 +342,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/invisible-chars</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/ip-convert</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -451,6 +506,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/keycode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/leetspeak</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -462,6 +522,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/lorem</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/mac-format</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -526,6 +591,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/pbkdf2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/percentage</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -557,6 +627,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/quoted-printable</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/regex-cheatsheet</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

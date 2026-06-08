@@ -1,0 +1,80 @@
+import type { ToolOption, ToolOptions } from '@/hooks/useToolState';
+
+export const EMOJI_OPTIONS: ToolOption[] = [
+  { key: 'filter', label: 'Search', type: 'text', default: '', placeholder: 'heart, fire, rocket…' },
+];
+
+const EMOJIS: [string, string][] = [
+  ['😀', 'grinning face smile happy'],
+  ['😃', 'grinning face big eyes smile happy'],
+  ['😄', 'grinning face smiling eyes happy laugh'],
+  ['😁', 'beaming face grin smile happy'],
+  ['😆', 'laugh squinting happy haha'],
+  ['😂', 'face tears of joy laugh cry funny lol'],
+  ['🤣', 'rolling on the floor laughing rofl funny'],
+  ['😊', 'smiling face blush happy smile'],
+  ['🙂', 'slightly smiling face smile'],
+  ['😉', 'winking face wink flirt'],
+  ['😍', 'heart eyes love smile'],
+  ['😘', 'face blowing a kiss love heart'],
+  ['😎', 'smiling face sunglasses cool'],
+  ['🤩', 'star struck eyes excited wow'],
+  ['🤔', 'thinking face hmm consider'],
+  ['😴', 'sleeping face zzz tired sleep'],
+  ['😭', 'loudly crying face cry tears sad'],
+  ['😢', 'crying face cry tear sad'],
+  ['😡', 'pouting face angry mad rage'],
+  ['😱', 'face screaming in fear shock scared'],
+  ['🥳', 'partying face party celebrate'],
+  ['😇', 'smiling face halo angel innocent'],
+  ['🥰', 'smiling face hearts love adore'],
+  ['😏', 'smirking face smirk'],
+  ['🙄', 'face rolling eyes annoyed'],
+  ['👀', 'eyes look watch see'],
+  ['❤️', 'red heart love like'],
+  ['🧡', 'orange heart love'],
+  ['💛', 'yellow heart love'],
+  ['💚', 'green heart love'],
+  ['💙', 'blue heart love'],
+  ['💜', 'purple heart love'],
+  ['💔', 'broken heart sad love'],
+  ['💖', 'sparkling heart love sparkle'],
+  ['👍', 'thumbs up like approve good yes'],
+  ['👎', 'thumbs down dislike bad no'],
+  ['👏', 'clapping hands applause clap'],
+  ['🙏', 'folded hands pray thanks please'],
+  ['🙌', 'raising hands celebrate hooray'],
+  ['👋', 'waving hand hello hi bye wave'],
+  ['🤝', 'handshake deal agree'],
+  ['💪', 'flexed biceps strong muscle'],
+  ['🔥', 'fire flame lit hot'],
+  ['🚀', 'rocket launch ship fast space'],
+  ['✅', 'check mark button done yes correct'],
+  ['❌', 'cross mark no wrong delete cancel'],
+  ['⭐', 'star favorite'],
+  ['🌟', 'glowing star sparkle shine'],
+  ['✨', 'sparkles magic shine glitter'],
+  ['🎉', 'party popper celebrate tada congrats'],
+  ['🎊', 'confetti ball party celebrate'],
+  ['🎁', 'gift present wrapped birthday'],
+  ['💯', 'hundred points score perfect 100'],
+  ['☀️', 'sun sunny weather hot'],
+  ['🌙', 'crescent moon night'],
+  ['🌈', 'rainbow weather colorful'],
+  ['⚡', 'high voltage lightning bolt electric'],
+  ['❄️', 'snowflake cold winter snow'],
+  ['💀', 'skull dead death'],
+  ['🌍', 'globe earth world planet'],
+  ['🐶', 'dog face puppy animal pet'],
+  ['🐱', 'cat face kitten animal pet'],
+  ['🍕', 'pizza food slice'],
+  ['☕', 'hot beverage coffee tea cup'],
+];
+
+export function buildEmoji(options: ToolOptions): string {
+  const q = String(options.filter ?? '')
+    .trim()
+    .toLowerCase();
+  const list = q ? EMOJIS.filter(([, k]) => k.includes(q)) : EMOJIS;
+  return list.length ? list.map(([e, k]) => `${e}  ${k}`).join('\n') : 'No matches.';
+}

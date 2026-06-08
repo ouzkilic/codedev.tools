@@ -182,6 +182,22 @@ import { meta as zodToTs } from './zod-to-ts/meta';
 import { meta as zodToJsonSchema } from './zod-to-jsonschema/meta';
 import { meta as openapiToTs } from './openapi-to-ts/meta';
 import { meta as sqlDdlToPrisma } from './sql-ddl-to-prisma/meta';
+// Stage 5 (crypto) + Stage 11/Network
+import { meta as pbkdf2 } from './pbkdf2/meta';
+import { meta as aes } from './aes/meta';
+import { meta as bcrypt } from './bcrypt/meta';
+import { meta as argon2 } from './argon2/meta';
+import { meta as hashId } from './hash-id/meta';
+import { meta as ipConvert } from './ip-convert/meta';
+import { meta as macFormat } from './mac-format/meta';
+import { meta as httpHeaders } from './http-headers/meta';
+import { meta as basicAuth } from './basic-auth/meta';
+import { meta as keycode } from './keycode/meta';
+import { meta as emoji } from './emoji/meta';
+import { meta as entityReference } from './entity-reference/meta';
+import { meta as crontabCheatsheet } from './crontab-cheatsheet/meta';
+import { meta as regexCheatsheet } from './regex-cheatsheet/meta';
+import { meta as gitCheatsheet } from './git-cheatsheet/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -195,17 +211,18 @@ const metas = [
   markdownToHtml, htmlToMarkdown, markdownPreview,
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, jsonToExcel, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate, csvViewer, tsvViewer,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode, punycode,
-  hash, hmac, md5, fileHash, crc32, adler32, imageBase64, base64ToFile,
+  hash, hmac, md5, fileHash, crc32, adler32, pbkdf2, aes, bcrypt, argon2, hashId, imageBase64, base64ToFile,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
-  regexTester,
+  regexTester, regexCheatsheet,
   uuid, nanoid, password, lorem, qr, faker, ulid, colorPalette,
   timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, cubicBezier, byteSize, roman,
   numberToWords, unitConvert, aspectRatio, wordsToNumber, percentage, numberFormat,
-  durationFormat, timezone, dateInfo,
+  durationFormat, timezone, dateInfo, crontabCheatsheet,
   queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify, htmlToJsx, graphqlFormat, prettierFormat,
-  subnet, userAgent,
+  subnet, userAgent, ipConvert, macFormat, httpHeaders, basicAuth,
   httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv, propertiesToJson, jsonToProperties, gitignore, uuidValidate,
+  keycode, emoji, entityReference, gitCheatsheet,
 ];
 
 export const tools = metas.map((m) => ({
