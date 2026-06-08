@@ -66,7 +66,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/charcode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/color-convert</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/color-palette</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -87,6 +97,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/css-gradient</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/css-minify</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -132,6 +147,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/csv-tsv</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/cubic-bezier</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -186,6 +206,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/gitignore</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/hash</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -202,6 +227,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/html-entities</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/html-minify</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -376,6 +406,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/meta-tags</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/mime-types</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -446,6 +481,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/robots-txt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/roman</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -467,6 +507,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/sql-formatter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/sql-minify</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -552,6 +597,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/uuid</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/uuid-validate</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

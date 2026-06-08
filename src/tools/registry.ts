@@ -139,6 +139,17 @@ import { meta as csvTranspose } from './csv-transpose/meta';
 import { meta as propertiesToJson } from './properties-to-json/meta';
 import { meta as jsonToProperties } from './json-to-properties/meta';
 import { meta as base64url } from './base64url/meta';
+// Batch 3: generators + minifiers + validators
+import { meta as metaTags } from './meta-tags/meta';
+import { meta as gitignore } from './gitignore/meta';
+import { meta as robotsTxt } from './robots-txt/meta';
+import { meta as cubicBezier } from './cubic-bezier/meta';
+import { meta as colorPalette } from './color-palette/meta';
+import { meta as htmlMinify } from './html-minify/meta';
+import { meta as cssMinify } from './css-minify/meta';
+import { meta as uuidValidate } from './uuid-validate/meta';
+import { meta as charcode } from './charcode/meta';
+import { meta as sqlMinify } from './sql-minify/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -150,18 +161,18 @@ const metas = [
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml,
   markdownToHtml, htmlToMarkdown,
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, csvToHtml, csvToXml, csvToYaml, csvTranspose,
-  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape,
+  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode,
   hash, hmac, md5, fileHash, crc32, adler32, imageBase64,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
   regexTester,
-  uuid, nanoid, password, lorem, qr, faker, ulid,
-  timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, byteSize, roman,
+  uuid, nanoid, password, lorem, qr, faker, ulid, colorPalette,
+  timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, cubicBezier, byteSize, roman,
   numberToWords, unitConvert, aspectRatio, wordsToNumber, percentage, numberFormat,
   durationFormat, timezone, dateInfo,
-  queryString, urlParser, cssUnits, sqlFormatter,
+  queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify,
   subnet, userAgent,
-  httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv, propertiesToJson, jsonToProperties,
+  httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv, propertiesToJson, jsonToProperties, gitignore, uuidValidate,
 ];
 
 export const tools = metas.map((m) => ({
