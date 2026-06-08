@@ -41,6 +41,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/base64-to-file</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/base64url</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -346,6 +351,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-to-excel</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-to-graphql</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -446,6 +456,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/markdown-preview</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/markdown-to-html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -497,6 +512,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/percentage</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/prettier-format</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -712,6 +732,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/xml-validate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/xpath</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

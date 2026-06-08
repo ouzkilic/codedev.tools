@@ -166,6 +166,12 @@ import { meta as csvDiff } from './csv-diff/meta';
 import { meta as htmlDiff } from './html-diff/meta';
 import { meta as graphqlFormat } from './graphql-format/meta';
 import { meta as jsonToTypes } from './json-to-types/meta';
+// Bespoke Stage 1-4 remainder
+import { meta as prettierFormat } from './prettier-format/meta';
+import { meta as markdownPreview } from './markdown-preview/meta';
+import { meta as jsonToExcel } from './json-to-excel/meta';
+import { meta as base64ToFile } from './base64-to-file/meta';
+import { meta as xpath } from './xpath/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -173,12 +179,12 @@ const metas = [
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
   jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema, jsonToTypes, jsonSchemaToJson, jsonToGraphql, jsonToProto, sqlDdlToTs, jsonPatch,
   textDiff, jsonDiff, xmlDiff, yamlDiff, csvDiff, htmlDiff, listCompare,
-  xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate, xmlToYaml, yamlToXml,
+  xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate, xmlToYaml, yamlToXml, xpath,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml, tomlFormatter,
-  markdownToHtml, htmlToMarkdown,
-  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate,
+  markdownToHtml, htmlToMarkdown, markdownPreview,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, jsonToExcel, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode, punycode,
-  hash, hmac, md5, fileHash, crc32, adler32, imageBase64,
+  hash, hmac, md5, fileHash, crc32, adler32, imageBase64, base64ToFile,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
   regexTester,
@@ -186,7 +192,7 @@ const metas = [
   timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, cubicBezier, byteSize, roman,
   numberToWords, unitConvert, aspectRatio, wordsToNumber, percentage, numberFormat,
   durationFormat, timezone, dateInfo,
-  queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify, htmlToJsx, graphqlFormat,
+  queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify, htmlToJsx, graphqlFormat, prettierFormat,
   subnet, userAgent,
   httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv, propertiesToJson, jsonToProperties, gitignore, uuidValidate,
 ];
