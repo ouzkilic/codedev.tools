@@ -150,18 +150,34 @@ import { meta as cssMinify } from './css-minify/meta';
 import { meta as uuidValidate } from './uuid-validate/meta';
 import { meta as charcode } from './charcode/meta';
 import { meta as sqlMinify } from './sql-minify/meta';
+// Stage 1-4 remaining
+import { meta as jsonPatch } from './json-patch/meta';
+import { meta as tomlFormatter } from './toml-formatter/meta';
+import { meta as csvValidate } from './csv-validate/meta';
+import { meta as xmlToYaml } from './xml-to-yaml/meta';
+import { meta as yamlToXml } from './yaml-to-xml/meta';
+import { meta as htmlToJsx } from './html-to-jsx/meta';
+import { meta as jsonSchemaToJson } from './jsonschema-to-json/meta';
+import { meta as jsonToGraphql } from './json-to-graphql/meta';
+import { meta as jsonToProto } from './json-to-proto/meta';
+import { meta as punycode } from './punycode/meta';
+import { meta as sqlDdlToTs } from './sql-ddl-to-ts/meta';
+import { meta as csvDiff } from './csv-diff/meta';
+import { meta as htmlDiff } from './html-diff/meta';
+import { meta as graphqlFormat } from './graphql-format/meta';
+import { meta as jsonToTypes } from './json-to-types/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
   jsonFormatter, jsonMinify, jsonValidate, jsonViewer, jsonRepair, jsonSort,
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
-  jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema,
-  textDiff, jsonDiff, xmlDiff, yamlDiff, listCompare,
-  xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate,
-  yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml,
+  jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema, jsonToTypes, jsonSchemaToJson, jsonToGraphql, jsonToProto, sqlDdlToTs, jsonPatch,
+  textDiff, jsonDiff, xmlDiff, yamlDiff, csvDiff, htmlDiff, listCompare,
+  xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate, xmlToYaml, yamlToXml,
+  yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml, tomlFormatter,
   markdownToHtml, htmlToMarkdown,
-  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, csvToHtml, csvToXml, csvToYaml, csvTranspose,
-  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate,
+  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode, punycode,
   hash, hmac, md5, fileHash, crc32, adler32, imageBase64,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
@@ -170,7 +186,7 @@ const metas = [
   timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, cubicBezier, byteSize, roman,
   numberToWords, unitConvert, aspectRatio, wordsToNumber, percentage, numberFormat,
   durationFormat, timezone, dateInfo,
-  queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify,
+  queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify, htmlToJsx, graphqlFormat,
   subnet, userAgent,
   httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv, propertiesToJson, jsonToProperties, gitignore, uuidValidate,
 ];

@@ -111,6 +111,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/csv-diff</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/csv-to-html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -147,6 +152,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/csv-tsv</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/csv-validate</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -211,6 +221,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/graphql-format</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/hash</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -226,6 +241,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/html-diff</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/html-entities</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -237,6 +257,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/html-strip</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/html-to-jsx</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -291,6 +316,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-patch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-path</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -316,6 +346,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-to-graphql</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-to-jsonl</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -331,12 +366,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-to-proto</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-to-toml</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codedev.tools/tool/json-to-ts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/json-to-types</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -372,6 +417,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/jsonl-to-json</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/jsonschema-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -456,6 +506,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/punycode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/qr</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -506,6 +561,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/sql-ddl-to-ts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/sql-formatter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -552,6 +612,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/timezone</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/toml-formatter</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -641,6 +706,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/xml-to-yaml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/xml-validate</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -662,6 +732,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/yaml-to-toml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/yaml-to-xml</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
