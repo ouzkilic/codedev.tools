@@ -204,6 +204,15 @@ import { meta as svgOptimize } from './svg-optimize/meta';
 import { meta as svgToJsx } from './svg-to-jsx/meta';
 import { meta as curlToCode } from './curl-to-code/meta';
 import { meta as highlight } from './highlight/meta';
+// Stage 10 image
+import { meta as imageConvert } from './image-convert/meta';
+import { meta as imageResize } from './image-resize/meta';
+import { meta as imageAscii } from './image-ascii/meta';
+import { meta as favicon } from './favicon/meta';
+import { meta as exif } from './exif/meta';
+import { meta as imageColors } from './image-colors/meta';
+import { meta as qrDecode } from './qr-decode/meta';
+import { meta as imageDiff } from './image-diff/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -218,6 +227,7 @@ const metas = [
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, jsonToExcel, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate, csvViewer, tsvViewer,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode, punycode,
   hash, hmac, md5, fileHash, crc32, adler32, pbkdf2, aes, bcrypt, argon2, hashId, imageBase64, base64ToFile,
+  imageConvert, imageResize, imageAscii, favicon, exif, imageColors, qrDecode, imageDiff,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
   regexTester, regexCheatsheet,
