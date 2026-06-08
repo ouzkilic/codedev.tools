@@ -213,6 +213,8 @@ import { meta as exif } from './exif/meta';
 import { meta as imageColors } from './image-colors/meta';
 import { meta as qrDecode } from './qr-decode/meta';
 import { meta as imageDiff } from './image-diff/meta';
+import { meta as keygen } from './keygen/meta';
+import { meta as codeImage } from './code-image/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -226,8 +228,8 @@ const metas = [
   markdownToHtml, htmlToMarkdown, markdownPreview,
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, jsonToExcel, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate, csvViewer, tsvViewer,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode, punycode,
-  hash, hmac, md5, fileHash, crc32, adler32, pbkdf2, aes, bcrypt, argon2, hashId, imageBase64, base64ToFile,
-  imageConvert, imageResize, imageAscii, favicon, exif, imageColors, qrDecode, imageDiff,
+  hash, hmac, md5, fileHash, crc32, adler32, pbkdf2, aes, bcrypt, argon2, hashId, keygen, imageBase64, base64ToFile,
+  imageConvert, imageResize, imageAscii, favicon, exif, imageColors, qrDecode, imageDiff, codeImage,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
   regexTester, regexCheatsheet,

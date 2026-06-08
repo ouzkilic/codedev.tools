@@ -96,6 +96,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/code-image</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/color-convert</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -552,6 +557,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/keycode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/keygen</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
