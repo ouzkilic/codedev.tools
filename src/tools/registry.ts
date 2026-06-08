@@ -56,6 +56,9 @@ import { meta as unicodeEscape } from './unicode-escape/meta';
 import { meta as hash } from './hash/meta';
 import { meta as hmac } from './hmac/meta';
 import { meta as md5 } from './md5/meta';
+import { meta as fileHash } from './file-hash/meta';
+// Image
+import { meta as imageBase64 } from './image-base64/meta';
 // Text
 import { meta as textCase } from './text-case/meta';
 import { meta as sortLines } from './sort-lines/meta';
@@ -110,7 +113,7 @@ const metas = [
   markdownToHtml, htmlToMarkdown,
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, unicodeEscape,
-  hash, hmac, md5,
+  hash, hmac, md5, fileHash, imageBase64,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   regexTester,
   uuid, nanoid, password, lorem, qr, faker,
