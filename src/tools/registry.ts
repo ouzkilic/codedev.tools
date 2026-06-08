@@ -198,6 +198,12 @@ import { meta as entityReference } from './entity-reference/meta';
 import { meta as crontabCheatsheet } from './crontab-cheatsheet/meta';
 import { meta as regexCheatsheet } from './regex-cheatsheet/meta';
 import { meta as gitCheatsheet } from './git-cheatsheet/meta';
+// Stage 8 web
+import { meta as tailwindHints } from './tailwind-hints/meta';
+import { meta as svgOptimize } from './svg-optimize/meta';
+import { meta as svgToJsx } from './svg-to-jsx/meta';
+import { meta as curlToCode } from './curl-to-code/meta';
+import { meta as highlight } from './highlight/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -220,6 +226,7 @@ const metas = [
   numberToWords, unitConvert, aspectRatio, wordsToNumber, percentage, numberFormat,
   durationFormat, timezone, dateInfo, crontabCheatsheet,
   queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify, htmlToJsx, graphqlFormat, prettierFormat,
+  tailwindHints, svgOptimize, svgToJsx, curlToCode, highlight,
   subnet, userAgent, ipConvert, macFormat, httpHeaders, basicAuth,
   httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv, propertiesToJson, jsonToProperties, gitignore, uuidValidate,
   keycode, emoji, entityReference, gitCheatsheet,
