@@ -16,6 +16,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/base58</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/base64</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -41,7 +46,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/contrast</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/cron</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/css-gradient</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -367,6 +382,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/toml-to-json</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/ulid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

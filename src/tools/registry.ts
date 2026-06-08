@@ -51,6 +51,7 @@ import { meta as hex } from './hex/meta';
 import { meta as jwtDecode } from './jwt-decode/meta';
 import { meta as binary } from './binary/meta';
 import { meta as base32 } from './base32/meta';
+import { meta as base58 } from './base58/meta';
 import { meta as unicodeEscape } from './unicode-escape/meta';
 // Hash / Crypto
 import { meta as hash } from './hash/meta';
@@ -79,12 +80,15 @@ import { meta as password } from './password/meta';
 import { meta as lorem } from './lorem/meta';
 import { meta as qr } from './qr/meta';
 import { meta as faker } from './faker/meta';
+import { meta as ulid } from './ulid/meta';
 // Date / Time, Number, Color
 import { meta as timestamp } from './timestamp/meta';
 import { meta as dateDiff } from './date-diff/meta';
 import { meta as cron } from './cron/meta';
 import { meta as baseConvert } from './base-convert/meta';
 import { meta as colorConvert } from './color-convert/meta';
+import { meta as contrast } from './contrast/meta';
+import { meta as cssGradient } from './css-gradient/meta';
 import { meta as byteSize } from './byte-size/meta';
 import { meta as roman } from './roman/meta';
 // Web / Frontend, Code
@@ -112,12 +116,12 @@ const metas = [
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
   markdownToHtml, htmlToMarkdown,
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson,
-  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, unicodeEscape,
+  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, unicodeEscape,
   hash, hmac, md5, fileHash, imageBase64,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   regexTester,
-  uuid, nanoid, password, lorem, qr, faker,
-  timestamp, dateDiff, cron, baseConvert, colorConvert, byteSize, roman,
+  uuid, nanoid, password, lorem, qr, faker, ulid,
+  timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, byteSize, roman,
   queryString, urlParser, cssUnits, sqlFormatter,
   subnet, userAgent,
   httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv,
