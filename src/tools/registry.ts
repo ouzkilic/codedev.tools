@@ -172,17 +172,28 @@ import { meta as markdownPreview } from './markdown-preview/meta';
 import { meta as jsonToExcel } from './json-to-excel/meta';
 import { meta as base64ToFile } from './base64-to-file/meta';
 import { meta as xpath } from './xpath/meta';
+// Stage 1-4 final
+import { meta as csvViewer } from './csv-viewer/meta';
+import { meta as tsvViewer } from './tsv-viewer/meta';
+import { meta as jsonSchemaToTs } from './jsonschema-to-ts/meta';
+import { meta as tsToJsonSchema } from './ts-to-jsonschema/meta';
+import { meta as tsToZod } from './ts-to-zod/meta';
+import { meta as zodToTs } from './zod-to-ts/meta';
+import { meta as zodToJsonSchema } from './zod-to-jsonschema/meta';
+import { meta as openapiToTs } from './openapi-to-ts/meta';
+import { meta as sqlDdlToPrisma } from './sql-ddl-to-prisma/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
   jsonFormatter, jsonMinify, jsonValidate, jsonViewer, jsonRepair, jsonSort,
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
   jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema, jsonToTypes, jsonSchemaToJson, jsonToGraphql, jsonToProto, sqlDdlToTs, jsonPatch,
+  jsonSchemaToTs, tsToJsonSchema, tsToZod, zodToTs, zodToJsonSchema, openapiToTs, sqlDdlToPrisma,
   textDiff, jsonDiff, xmlDiff, yamlDiff, csvDiff, htmlDiff, listCompare,
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate, xmlToYaml, yamlToXml, xpath,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml, tomlFormatter,
   markdownToHtml, htmlToMarkdown, markdownPreview,
-  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, jsonToExcel, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, jsonToExcel, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate, csvViewer, tsvViewer,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode, punycode,
   hash, hmac, md5, fileHash, crc32, adler32, imageBase64, base64ToFile,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,

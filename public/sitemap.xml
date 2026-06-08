@@ -166,6 +166,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/csv-viewer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/cubic-bezier</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -436,6 +441,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/jsonschema-to-ts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/jwt-decode</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -497,6 +507,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/number-to-words</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/openapi-to-ts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -581,6 +596,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/sql-ddl-to-prisma</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/sql-ddl-to-ts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -647,6 +667,21 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/toml-to-yaml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/ts-to-jsonschema</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/ts-to-zod</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/tsv-viewer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -767,6 +802,16 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/yaml-validate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/zod-to-jsonschema</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/zod-to-ts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
