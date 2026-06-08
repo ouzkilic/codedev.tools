@@ -52,6 +52,32 @@ function hslToRgb(h: number, s: number, l: number): Rgb {
   };
 }
 
+function rgbToHsv({ r, g, b }: Rgb): { h: number; s: number; v: number } {
+  const rr = r / 255, gg = g / 255, bb = b / 255;
+  const max = Math.max(rr, gg, bb), min = Math.min(rr, gg, bb);
+  const d = max - min;
+  let h = 0;
+  if (d !== 0) {
+    if (max === rr) h = ((gg - bb) / d + (gg < bb ? 6 : 0));
+    else if (max === gg) h = (bb - rr) / d + 2;
+    else h = (rr - gg) / d + 4;
+    h /= 6;
+  }
+  return { h: Math.round(h * 360), s: Math.round((max === 0 ? 0 : d / max) * 100), v: Math.round(max * 100) };
+}
+
+function rgbToCmyk({ r, g, b }: Rgb): { c: number; m: number; y: number; k: number } {
+  const rr = r / 255, gg = g / 255, bb = b / 255;
+  const k = 1 - Math.max(rr, gg, bb);
+  if (k === 1) return { c: 0, m: 0, y: 0, k: 100 };
+  return {
+    c: Math.round(((1 - rr - k) / (1 - k)) * 100),
+    m: Math.round(((1 - gg - k) / (1 - k)) * 100),
+    y: Math.round(((1 - bb - k) / (1 - k)) * 100),
+    k: Math.round(k * 100),
+  };
+}
+
 function parseColor(input: string): Rgb {
   const s = input.trim().toLowerCase();
   const rgbMatch = s.match(/^rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
@@ -70,10 +96,14 @@ export const colorConvertLogic: ToolLogic = {
   transform(input: string): string {
     const rgb = parseColor(input);
     const hsl = rgbToHsl(rgb);
+    const hsv = rgbToHsv(rgb);
+    const cmyk = rgbToCmyk(rgb);
     return [
-      `HEX:  ${rgbToHex(rgb)}`,
-      `RGB:  rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`,
-      `HSL:  hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`,
+      `HEX:   ${rgbToHex(rgb)}`,
+      `RGB:   rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`,
+      `HSL:   hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`,
+      `HSV:   hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)`,
+      `CMYK:  cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)`,
     ].join('\n');
   },
 };

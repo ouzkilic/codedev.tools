@@ -215,13 +215,24 @@ import { meta as qrDecode } from './qr-decode/meta';
 import { meta as imageDiff } from './image-diff/meta';
 import { meta as keygen } from './keygen/meta';
 import { meta as codeImage } from './code-image/meta';
+// Roadmap remainder
+import { meta as regexExplain } from './regex-explain/meta';
+import { meta as cronNext } from './cron-next/meta';
+import { meta as relativeTime } from './relative-time/meta';
+import { meta as mockJson } from './mock-json/meta';
+import { meta as asciiArt } from './ascii-art/meta';
+import { meta as random } from './random/meta';
+import { meta as testData } from './test-data/meta';
+import { meta as token } from './token/meta';
+import { meta as colorPicker } from './color-picker/meta';
+import { meta as barcode } from './barcode/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
   jsonFormatter, jsonMinify, jsonValidate, jsonViewer, jsonRepair, jsonSort,
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
   jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema, jsonToTypes, jsonSchemaToJson, jsonToGraphql, jsonToProto, sqlDdlToTs, jsonPatch,
-  jsonSchemaToTs, tsToJsonSchema, tsToZod, zodToTs, zodToJsonSchema, openapiToTs, sqlDdlToPrisma,
+  jsonSchemaToTs, tsToJsonSchema, tsToZod, zodToTs, zodToJsonSchema, openapiToTs, sqlDdlToPrisma, mockJson,
   textDiff, jsonDiff, xmlDiff, yamlDiff, csvDiff, htmlDiff, listCompare,
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate, xmlToYaml, yamlToXml, xpath,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml, tomlFormatter,
@@ -231,10 +242,10 @@ const metas = [
   hash, hmac, md5, fileHash, crc32, adler32, pbkdf2, aes, bcrypt, argon2, hashId, keygen, imageBase64, base64ToFile,
   imageConvert, imageResize, imageAscii, favicon, exif, imageColors, qrDecode, imageDiff, codeImage,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
-  rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
-  regexTester, regexCheatsheet,
-  uuid, nanoid, password, lorem, qr, faker, ulid, colorPalette,
-  timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, cubicBezier, byteSize, roman,
+  rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak, asciiArt,
+  regexTester, regexCheatsheet, regexExplain,
+  uuid, nanoid, password, lorem, qr, faker, ulid, colorPalette, random, testData, token, barcode,
+  timestamp, dateDiff, cron, cronNext, relativeTime, baseConvert, colorConvert, colorPicker, contrast, cssGradient, boxShadow, cubicBezier, byteSize, roman,
   numberToWords, unitConvert, aspectRatio, wordsToNumber, percentage, numberFormat,
   durationFormat, timezone, dateInfo, crontabCheatsheet,
   queryString, urlParser, cssUnits, sqlFormatter, metaTags, robotsTxt, htmlMinify, cssMinify, sqlMinify, htmlToJsx, graphqlFormat, prettierFormat,
