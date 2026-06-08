@@ -124,6 +124,21 @@ import { meta as textRepeat } from './text-repeat/meta';
 import { meta as numberToWords } from './number-to-words/meta';
 import { meta as unitConvert } from './unit-convert/meta';
 import { meta as aspectRatio } from './aspect-ratio/meta';
+// Batch 2: native tools
+import { meta as wordsToNumber } from './words-to-number/meta';
+import { meta as percentage } from './percentage/meta';
+import { meta as numberFormat } from './number-format/meta';
+import { meta as padTruncate } from './pad-truncate/meta';
+import { meta as htmlStrip } from './html-strip/meta';
+import { meta as leetspeak } from './leetspeak/meta';
+import { meta as durationFormat } from './duration-format/meta';
+import { meta as timezone } from './timezone/meta';
+import { meta as dateInfo } from './date-info/meta';
+import { meta as csvToYaml } from './csv-to-yaml/meta';
+import { meta as csvTranspose } from './csv-transpose/meta';
+import { meta as propertiesToJson } from './properties-to-json/meta';
+import { meta as jsonToProperties } from './json-to-properties/meta';
+import { meta as base64url } from './base64url/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -134,18 +149,19 @@ const metas = [
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml,
   markdownToHtml, htmlToMarkdown,
-  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, csvToHtml, csvToXml,
-  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, quotedPrintable, unicodeEscape,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, csvToHtml, csvToXml, csvToYaml, csvTranspose,
+  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape,
   hash, hmac, md5, fileHash, crc32, adler32, imageBase64,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
-  rot13, morse, invisibleChars, textRepeat,
+  rot13, morse, invisibleChars, textRepeat, padTruncate, htmlStrip, leetspeak,
   regexTester,
   uuid, nanoid, password, lorem, qr, faker, ulid,
   timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, byteSize, roman,
-  numberToWords, unitConvert, aspectRatio,
+  numberToWords, unitConvert, aspectRatio, wordsToNumber, percentage, numberFormat,
+  durationFormat, timezone, dateInfo,
   queryString, urlParser, cssUnits, sqlFormatter,
   subnet, userAgent,
-  httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv,
+  httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv, propertiesToJson, jsonToProperties,
 ];
 
 export const tools = metas.map((m) => ({

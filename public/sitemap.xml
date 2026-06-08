@@ -41,6 +41,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/base64url</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/binary</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -116,6 +121,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/csv-to-yaml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/csv-transpose</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/csv-tsv</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -126,7 +141,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/date-info</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/dedupe-lines</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/duration-format</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -177,6 +202,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/html-entities</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/html-strip</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -266,6 +296,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/json-to-properties</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/json-to-toml</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -316,6 +351,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/leetspeak</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/list-compare</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -351,12 +391,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/number-format</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/number-to-words</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/pad-truncate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/password</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/percentage</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/properties-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -446,6 +506,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/timezone</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/toml-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -497,6 +562,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/word-freq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/words-to-number</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
