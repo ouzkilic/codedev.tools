@@ -52,12 +52,15 @@ import { meta as jwtDecode } from './jwt-decode/meta';
 import { meta as binary } from './binary/meta';
 import { meta as base32 } from './base32/meta';
 import { meta as base58 } from './base58/meta';
+import { meta as base62 } from './base62/meta';
+import { meta as quotedPrintable } from './quoted-printable/meta';
 import { meta as unicodeEscape } from './unicode-escape/meta';
 // Hash / Crypto
 import { meta as hash } from './hash/meta';
 import { meta as hmac } from './hmac/meta';
 import { meta as md5 } from './md5/meta';
 import { meta as fileHash } from './file-hash/meta';
+import { meta as crc32 } from './crc32/meta';
 // Image
 import { meta as imageBase64 } from './image-base64/meta';
 // Text
@@ -89,6 +92,7 @@ import { meta as baseConvert } from './base-convert/meta';
 import { meta as colorConvert } from './color-convert/meta';
 import { meta as contrast } from './contrast/meta';
 import { meta as cssGradient } from './css-gradient/meta';
+import { meta as boxShadow } from './box-shadow/meta';
 import { meta as byteSize } from './byte-size/meta';
 import { meta as roman } from './roman/meta';
 // Web / Frontend, Code
@@ -116,12 +120,12 @@ const metas = [
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
   markdownToHtml, htmlToMarkdown,
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson,
-  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, unicodeEscape,
-  hash, hmac, md5, fileHash, imageBase64,
+  base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, quotedPrintable, unicodeEscape,
+  hash, hmac, md5, fileHash, crc32, imageBase64,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
   regexTester,
   uuid, nanoid, password, lorem, qr, faker, ulid,
-  timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, byteSize, roman,
+  timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, byteSize, roman,
   queryString, urlParser, cssUnits, sqlFormatter,
   subnet, userAgent,
   httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv,

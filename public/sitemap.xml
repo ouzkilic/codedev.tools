@@ -21,12 +21,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/base62</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/base64</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codedev.tools/tool/binary</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/box-shadow</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -47,6 +57,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/contrast</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/crc32</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -317,6 +332,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/query-string</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/quoted-printable</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
