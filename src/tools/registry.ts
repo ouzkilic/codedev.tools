@@ -41,6 +41,8 @@ import { meta as jsonToCsv } from './json-to-csv/meta';
 import { meta as csvToMarkdown } from './csv-to-markdown/meta';
 import { meta as csvToSql } from './csv-to-sql/meta';
 import { meta as csvTsv } from './csv-tsv/meta';
+import { meta as excelToCsv } from './excel-to-csv/meta';
+import { meta as excelToJson } from './excel-to-json/meta';
 // Encode / Decode
 import { meta as base64 } from './base64/meta';
 import { meta as urlEncode } from './url-encode/meta';
@@ -106,7 +108,7 @@ const metas = [
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
   markdownToHtml, htmlToMarkdown,
-  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, unicodeEscape,
   hash, hmac, md5,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
