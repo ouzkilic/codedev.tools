@@ -6,6 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/adler32</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/aspect-ratio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/base-convert</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -81,6 +91,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/csv-to-html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/csv-to-json</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -92,6 +107,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/csv-to-sql</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/csv-to-xml</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -172,6 +192,11 @@
   </url>
   <url>
     <loc>https://codedev.tools/tool/image-base64</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/invisible-chars</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -316,7 +341,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/morse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/nanoid</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/number-to-words</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -356,6 +391,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/rot13</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/slugify</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -391,6 +431,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/text-repeat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/text-stats</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -406,12 +451,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/toml-to-yaml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/ulid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codedev.tools/tool/unicode-escape</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/unit-convert</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -466,12 +521,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/xml-validate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/yaml-diff</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://codedev.tools/tool/yaml-formatter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://codedev.tools/tool/yaml-to-json</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://codedev.tools/tool/yaml-to-toml</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

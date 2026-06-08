@@ -109,6 +109,21 @@ import { meta as mimeTypes } from './mime-types/meta';
 import { meta as charInfo } from './char-info/meta';
 import { meta as envToJson } from './env-to-json/meta';
 import { meta as jsonToEnv } from './json-to-env/meta';
+// Batch: native tools
+import { meta as xmlValidate } from './xml-validate/meta';
+import { meta as yamlFormatter } from './yaml-formatter/meta';
+import { meta as yamlToToml } from './yaml-to-toml/meta';
+import { meta as tomlToYaml } from './toml-to-yaml/meta';
+import { meta as csvToHtml } from './csv-to-html/meta';
+import { meta as csvToXml } from './csv-to-xml/meta';
+import { meta as adler32 } from './adler32/meta';
+import { meta as rot13 } from './rot13/meta';
+import { meta as morse } from './morse/meta';
+import { meta as invisibleChars } from './invisible-chars/meta';
+import { meta as textRepeat } from './text-repeat/meta';
+import { meta as numberToWords } from './number-to-words/meta';
+import { meta as unitConvert } from './unit-convert/meta';
+import { meta as aspectRatio } from './aspect-ratio/meta';
 // For each new tool, add one import here and one entry to the array.
 
 const metas = [
@@ -116,16 +131,18 @@ const metas = [
   jsonEscape, jsonFlatten, jsonUnflatten, jsonPath, jsonMerge, jsonToJsonl,
   jsonlToJson, jsonToZod, jsonToTs, jsonToJsonSchema,
   textDiff, jsonDiff, xmlDiff, yamlDiff, listCompare,
-  xmlFormatter, xmlMinify, xmlToJson, jsonToXml,
-  yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml,
+  xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate,
+  yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml,
   markdownToHtml, htmlToMarkdown,
-  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson,
+  csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, csvToHtml, csvToXml,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, quotedPrintable, unicodeEscape,
-  hash, hmac, md5, fileHash, crc32, imageBase64,
+  hash, hmac, md5, fileHash, crc32, adler32, imageBase64,
   textCase, sortLines, dedupeLines, textStats, slugify, stringEscape, reverse, whitespace, wordFreq, findReplace,
+  rot13, morse, invisibleChars, textRepeat,
   regexTester,
   uuid, nanoid, password, lorem, qr, faker, ulid,
   timestamp, dateDiff, cron, baseConvert, colorConvert, contrast, cssGradient, boxShadow, byteSize, roman,
+  numberToWords, unitConvert, aspectRatio,
   queryString, urlParser, cssUnits, sqlFormatter,
   subnet, userAgent,
   httpStatus, mimeTypes, charInfo, envToJson, jsonToEnv,
