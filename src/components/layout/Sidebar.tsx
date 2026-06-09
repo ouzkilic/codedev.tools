@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Search } from 'lucide-react';
+import { Search, Github } from 'lucide-react';
 import { orderedCategories } from '@/tools/categories';
 import { tools, searchTools } from '@/tools/registry';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
@@ -77,9 +77,19 @@ export function Sidebar() {
         )}
       </nav>
 
-      <div className="border-t px-4 py-2.5 text-[11px] text-muted-foreground/70">
-        <kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">⌘K</kbd> /{' '}
-        <kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">Ctrl K</kbd> to search
+      <div className="space-y-2 border-t px-4 py-2.5 text-[11px] text-muted-foreground/70">
+        <div>
+          <kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">⌘K</kbd> /{' '}
+          <kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">Ctrl K</kbd> to search
+        </div>
+        <a
+          href="https://github.com/ouzkilic/codedev.tools"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
+        >
+          <Github className="size-3.5" /> Source on GitHub
+        </a>
       </div>
     </aside>
   );

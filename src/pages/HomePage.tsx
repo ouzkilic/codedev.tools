@@ -30,9 +30,14 @@ export function HomePage() {
           <span className="inline-flex items-center gap-1.5">
             <Zap className="size-4" /> No sign-up, no ads
           </span>
-          <span className="inline-flex items-center gap-1.5">
+          <a
+            href="https://github.com/ouzkilic/codedev.tools"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          >
             <Code2 className="size-4" /> Open source
-          </span>
+          </a>
           <span className="opacity-70">Press ⌘K to search</span>
         </div>
       </header>
