@@ -1,0 +1,32 @@
+{
+  "intro": "Word Frequency counts how often each word appears in any block of text and lists the results sorted from most to least frequent. Paste an article, log, transcript, or document and instantly see a tab-separated count of every unique word, with an optional case-sensitive mode. It is handy whenever you need a quick frequency analysis without reaching for a script or spreadsheet.",
+  "useCases": [
+    "Find the most common terms in an article, blog post, or documentation page to check keyword density",
+    "Audit log files or error output to see which messages or tokens repeat most often",
+    "Analyze chat transcripts, interviews, or survey responses for recurring words and themes",
+    "Build quick word lists or vocabulary frequency tables from sample text while developing or testing",
+    "Compare counts with and without case sensitivity to spot inconsistent capitalization in copy"
+  ],
+  "faq": [
+    {
+      "q": "How are words detected and split?",
+      "a": "Text is split on anything that is not a letter, number, or apostrophe, so contractions like don't stay intact while punctuation and spaces act as separators. Unicode letters and digits (including accented characters) are recognized as part of words."
+    },
+    {
+      "q": "How is the output sorted and formatted?",
+      "a": "Each line is the count followed by a tab and the word. Results are ordered by descending frequency, and words that share the same count are listed alphabetically."
+    },
+    {
+      "q": "What does the case-sensitive option do?",
+      "a": "When off (the default), the text is lowercased first, so The, the, and THE are counted together as one word. When on, words are counted exactly as written, keeping different capitalizations separate."
+    },
+    {
+      "q": "Are emoji or punctuation counted?",
+      "a": "No. Emoji, symbols, and standalone punctuation are treated as separators and dropped, while the words around them are still counted normally."
+    },
+    {
+      "q": "Is my text uploaded anywhere?",
+      "a": "No. The entire analysis runs locally in your browser using client-side JavaScript, so nothing you paste is sent to a server or stored remotely."
+    }
+  ]
+}

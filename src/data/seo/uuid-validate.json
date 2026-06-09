@@ -1,0 +1,32 @@
+{
+  "intro": "UUID Validate checks whether a string is a well-formed UUID and reports its version. Paste a UUID and the tool trims surrounding whitespace, verifies the canonical 8-4-4-4-12 hyphenated format, confirms a valid version digit (1-5) and variant, then tells you which UUID version it belongs to. It is handy whenever you need to quickly confirm an identifier before storing it, sending it to an API, or debugging data.",
+  "useCases": [
+    "Confirm that an ID copied from a log line or database row is a valid UUID before using it",
+    "Identify which UUID version (1-5) a given identifier was generated with",
+    "Catch malformed UUIDs (wrong length, missing hyphens, non-hex characters) during debugging",
+    "Validate UUIDs pasted from API responses or config files without writing a regex by hand",
+    "Sanity-check UUIDs in test fixtures or seed data while developing"
+  ],
+  "faq": [
+    {
+      "q": "Which UUID versions are recognized?",
+      "a": "The validator accepts versions 1 through 5, requiring the canonical hyphenated format with a valid version digit and an 8/9/a/b variant nibble. The nil UUID and versions outside the 1-5 range are reported as invalid."
+    },
+    {
+      "q": "Is the input case-sensitive?",
+      "a": "No. Validation is case-insensitive, so both lowercase and uppercase hexadecimal digits are accepted as valid."
+    },
+    {
+      "q": "Does it accept extra whitespace around the UUID?",
+      "a": "Leading and trailing whitespace is trimmed before validation, so a UUID surrounded by spaces or newlines still validates. Any non-whitespace characters before or after the UUID, however, make it invalid."
+    },
+    {
+      "q": "Is my data sent anywhere?",
+      "a": "No. Validation runs entirely in your browser using a local regular expression. Nothing you paste is uploaded to a server or shared with any third party."
+    },
+    {
+      "q": "What happens with an invalid UUID?",
+      "a": "If the string is not a valid UUID, the tool reports an error instead of a version. Common causes include the wrong length, missing hyphens, non-hex characters, or an unsupported version digit."
+    }
+  ]
+}

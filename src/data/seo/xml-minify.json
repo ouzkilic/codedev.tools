@@ -1,0 +1,28 @@
+{
+  "intro": "XML Minify strips the whitespace and indentation between tags to compress an XML document into its smallest equivalent form. It keeps the XML declaration, comments, CDATA sections, entity references, and attribute values intact while collapsing the formatting noise, so the result parses identically to the original. Use it whenever you need a compact XML payload for transport, storage, or embedding.",
+  "useCases": [
+    "Shrink SOAP, RSS, or sitemap XML before sending it over the network to cut payload size",
+    "Minify pretty-printed configuration or build files to embed them inline in code or templates",
+    "Compress XML responses captured during debugging so they fit neatly into logs or snapshots",
+    "Normalize messy, hand-edited XML by removing inconsistent indentation between elements",
+    "Prepare XML fixtures for tests where a single-line, deterministic string is easier to compare"
+  ],
+  "faq": [
+    {
+      "q": "Does minifying change what the XML means?",
+      "a": "No. Only the insignificant whitespace and indentation between tags is removed. The XML declaration, comments, CDATA, entities, and attributes are preserved, so the minified output parses to the same document."
+    },
+    {
+      "q": "Is the text inside my elements kept as-is?",
+      "a": "Yes. Content inside leaf elements, attribute values, and CDATA sections is left unchanged, including any internal spaces. Only the formatting whitespace surrounding tags is collapsed."
+    },
+    {
+      "q": "What happens if I paste something that is not valid XML?",
+      "a": "The tool needs parseable XML. Empty input, whitespace-only input, or plain text that is not XML will fail to parse and report an error rather than producing output."
+    },
+    {
+      "q": "Is my XML uploaded anywhere?",
+      "a": "No. Minification runs entirely in your browser. Your XML never leaves your device and is not sent to any server, so it is safe to use with private or sensitive documents."
+    }
+  ]
+}

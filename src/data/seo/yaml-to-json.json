@@ -1,0 +1,32 @@
+{
+  "intro": "YAML to JSON converts your YAML document into clean, pretty-printed JSON right in your browser. Paste a YAML config, manifest, or data file and instantly get the equivalent JSON with two-space indentation. It is handy whenever a tool, API, or library expects JSON but your source is written in the more human-friendly YAML syntax.",
+  "useCases": [
+    "Convert a Kubernetes, Docker Compose, or CI pipeline YAML manifest into JSON for tooling that only accepts JSON.",
+    "Turn a YAML config file into JSON to paste into a REST client or API request body.",
+    "Quickly inspect how YAML scalars (numbers, booleans, null, hex like 0x1A) map to JSON values.",
+    "Flatten flow-style inline YAML such as {a: 1, b: [2, 3]} into standard pretty JSON.",
+    "Validate that a YAML snippet is well-formed: invalid indentation, tabs, or duplicate keys surface as errors."
+  ],
+  "faq": [
+    {
+      "q": "Is my YAML data uploaded to a server?",
+      "a": "No. The conversion runs entirely in your browser using a client-side YAML parser. Nothing you paste is ever sent over the network or stored on a server."
+    },
+    {
+      "q": "How is the JSON output formatted?",
+      "a": "The output is pretty-printed with two-space indentation, making it easy to read and diff."
+    },
+    {
+      "q": "Does it support multiple YAML documents in one input?",
+      "a": "No. It parses a single YAML document, so a stream separated by '---' will produce an error. Convert one document at a time."
+    },
+    {
+      "q": "What happens with empty or comment-only input?",
+      "a": "A comment-only or blank document parses to JSON null, while a fully empty input produces no JSON output at all."
+    },
+    {
+      "q": "Why did my YAML fail to convert?",
+      "a": "The parser rejects malformed YAML such as tab-based indentation, inconsistent list nesting, or duplicate mapping keys. Fix the reported syntax issue and try again."
+    }
+  ]
+}

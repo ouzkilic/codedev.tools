@@ -1,0 +1,28 @@
+{
+  "intro": "Unit Convert is a fast, browser-based unit converter for everyday developer and engineering work, handling length, mass, and temperature in a single tool. Enter a value, pick a 'from' and 'to' unit, and get an answer rounded to six significant figures. It is handy whenever you need a quick, accurate conversion without reaching for a calculator or an online service.",
+  "useCases": [
+    "Convert kilometers to miles (or back) when working with map and geolocation data",
+    "Switch lengths between metric and imperial units like meters, feet, inches, and yards",
+    "Convert mass between grams, kilograms, milligrams, ounces, and pounds for product specs",
+    "Translate temperatures between Celsius, Fahrenheit, and Kelvin for sensor or scientific data",
+    "Sanity-check unit handling in code by comparing expected against computed conversions"
+  ],
+  "faq": [
+    {
+      "q": "Which units does the converter support?",
+      "a": "Length covers mm, cm, m, km, in, ft, yd, and mi; mass covers mg, g, kg, oz, and lb; temperature covers Celsius (c), Fahrenheit (f), and Kelvin (k). Unit names are case-insensitive and surrounding spaces are ignored."
+    },
+    {
+      "q": "How precise are the results?",
+      "a": "Each result is rounded to six significant figures using standard floating-point math, so very large or very small values are shown compactly without losing meaningful precision."
+    },
+    {
+      "q": "Can I convert between different kinds of units, like meters to kilograms?",
+      "a": "No. The converter only works within the same category (length to length, mass to mass, temperature to temperature). Mixing categories returns an error, as does an unrecognized unit or a non-numeric value."
+    },
+    {
+      "q": "Is my data uploaded anywhere?",
+      "a": "No. Every conversion runs entirely in your browser with plain JavaScript. Nothing you type is sent to a server or any external service."
+    }
+  ]
+}

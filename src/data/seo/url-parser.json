@@ -1,0 +1,32 @@
+{
+  "intro": "URL Parser breaks any URL into its components, showing the protocol, host, hostname, port, path, search string, hash, and origin at a glance. It also decodes and lists every query parameter as a readable key/value pair, so you can inspect exactly what a link is carrying. It is handy whenever you need to dissect an endpoint, a redirect, or a tracking link without manually picking it apart.",
+  "useCases": [
+    "Inspect the query parameters of a tracking or marketing URL to see which key/value pairs are being passed",
+    "Verify the protocol, host, and port of an API endpoint while debugging a request",
+    "Check the origin a URL resolves to before whitelisting it in a CORS or CSP configuration",
+    "Decode percent-encoded path and query values to read the actual content of a link",
+    "Confirm whether a URL contains embedded userinfo (a username) that should not be there"
+  ],
+  "faq": [
+    {
+      "q": "What parts of a URL does this tool show?",
+      "a": "It displays the protocol, host, hostname, port, path, search string, hash, and origin. It also lists each query parameter as a decoded key = value pair, and shows the username when the URL includes embedded userinfo."
+    },
+    {
+      "q": "Why do I get an error saying the URL is invalid?",
+      "a": "The parser requires a full, well-formed URL including the protocol, such as https://. Input like example.com without a scheme will be rejected with a message reminding you to include the protocol."
+    },
+    {
+      "q": "How are repeated query parameters handled?",
+      "a": "Each occurrence is listed separately, so a URL with tag=a&tag=b shows two distinct entries. Values are URL-decoded, so percent-encoded text like hello%20world appears as hello world."
+    },
+    {
+      "q": "Does it work with non-HTTP URLs?",
+      "a": "Yes. Any scheme the browser's URL standard understands works, including ftp:// and others, not just http:// and https://."
+    },
+    {
+      "q": "Is my URL sent to a server?",
+      "a": "No. Parsing happens entirely in your browser using the built-in URL API. Nothing you paste is uploaded, logged, or transmitted anywhere."
+    }
+  ]
+}

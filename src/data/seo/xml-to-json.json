@@ -1,0 +1,32 @@
+{
+  "intro": "The XML to JSON converter parses any well-formed XML document and turns it into clean, 2-space indented JSON right in your browser. Element nesting becomes nested objects, repeated sibling tags become arrays, and attributes are preserved with an @_ prefix. It is handy whenever you need to feed legacy XML data into a modern JSON-based workflow, API, or config.",
+  "useCases": [
+    "Convert a SOAP or legacy XML API response into JSON so it is easier to read and work with in JavaScript",
+    "Migrate XML configuration or data files into JSON for a tool or service that expects JSON input",
+    "Inspect how attributes (exposed as @_ prefixed keys) and text nodes map into a JSON structure before writing parsing code",
+    "Quickly validate that an XML snippet is well-formed, since malformed XML surfaces a clear error message",
+    "Flatten repeated XML elements into JSON arrays to prototype a data model"
+  ],
+  "faq": [
+    {
+      "q": "Is my XML uploaded to a server?",
+      "a": "No. The conversion runs entirely in your browser using a client-side parser, so your XML never leaves your device and nothing is uploaded anywhere."
+    },
+    {
+      "q": "How are XML attributes represented in the JSON output?",
+      "a": "Attributes are kept and exposed as keys prefixed with @_, for example x=\"1\" becomes \"@_x\": \"1\". When an element has both attributes and text, the text is placed under a \"#text\" key."
+    },
+    {
+      "q": "What happens to repeated elements with the same tag name?",
+      "a": "Sibling elements that share a tag name are collapsed into a JSON array. For example two <a> elements under the same parent become an array of two values."
+    },
+    {
+      "q": "Does it parse numbers and booleans automatically?",
+      "a": "Yes, element text values that look like numbers or booleans are converted to native JSON numbers and booleans (for example 42 and true), while attribute values are kept as strings."
+    },
+    {
+      "q": "What happens if my XML is invalid?",
+      "a": "The XML is validated before conversion. If it is malformed, unclosed, or empty, the tool throws an error with the validator's message instead of producing JSON."
+    }
+  ]
+}

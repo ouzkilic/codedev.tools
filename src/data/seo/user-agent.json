@@ -1,0 +1,28 @@
+{
+  "intro": "The User Agent Parser breaks down any user-agent string into readable details about the browser, rendering engine, operating system, device, and CPU architecture. Paste a UA string and instantly see which browser and version, which OS, and what kind of device (mobile, tablet, or desktop) it represents. It is handy whenever you need to make sense of a raw user-agent header from a log, request, or analytics report.",
+  "useCases": [
+    "Decode a user-agent string pulled from server logs to identify which browser and OS a visitor was using",
+    "Inspect the User-Agent request header during API or web debugging to confirm the client being detected",
+    "Distinguish mobile, tablet, and desktop clients when triaging device-specific bugs",
+    "Identify the rendering engine (Blink, Gecko, WebKit) and version behind a browser for compatibility checks",
+    "Quickly read the OS name and version reported by an unfamiliar or legacy user-agent string"
+  ],
+  "faq": [
+    {
+      "q": "What information does the parser extract from a user-agent string?",
+      "a": "It reports five fields: Browser (name and version), Engine (name and version), OS (name and version), Device (vendor, model, and type), and CPU (architecture)."
+    },
+    {
+      "q": "What happens when a field cannot be detected?",
+      "a": "If a value such as the browser or OS cannot be recognized, that field shows \"(unknown)\". When no device type is detected, the device line falls back to \"desktop\"."
+    },
+    {
+      "q": "Does it handle empty or unrecognized input?",
+      "a": "Yes. Leading and trailing whitespace is trimmed first, and empty or unrecognized strings simply produce the five labels with \"(unknown)\" values rather than an error."
+    },
+    {
+      "q": "Is my user-agent data sent anywhere?",
+      "a": "No. Parsing runs entirely in your browser, and nothing you paste is uploaded or sent to any server."
+    }
+  ]
+}

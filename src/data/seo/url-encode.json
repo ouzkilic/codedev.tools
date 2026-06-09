@@ -1,0 +1,32 @@
+{
+  "intro": "URL Encode is a free online tool that percent-encodes text into a URL-safe form and decodes it back. Encoding escapes spaces, reserved characters, and Unicode (including emoji) as UTF-8 percent sequences, while decoding reverses the process. It is handy whenever you need to safely embed values in query strings, links, or APIs.",
+  "useCases": [
+    "Encode a query-string parameter so characters like &, =, ?, and spaces don't break the URL",
+    "Decode a percent-encoded URL segment to read the original human-readable value",
+    "Prepare Unicode or emoji text for use in a link by converting it to UTF-8 percent escapes",
+    "Quickly inspect or fix a malformed URL by decoding its components",
+    "Build or debug API request URLs where values must be percent-encoded"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. All encoding and decoding happen entirely in your browser using the built-in encodeURIComponent and decodeURIComponent functions. Nothing you type is uploaded or stored remotely."
+    },
+    {
+      "q": "Does this tool turn a plus sign into a space when decoding?",
+      "a": "No. It uses decodeURIComponent, which treats '+' as a literal plus character. Form-style '+'-as-space decoding is a separate convention and is not applied here."
+    },
+    {
+      "q": "Why does decoding sometimes show an error?",
+      "a": "Decoding fails on malformed percent sequences, such as a lone '%' or an incomplete escape like '%E0%A4'. Make sure every '%' is followed by two valid hex digits that form complete UTF-8 byte sequences."
+    },
+    {
+      "q": "Which characters are left unchanged when encoding?",
+      "a": "Encoding follows encodeURIComponent, so letters, digits, and the characters - _ . ! ~ * ' ( ) pass through untouched. Everything else, including spaces and reserved characters, is percent-encoded."
+    },
+    {
+      "q": "How do I get back my original text?",
+      "a": "Switch the mode to Decode and paste the encoded string. Encoding then decoding the same text returns the exact original input."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "The XML Formatter takes messy or minified XML and pretty-prints it with clean two-space indentation, putting each element, comment, and the XML declaration on its own line. It's handy any time you need to read, review, or diff an XML payload that arrived as a single unreadable line. Everything runs in your browser, so even large documents are formatted instantly without leaving your machine.",
+  "useCases": [
+    "Beautify a minified API response or SOAP envelope so you can actually read the structure",
+    "Re-indent a hand-edited config or build file (pom.xml, .csproj, web.xml) before committing it",
+    "Normalize XML formatting so two versions produce a clean, line-by-line diff in code review",
+    "Inspect RSS/Atom feeds or sitemaps by expanding them into a readable nested layout",
+    "Tidy up exported data (SVG, XLSX sheets, Android layout XML) for easier debugging"
+  ],
+  "faq": [
+    {
+      "q": "Is my XML uploaded to a server?",
+      "a": "No. Formatting happens entirely in your browser using client-side JavaScript, so your XML never leaves your device and nothing is sent to any server."
+    },
+    {
+      "q": "How much does it indent each level?",
+      "a": "It uses two spaces per nesting level and a newline (\\n) line separator, with each child element placed on its own line."
+    },
+    {
+      "q": "What happens if my XML is invalid?",
+      "a": "If the input can't be parsed as XML, the formatter throws an error that surfaces in the error banner. Some lenient cases, like an unclosed or mismatched tag, may be auto-corrected rather than rejected."
+    },
+    {
+      "q": "Does it touch CDATA sections or entities?",
+      "a": "No. CDATA blocks are left exactly as written and entity references such as &amp; are preserved unchanged; only indentation and line breaks are adjusted."
+    },
+    {
+      "q": "Will running it twice change the result?",
+      "a": "No. Formatting is idempotent, so feeding already-formatted output back in returns the same result."
+    }
+  ]
+}

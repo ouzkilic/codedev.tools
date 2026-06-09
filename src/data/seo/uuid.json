@@ -1,0 +1,32 @@
+{
+  "intro": "This UUID generator creates universally unique identifiers right in your browser, supporting both version 4 (random) and version 7 (time-ordered) UUIDs. Generate anywhere from a single ID up to 1000 at once, ready to copy into databases, API payloads, or test fixtures. It is handy whenever you need collision-resistant keys without running a backend or installing a library.",
+  "useCases": [
+    "Seeding database tables with random v4 primary keys for local development and tests",
+    "Generating time-ordered UUIDv7 values that sort chronologically and improve index locality in databases",
+    "Creating batches of up to 1000 unique identifiers at once for bulk data fixtures",
+    "Producing correlation or request IDs to copy into API requests and log entries",
+    "Grabbing a quick, RFC-compliant identifier while coding without reaching for a UUID library"
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between UUID v4 and v7?",
+      "a": "v4 UUIDs are fully random, while v7 UUIDs embed a 48-bit millisecond timestamp at the front so they sort in roughly chronological order. v7 is useful as a database key because the time-ordered prefix keeps inserts sequential and improves index performance."
+    },
+    {
+      "q": "How many UUIDs can I generate at once?",
+      "a": "You can request any count, but it is clamped between 1 and 1000. Invalid or empty values fall back to 1, and anything above 1000 is capped at 1000."
+    },
+    {
+      "q": "Are the generated UUIDs cryptographically random?",
+      "a": "Yes. Both v4 and the random portion of v7 use the browser's crypto API (crypto.randomUUID and crypto.getRandomValues), which is a cryptographically secure random source."
+    },
+    {
+      "q": "Does my data get sent to a server?",
+      "a": "No. Every UUID is generated entirely in your browser using the built-in Web Crypto API. Nothing is uploaded, logged, or transmitted anywhere."
+    },
+    {
+      "q": "Are the UUIDs in a v7 batch sortable by creation time?",
+      "a": "Within a batch they share the generation timestamp, so they all start with the same time prefix and differ only in the random tail. Across separate generations, later UUIDs sort after earlier ones because the leading timestamp increases."
+    }
+  ]
+}

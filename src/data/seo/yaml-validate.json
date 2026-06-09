@@ -1,0 +1,32 @@
+{
+  "intro": "The YAML validator checks whether a YAML document is well-formed by parsing it and reporting the first syntax error it finds. Paste your config, manifest, or pipeline file and instantly see whether it is valid YAML or get the exact line and reason it failed. It is handy for catching indentation mistakes, unterminated structures, and duplicate keys before they break your build.",
+  "useCases": [
+    "Validate a Kubernetes or Docker Compose manifest before applying it to a cluster",
+    "Check a CI/CD pipeline file (GitHub Actions, GitLab CI) for indentation or syntax errors",
+    "Confirm an application config (settings.yaml, .yamllint) parses cleanly during a code review",
+    "Debug a YAML error by finding the exact line where parsing fails",
+    "Catch accidental duplicate keys that a parser would otherwise reject"
+  ],
+  "faq": [
+    {
+      "q": "Is my YAML uploaded anywhere?",
+      "a": "No. Validation runs entirely in your browser using a JavaScript YAML parser. Your input never leaves your device and nothing is sent to a server."
+    },
+    {
+      "q": "What counts as valid YAML here?",
+      "a": "Any document the parser can load as a single YAML document, including mappings, sequences, scalars, comments, and even an empty or whitespace-only document. If it parses without error, you get a confirmation message."
+    },
+    {
+      "q": "Why does my multi-document file fail validation?",
+      "a": "The validator loads a single YAML document, so a stream separated by --- markers will report an error. Validate each document on its own."
+    },
+    {
+      "q": "Does it flag duplicate keys?",
+      "a": "Yes. Two identical keys in the same mapping are rejected as a syntax error, which helps catch a common copy-paste mistake."
+    },
+    {
+      "q": "Will it tell me where the error is?",
+      "a": "Yes. When parsing fails, the error message includes the reason and the line and column where the problem was detected."
+    }
+  ]
+}

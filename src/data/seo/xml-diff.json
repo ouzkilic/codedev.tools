@@ -1,0 +1,28 @@
+{
+  "intro": "XML Diff compares two XML documents and highlights exactly what changed between them. Each side is pretty-printed and normalized first, so differences in indentation, line breaks, and surrounding whitespace are ignored and only real structural or content changes show up. It is handy whenever you need to see how two XML files actually differ without being distracted by formatting noise.",
+  "useCases": [
+    "Compare two versions of a config or pom.xml to spot which elements or attribute values actually changed",
+    "Review the difference between an expected and an actual XML API response while debugging",
+    "Verify that reformatting or pretty-printing an XML file did not alter its real content",
+    "Diff SOAP request or response payloads where indentation differs but the data may not",
+    "Check what a tool or script changed in an XML document by comparing the before and after"
+  ],
+  "faq": [
+    {
+      "q": "Does the comparison ignore whitespace and formatting differences?",
+      "a": "Yes. Both inputs are normalized with consistent two-space indentation and newlines before they are diffed, so pure formatting or whitespace differences are not reported as changes."
+    },
+    {
+      "q": "What happens if I paste invalid XML?",
+      "a": "Each side must be well-formed XML. If either input cannot be parsed, the tool reports an error instead of producing a diff, so make sure both documents are valid XML first."
+    },
+    {
+      "q": "Are XML declarations, attributes, and self-closing tags preserved?",
+      "a": "Yes. Normalization keeps the XML declaration on its own line and preserves attributes and self-closing tags, so the diff reflects genuine structural and content changes."
+    },
+    {
+      "q": "Is my XML uploaded to a server?",
+      "a": "No. The comparison runs entirely in your browser. Your XML never leaves your device and nothing is uploaded or stored on any server."
+    }
+  ]
+}

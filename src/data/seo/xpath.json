@@ -1,0 +1,33 @@
+{
+  "intro": "This XPath tester runs an XPath expression against an XML document and shows the matching result instantly in your browser. Enter your XML on the left, type an XPath query in the toolbar, and the tool prints matched text, attribute values, serialized element markup, or the result of an XPath function such as count() or string(). It's useful whenever you need to write, debug, or verify an XPath selector without setting up a script or parser.",
+  "useCases": [
+    "Test and debug an XPath selector against a real XML sample before using it in code",
+    "Extract text nodes or attribute values from an XML document with expressions like //title/text() or //node/@id",
+    "Count matching nodes or evaluate boolean conditions using functions such as count(//book) or count(//book) > 1",
+    "Serialize selected element nodes to their XML markup to inspect structure",
+    "Verify how positional predicates like //title[1] behave relative to each parent context",
+    "Use string functions such as string() or normalize-space() to normalize extracted values"
+  ],
+  "faq": [
+    {
+      "q": "Is my XML data sent to a server?",
+      "a": "No. The XML is parsed and the XPath expression is evaluated entirely in your browser with JavaScript, so nothing you enter is uploaded or stored anywhere."
+    },
+    {
+      "q": "What kinds of XPath results can it show?",
+      "a": "It handles node-sets (text, attribute, and element nodes), as well as string, number, and boolean results from XPath functions. Multiple matched nodes are joined one per line, and element nodes are shown as their serialized XML."
+    },
+    {
+      "q": "What happens when nothing matches?",
+      "a": "If the expression returns an empty node-set, the tool shows \"No matches.\" If you leave the XPath box blank, it shows a hint asking you to enter an expression."
+    },
+    {
+      "q": "What if my XPath expression or XML is invalid?",
+      "a": "An invalid XPath expression or malformed XML (for example empty input or unclosed tags) raises a parse error, which the tool surfaces so you can fix the query or document."
+    },
+    {
+      "q": "Does it support XPath functions and predicates?",
+      "a": "Yes. You can use functions like count(), string(), normalize-space(), and true(), along with positional predicates such as [1], and the result is converted to a readable string."
+    }
+  ]
+}

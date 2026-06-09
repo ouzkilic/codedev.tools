@@ -1,0 +1,28 @@
+{
+  "intro": "YAML Diff compares two YAML documents and highlights what actually changed, ignoring noise like key ordering and formatting. It parses each side, re-serializes with sorted keys, then runs a line-by-line diff so you see real value, key, and structural differences instead of cosmetic ones. It is handy whenever you need to review YAML configuration changes without getting distracted by reordered keys.",
+  "useCases": [
+    "Reviewing changes between two Kubernetes manifests or Helm values files where keys may have been reordered",
+    "Comparing a CI/CD pipeline config before and after an edit to confirm only the intended values changed",
+    "Diffing two app configuration files (e.g. dev vs prod) to spot missing or added keys",
+    "Verifying that a refactor that reorders YAML keys did not accidentally alter any values",
+    "Inspecting differences between two versions of an OpenAPI or docker-compose definition"
+  ],
+  "faq": [
+    {
+      "q": "Does reordering keys show up as a difference?",
+      "a": "No. Both documents are re-serialized with keys sorted alphabetically before comparison, so key-order-only changes are treated as equal. Only changes to values, keys, or structure are reported."
+    },
+    {
+      "q": "Are list (sequence) items treated the same way as map keys?",
+      "a": "No. Mapping keys are sorted so their order does not matter, but list items are ordered, so reordering elements in a YAML sequence is reported as a real difference."
+    },
+    {
+      "q": "What happens if my YAML is invalid?",
+      "a": "Parsing fails and the tool reports an error for that side. Both inputs must be valid YAML for the diff to run."
+    },
+    {
+      "q": "Is my data uploaded anywhere?",
+      "a": "No. Parsing, normalization, and the diff all run entirely in your browser. Nothing you paste is sent to a server or stored remotely."
+    }
+  ]
+}

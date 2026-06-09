@@ -1,0 +1,32 @@
+{
+  "intro": "Words to Number converts English number words like \"one thousand two hundred thirty-four\" into their numeric form (1234) instantly in your browser. It understands units, teens, tens, hundreds, the scale words thousand, million and billion, hyphenated forms such as forty-two, the connector \"and\", and negative markers like \"negative\" or \"minus\". It is handy whenever you need to turn spelled-out numbers into plain integers for code, data, or testing.",
+  "useCases": [
+    "Normalize spelled-out numbers from scraped text or OCR output into integers before storing them",
+    "Convert numbers written as words in CSV or JSON fixtures into numeric values for test data",
+    "Quickly check what a long compound phrase like \"one million two hundred thirty-four thousand\" evaluates to",
+    "Clean up user-entered amounts that mix words and hyphens (e.g. \"forty-two\") into a single integer",
+    "Parse negative amounts expressed as \"negative\" or \"minus\" followed by number words"
+  ],
+  "faq": [
+    {
+      "q": "Is my input sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript. Nothing you type is uploaded, logged, or sent anywhere."
+    },
+    {
+      "q": "Which number words are supported?",
+      "a": "Units zero through nineteen, the tens (twenty through ninety), hundred, and the scale words thousand, million and billion. It also accepts hyphenated forms like forty-two and the connector word \"and\"."
+    },
+    {
+      "q": "How do I write negative numbers?",
+      "a": "Start the phrase with \"negative\" or \"minus\", for example \"negative five\" gives -5 and \"minus forty-two\" gives -42."
+    },
+    {
+      "q": "What happens if I include a word it does not recognize?",
+      "a": "The tool reports an error naming the unrecognized word, so \"one foo\" fails with a message about \"foo\". Emoji and accented words that are not valid number words are also rejected."
+    },
+    {
+      "q": "Is the input case sensitive?",
+      "a": "No. Input is lowercased before parsing, so \"ONE Thousand\" and \"one thousand\" both convert to 1000, and extra spaces are collapsed automatically."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Zod to TypeScript converts a Zod object schema into a matching TypeScript interface right in your browser. Paste a z.object({ ... }) definition and instantly get an export interface Schema with the correct field types, optional markers, and nested shapes. It is handy when you want a quick static type from an existing Zod validator without pulling in extra tooling or running a build step.",
+  "useCases": [
+    "Turn a z.object schema into an exported TypeScript interface to use as a function parameter or API response type.",
+    "Generate union types from z.enum members so your code only accepts the allowed string literals.",
+    "Map array fields like z.array(z.string()) to TypeScript array types such as string[].",
+    "Flatten nested z.object definitions into inline object types for quick reference.",
+    "Mark optional or nullish fields with a ? so the generated interface reflects which properties may be missing."
+  ],
+  "faq": [
+    {
+      "q": "Which Zod types does the converter support?",
+      "a": "It handles z.string(), z.number(), z.boolean(), z.enum([...]), z.array(...), and nested z.object({...}). Optional and nullish fields are detected and rendered with a ? modifier. Unsupported types such as z.date() throw an error rather than guessing."
+    },
+    {
+      "q": "How are optional fields handled?",
+      "a": "Fields ending in .optional() or .nullish() are marked with a ? in the generated interface. The check scans the whole field value, so a modifier placed anywhere in the expression flags that field as optional."
+    },
+    {
+      "q": "What does the generated output look like?",
+      "a": "It always produces a single export interface Schema { ... } block. Enums become string-literal unions, arrays become element[] types, and nested objects are inlined as object types."
+    },
+    {
+      "q": "Why did I get an error instead of an interface?",
+      "a": "The input must contain a z.object({ ... }) with at least one field and balanced brackets. You will get an error if no z.object is found, the object is empty, brackets are unbalanced, an enum has no members, or a field uses an unsupported Zod type."
+    },
+    {
+      "q": "Is my schema sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, so nothing you paste is uploaded or stored anywhere."
+    }
+  ]
+}

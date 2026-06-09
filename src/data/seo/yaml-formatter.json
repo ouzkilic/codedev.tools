@@ -1,0 +1,33 @@
+{
+  "intro": "The YAML Formatter parses your YAML and re-serializes it with clean, consistent 2-space indentation and normalized spacing, so messy or hand-edited configuration becomes tidy and readable. It also surfaces syntax errors immediately, making it a quick way to validate that a YAML document is well-formed. It is handy any time you need to clean up Kubernetes manifests, CI pipelines, or app config files.",
+  "useCases": [
+    "Reformat a hand-edited Kubernetes or Docker Compose manifest into consistent 2-space indentation before committing it.",
+    "Validate that a CI/CD pipeline file (GitHub Actions, GitLab CI) is well-formed YAML and catch syntax errors early.",
+    "Convert compact flow-style YAML like {a: 1, b: 2} into readable block style.",
+    "Normalize inconsistent spacing and redundant quotes across a team's configuration files.",
+    "Resolve YAML anchors and aliases into their concrete values to see the fully expanded document.",
+    "Tidy up a generated or pasted YAML snippet before sharing it in documentation or a review."
+  ],
+  "faq": [
+    {
+      "q": "Is my YAML uploaded to a server?",
+      "a": "No. The formatter runs entirely in your browser and your YAML never leaves your device or gets sent anywhere."
+    },
+    {
+      "q": "What indentation does the formatter use?",
+      "a": "It always re-indents the document using 2 spaces per level for nested mappings and sequences."
+    },
+    {
+      "q": "Does it wrap long lines?",
+      "a": "No. Line wrapping is disabled, so long scalar values stay on a single line instead of being folded across multiple lines."
+    },
+    {
+      "q": "What happens if my YAML is invalid?",
+      "a": "The tool reports an error instead of producing output. Common causes include tab characters used for indentation, inconsistent structure, or more than one document in a single stream."
+    },
+    {
+      "q": "Why did my flow-style or quoted values change?",
+      "a": "The formatter re-serializes the parsed data, so flow-style mappings and sequences become block style, redundant quotes are dropped, and ambiguous values like yes are quoted to keep them as strings."
+    }
+  ]
+}

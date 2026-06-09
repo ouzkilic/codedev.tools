@@ -1,0 +1,32 @@
+{
+  "intro": "YAML to XML converts a YAML mapping into a clean, two-space-indented XML document right in your browser. Paste any YAML object and instantly get the equivalent XML, with nested mappings, arrays, and scalar values mapped to elements automatically. It is handy whenever a config or API expects XML but you would rather author it in concise, readable YAML.",
+  "useCases": [
+    "Turn a YAML configuration file into XML for legacy systems or SOAP-style services that require XML input.",
+    "Convert YAML mappings into XML elements where each list item repeats its parent key (for example a list under 'item' becomes multiple <item> tags).",
+    "Add XML attributes from YAML by prefixing keys with @_ (so \"@_id\": 5 renders as id=\"5\") and inline text via a #text key.",
+    "Quickly preview how nested YAML structures translate into a properly indented XML tree while editing documentation or fixtures.",
+    "Sanity-check that special characters such as <, >, & and quotes are correctly escaped before pasting XML into another tool."
+  ],
+  "faq": [
+    {
+      "q": "Is my YAML data uploaded to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, so your YAML never leaves your device and nothing is uploaded or stored remotely."
+    },
+    {
+      "q": "What kind of YAML input is accepted?",
+      "a": "The input must be a top-level YAML mapping (an object). Top-level lists, scalars, numbers, or null documents are rejected with the error 'YAML must be a top-level mapping.'"
+    },
+    {
+      "q": "How are arrays in YAML represented in the XML output?",
+      "a": "A list value does not produce a wrapper element. Instead the parent key is repeated for each item, so three items under 'list' produce three separate <list> elements."
+    },
+    {
+      "q": "Can I produce XML attributes and inline text?",
+      "a": "Yes. Keys prefixed with @_ become attributes on their element, and a #text key sets the element's text content, letting you build tags like <item id=\"5\">hello</item>."
+    },
+    {
+      "q": "How are special characters and empty values handled?",
+      "a": "Characters like <, >, & and quotes are XML-escaped automatically, null values render as self-closing elements such as <nil/>, and the output is indented with two spaces."
+    }
+  ]
+}

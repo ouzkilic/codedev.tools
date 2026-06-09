@@ -1,0 +1,32 @@
+{
+  "intro": "The XML to YAML converter turns XML markup into clean, readable YAML right in your browser. It validates the XML, parses elements, attributes, and nested structures, then outputs equivalent YAML. This is handy whenever you need to migrate XML data or config into a YAML-based format.",
+  "useCases": [
+    "Convert a legacy XML configuration file into YAML for a tool that expects YAML (CI pipelines, Kubernetes, Ansible).",
+    "Quickly inspect a deeply nested XML payload as easier-to-read YAML while debugging.",
+    "Migrate XML-based fixtures or sample data into YAML for tests and documentation.",
+    "Transform an XML API response into YAML to paste into a config or spec file.",
+    "Flatten repeated XML sibling tags into a YAML sequence (list) automatically."
+  ],
+  "faq": [
+    {
+      "q": "How are XML attributes represented in the YAML output?",
+      "a": "Attributes are preserved and prefixed with @_ on their key (for example id=\"1\" becomes '@_id'). When an element has both text and attributes, the text is kept under a '#text' key."
+    },
+    {
+      "q": "What happens to repeated tags with the same name?",
+      "a": "Repeated sibling elements with the same tag name are grouped into a YAML sequence (a list), so two <a> elements under one parent become a list of two items."
+    },
+    {
+      "q": "Are numbers and booleans kept as strings?",
+      "a": "No. Numeric and boolean-looking text values are emitted as native YAML scalars, so 42 stays an unquoted number and true stays an unquoted boolean rather than a quoted string."
+    },
+    {
+      "q": "What if my XML is invalid?",
+      "a": "The XML is validated before conversion. If it is malformed, for example with mismatched or unclosed tags, the tool reports the validation error instead of producing output."
+    },
+    {
+      "q": "Is my data uploaded anywhere?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript. Your XML is never sent to a server or uploaded anywhere."
+    }
+  ]
+}

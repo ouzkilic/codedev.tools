@@ -1,0 +1,32 @@
+{
+  "intro": "The whitespace cleaner tidies messy text by trimming trailing and leading spaces from each line, collapsing repeated spaces and tabs into a single space, and removing blank lines. It is handy whenever you paste code, logs, or data and want consistent, clean formatting without manually hunting for stray whitespace. Each option is an independent toggle, so you can apply only the cleanup you need.",
+  "useCases": [
+    "Stripping trailing whitespace from code or config files before committing to avoid noisy diffs",
+    "Collapsing runs of spaces and tabs in pasted log output so columns and messages line up",
+    "Removing empty lines from a list of items copied out of a spreadsheet or document",
+    "Normalizing indentation-heavy snippets where mixed tabs and spaces leave extra gaps",
+    "Cleaning up data dumps before pasting them into another tool that is sensitive to blank lines"
+  ],
+  "faq": [
+    {
+      "q": "Does my text get uploaded anywhere?",
+      "a": "No. The whitespace cleaner runs entirely in your browser as a pure text transformation. Nothing you paste is sent to a server, so it is safe for private code, logs, and data."
+    },
+    {
+      "q": "What does Collapse spaces actually collapse?",
+      "a": "It replaces any run of two or more spaces or tabs with a single space. A single space between words is left untouched, and other characters are never changed."
+    },
+    {
+      "q": "In what order are the options applied?",
+      "a": "Spaces are collapsed first, then each line is trimmed, and finally empty lines are removed. This ordering means a line that becomes blank after collapsing and trimming will also be dropped when Remove empty lines is on."
+    },
+    {
+      "q": "Will trimming remove blank lines too?",
+      "a": "No. Trimming only strips leading and trailing whitespace from each line; a line that becomes empty stays as an empty line unless you also enable Remove empty lines."
+    },
+    {
+      "q": "Are emoji or accented characters affected?",
+      "a": "No. Only spaces and tabs are treated as whitespace. Emoji, accented letters, and other non-whitespace characters are preserved exactly."
+    }
+  ]
+}

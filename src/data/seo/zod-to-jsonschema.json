@@ -1,0 +1,32 @@
+{
+  "intro": "The Zod to JSON Schema converter turns a Zod object schema into a draft-07 JSON Schema right in your browser. Paste a z.object(...) definition and it maps strings, numbers, booleans, arrays, enums, nested objects, and optional fields into the equivalent JSON Schema with a properties map and a required list. It's handy whenever you already model data with Zod but need a portable JSON Schema for documentation, validation tooling, or API contracts.",
+  "useCases": [
+    "Generate a draft-07 JSON Schema from an existing Zod object to feed OpenAPI docs or form builders that expect JSON Schema.",
+    "Quickly inspect how a Zod schema's optional() fields translate into a JSON Schema required array.",
+    "Convert nested Zod objects and arrays (including arrays of objects) into a structured JSON Schema tree.",
+    "Map a z.enum([...]) into a JSON Schema enum constraint for validation or code generation.",
+    "Share a language-neutral JSON Schema with teammates or services that don't use Zod or TypeScript."
+  ],
+  "faq": [
+    {
+      "q": "Which Zod types are supported?",
+      "a": "It handles z.string, z.number, z.boolean, z.array, z.enum, and nested z.object. Chained refinements like .email() or .int() are recognized as their base primitive (string, number), and .optional() removes a field from the required list."
+    },
+    {
+      "q": "How are optional fields represented?",
+      "a": "Every field is added to the schema's properties, and any field without .optional() is also listed in the required array. Optional fields appear in properties but are left out of required."
+    },
+    {
+      "q": "What JSON Schema version does it output?",
+      "a": "It emits a draft-07 schema, with a $schema of http://json-schema.org/draft-07/schema# and a top-level type of object, pretty-printed with two-space indentation."
+    },
+    {
+      "q": "What happens with unsupported types or malformed input?",
+      "a": "The input must contain a z.object(...) schema. Unsupported types such as z.date(), missing colons, unbalanced braces, or non-Zod values produce a clear parse error instead of partial output."
+    },
+    {
+      "q": "Is my schema sent to a server?",
+      "a": "No. The conversion runs entirely in your browser with client-side JavaScript. Nothing you paste is uploaded or stored on any server."
+    }
+  ]
+}

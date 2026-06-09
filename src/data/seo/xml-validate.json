@@ -1,0 +1,32 @@
+{
+  "intro": "XML Validate checks whether an XML document is well-formed and reports the first syntax error it finds, including the line and column where it occurs. Paste your markup and the tool instantly confirms valid XML or surfaces issues like mismatched tags, unclosed elements, or repeated attributes. It is handy whenever you need a quick well-formedness check without setting up a parser or editor plugin.",
+  "useCases": [
+    "Verifying an API response or config file is well-formed XML before feeding it to a parser",
+    "Pinpointing the exact tag that breaks a document via the line/column reported in the error",
+    "Catching mismatched or crossed closing tags (for example <a><b></a></b>) during hand-editing",
+    "Spotting duplicate attributes on the same element, such as a repeated id",
+    "Quickly checking pasted SVG, RSS, or SOAP snippets without leaving the browser"
+  ],
+  "faq": [
+    {
+      "q": "Is my XML uploaded anywhere?",
+      "a": "No. Validation runs entirely in your browser using a client-side parser. Your XML is never sent to a server or stored remotely."
+    },
+    {
+      "q": "Does it check the XML against a schema (XSD or DTD)?",
+      "a": "No. It only checks well-formedness, that is, correct tag nesting, closing tags, attributes, and overall syntax. It does not validate against an XSD, DTD, or RELAX NG schema."
+    },
+    {
+      "q": "What does the error message tell me?",
+      "a": "On invalid input it shows the first problem the parser encounters, such as a mismatched closing tag, an unexpected character, or a repeated attribute, often with the line and column where it was found."
+    },
+    {
+      "q": "Is an empty or blank input considered valid?",
+      "a": "No. Empty or whitespace-only input is reported as an error because no start tag is found. A valid document needs at least one element."
+    },
+    {
+      "q": "Does it handle unicode and emoji?",
+      "a": "Yes. As long as the markup is well-formed, unicode text and emoji inside element content validate normally."
+    }
+  ]
+}

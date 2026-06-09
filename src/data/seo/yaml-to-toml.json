@@ -1,0 +1,32 @@
+{
+  "intro": "YAML to TOML converts a YAML document into equivalent TOML, turning nested mappings into tables, lists of objects into arrays of tables, and scalars into typed TOML values. It is useful when you have configuration written in YAML but need the TOML format expected by tools like Cargo, Hugo, or other apps that read .toml config. The conversion runs entirely in your browser, so it is a quick way to migrate config files without changing your data structure.",
+  "useCases": [
+    "Migrate an app or service configuration from a YAML file to a TOML file (for example, when adopting Cargo or a TOML-based config loader).",
+    "Convert a YAML mapping with nested sections into TOML tables and array-of-tables blocks for a static-site generator.",
+    "Quickly preview how a YAML config would look as TOML before committing to the format switch.",
+    "Translate a list of objects under a key into TOML [[array]] of tables for structured config.",
+    "Sanity-check that a YAML document is a valid top-level mapping that can be represented in TOML at all."
+  ],
+  "faq": [
+    {
+      "q": "Is my YAML uploaded anywhere during conversion?",
+      "a": "No. The conversion happens entirely in your browser using JavaScript. Your YAML is never sent to a server or any external service."
+    },
+    {
+      "q": "Why do I get an error about a top-level mapping?",
+      "a": "TOML documents must start with key/value pairs, so the input must be a YAML mapping (object) at the top level. A bare scalar, a top-level list, an empty document, or a null value will be rejected with that message."
+    },
+    {
+      "q": "What happens to YAML keys whose value is null?",
+      "a": "TOML has no null type, so keys with a null value are dropped from the output. The rest of the mapping is converted normally."
+    },
+    {
+      "q": "How are nested objects and lists represented in the TOML output?",
+      "a": "Nested mappings become TOML tables (for example [owner]), a list of scalars becomes an inline array, and a list of mappings becomes an array of tables (for example [[items]])."
+    },
+    {
+      "q": "Are value types preserved?",
+      "a": "Yes. Numbers, booleans, and floats are emitted as unquoted TOML values, while strings are quoted, matching the types parsed from your YAML."
+    }
+  ]
+}
