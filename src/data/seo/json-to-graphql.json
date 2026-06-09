@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to GraphQL Type infers GraphQL type definitions from a JSON sample, turning a representative object into ready-to-use schema types. Paste any JSON value and the tool walks the structure to produce named GraphQL types with inferred field types, so you can scaffold a schema without writing it by hand. It is handy when you have an API response or fixture and want a quick starting point for GraphQL type definitions.",
+  "useCases": [
+    "Scaffold GraphQL type definitions from an existing REST or JSON API response",
+    "Turn a sample JSON fixture into a starting schema while designing a GraphQL service",
+    "Generate nested types automatically for deeply structured JSON objects",
+    "Quickly check what GraphQL field types (Int, Float, String, Boolean) a JSON sample maps to",
+    "Bootstrap types before refining nullability and naming in your real schema"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing is uploaded or stored on a server. Your JSON never leaves your device."
+    },
+    {
+      "q": "How are JSON types mapped to GraphQL types?",
+      "a": "Strings become String, booleans become Boolean, and numbers become Int when they are integers or Float otherwise. Objects become named GraphQL types and arrays become a list of the element type, such as [String]."
+    },
+    {
+      "q": "How does it handle nested objects and arrays?",
+      "a": "Each nested object generates its own named type, derived from the field name in PascalCase, and parent types reference those by name. For arrays, the type of the first element is used and a singular form of the field name is applied to name the element type."
+    },
+    {
+      "q": "What happens with null values or empty arrays?",
+      "a": "A null value is inferred as String, and an empty array is inferred as [String], since there is no value present to infer a more specific type. You may want to adjust these manually for accuracy."
+    },
+    {
+      "q": "Does the generated schema include nullability or directives?",
+      "a": "No. The output is a plain set of GraphQL type definitions with inferred field types only; it does not add non-null markers, queries, mutations, or directives. Treat it as a starting point to refine by hand."
+    }
+  ]
+}

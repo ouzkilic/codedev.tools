@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Formatter pretty-prints JSON with readable two-space indentation, turning minified or messy data into a clean, structured layout. It's handy whenever you need to beautify and inspect API responses, config files, or log output. Everything runs in your browser, so you can format and indent JSON without sending it anywhere.",
+  "useCases": [
+    "Beautify a minified API response so you can read its structure",
+    "Re-indent a hand-edited config file to consistent two-space spacing",
+    "Inspect deeply nested JSON by expanding it into an indented layout",
+    "Quickly check whether a snippet is valid JSON before using it elsewhere",
+    "Clean up copy-pasted JSON from logs or chat messages for sharing"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The formatter runs entirely in your browser using the built-in JSON parser, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "What indentation does it use?",
+      "a": "It always formats with two-space indentation. There is currently no option to change the indent size or use tabs."
+    },
+    {
+      "q": "What happens if my JSON is invalid?",
+      "a": "Parsing fails and you'll see an error instead of formatted output, since the tool uses the standard JSON parser. Fix the reported syntax issue and try again."
+    },
+    {
+      "q": "Does it support comments or trailing commas?",
+      "a": "No. It only accepts strict, standard JSON, so JSON5-style comments and trailing commas will cause a parse error."
+    },
+    {
+      "q": "Does formatting change my data?",
+      "a": "It only re-serializes the parsed value with indentation, so the data stays the same. Note that key order is preserved as parsed and duplicate keys collapse to the last value, per standard JSON parsing."
+    }
+  ]
+}

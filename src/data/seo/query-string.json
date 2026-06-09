@@ -1,0 +1,32 @@
+{
+  "intro": "Query String to JSON converts a URL query string into a readable JSON object, and can also build a query string back from a JSON object of key/value pairs. It is handy when you are inspecting URL params, debugging API requests, or copying search parameters between tools. Everything runs in your browser, so you can paste raw query strings or JSON without sending anything anywhere.",
+  "useCases": [
+    "Turn a long URL query string like ?page=2&sort=name into structured JSON to read it at a glance",
+    "Build an encoded query string from a JSON object when assembling an API request URL",
+    "Inspect repeated parameters (e.g. tag=a&tag=b) that get grouped into a JSON array",
+    "Verify how special characters and spaces are percent-encoded in a query string",
+    "Quickly reformat URL search params copied from browser devtools or logs"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using the built-in URLSearchParams API, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "How are repeated keys handled?",
+      "a": "When a query string has the same key more than once (e.g. id=1&id=2), the values are collected into a JSON array. When converting JSON to a query string, an array value is expanded back into repeated key entries."
+    },
+    {
+      "q": "Do I need to include the leading ? in the query string?",
+      "a": "It is optional. A leading ? or & is stripped automatically, so both ?a=1&b=2 and a=1&b=2 work the same way."
+    },
+    {
+      "q": "What kind of JSON does the JSON to Query mode accept?",
+      "a": "It must be a flat JSON object of key/value pairs. Arrays as the top-level value are rejected, and non-string values are converted to strings, so nested objects become their string form rather than encoded sub-fields."
+    },
+    {
+      "q": "Are values URL-encoded automatically?",
+      "a": "Yes. Building a query string uses URLSearchParams, so spaces and special characters are percent-encoded, and parsing decodes them back into plain text in the JSON output."
+    }
+  ]
+}

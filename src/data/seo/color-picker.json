@@ -1,0 +1,32 @@
+{
+  "intro": "Color Picker lets you choose a color and instantly read its HEX, RGB and HSL values side by side. It's handy when you're styling a UI and need the same color in different formats, or when you want to convert a HEX code into RGB and HSL without reaching for a calculator. Everything runs in your browser, so you can grab and copy color values quickly.",
+  "useCases": [
+    "Convert a HEX color like #3b82f6 into its rgb() and hsl() equivalents for CSS",
+    "Pick a color visually and copy the HEX value into a stylesheet or design token",
+    "Read the HSL hue, saturation and lightness of a color to build a consistent palette",
+    "Double-check that a HEX code maps to the RGB values you expect",
+    "Grab matching color formats while writing CSS, Tailwind config, or SVG fills"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The Color Picker runs entirely in your browser and computes all conversions locally. Nothing about the colors you pick is uploaded or stored on any server."
+    },
+    {
+      "q": "Which color formats does it show?",
+      "a": "It displays three formats for the selected color: HEX (lowercased), RGB as rgb(r, g, b), and HSL as hsl(h, s%, l%)."
+    },
+    {
+      "q": "How are the HSL values calculated?",
+      "a": "The tool converts the HEX color to RGB, then derives HSL from it. Hue is rounded to the nearest degree (0-360) and saturation and lightness are rounded to the nearest whole percentage."
+    },
+    {
+      "q": "Does it support alpha or transparency?",
+      "a": "No. It works with 6-digit HEX colors and outputs opaque RGB and HSL values, so there is no alpha or opacity channel."
+    },
+    {
+      "q": "Can I paste my own HEX code instead of using the picker?",
+      "a": "The tool reads a 6-digit HEX value (with or without a leading #) and shows the matching RGB and HSL output for it."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "intro": "The Code Formatter runs Prettier in your browser to clean up and beautify source code with consistent indentation and style. It supports JavaScript, TypeScript, JSON, CSS, SCSS, LESS, HTML and Markdown, so you can paste messy or minified code and get a readable, formatted result. It is handy whenever you want quick formatting without installing Prettier or wiring it into your editor.",
+  "useCases": [
+    "Reformat minified or poorly indented JavaScript and TypeScript into readable code",
+    "Pretty-print compact JSON payloads from API responses or logs",
+    "Clean up CSS, SCSS or LESS stylesheets with consistent spacing",
+    "Tidy HTML markup pasted from another source",
+    "Format Markdown documents before committing them",
+    "Quickly format a snippet when Prettier is not set up in your local environment"
+  ],
+  "faq": [
+    {
+      "q": "Is my code sent to a server?",
+      "a": "No. Formatting runs entirely in your browser using Prettier's standalone build, and nothing you paste is uploaded or stored anywhere."
+    },
+    {
+      "q": "Which languages and formats are supported?",
+      "a": "JavaScript, TypeScript, JSON, CSS, SCSS, LESS, HTML and Markdown. You pick the language from the Language option before formatting."
+    },
+    {
+      "q": "Can I configure options like print width, tabs or semicolons?",
+      "a": "Not currently. The tool formats with Prettier's default settings; the only choice exposed is the language/parser to use."
+    },
+    {
+      "q": "What happens if my code has a syntax error?",
+      "a": "Prettier needs parseable input, so invalid syntax for the selected language will produce a parse error instead of formatted output. Make sure the language selection matches your code."
+    },
+    {
+      "q": "Does it use the real Prettier?",
+      "a": "Yes. It loads Prettier's standalone engine and the matching language plugins on demand, so output matches what Prettier produces with its defaults."
+    }
+  ]
+}

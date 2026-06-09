@@ -1,0 +1,32 @@
+{
+  "intro": "Tailwind → CSS is a searchable reference that maps common Tailwind utility classes to the plain CSS they generate. Type part of a class name like flex or px-4, or part of a CSS declaration like padding, and the list filters instantly to matching entries. It is handy when you are learning Tailwind, reviewing markup, or want to recall what a utility actually does without leaving your browser.",
+  "useCases": [
+    "Look up what a Tailwind class such as truncate or justify-between compiles to in CSS",
+    "Search by CSS property (for example 'display' or 'border-radius') to find the matching utility class",
+    "Refresh your memory on spacing, flexbox, and typography utilities while reading or reviewing code",
+    "Help someone new to Tailwind translate utility-first markup into familiar CSS",
+    "Quickly confirm the rem or pixel value behind a class like p-4, text-lg, or rounded-lg"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser using a built-in lookup table, so nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "How many classes does the reference cover?",
+      "a": "It includes a curated set of around 70 of the most common Tailwind utilities across display, flexbox, spacing, sizing, typography, borders, positioning, and more. It is a quick reference, not an exhaustive list of every Tailwind class."
+    },
+    {
+      "q": "How does the search work?",
+      "a": "The filter is a case-insensitive substring match against both the class name and its CSS output, so searching 'rem' or 'center' will surface every entry that contains that text in either column."
+    },
+    {
+      "q": "Are arbitrary values, variants, or custom config supported?",
+      "a": "No. The reference shows fixed default mappings only. Responsive prefixes, state variants like hover:, and arbitrary value syntax such as p-[7px] are not part of the table."
+    },
+    {
+      "q": "Does it reflect a specific Tailwind version?",
+      "a": "It reflects the default CSS values for these common utilities. Exact values can differ if your project overrides Tailwind's default theme, so treat it as a quick reference rather than a substitute for your build output."
+    }
+  ]
+}

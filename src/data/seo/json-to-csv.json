@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to CSV converts a JSON array of objects into CSV text right in your browser. Paste an array like [{\"name\":\"Ada\",\"age\":36}], and it produces a comma-separated table with a header row derived from the object keys. It's handy whenever you need to export, convert, or open JSON data as a table in a spreadsheet.",
+  "useCases": [
+    "Turn an API response that returns a JSON array into a CSV you can open in Excel or Google Sheets",
+    "Export records from a database query or log dump into a spreadsheet-friendly table",
+    "Convert mock or seed data to CSV for import into another system",
+    "Flatten a list of objects into columns for quick review or sharing with non-developers",
+    "Generate CSV fixtures for testing import pipelines"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored remotely."
+    },
+    {
+      "q": "What input format does it expect?",
+      "a": "It expects a JSON array, typically an array of objects such as [{\"id\":1},{\"id\":2}]. If the input is valid JSON but not an array, it returns an error asking for a JSON array of objects."
+    },
+    {
+      "q": "How are the CSV columns and headers determined?",
+      "a": "Columns and the header row come from the object keys in the array, handled by the PapaParse library. Objects with differing keys are unified into a single set of columns."
+    },
+    {
+      "q": "What line endings does the output use?",
+      "a": "The output is normalized to LF (\\n) line endings for consistent, cross-platform results, rather than CRLF."
+    },
+    {
+      "q": "What happens if my JSON is invalid?",
+      "a": "Invalid JSON cannot be parsed, so the tool surfaces a parse error instead of producing CSV. Fix the syntax and the conversion runs again."
+    }
+  ]
+}

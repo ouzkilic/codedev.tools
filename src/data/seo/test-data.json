@@ -1,0 +1,32 @@
+{
+  "intro": "The Test Data Generator creates Luhn-valid test credit-card numbers and test IBANs you can paste into forms, fixtures, and automated tests. Pick a type and a count, and it produces random sample data right in your browser, so you never have to risk real card numbers or account details. It's handy whenever you need fake but structurally valid data to exercise validation logic.",
+  "useCases": [
+    "Seeding test fixtures or mock databases with structurally valid credit-card numbers",
+    "Verifying that a payment form's Luhn checksum validation accepts and rejects the right inputs",
+    "Generating placeholder IBANs to test bank-account input fields and parsers",
+    "Producing quick throwaway sample data for QA, demos, or bug reproductions",
+    "Filling out staging or sandbox forms without exposing real financial data"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser using the Web Crypto API for randomness. Nothing is uploaded, logged, or sent anywhere."
+    },
+    {
+      "q": "Are the generated credit-card numbers real?",
+      "a": "No. They are random 16-digit numbers starting with 4 (a Visa-style prefix) and ending in a valid Luhn check digit. They pass the Luhn algorithm but are not tied to any real account and cannot be used for payments."
+    },
+    {
+      "q": "Are the IBANs valid for real bank transfers?",
+      "a": "No. Each IBAN is a German-style string (DE prefix plus 20 random digits). The check digits are random, not computed, so the IBAN is meant only for testing input fields and is not a usable account."
+    },
+    {
+      "q": "How many items can I generate at once?",
+      "a": "You can set any count, but it is clamped to a minimum of 1 and a maximum of 100. Each generated value appears on its own line."
+    },
+    {
+      "q": "What types of test data are supported?",
+      "a": "Two types: Luhn-valid credit-card numbers and German-format test IBANs. Select the type before generating."
+    }
+  ]
+}

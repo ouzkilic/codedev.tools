@@ -1,0 +1,32 @@
+{
+  "intro": "The Regex Explainer breaks a regular expression down token by token, pairing each part of the pattern with a plain-English description of what it matches. Paste a regex and it walks through escapes like \\d and \\w, character sets, groups, anchors, and quantifiers so you can understand or sanity-check a pattern without parsing it in your head. It runs entirely in your browser, which makes it handy for quickly decoding unfamiliar patterns from code reviews, logs, or config files.",
+  "useCases": [
+    "Decode an unfamiliar regex copied from someone else's code or a Stack Overflow answer.",
+    "Sanity-check your own pattern by confirming each token does what you expect.",
+    "Learn regex syntax by seeing how anchors, groups, and quantifiers are described.",
+    "Document a pattern by listing its tokens and meanings during a code review.",
+    "Spot mistakes such as an unintended character set or a misplaced quantifier."
+  ],
+  "faq": [
+    {
+      "q": "Is my regex sent to a server?",
+      "a": "No. The tool runs entirely in your browser and nothing is uploaded. Your pattern never leaves your device."
+    },
+    {
+      "q": "What regex tokens does it recognize?",
+      "a": "It explains escape sequences (\\d, \\D, \\w, \\W, \\s, \\S, \\b), character sets including negated ones, capturing and non-capturing (?:) groups, the anchors ^ and $, the quantifiers *, + and ?, alternation with |, and brace quantifiers like {3}, {2,5} and {2,}."
+    },
+    {
+      "q": "Does it tell me whether my regex is valid?",
+      "a": "No. It does not compile or validate the pattern; it walks the string and describes each token it recognizes. Anything it does not recognize is reported as a literal character."
+    },
+    {
+      "q": "Which regex flavor does it assume?",
+      "a": "It is geared toward common JavaScript-style regex syntax. Flags (such as g, i or m) and lookahead or lookbehind groups are not specially interpreted."
+    },
+    {
+      "q": "What happens with an empty input?",
+      "a": "An empty or whitespace-only input produces an error asking you to enter a regular expression to explain."
+    }
+  ]
+}

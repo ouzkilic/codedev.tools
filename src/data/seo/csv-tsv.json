@@ -1,0 +1,32 @@
+{
+  "intro": "CSV ↔ TSV is a converter that switches data between comma-separated values (CSV) and tab-separated values (TSV) directly in your browser. Pick a direction — CSV → TSV or TSV → CSV — paste your data, and it re-parses the rows and re-serializes them with the new delimiter. It is handy when a tool, spreadsheet, or script expects one delimiter but your file uses the other.",
+  "useCases": [
+    "Convert a comma-separated export into TSV for tools that paste cleanly into spreadsheets without quoting issues",
+    "Turn a tab-separated dump (e.g. copied from a database client) into proper CSV",
+    "Normalize delimiter format before feeding data into a script or import pipeline",
+    "Quickly reformat clipboard data when the receiving app only accepts one separator",
+    "Clean up a file by dropping empty lines while changing the delimiter"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "Does it handle quoted fields that contain commas or tabs?",
+      "a": "Yes. It parses with PapaParse, so fields wrapped in quotes are treated as single values, and the output is re-quoted as needed for the target delimiter."
+    },
+    {
+      "q": "What happens to empty lines in my input?",
+      "a": "Empty lines are skipped during parsing, so they will not appear in the converted output. The input is also trimmed of leading and trailing whitespace before processing."
+    },
+    {
+      "q": "Which line endings does the output use?",
+      "a": "The output uses Unix-style line feeds (\\n); any carriage-return/line-feed (\\r\\n) sequences are normalized to \\n."
+    },
+    {
+      "q": "What if my input is malformed?",
+      "a": "If parsing produces a fatal error (other than a delimiter-detection warning), the tool reports the error message instead of returning output."
+    }
+  ]
+}

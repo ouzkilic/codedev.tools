@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Repair fixes broken or invalid JSON and returns clean, pretty-printed output. It automatically corrects common mistakes like unquoted keys, trailing commas, and single quotes, then re-formats the result with 2-space indentation. It is useful when you paste in malformed JSON from a log, an API response, or a config file and need valid JSON back quickly.",
+  "useCases": [
+    "Recover JSON copied from logs or terminals where keys are unquoted",
+    "Remove trailing commas left after editing arrays or objects by hand",
+    "Convert single-quoted strings and keys into valid double-quoted JSON",
+    "Clean up JavaScript-style object literals into strict JSON",
+    "Quickly re-indent and validate a messy JSON snippet before using it"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. JSON Repair runs entirely in your browser and nothing is uploaded. Your input never leaves your device."
+    },
+    {
+      "q": "What kinds of problems can it fix?",
+      "a": "It repairs common JSON mistakes such as unquoted keys, trailing commas, and single quotes used instead of double quotes. After repairing, it parses the result and re-formats it as valid, indented JSON."
+    },
+    {
+      "q": "How is the output formatted?",
+      "a": "The repaired JSON is pretty-printed with 2-space indentation. Even if your input was minified or messy, the output is consistently formatted."
+    },
+    {
+      "q": "What happens if the JSON is too broken to repair?",
+      "a": "If the input cannot be repaired into valid JSON that parses, the tool reports an error instead of returning output. In that case you will need to fix the structural problems manually."
+    },
+    {
+      "q": "Does it change my data values?",
+      "a": "No. It only fixes the JSON syntax so it becomes valid; the keys and values themselves are preserved, just reformatted."
+    }
+  ]
+}

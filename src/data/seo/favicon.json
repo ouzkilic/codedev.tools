@@ -1,0 +1,32 @@
+{
+  "intro": "The Favicon Generator turns any image into favicon PNGs at the standard sizes (16×16, 32×32, 48×48, and a 180×180 apple-touch-icon) right in your browser. Upload an image, preview each size, download the PNGs you need, and copy the matching HTML <link> tags to paste into your page head. It's handy whenever you're setting up a new site or app and want browser tab and home-screen icons without an online converter.",
+  "useCases": [
+    "Generate the 16×16 and 32×32 favicon PNGs for a new website's browser tab icon",
+    "Create a 180×180 apple-touch-icon PNG for iOS home-screen bookmarks",
+    "Resize a logo or square PNG into multiple favicon sizes at once",
+    "Copy ready-made <link rel=\"icon\"> and apple-touch-icon tags into your HTML head",
+    "Quickly check how a graphic looks scaled down to tiny favicon dimensions before shipping"
+  ],
+  "faq": [
+    {
+      "q": "Is my image sent to a server?",
+      "a": "No. The tool runs entirely in your browser using the canvas API, and nothing is uploaded. Your image never leaves your device."
+    },
+    {
+      "q": "What sizes does it generate?",
+      "a": "It produces PNGs at 16×16, 32×32, 48×48, and 180×180. The 180×180 file is intended as an apple-touch-icon for iOS."
+    },
+    {
+      "q": "Does it output a .ico file?",
+      "a": "No. The tool outputs PNG files only. The provided <link> tags reference the PNGs by their sizes, which modern browsers support."
+    },
+    {
+      "q": "Can I download all sizes in one click?",
+      "a": "Each size has its own Download button, so you download them individually as favicon-16x16.png, favicon-32x32.png, and so on. There is no combined ZIP download."
+    },
+    {
+      "q": "Does it keep my image's aspect ratio?",
+      "a": "No. Each output is square, and the image is scaled to fill that square. For best results start with a square source image so it isn't stretched."
+    }
+  ]
+}

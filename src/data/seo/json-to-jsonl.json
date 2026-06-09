@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to JSONL converts a JSON array into newline-delimited JSON (NDJSON), where each array element is written as one compact JSON object on its own line. This format is handy for streaming data, log pipelines, and bulk-loading tools that read one record per line. Paste a JSON array and get JSONL output instantly in your browser.",
+  "useCases": [
+    "Prepare training or fine-tuning data sets that expect one JSON record per line",
+    "Convert an exported JSON array into NDJSON for bulk import into Elasticsearch or BigQuery",
+    "Feed line-oriented log processors and streaming pipelines that read one JSON object at a time",
+    "Split a large JSON array into independent lines so records can be processed or appended individually",
+    "Generate JSONL fixtures for testing parsers and data loaders"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JSON.parse and JSON.stringify. Nothing you paste is uploaded or stored on a server."
+    },
+    {
+      "q": "What input does the tool expect?",
+      "a": "It expects a top-level JSON array. Each element of the array, whether an object, number, string, or nested array, becomes one line in the output. If the input is not an array, you will get an error."
+    },
+    {
+      "q": "Is the output formatted or compact?",
+      "a": "Each line is compact JSON with no extra whitespace, produced by JSON.stringify on the element. Lines are joined with a single newline character."
+    },
+    {
+      "q": "Why do I get an error when I paste a single JSON object?",
+      "a": "The tool only converts arrays, since JSONL emits one line per array element. Wrap a single object in an array (for example [ {...} ]) to convert it into one JSONL line."
+    },
+    {
+      "q": "What happens to nested objects and arrays inside elements?",
+      "a": "They are preserved exactly. Only the top level is split into lines; each element keeps its full structure serialized as compact JSON on its line."
+    }
+  ]
+}

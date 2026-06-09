@@ -1,0 +1,33 @@
+{
+  "intro": "Sort Lines reorders the lines of any text alphabetically, numerically, or by line length, in ascending or descending order. It's handy for tidying up word lists, log entries, CSV rows, or import statements, and includes an optional case-insensitive mode for alphabetical sorting. Paste your text, pick a sort mode and order, and get the sorted result instantly in your browser.",
+  "useCases": [
+    "Alphabetize a list of names, words, or tags",
+    "Sort import or dependency lines so they stay in a consistent order",
+    "Order a list of numbers ascending or descending",
+    "Arrange lines from shortest to longest by length",
+    "Clean up exported lists or config entries before committing them",
+    "Reverse the order of any sorted list with the descending option"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Sorting runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server. The site is open source so you can verify this yourself."
+    },
+    {
+      "q": "How does numeric sorting handle non-numeric lines?",
+      "a": "Numeric mode parses the start of each line as a number; lines that don't begin with a valid number are treated as 0. This means text-only lines will cluster together rather than being ordered alphabetically."
+    },
+    {
+      "q": "What does case-insensitive mode do?",
+      "a": "When enabled, alphabetical sorting compares lines without regard to upper or lowercase, so \"Apple\" and \"apple\" sort together. It only affects alphabetical mode, not numeric or length sorting."
+    },
+    {
+      "q": "How are lines split?",
+      "a": "Lines are split on the newline character (\\n). Empty lines are kept as empty strings and sorted along with the rest, so blank lines may move position in the output."
+    },
+    {
+      "q": "Does it sort by total length or alphabetically when sorting by length?",
+      "a": "Length mode sorts purely by the number of characters in each line. Lines with the same length keep their original relative order and are not further sorted alphabetically."
+    }
+  ]
+}

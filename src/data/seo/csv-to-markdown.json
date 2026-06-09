@@ -1,0 +1,32 @@
+{
+  "intro": "CSV to Markdown Table converts CSV data into a GitHub-flavored Markdown table directly in your browser. Paste any comma-separated values and the tool detects the delimiter automatically, treats the first row as the table header, and outputs ready-to-paste Markdown. It's handy whenever you need to drop tabular data into a README, pull request, issue, or any Markdown document.",
+  "useCases": [
+    "Turn an exported CSV report into a Markdown table for a README or documentation page",
+    "Paste spreadsheet data into a GitHub issue or pull request as a formatted table",
+    "Add tabular data to wiki pages, blog posts, or notes that use Markdown",
+    "Quickly preview how rows from a data export will look as a Markdown table",
+    "Convert small query results or logs into a shareable Markdown table"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and your CSV is never uploaded or stored on any server."
+    },
+    {
+      "q": "Which row becomes the table header?",
+      "a": "The first row of your CSV is always used as the Markdown table header, and a separator row is added automatically beneath it. The remaining rows become the table body."
+    },
+    {
+      "q": "Does it handle different delimiters?",
+      "a": "Yes. The tool uses PapaParse, which auto-detects the delimiter, so comma-, semicolon-, or tab-separated files are parsed correctly without extra configuration."
+    },
+    {
+      "q": "What happens to pipe characters in my data?",
+      "a": "Pipe characters (|) inside cells are escaped as \\| so they don't break the Markdown table structure."
+    },
+    {
+      "q": "Are empty lines included in the output?",
+      "a": "No. Blank lines are skipped during parsing. If the CSV contains no rows at all, the tool reports an error instead of producing an empty table."
+    }
+  ]
+}

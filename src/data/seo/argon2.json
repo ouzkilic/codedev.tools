@@ -1,0 +1,32 @@
+{
+  "intro": "The Argon2 Hash tool turns any password into an Argon2id hash directly in your browser using a WebAssembly build of the algorithm. Argon2id is a modern memory-hard key derivation function (KDF) recommended for password storage, and this tool generates a random salt for each run so you can quickly produce a hash for testing, fixtures, or learning how Argon2 output looks.",
+  "useCases": [
+    "Generate an Argon2id password hash for testing authentication code or seeding a database",
+    "Create example hashes for documentation, demos, or unit-test fixtures",
+    "Inspect the structure of the Argon2 encoded output string (parameters, salt, and digest)",
+    "Compare Argon2 against other KDFs while learning about password hashing",
+    "Quickly produce a hash without installing libraries or running a local script"
+  ],
+  "faq": [
+    {
+      "q": "Is my password sent to a server?",
+      "a": "No. Hashing runs entirely in your browser via WebAssembly, and your password never leaves your device or gets uploaded anywhere."
+    },
+    {
+      "q": "Which Argon2 variant and parameters does this tool use?",
+      "a": "It uses Argon2id with a parallelism of 1, 3 iterations, 4096 KiB of memory, and a 32-byte hash length. A fresh 16-byte random salt is generated for every hash."
+    },
+    {
+      "q": "Why do I get a different hash each time for the same password?",
+      "a": "A new random salt is generated on each run, so the output changes every time even for identical input. This is expected and is what makes Argon2 hashes resistant to precomputation attacks."
+    },
+    {
+      "q": "What output format is produced?",
+      "a": "The tool returns the standard Argon2 encoded string (the $argon2id$... format), which embeds the variant, parameters, salt, and digest so it can be stored and verified later."
+    },
+    {
+      "q": "Can I choose my own salt or parameters?",
+      "a": "Not in this tool. The salt is always randomly generated and the cost parameters are fixed, so it is intended for quick hashing rather than tuning Argon2 settings."
+    }
+  ]
+}

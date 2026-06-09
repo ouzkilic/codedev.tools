@@ -1,0 +1,32 @@
+{
+  "intro": "Cubic Bezier builds a CSS cubic-bezier() timing function from four control point values (X1, Y1, X2, Y2). Enter the coordinates and it outputs a ready-to-paste transition-timing-function declaration for your CSS animations and transitions. It is handy whenever you need a custom easing curve instead of the built-in ease, linear, or ease-in-out keywords.",
+  "useCases": [
+    "Generate a custom CSS easing curve for transition-timing-function or animation-timing-function",
+    "Reproduce a known easing preset by typing its four cubic-bezier coordinates",
+    "Fine-tune animation feel by adjusting the X1, Y1, X2, Y2 control points and copying the result",
+    "Produce a consistent cubic-bezier() string to share with teammates or drop into a stylesheet",
+    "Quickly write the timing-function declaration without memorizing the cubic-bezier() syntax"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and nothing is uploaded. The four values you enter are converted to a CSS string locally on your device."
+    },
+    {
+      "q": "What does the output look like?",
+      "a": "It produces a single CSS declaration in the form transition-timing-function: cubic-bezier(x1, y1, x2, y2);. You can paste it directly into a CSS rule or adapt it for animation-timing-function."
+    },
+    {
+      "q": "What happens if I leave a field blank or type an invalid number?",
+      "a": "Each field falls back to a default value when it cannot be parsed as a number: X1 = 0.25, Y1 = 0.1, X2 = 0.25, Y2 = 1. So an empty or invalid entry uses the default rather than breaking the output."
+    },
+    {
+      "q": "Can the X values be outside the 0 to 1 range?",
+      "a": "The tool does not restrict the values; it parses whatever number you enter and places it in the output. Note that the CSS spec only allows X1 and X2 (the time axis) to be between 0 and 1, while Y values can go beyond that range, so verify your coordinates if you need spec-valid CSS."
+    },
+    {
+      "q": "Does it show a live preview of the easing curve?",
+      "a": "No. The tool generates the cubic-bezier() CSS string from the four control point values; it does not draw or animate the curve itself."
+    }
+  ]
+}

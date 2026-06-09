@@ -1,0 +1,32 @@
+{
+  "intro": "The Box Shadow Generator builds a CSS box-shadow value from horizontal and vertical offsets, blur, spread, and a color, with a live preview so you can see the result as you adjust it. It outputs a ready-to-paste box-shadow declaration and supports an inset toggle, making it handy for quickly dialing in shadows for cards, buttons, and other UI elements.",
+  "useCases": [
+    "Designing drop shadows for cards, modals, and dropdown menus",
+    "Creating inset shadows for input fields or pressed-button states",
+    "Tweaking offset, blur, and spread values visually instead of guessing in code",
+    "Generating a box-shadow declaration to paste straight into a stylesheet or component",
+    "Experimenting with subtle vs. heavy shadows using an rgba color with adjustable opacity"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser and nothing is uploaded. All values and the preview are computed client-side."
+    },
+    {
+      "q": "What units do the X, Y, blur, and spread fields use?",
+      "a": "They are treated as pixel values; the generator appends px to whatever number you enter. So entering 4 for Y produces 4px in the output."
+    },
+    {
+      "q": "What color formats can I use?",
+      "a": "The color field is free text, so you can enter any valid CSS color such as an rgba() value, a hex code, or a named color. The default is rgba(0,0,0,0.25)."
+    },
+    {
+      "q": "Does it support inset shadows?",
+      "a": "Yes. Toggling the inset option prefixes the value with the inset keyword, producing an inner shadow instead of an outer one."
+    },
+    {
+      "q": "Can I create multiple stacked shadows at once?",
+      "a": "The tool generates a single box-shadow value. To stack multiple shadows, you can generate each one and combine them in your CSS, separated by commas."
+    }
+  ]
+}

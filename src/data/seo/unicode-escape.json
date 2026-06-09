@@ -1,0 +1,32 @@
+{
+  "intro": "Unicode Escape converts non-ASCII characters into \\uXXXX escape sequences, or unescapes existing \\u sequences back into readable text. It is handy when you need to embed emoji, accented letters, or other non-ASCII codepoints into JSON, source code, or config files that only accept plain ASCII. Everything runs in your browser, so you can escape and unescape Unicode strings instantly without sending anything to a server.",
+  "useCases": [
+    "Escape accented or non-Latin text into \\uXXXX form so it survives in ASCII-only JSON or source files",
+    "Unescape a string full of \\uXXXX sequences to see the actual characters it represents",
+    "Inspect which codepoints a piece of text contains when debugging encoding issues",
+    "Convert pasted code or log output that uses \\u escapes back into human-readable text",
+    "Decode mixed escape forms, including both \\uXXXX and \\u{...} sequences, in one pass"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser using client-side JavaScript, and nothing you type or paste is ever uploaded or stored on a server."
+    },
+    {
+      "q": "Which characters get escaped?",
+      "a": "Escape mode converts every character at U+0080 and above into a \\uXXXX sequence. Plain ASCII characters, including ASCII control characters below U+0080, are left unchanged."
+    },
+    {
+      "q": "What escape formats can the unescape mode read?",
+      "a": "Unescape understands both the fixed 4-hex-digit form \\uXXXX and the brace form \\u{...} with a variable number of hex digits, so it can also handle codepoints above the basic multilingual plane."
+    },
+    {
+      "q": "Why does escaping output \\uXXXX surrogate pairs for emoji?",
+      "a": "Escape works on UTF-16 code units, so characters outside the basic multilingual plane (like many emoji) are emitted as two \\uXXXX sequences. Unescape mode reverses this correctly."
+    },
+    {
+      "q": "Is the hex output uppercase or lowercase?",
+      "a": "Escape mode always produces lowercase hex digits, zero-padded to four characters (for example \\u00e9). Unescape mode accepts both uppercase and lowercase hex on input."
+    }
+  ]
+}

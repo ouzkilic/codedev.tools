@@ -1,0 +1,32 @@
+{
+  "intro": "The CRC32 Checksum tool computes the CRC32 hash of any text you paste, encoding the input as UTF-8 bytes and applying the standard IEEE polynomial (0xEDB88320). It returns the 32-bit result as both an 8-digit zero-padded hexadecimal value and a decimal number. This is handy for quickly verifying data integrity, comparing strings, or generating short, deterministic checksums.",
+  "useCases": [
+    "Verify that a string matches an expected CRC32 value reported by another tool or library",
+    "Generate a compact, deterministic checksum to use as a cache key or bucket identifier",
+    "Detect accidental changes by comparing the CRC32 of two text snippets",
+    "Reproduce the same CRC32 (IEEE) values used in zlib, PNG, and ZIP formats for short text inputs",
+    "Debug checksum mismatches by inspecting both the hex and decimal representations"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The CRC32 is computed entirely in your browser using JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Which CRC32 variant does this tool use?",
+      "a": "It uses the standard CRC-32/IEEE algorithm with the reversed polynomial 0xEDB88320, the same variant used by zlib, PNG, and ZIP. The result matches those implementations for identical byte input."
+    },
+    {
+      "q": "How is the input encoded before hashing?",
+      "a": "The text is encoded as UTF-8 bytes before the checksum is computed. Non-ASCII characters are therefore hashed as their multi-byte UTF-8 representation."
+    },
+    {
+      "q": "What format is the output in?",
+      "a": "It shows two lines: the checksum as an 8-character zero-padded lowercase hexadecimal value, and the same value in decimal."
+    },
+    {
+      "q": "Is CRC32 suitable for security or cryptographic use?",
+      "a": "No. CRC32 is an error-detection checksum, not a cryptographic hash. Use it for integrity checks and quick comparisons, not for hashing passwords or signing data."
+    }
+  ]
+}

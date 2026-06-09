@@ -1,0 +1,32 @@
+{
+  "intro": "Duration Formatter converts a number of seconds into a human-readable duration like \"1d 2h 3m 4s\", and converts that compact format back into a total number of seconds. It uses days, hours, minutes, and seconds, making it handy whenever you need to humanize a timeout, TTL, or elapsed time, or turn a written duration back into raw seconds.",
+  "useCases": [
+    "Turn a cache TTL or session timeout expressed in seconds (e.g. 3600) into a readable \"1h\"",
+    "Convert an elapsed time from a log or benchmark into days/hours/minutes/seconds",
+    "Compute the total seconds for a configured duration like \"2h 30m\" before pasting it into code or a config file",
+    "Sanity-check cron or scheduler intervals by switching between seconds and a human format",
+    "Quickly read large second values such as uptime counters without doing the math by hand"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and performs the conversion locally in JavaScript. Nothing you enter is uploaded or sent anywhere."
+    },
+    {
+      "q": "What units and format does it support?",
+      "a": "It uses four units: days (d), hours (h), minutes (m), and seconds (s). The human-readable output looks like \"1d 2h 3m 4s\", and units with a zero value are omitted."
+    },
+    {
+      "q": "What input does the seconds-to-human mode accept?",
+      "a": "It accepts a single non-negative integer number of seconds. Decimals, negative numbers, or other characters are rejected, and an input of 0 returns \"0s\"."
+    },
+    {
+      "q": "How do I write a duration when converting back to seconds?",
+      "a": "Use space-separated tokens of a number followed by a unit letter, such as \"2h 30m\" or \"1d 12h\". Each token must match the pattern number + d/h/m/s, otherwise the tool reports an invalid token."
+    },
+    {
+      "q": "Is there a limit on how large a number can be?",
+      "a": "Yes. The number of seconds must be a safe integer (up to 2^53 - 1); larger values are rejected with a \"too large\" error to avoid precision loss."
+    }
+  ]
+}

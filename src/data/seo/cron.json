@@ -1,0 +1,32 @@
+{
+  "intro": "Cron Explainer turns a cron expression into a plain English description so you can verify what a crontab schedule actually does. Paste a cron expression and instantly see when it runs, which helps when reading, debugging, or reviewing scheduled jobs. Everything runs in your browser, so no setup or command line is needed.",
+  "useCases": [
+    "Double-check a crontab line before deploying a scheduled job",
+    "Understand an unfamiliar cron expression in someone else's config or CI pipeline",
+    "Confirm a schedule like '0 9 * * 1-5' means weekday mornings",
+    "Translate cron entries while documenting recurring tasks or backups",
+    "Spot mistakes in fields (minute, hour, day, month, weekday) by reading the description back"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The cron expression is parsed entirely in your browser using a JavaScript library, and nothing is uploaded or stored remotely."
+    },
+    {
+      "q": "What cron format does it accept?",
+      "a": "It accepts standard cron expressions and parses them with the cronstrue library, including the common five-field format (minute, hour, day of month, month, day of week) plus extensions cronstrue supports."
+    },
+    {
+      "q": "What happens if my expression is invalid?",
+      "a": "Parsing throws on invalid expressions, so the tool shows an error instead of a description. Fix the offending field and the explanation will update."
+    },
+    {
+      "q": "Does it schedule or run cron jobs for me?",
+      "a": "No. It only explains what an expression means in plain English; it does not execute, schedule, or store any jobs."
+    },
+    {
+      "q": "Does leading or trailing whitespace matter?",
+      "a": "No. The input is trimmed before parsing, so surrounding spaces are ignored."
+    }
+  ]
+}

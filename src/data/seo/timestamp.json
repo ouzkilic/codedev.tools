@@ -1,0 +1,32 @@
+{
+  "intro": "The Unix Timestamp Converter turns Unix epoch timestamps into human-readable dates and back again, right in your browser. Switch between Timestamp to Date and Date to Timestamp modes to see ISO 8601, UTC, local, and Unix second/millisecond representations side by side. It's handy whenever you're debugging logs, database fields, or API payloads that store time as epoch values.",
+  "useCases": [
+    "Convert a Unix epoch value from a log file or database into a readable ISO 8601 or UTC date",
+    "Turn a human-readable date string into Unix seconds and milliseconds for an API request or test fixture",
+    "Check whether a stored timestamp is in seconds or milliseconds and see the resulting date",
+    "Compare the UTC and local-time interpretation of the same timestamp while debugging timezone issues",
+    "Quickly grab the ISO 8601 string for a given epoch value when writing configuration or seed data"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript's built-in Date object. Nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Does it handle timestamps in seconds and milliseconds?",
+      "a": "Yes. In Timestamp to Date mode it uses a heuristic: values with 13 or more digits (1e12 and above) are treated as milliseconds, and smaller values are treated as seconds. The output always shows both Unix seconds and milliseconds so you can confirm the interpretation."
+    },
+    {
+      "q": "What date formats can I enter in Date to Timestamp mode?",
+      "a": "Any string that JavaScript's Date constructor can parse, such as ISO 8601 (2026-06-08T12:00:00Z) or other common date strings. If the value can't be parsed, you'll see a 'Could not parse the date.' error."
+    },
+    {
+      "q": "Why do I get an out-of-range or numeric error?",
+      "a": "In Timestamp to Date mode the input must be a finite number, otherwise you'll see 'Enter a numeric Unix timestamp.' Values that fall outside the range JavaScript's Date can represent produce 'Timestamp is out of range.'"
+    },
+    {
+      "q": "What's the difference between the ISO, UTC, and Local outputs?",
+      "a": "ISO 8601 and UTC both express the time in Coordinated Universal Time using different formatting, while Local renders the same instant in your machine's local timezone. They all point to the same moment, just displayed differently."
+    }
+  ]
+}

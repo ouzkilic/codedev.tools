@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Validator checks whether your JSON is syntactically valid and, when you provide a JSON Schema, verifies that the data conforms to it. It uses the Ajv library under the hood to report every schema violation at once, with the path to each offending field. It's handy for catching malformed JSON, confirming API payloads match a contract, or linting config files before you ship them.",
+  "useCases": [
+    "Quickly confirm that a JSON snippet parses correctly and spot syntax errors like trailing commas or unquoted keys",
+    "Validate an API request or response body against a JSON Schema to ensure required fields and types are present",
+    "Check configuration files against a schema before committing or deploying them",
+    "Debug schema definitions by seeing exactly which instance paths fail and why",
+    "Verify generated or hand-edited JSON matches an agreed data contract during development"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Validation runs entirely in your browser using JavaScript, so neither your JSON nor your schema is ever uploaded or stored on a server."
+    },
+    {
+      "q": "What happens if I don't provide a schema?",
+      "a": "If you leave the schema field empty, the tool only checks that your input is syntactically valid JSON and reports it as valid without any schema comparison."
+    },
+    {
+      "q": "Which JSON Schema features are supported?",
+      "a": "Schema validation is powered by Ajv with strict mode disabled, so standard JSON Schema keywords like type, required, properties, and enum work as expected."
+    },
+    {
+      "q": "Does it show all errors or just the first one?",
+      "a": "It reports all errors at once. Each line shows the instance path of the failing field (or root) along with the validation message, so you can fix everything in one pass."
+    },
+    {
+      "q": "Why does it say my JSON is invalid when it looks fine?",
+      "a": "The parser follows standard JSON rules, so common issues like trailing commas, single quotes, comments, or unquoted property names will cause a syntax error even if they look acceptable in JavaScript."
+    }
+  ]
+}

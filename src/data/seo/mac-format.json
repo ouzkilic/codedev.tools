@@ -1,0 +1,32 @@
+{
+  "intro": "The MAC Address Formatter reformats an Ethernet MAC address into the separator style you need: colon (aa:bb:cc:dd:ee:ff), hyphen (aa-bb-cc-dd-ee-ff), Cisco-style dot (aabb.ccdd.eeff), or no separator at all. It strips any existing separators and lets you choose lowercase or uppercase output, which is handy when network gear, config files, and APIs each expect a different MAC address format.",
+  "useCases": [
+    "Convert a colon-separated MAC address from ifconfig/ip into the dotted notation Cisco IOS expects",
+    "Normalize MAC addresses pulled from logs or spreadsheets into a single consistent separator and case",
+    "Strip all separators to get the bare 12 hex digits for a database column or API field",
+    "Switch a MAC between lowercase and uppercase to match a vendor's documentation or naming convention",
+    "Reformat a hyphenated Windows-style MAC into the colon form used by Linux tools"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The formatter runs entirely in your browser and nothing is uploaded. The MAC address you paste never leaves your device."
+    },
+    {
+      "q": "What input formats are accepted?",
+      "a": "Any input is accepted as long as it contains exactly 12 hexadecimal digits (0-9, a-f). All other characters such as colons, hyphens, dots, and spaces are ignored, so you can paste a MAC in nearly any common notation."
+    },
+    {
+      "q": "What separator styles can it output?",
+      "a": "It outputs colon (aa:bb:cc:dd:ee:ff), hyphen (aa-bb-cc-dd-ee-ff), dot in groups of four (aabb.ccdd.eeff), or none (12 plain hex digits)."
+    },
+    {
+      "q": "Why do I get a \"A MAC address has 12 hex digits.\" error?",
+      "a": "The tool requires exactly 12 hex digits after removing all non-hex characters. If you have too few or too many digits, or stray characters that aren't valid hex, the count won't match and you'll see this error."
+    },
+    {
+      "q": "Can I control uppercase or lowercase output?",
+      "a": "Yes. A case option lets you output the MAC address in lowercase or uppercase; the default is lowercase."
+    }
+  ]
+}

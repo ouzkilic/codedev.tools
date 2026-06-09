@@ -1,0 +1,33 @@
+{
+  "intro": "The Barcode Generator turns any text or number into a scannable barcode image right in your browser. It supports common formats including CODE128, CODE39, EAN13, EAN8, UPC, ITF14, MSI, pharmacode, and codabar, and lets you download the result as a PNG. It's handy whenever you need to quickly create a barcode for labels, products, or inventory without installing software.",
+  "useCases": [
+    "Generate a CODE128 barcode to print on a shipping or inventory label",
+    "Create an EAN13 or UPC barcode for a product mockup or catalog",
+    "Encode an internal SKU or asset ID as a scannable code",
+    "Produce a pharmacode or codabar barcode for healthcare or library workflows",
+    "Quickly test how a value renders across different barcode symbologies",
+    "Export a barcode as a PNG to drop into a document, slide, or design file"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The barcode is rendered entirely in your browser using JavaScript on a canvas element, and nothing you type is uploaded or stored remotely."
+    },
+    {
+      "q": "Which barcode formats are supported?",
+      "a": "CODE128, CODE39, EAN13, EAN8, UPC, ITF14, MSI, pharmacode, and codabar. You pick the format from the Format dropdown, and CODE128 is the default."
+    },
+    {
+      "q": "Why does my input show an error?",
+      "a": "Each format has its own rules — for example EAN13 expects digits of a specific length and pharmacode accepts only certain numeric ranges. If the value doesn't match the selected format's requirements, the generator reports the error and no barcode is drawn."
+    },
+    {
+      "q": "Can I download the barcode?",
+      "a": "Yes. Once a valid barcode is generated you can export it as a PNG image using the PNG button, which saves a file named barcode.png to your device."
+    },
+    {
+      "q": "Is the human-readable value shown under the barcode?",
+      "a": "Yes. The encoded value is printed below the bars so you can verify what was generated at a glance."
+    }
+  ]
+}

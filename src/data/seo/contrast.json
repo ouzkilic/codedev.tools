@@ -1,0 +1,32 @@
+{
+  "intro": "The Contrast Checker calculates the WCAG contrast ratio between a foreground color and a background color, then reports whether it meets the AA and AAA accessibility thresholds. Enter two colors as hex or rgb() values and instantly see the ratio plus pass/fail results for normal and large text. It's useful for verifying that text, buttons, and UI elements are readable enough to satisfy WCAG a11y requirements.",
+  "useCases": [
+    "Check whether body text color passes WCAG AA (4.5:1) against its background",
+    "Verify large headings or UI labels meet the relaxed 3.0:1 large-text threshold",
+    "Confirm a high-contrast theme reaches AAA (7.0:1) for normal text",
+    "Test foreground/background pairs from a design system before shipping",
+    "Quickly compare two brand colors to see if they are usable as a text/background combination"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The contrast calculation runs entirely in your browser, and nothing you type is uploaded or stored anywhere."
+    },
+    {
+      "q": "What color formats are supported?",
+      "a": "You can use 6-digit hex (#ffffff), 3-digit shorthand hex (#fff, with or without the #), and rgb()/rgba() values like rgb(255, 0, 0). Other formats such as HSL or named colors are not parsed."
+    },
+    {
+      "q": "How is the contrast ratio calculated?",
+      "a": "It uses the WCAG formula: relative luminance of each color is computed, then the ratio is (lighter + 0.05) / (darker + 0.05). The result ranges from 1:1 (identical colors) to 21:1 (black on white)."
+    },
+    {
+      "q": "What do the AA and AAA results mean?",
+      "a": "AA requires 4.5:1 for normal text and 3.0:1 for large text; AAA requires 7.0:1 for normal text and 4.5:1 for large text. The tool shows a pass or fail mark for each of these four thresholds."
+    },
+    {
+      "q": "What counts as large text?",
+      "a": "Under WCAG, large text is roughly 18pt (24px) or 14pt (about 18.66px) bold and above. Large text qualifies for the lower contrast thresholds shown in the results."
+    }
+  ]
+}

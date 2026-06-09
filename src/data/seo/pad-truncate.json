@@ -1,0 +1,33 @@
+{
+  "intro": "Pad / Truncate Lines processes text line by line, padding each line to a fixed width with a chosen character or truncating it to that width. You control the target width, the pad character, which side to pad (start or end), and whether to pad, truncate, or do both. It is handy for aligning columns, building fixed-width records, or trimming lines to a uniform length.",
+  "useCases": [
+    "Pad each line to a fixed width to align values into neat columns",
+    "Right-align numbers by padding on the start side with spaces or zeros",
+    "Build fixed-width record formats by padding and truncating every line to the same length",
+    "Truncate long lines to a maximum width to fit a column or display limit",
+    "Zero-pad short codes or IDs to a consistent length",
+    "Normalize ragged text so every line is exactly the same width"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Everything runs entirely in your browser and nothing is uploaded. Your text never leaves your device."
+    },
+    {
+      "q": "What does the Mode option do?",
+      "a": "Pad lengthens lines shorter than the width using the pad character, Truncate cuts lines longer than the width, and Both first truncates then pads so every line ends up exactly the target width."
+    },
+    {
+      "q": "What is the difference between the Start and End side?",
+      "a": "Side controls where padding is added. Start pads on the left (right-aligning the text), and End pads on the right (left-aligning the text). It only affects padding, not truncation."
+    },
+    {
+      "q": "Can I use more than one pad character?",
+      "a": "No. Only the first character of the Pad char field is used, and if the field is empty it defaults to a space."
+    },
+    {
+      "q": "Is there a limit on the width?",
+      "a": "Yes. The width is clamped between 0 and 1000. Non-numeric input is treated as 0, and the default width is 10."
+    }
+  ]
+}

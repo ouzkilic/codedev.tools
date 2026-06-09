@@ -1,0 +1,32 @@
+{
+  "intro": "Morse Code is a free tool that converts text to and from Morse code right in your browser. Use encode mode to turn letters and digits into dots and dashes, or decode mode to translate Morse signals back into readable text. It covers the standard A-Z letters and 0-9 numbers, with spaces between symbols and a slash separating words.",
+  "useCases": [
+    "Encode a short message or callsign into Morse code for amateur radio practice",
+    "Decode dot-and-dash sequences you received or read somewhere back into plain text",
+    "Generate Morse output to drive a buzzer, LED blink pattern, or telegraph demo",
+    "Learn or teach Morse by comparing letters and numbers against their dot/dash codes",
+    "Quickly verify a Morse string is valid before using it in a puzzle, game, or escape room clue"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Which characters are supported?",
+      "a": "It maps the 26 English letters A-Z and the digits 0-9. When encoding, letters are uppercased automatically and any unsupported characters (such as punctuation or accented letters) are dropped from the output."
+    },
+    {
+      "q": "What format does the Morse output use?",
+      "a": "Each character's dots and dashes are separated by a single space, and words are separated by a space-slash-space sequence ( / ). For decoding, your input should follow this same convention."
+    },
+    {
+      "q": "Why do I get an \"Invalid Morse token\" error when decoding?",
+      "a": "Decoding throws an error if it encounters a dot/dash sequence that doesn't match any known letter or number. Check that symbols are separated by single spaces and words by ' / ', and that you only use supported A-Z or 0-9 codes."
+    },
+    {
+      "q": "Does it preserve punctuation or special characters?",
+      "a": "No. Only letters and digits are encoded; punctuation, symbols, and accented characters are ignored and won't appear in the Morse output."
+    }
+  ]
+}

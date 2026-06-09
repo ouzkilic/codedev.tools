@@ -1,0 +1,33 @@
+{
+  "intro": "Regex Tester runs a regular expression against your text and lists every match along with its position and any capture groups. Enter a pattern and flags, paste the text to test, and see each match, its index, and numbered capture groups instantly. It uses the JavaScript regex engine in your browser, making it handy for quickly checking that a pattern matches what you expect.",
+  "useCases": [
+    "Verify that a regex pattern matches the strings you expect before using it in code",
+    "Extract and inspect numbered capture groups from each match",
+    "Debug why a pattern matches too much or too little against sample text",
+    "Test flag combinations like case-insensitive (i) or multiline (m) matching",
+    "Find the index position of every occurrence of a pattern in a block of text",
+    "Quickly validate a regex copied from documentation or a Stack Overflow answer"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The Regex Tester runs entirely in your browser using the built-in JavaScript regex engine. Your pattern and text are never uploaded or sent anywhere."
+    },
+    {
+      "q": "Which regex syntax does it support?",
+      "a": "It uses the JavaScript RegExp engine, so it supports JavaScript regex syntax and flags such as g, i, m, s, u, and y. Patterns written for other languages may behave differently."
+    },
+    {
+      "q": "Do I need to add the global flag?",
+      "a": "No. The global (g) flag is added automatically if you leave it out, so the tester always returns all matches in the text rather than just the first one."
+    },
+    {
+      "q": "What does the output show for each match?",
+      "a": "Each match is listed with its matched text and its character index in the input. Below it, any numbered capture groups are shown, with groups that did not participate displayed as (undefined)."
+    },
+    {
+      "q": "What happens if my pattern is invalid?",
+      "a": "If the pattern is not a valid JavaScript regular expression, the tool reports an \"Invalid regex\" message with the engine's error so you can fix the syntax."
+    }
+  ]
+}

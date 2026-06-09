@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Minify compresses JSON by parsing it and re-stringifying it without any spaces, line breaks, or indentation, producing a compact single-line output. Because it parses the input first, it also validates that your JSON is well-formed before minifying. It is handy whenever you want to shrink JSON for storage, transfer, or embedding without changing the data itself.",
+  "useCases": [
+    "Reduce the size of API responses or config files before sending them over the network",
+    "Strip whitespace from formatted JSON to embed it in a single line of code or an environment variable",
+    "Quickly check whether a JSON snippet is valid, since invalid JSON will report a parse error",
+    "Prepare compact JSON payloads for logging, caching, or storing in a database column",
+    "Convert pretty-printed JSON back into its smallest equivalent representation"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser using the built-in JSON parser, and nothing you paste is uploaded or stored anywhere. The whole site is open source and client-side, so you can verify this yourself."
+    },
+    {
+      "q": "How does minifying work?",
+      "a": "Your input is parsed with JSON.parse and then re-serialized with JSON.stringify using no spacing, which removes all insignificant whitespace between keys, values, and structural characters."
+    },
+    {
+      "q": "What happens if my JSON is invalid?",
+      "a": "Because the tool parses the input before minifying, invalid JSON cannot be processed and you will see a parse error instead of output. Fix the syntax and try again."
+    },
+    {
+      "q": "Does minifying change my data or the order of keys?",
+      "a": "No values are changed; only whitespace is removed. Object keys keep their original order as they appeared in the input, since JSON.parse and JSON.stringify preserve insertion order."
+    },
+    {
+      "q": "Will comments or trailing commas survive minification?",
+      "a": "No. Standard JSON does not allow comments or trailing commas, so input containing them is invalid and will fail to parse rather than being minified."
+    }
+  ]
+}

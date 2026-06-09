@@ -1,0 +1,32 @@
+{
+  "intro": "TOML to YAML converts a TOML document into equivalent YAML directly in your browser. Paste a config file such as a Cargo.toml or pyproject.toml and get YAML output you can drop into another tool or pipeline. It's handy whenever you need to move configuration between formats without writing a conversion script.",
+  "useCases": [
+    "Convert a Rust Cargo.toml or Python pyproject.toml into YAML for a tool that expects YAML config",
+    "Migrate application settings from TOML to a YAML-based config format",
+    "Inspect how TOML tables, arrays, and dates map onto YAML structure",
+    "Generate YAML fixtures or examples from existing TOML during development",
+    "Quickly reformat a snippet of TOML as YAML while reading documentation or debugging"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on a server."
+    },
+    {
+      "q": "What happens if my TOML is invalid?",
+      "a": "The tool reports an error message describing the parse failure instead of producing output. Fix the reported syntax issue in the TOML and the conversion will run."
+    },
+    {
+      "q": "How are TOML tables and arrays represented in the YAML output?",
+      "a": "TOML tables become nested YAML mappings and TOML arrays become YAML sequences. The structure mirrors the parsed TOML value tree."
+    },
+    {
+      "q": "Are TOML dates and times preserved?",
+      "a": "TOML date and time values are parsed by the TOML reader and then serialized into the YAML output, so they carry through the conversion."
+    },
+    {
+      "q": "Does an empty input produce an error?",
+      "a": "No. If the input is empty or only whitespace, the tool simply returns an empty result rather than an error."
+    }
+  ]
+}

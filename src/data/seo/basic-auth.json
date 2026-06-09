@@ -1,0 +1,32 @@
+{
+  "intro": "The Basic Auth Header tool builds an HTTP Basic Authorization header from a username and password. It joins them as username:password, UTF-8 encodes the result, base64-encodes it, and returns a ready-to-use Authorization: Basic <token> line. This is handy whenever you need to authenticate an HTTP request that uses Basic auth, such as testing an API with curl, Postman, or a browser fetch.",
+  "useCases": [
+    "Generate an Authorization: Basic header to paste into curl, Postman, or HTTPie when testing an API",
+    "Quickly base64-encode credentials in the username:password form required by HTTP Basic authentication",
+    "Build the header value for a fetch or axios request that talks to a Basic-auth-protected endpoint",
+    "Reproduce or debug a 401 response by checking the exact encoded credentials a client sends",
+    "Encode credentials that contain non-ASCII characters correctly using UTF-8 before base64"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The encoding runs entirely in your browser using TextEncoder and btoa, and nothing you type is uploaded or logged. The username and password never leave your device."
+    },
+    {
+      "q": "What format does the output use?",
+      "a": "It outputs a full header line in the form Authorization: Basic <token>, where <token> is the base64 encoding of username:password. You can paste the whole line into a request or use just the token after Basic."
+    },
+    {
+      "q": "How are the username and password combined?",
+      "a": "The username is trimmed of surrounding whitespace, then joined with the password using a single colon as username:password before encoding. The password is taken as-is and is not trimmed."
+    },
+    {
+      "q": "Does it handle non-ASCII characters?",
+      "a": "Yes. The credentials are encoded as UTF-8 bytes before base64 encoding, so characters outside the ASCII range are handled correctly."
+    },
+    {
+      "q": "Is Basic auth encryption?",
+      "a": "No. Base64 is reversible encoding, not encryption, so anyone who sees the header can decode the credentials. Always send Basic auth over HTTPS to keep them protected in transit."
+    }
+  ]
+}

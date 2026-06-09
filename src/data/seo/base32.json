@@ -1,0 +1,32 @@
+{
+  "intro": "Base32 Encode / Decode converts text to and from Base32 using the standard RFC 4648 alphabet (A-Z and 2-7). Switch between encode and decode modes to turn UTF-8 text into a padded Base32 string or read an existing Base32 string back into plain text. It is handy whenever you need a case-insensitive, alphanumeric-only encoding that survives copy-paste and URLs better than Base64.",
+  "useCases": [
+    "Encode short text into the RFC 4648 Base32 alphabet for use in tokens or identifiers",
+    "Decode a Base32 string copied from logs, config files, or API responses back to readable text",
+    "Inspect Base32-encoded values where Base64 is undesirable because of case sensitivity",
+    "Produce padded Base32 output (= padding to an 8-character boundary) for systems that expect RFC 4648 formatting",
+    "Quickly check whether a string is valid Base32 by attempting to decode it"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encoding and decoding run entirely in your browser using JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Which Base32 variant does this use?",
+      "a": "It uses the standard RFC 4648 alphabet (A-Z and digits 2-7) with = padding so the output length is a multiple of 8. It does not support the extended hex (base32hex) or z-base-32 alphabets."
+    },
+    {
+      "q": "Is decoding case-sensitive?",
+      "a": "No. On decode the input is uppercased first, trailing = padding is stripped, and whitespace is removed, so lowercase or spaced-out Base32 still decodes correctly."
+    },
+    {
+      "q": "What happens if the input contains an invalid character?",
+      "a": "Decoding throws an error naming the offending character. Only letters A-Z and digits 2-7 (plus padding and whitespace) are valid; characters like 0, 1, and 8 are not part of the alphabet."
+    },
+    {
+      "q": "How is text interpreted during encoding?",
+      "a": "Input text is encoded as UTF-8 bytes before conversion, so multi-byte characters are handled correctly. Decoding reverses this and returns the bytes as UTF-8 text."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "The Number Base Converter turns a value between binary, octal, decimal, and hexadecimal, showing all four representations at once. Paste a number and it either auto-detects the input base from prefixes like 0x, 0b, or 0o, or you can pick the source base manually. It uses arbitrary-precision integers, so very large values convert without rounding or overflow.",
+  "useCases": [
+    "Convert a hex memory address or color value (e.g. 0xff) into its decimal and binary equivalents",
+    "Read a binary bitmask such as 0b10110 as decimal and hex while debugging flags",
+    "Translate an octal file permission or constant into decimal",
+    "Check the exact decimal value of a large hexadecimal number without precision loss",
+    "Quickly cross-reference all four bases for a single number while reading low-level code or protocol specs"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Which bases does it support?",
+      "a": "It reads and outputs binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16). Every conversion shows all four results together."
+    },
+    {
+      "q": "How does auto-detect work?",
+      "a": "With the From option set to Auto-detect, an input starting with 0x is read as hex, 0b as binary, and 0o as octal; anything else is treated as decimal. You can also set the source base explicitly instead of relying on prefixes."
+    },
+    {
+      "q": "Can it handle very large numbers?",
+      "a": "Yes. It uses arbitrary-precision (BigInt) arithmetic, so large values convert exactly without floating-point rounding or overflow."
+    },
+    {
+      "q": "What happens if I enter an invalid digit?",
+      "a": "If a character is not valid for the selected base, such as a 9 in a binary input, it reports an error naming the invalid digit and the base instead of producing a result."
+    }
+  ]
+}

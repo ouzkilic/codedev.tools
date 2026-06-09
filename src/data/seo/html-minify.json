@@ -1,0 +1,32 @@
+{
+  "intro": "HTML Minify strips out comments and collapses extra whitespace to shrink your HTML markup. It removes every <!-- ... --> comment, eliminates spaces between adjacent tags, and reduces runs of whitespace to a single space, which is handy when you want to compress HTML by hand or quickly clean up generated output. Paste your markup and get a minified version back instantly.",
+  "useCases": [
+    "Compressing a small HTML snippet or email template before pasting it into a string in your code",
+    "Stripping comments from HTML before sharing or publishing it",
+    "Cleaning up verbose, heavily indented HTML exported from a WYSIWYG editor or generator",
+    "Reducing the byte size of inline HTML fragments used in tests or fixtures",
+    "Quickly flattening multi-line markup onto a single line for logging or debugging"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The minifier runs entirely in your browser using plain JavaScript, so your HTML never leaves your device and nothing is uploaded."
+    },
+    {
+      "q": "What exactly does it remove?",
+      "a": "It deletes all HTML comments (<!-- ... -->), removes whitespace between adjacent tags, collapses any run of whitespace into a single space, and trims leading and trailing whitespace."
+    },
+    {
+      "q": "Does it preserve content inside <pre>, <textarea>, <script>, or <style> tags?",
+      "a": "No. Whitespace is collapsed everywhere, so significant spacing or newlines inside <pre>, <textarea>, <script>, or <style> will be altered. Avoid minifying markup that depends on whitespace in those elements."
+    },
+    {
+      "q": "Does it strip attribute quotes or remove optional tags?",
+      "a": "No. It only handles comments and whitespace. Attributes, quotes, and tags are left intact aside from the spacing changes."
+    },
+    {
+      "q": "Will it break HTML that contains a comment-like string in text or attributes?",
+      "a": "It matches anything between <!-- and -->, so a literal comment marker appearing inside text or an attribute value would also be removed. This is rare but worth checking on unusual input."
+    }
+  ]
+}

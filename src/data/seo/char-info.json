@@ -1,0 +1,33 @@
+{
+  "intro": "Character Info shows the ASCII and Unicode details for a single character or code point. Enter a character, a decimal code, or a 0x-prefixed hex value and it returns the decimal, hexadecimal, octal, binary, HTML entity, and U+ Unicode notations. It is handy when you need to look up a charcode or convert between code point representations while debugging text, encodings, or escape sequences.",
+  "useCases": [
+    "Look up the decimal, hex, and octal code point for a character you pasted in",
+    "Find the HTML numeric entity (&#NNN;) to embed a special character in markup",
+    "Get the U+ Unicode notation for a glyph to use in escape sequences",
+    "Convert a decimal char code (e.g. 65) to its actual character and other bases",
+    "Resolve a 0x-prefixed hex code point into the character it represents",
+    "Inspect the binary representation of a character's code point while debugging encodings"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Character Info runs entirely in your browser and nothing you type is uploaded. The conversion happens locally in JavaScript, so no character or code point ever leaves your device."
+    },
+    {
+      "q": "What input formats are accepted?",
+      "a": "You can enter a single character, a plain decimal number (e.g. 65), or a 0x-prefixed hexadecimal value (e.g. 0x41). Input is trimmed of surrounding whitespace before it is parsed."
+    },
+    {
+      "q": "Which output formats does it show?",
+      "a": "It displays the character itself plus its decimal, hexadecimal (0x), octal (0o), binary, HTML numeric entity (&#NNN;), and Unicode (U+) notations."
+    },
+    {
+      "q": "What happens if I paste more than one character?",
+      "a": "Only the first character is used; its code point is read and all other details are derived from that. To inspect a different character, enter it on its own."
+    },
+    {
+      "q": "Does it support full Unicode code points beyond ASCII?",
+      "a": "Yes. It reads the code point with codePointAt and rebuilds the character with String.fromCodePoint, so emoji and other characters above the basic ASCII range work too."
+    }
+  ]
+}

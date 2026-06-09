@@ -1,0 +1,32 @@
+{
+  "intro": "The HMAC Generator computes an HMAC signature from a message and a secret key, producing a hex-encoded MAC. It supports HMAC-SHA-1, HMAC-SHA-256, HMAC-SHA-384, and HMAC-SHA-512, making it handy for signing payloads, verifying webhooks, and testing API authentication. Everything is computed locally in your browser using the Web Crypto API, so no message or secret ever leaves your device.",
+  "useCases": [
+    "Generate an HMAC-SHA-256 signature to verify or reproduce a webhook signature (e.g. GitHub, Stripe-style payloads)",
+    "Sign an API request body or query string with a shared secret to test authentication locally",
+    "Compute a message authentication code to confirm a payload has not been tampered with",
+    "Compare an expected signature against one produced by your backend during debugging",
+    "Quickly check how different hash algorithms (SHA-1, SHA-256, SHA-384, SHA-512) change the resulting HMAC output"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The HMAC is computed entirely in your browser with the Web Crypto API. Your message and secret key are never uploaded or transmitted anywhere."
+    },
+    {
+      "q": "Which hash algorithms are supported?",
+      "a": "You can choose HMAC-SHA-1, HMAC-SHA-256, HMAC-SHA-384, or HMAC-SHA-512. SHA-256 is the default. If an unrecognized algorithm is passed, it falls back to SHA-256."
+    },
+    {
+      "q": "What format is the output in?",
+      "a": "The signature is returned as a lowercase hexadecimal string. There is no Base64 output option; if you need Base64, convert the hex result separately."
+    },
+    {
+      "q": "How are the message and secret encoded?",
+      "a": "Both the message and the secret key are encoded as UTF-8 before signing. The raw secret bytes are used directly as the HMAC key."
+    },
+    {
+      "q": "Why might my signature differ from my server's output?",
+      "a": "Differences usually come from a mismatched algorithm, a different key encoding (for example a hex- or Base64-decoded secret instead of raw UTF-8), or trailing whitespace and newlines in the message. Make sure both sides use the same algorithm and the same exact input bytes."
+    }
+  ]
+}

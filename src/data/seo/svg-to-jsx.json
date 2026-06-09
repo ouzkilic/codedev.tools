@@ -1,0 +1,32 @@
+{
+  "intro": "SVG to JSX / Data URI converts raw SVG markup into JSX-safe code or a data URI you can drop straight into your project. In JSX mode it renames hyphenated attributes to camelCase (like stroke-width to strokeWidth) and swaps class for className so React stops complaining; in Data URI mode it produces a URL-encoded data:image/svg+xml string for use in CSS or img src. It runs entirely in your browser, which makes it handy whenever you want to inline an icon or illustration in a React component.",
+  "useCases": [
+    "Paste an exported SVG icon and get JSX-ready markup to use as an inline React component",
+    "Fix invalid JSX attributes like class, stroke-width, or fill-rule that React would otherwise reject",
+    "Generate a data:image/svg+xml URI to embed an SVG as a CSS background-image",
+    "Inline a small SVG directly in an img src or style attribute without a separate file request",
+    "Quickly clean up SVG copied from a design tool before pasting it into a component"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, and nothing you paste is uploaded or stored anywhere."
+    },
+    {
+      "q": "What does JSX mode actually change?",
+      "a": "It converts hyphenated attribute names to camelCase (for example stroke-width becomes strokeWidth) and replaces class= with className=. It does not rewrite or reformat the rest of the SVG."
+    },
+    {
+      "q": "What format does Data URI mode output?",
+      "a": "It trims your input and returns a data:image/svg+xml URI with the SVG percent-encoded via encodeURIComponent, suitable for CSS background-image or an img src attribute."
+    },
+    {
+      "q": "Does it wrap the SVG in a React component for me?",
+      "a": "No. JSX mode only adjusts attribute names so the markup is valid inside JSX; you still place the resulting tags inside your own component."
+    },
+    {
+      "q": "Will it handle inline style or other special attributes?",
+      "a": "It only renames hyphenated attributes to camelCase and changes class to className, so inline style strings and similar values are left as-is and may still need manual adjustment for React."
+    }
+  ]
+}

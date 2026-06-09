@@ -1,0 +1,32 @@
+{
+  "intro": "Base64URL Encode / Decode converts text to and from URL-safe Base64, the variant that uses - and _ instead of + and / and omits the trailing = padding. This makes the output safe to drop into URLs, query strings, JWT segments, and filenames without extra escaping. Switch between encode and decode modes to round-trip UTF-8 text in either direction.",
+  "useCases": [
+    "Encode a value so it can be placed directly in a URL or query parameter without percent-encoding + / or =",
+    "Decode a Base64URL segment from a JWT (such as the header or payload) back into readable text",
+    "Generate URL-safe tokens or identifiers from plain text",
+    "Inspect or convert Base64URL strings found in API responses, OAuth flows, or cookies",
+    "Produce filename-safe encoded strings that avoid characters disallowed on many filesystems"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encoding and decoding run entirely in your browser using the built-in btoa, atob, TextEncoder, and TextDecoder APIs. Nothing you type is uploaded or stored remotely."
+    },
+    {
+      "q": "How is Base64URL different from standard Base64?",
+      "a": "Base64URL replaces the + character with - and the / character with _, and it strips the trailing = padding. This keeps the output safe for use in URLs and filenames, whereas standard Base64 would need additional escaping."
+    },
+    {
+      "q": "Does it handle Unicode and emoji?",
+      "a": "Yes. Text is encoded as UTF-8 before conversion via TextEncoder and decoded back with TextDecoder, so multi-byte characters and emoji round-trip correctly."
+    },
+    {
+      "q": "Do I need to add the = padding when decoding?",
+      "a": "No. The decoder automatically restores any missing = padding before decoding, so you can paste an unpadded Base64URL string directly."
+    },
+    {
+      "q": "What happens if I paste invalid input in decode mode?",
+      "a": "If the input is not valid Base64URL, decoding fails and the tool reports an 'Invalid Base64URL input' error rather than returning garbled output."
+    }
+  ]
+}

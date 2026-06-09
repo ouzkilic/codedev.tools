@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Schema to TypeScript generates TypeScript interfaces from a JSON Schema definition. Paste a schema and it walks the properties to produce typed interface declarations, turning each nested object into its own named interface so you can drop the result straight into your codebase. It's handy when you want to convert a schema into TypeScript types without wiring up a build-time codegen step.",
+  "useCases": [
+    "Turn an API request or response JSON Schema into TypeScript interfaces for typed client code",
+    "Generate interface stubs from a schema instead of hand-writing types for nested objects",
+    "Convert string enum schemas into TypeScript union literal types",
+    "Quickly inspect how a schema maps to TypeScript while reviewing or designing a data model",
+    "Bootstrap shared type definitions from an existing JSON Schema kept in your repo"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and your schema never leaves your device or gets uploaded anywhere."
+    },
+    {
+      "q": "What JSON Schema keywords does it support?",
+      "a": "It reads type, properties, required, items, and enum. Object properties listed in required become non-optional, while all others are marked optional with a question mark."
+    },
+    {
+      "q": "How are types mapped to TypeScript?",
+      "a": "string maps to string, integer and number map to number, boolean to boolean, and null to null. Arrays become a typed array based on items (or unknown[] if items is missing), and nested objects with properties become their own named interface."
+    },
+    {
+      "q": "How are enums handled?",
+      "a": "An enum whose values are all strings is emitted as a union of string literal types. Enums containing non-string values fall back to the property's declared type."
+    },
+    {
+      "q": "What is the top-level interface called?",
+      "a": "The root object is always emitted first as an interface named Root, followed by any nested interfaces, which are named in PascalCase from their property keys."
+    }
+  ]
+}

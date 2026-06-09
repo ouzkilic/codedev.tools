@@ -1,0 +1,33 @@
+{
+  "intro": "HTML Entities Reference is a searchable list of common HTML named entities, showing each entity name (like &copy;), the character it renders (©), and a short description. Type a keyword such as \"copy\", \"arrow\", or \"euro\" to filter the table and quickly find the named char you need. It is handy whenever you need to escape special characters or look up the right entity code for markup.",
+  "useCases": [
+    "Look up how to escape reserved HTML characters like &amp;, &lt;, and &gt; in markup",
+    "Find the named entity for symbols such as © (copyright), ® (registered), or ™ (trademark)",
+    "Search by description (e.g. \"arrow\" or \"quote\") to discover the matching entity name",
+    "Insert currency signs like € (euro), £ (pound sterling), or ¥ (yen) using named references",
+    "Grab typographic characters such as em dash (—), ellipsis (…), or non-breaking space (&nbsp;)",
+    "Reference math and miscellaneous symbols like ×, ÷, ≤, ≥, ∞, and ✓"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. This reference runs entirely in your browser and the entity list is built into the page. Nothing you type into the search box is uploaded or sent anywhere."
+    },
+    {
+      "q": "How does the search work?",
+      "a": "The filter is case-insensitive and matches the text you enter against both the entity name (such as &copy;) and its description (such as \"copyright\"). It does a simple substring match, so partial words like \"arr\" will match all arrow entities."
+    },
+    {
+      "q": "Does this list every HTML entity?",
+      "a": "No. It is a curated reference of around 60 common named entities, including the reserved characters, currency symbols, typographic marks, arrows, and a handful of math and suit symbols. It is not the full HTML5 entity specification."
+    },
+    {
+      "q": "Why use named entities instead of the actual characters?",
+      "a": "Named entities are required to escape reserved characters such as &, <, and >, and some teams prefer them for clarity or to avoid encoding issues. For most other characters you can use the raw character directly when your document is UTF-8 encoded."
+    },
+    {
+      "q": "What does each row show?",
+      "a": "Each row lists three things: the named entity reference (for example &euro;), the character it produces (€), and a short human-readable description (euro)."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Image to ASCII converts an image into ASCII art directly in your browser. It samples the image, maps each pixel's brightness to a character from a density ramp (@%#*+=-:. ), and produces text art you can copy anywhere. It's handy for adding image-based banners to terminals, README files, code comments, or chat messages.",
+  "useCases": [
+    "Turn a logo or photo into a text banner for a CLI tool's startup screen",
+    "Generate ASCII art to paste into README files, code comments, or commit messages",
+    "Create text-only graphics for plain-text emails, IRC, or chat where images aren't supported",
+    "Quickly preview how an image reduces to monochrome brightness levels",
+    "Produce retro-style ASCII output for documentation or terminal MOTD files"
+  ],
+  "faq": [
+    {
+      "q": "Is my image sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using a canvas and local pixel data. Your image is never uploaded and nothing leaves your device."
+    },
+    {
+      "q": "What image formats are supported?",
+      "a": "Any image format your browser can decode is accepted, since loading is handled by the browser's native Image element. This typically includes PNG, JPEG, GIF, WebP, and SVG."
+    },
+    {
+      "q": "How do I control the size of the output?",
+      "a": "Use the Columns option to set the output width in characters (default 80). The value is clamped between 1 and 400, and the height is computed automatically from the image's aspect ratio (scaled by 0.5 to account for taller-than-wide character cells)."
+    },
+    {
+      "q": "How are pixels mapped to characters?",
+      "a": "Each pixel's luminance is calculated as 0.299*R + 0.587*G + 0.114*B, then mapped to one character from the ramp '@%#*+=-:. '. Darker pixels use denser characters and brighter pixels use lighter ones, so color is reduced to brightness only."
+    },
+    {
+      "q": "Why does my output look stretched or capped in width?",
+      "a": "Output width is limited to a maximum of 400 columns, and height is multiplied by 0.5 so the art isn't vertically stretched in fixed-width fonts. View the result in a monospaced font for correct proportions."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "This TypeScript to JSON Schema converter turns a single TypeScript interface or type alias into a draft-07 JSON Schema right in your browser. Paste an interface and get an object schema with typed properties and a required list, handy when you need a schema for validation or documentation but only have the TypeScript types. It supports common shapes like strings, numbers, booleans, arrays, nested objects, and string-literal unions.",
+  "useCases": [
+    "Generate a draft-07 JSON Schema from an existing TypeScript interface to feed a validator",
+    "Convert a type alias describing an API request or response body into a schema",
+    "Turn string-literal unions like 'a' | 'b' into a JSON Schema enum",
+    "Produce schema scaffolding for config files defined as TypeScript types",
+    "Map nested objects and arrays (T[] or Array<T>) into a structured schema for docs"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "Which TypeScript constructs are supported?",
+      "a": "It reads a single interface or type alias whose body is an object literal. Property types can be string, number, boolean, arrays (T[] or Array<T>), inline nested objects, and string-literal unions, which become a JSON Schema enum."
+    },
+    {
+      "q": "How are optional properties handled?",
+      "a": "Properties marked with ? are left out of the schema's required array, while all non-optional properties are listed as required."
+    },
+    {
+      "q": "What JSON Schema version does it produce?",
+      "a": "It outputs a draft-07 schema, using the $schema URL http://json-schema.org/draft-07/schema# with a top-level object type."
+    },
+    {
+      "q": "Why do I get an unsupported type error?",
+      "a": "The tool only maps a fixed set of types, so constructs like number/boolean literal unions, references to other named types, generics other than Array<T>, or tuples are not supported and will raise an error."
+    }
+  ]
+}

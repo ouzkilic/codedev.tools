@@ -1,0 +1,32 @@
+{
+  "intro": "AES Encrypt / Decrypt secures text with AES-256-GCM using a passphrase, all in your browser via the Web Crypto API. Your passphrase is run through PBKDF2 (SHA-256, 100,000 iterations) to derive the key, and the random salt and IV are packed with the ciphertext into a single Base64 string. Use it to encrypt notes, tokens, or config snippets and decrypt them back later with the same passphrase.",
+  "useCases": [
+    "Encrypt a sensitive note or password before storing or sharing it",
+    "Protect an API key or token with a passphrase you can share separately",
+    "Decrypt a Base64 AES-GCM string you previously generated with this tool",
+    "Demonstrate or test PBKDF2 + AES-GCM behavior without writing code",
+    "Quickly verify that a passphrase correctly decrypts a given ciphertext"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encryption and decryption run entirely in your browser using the Web Crypto API. Neither your text nor your passphrase is uploaded anywhere."
+    },
+    {
+      "q": "What algorithm and key derivation does it use?",
+      "a": "It uses AES-256-GCM for encryption. The key is derived from your passphrase with PBKDF2 using SHA-256 and 100,000 iterations and a random 16-byte salt."
+    },
+    {
+      "q": "What is the format of the encrypted output?",
+      "a": "The output is a single Base64 string containing the 16-byte salt, then the 12-byte IV, followed by the AES-GCM ciphertext and authentication tag. Decryption expects this exact layout."
+    },
+    {
+      "q": "Why does decryption fail?",
+      "a": "Decryption fails if the passphrase is wrong, the Base64 input is altered or truncated, or the ciphertext was not produced by this tool. AES-GCM verifies integrity, so any tampering causes an error rather than garbled text."
+    },
+    {
+      "q": "Can I decrypt output from other AES tools?",
+      "a": "Only if they use the same scheme: AES-256-GCM with PBKDF2-SHA-256 at 100,000 iterations and the salt + IV + ciphertext packed in that order as Base64. Other formats will not decrypt here."
+    }
+  ]
+}

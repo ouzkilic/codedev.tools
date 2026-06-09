@@ -1,0 +1,32 @@
+{
+  "intro": "HTTP Status Codes is a quick reference that looks up status codes by number or by description. Type a code like 404 or 500, a partial number like 40 to see every match in that range, or a word like \"timeout\" or \"gateway\" to find codes by their reason phrase. It's handy when you're debugging an API response or reading server logs and need to recall what a status code means.",
+  "useCases": [
+    "Look up what a specific status code means, such as 404 Not Found or 502 Bad Gateway",
+    "Find all codes in a class by typing a prefix, for example 5 to list 5xx server errors",
+    "Search by reason phrase to recall the number, such as typing \"unauthorized\" to get 401",
+    "Confirm the standard meaning of a code while debugging an API or HTTP client",
+    "Quickly check the difference between similar codes like 301, 302, 307 and 308"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The lookup runs entirely in your browser against a built-in list, and nothing you type is uploaded or sent anywhere."
+    },
+    {
+      "q": "How does the search work?",
+      "a": "If your input is all digits, it matches codes that equal it or start with it (so 40 returns 400, 401, 402 and so on). Otherwise it matches any code whose number or reason phrase contains your text, case-insensitively."
+    },
+    {
+      "q": "Does it cover every HTTP status code?",
+      "a": "It includes a curated set of the common standard codes across the 1xx, 2xx, 3xx, 4xx and 5xx ranges, including entries like 418 I'm a Teapot. Less common or vendor-specific codes may not be listed."
+    },
+    {
+      "q": "What happens if there's no match?",
+      "a": "If nothing matches your input, the tool reports \"No matching HTTP status code.\" Try a shorter number prefix or a different keyword."
+    },
+    {
+      "q": "Can I search by the reason phrase instead of the number?",
+      "a": "Yes. Typing text like \"forbidden\" or \"gateway\" matches the reason phrase and returns the corresponding code and description."
+    }
+  ]
+}

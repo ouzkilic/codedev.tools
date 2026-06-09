@@ -1,0 +1,32 @@
+{
+  "intro": "The ASCII Art (Figlet) tool turns plain text into ASCII art banners using the classic Figlet engine. Type any text and it renders a large block-letter banner you can copy into READMEs, CLI output, terminal MOTDs, or code comments. The conversion runs entirely in your browser, so it works offline once loaded.",
+  "useCases": [
+    "Generate ASCII banners for project README files and documentation headers",
+    "Create startup splash text or MOTD banners for command-line tools",
+    "Add decorative section markers inside source code comments",
+    "Make labeled headers for terminal scripts and shell login messages",
+    "Quickly produce shareable text-art for chat, issues, or commit messages"
+  ],
+  "faq": [
+    {
+      "q": "Is my text sent to a server?",
+      "a": "No. The Figlet rendering runs entirely in your browser using JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Which font does this tool use?",
+      "a": "It renders text with Figlet's Standard font, which produces the familiar block-letter ASCII banner style."
+    },
+    {
+      "q": "What happens if I leave the input empty?",
+      "a": "If you provide no text, the tool falls back to rendering the word \"text\" as a sample banner so you can see the output format."
+    },
+    {
+      "q": "Can I use the output anywhere?",
+      "a": "Yes. The result is plain ASCII text, so you can copy and paste it into README files, code comments, terminals, chat, or anywhere monospaced text is supported."
+    },
+    {
+      "q": "Does it work with numbers and symbols?",
+      "a": "Yes. Standard ASCII characters including letters, numbers, and common symbols are rendered by the Figlet Standard font."
+    }
+  ]
+}

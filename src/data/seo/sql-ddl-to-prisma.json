@@ -1,0 +1,32 @@
+{
+  "intro": "SQL DDL to Prisma converts a SQL CREATE TABLE statement into a Prisma model definition. Paste your DDL and it derives the model name from the table, maps each column's SQL type to the matching Prisma type, and marks primary keys and nullability. It is handy when you are introspecting an existing database schema by hand or scaffolding a Prisma model from raw DDL.",
+  "useCases": [
+    "Turn a CREATE TABLE statement from a migration file into a starting Prisma model",
+    "Quickly map SQL column types (varchar, int, timestamp, jsonb, uuid) to their Prisma equivalents",
+    "Scaffold a Prisma schema field list when migrating an existing database to Prisma",
+    "Check how a column's NOT NULL constraint or PRIMARY KEY translates into Prisma's required and @id markers",
+    "Generate a draft model to copy into schema.prisma without writing the field types by hand"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored anywhere."
+    },
+    {
+      "q": "Which SQL types are mapped to Prisma types?",
+      "a": "Integer-like types (int, integer, smallint, serial, bigint) become Int; numeric, decimal, real, float, and double become Float; bool/boolean become Boolean; date, time, timestamp, timestamptz, and datetime become DateTime; json and jsonb become Json; and uuid, varchar, char, text, and citext become String. Any unrecognized type defaults to String."
+    },
+    {
+      "q": "How does it decide if a field is required or optional?",
+      "a": "A column is marked required when it is a PRIMARY KEY or declared NOT NULL; otherwise it is made optional with a trailing question mark. Primary key columns also receive the @id attribute."
+    },
+    {
+      "q": "Does it handle constraints and relations?",
+      "a": "Inline column-level NOT NULL and PRIMARY KEY are recognized, but standalone constraint lines such as PRIMARY KEY, FOREIGN KEY, UNIQUE, CONSTRAINT, CHECK, and KEY are skipped, so relations and indexes are not generated. You will need to add @relation, @unique, and indexes yourself."
+    },
+    {
+      "q": "Can I convert more than one table at a time?",
+      "a": "It processes a single CREATE TABLE statement and produces one model. The optional IF NOT EXISTS clause is supported, and quoted or bracketed identifiers (\", `, [ ]) are stripped from names."
+    }
+  ]
+}

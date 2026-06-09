@@ -1,0 +1,32 @@
+{
+  "intro": "This Adler-32 checksum tool computes the Adler-32 hash of any text you enter, returning the result in both hexadecimal and decimal form. Adler-32 is a fast checksum algorithm (used in zlib and the PNG format) that detects accidental data corruption, and it's handy when you need a quick integrity check or want to verify a value against another implementation.",
+  "useCases": [
+    "Verify an Adler-32 checksum reported by zlib, PNG tooling, or another library",
+    "Generate a lightweight integrity value for a short string or config snippet",
+    "Compare two text inputs by checking whether their checksums differ",
+    "Learn or demonstrate how the Adler-32 algorithm works on real input",
+    "Produce a fast non-cryptographic fingerprint for caching or change detection"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The checksum is computed entirely in your browser using JavaScript, and nothing you type is uploaded or stored anywhere."
+    },
+    {
+      "q": "What output format does the tool produce?",
+      "a": "It outputs the Adler-32 value twice: as an 8-digit zero-padded hexadecimal string and as an unsigned decimal number."
+    },
+    {
+      "q": "How does it handle non-ASCII characters?",
+      "a": "The input text is encoded as UTF-8 bytes before the checksum is calculated, so multi-byte characters are hashed by their UTF-8 byte sequence."
+    },
+    {
+      "q": "Is Adler-32 suitable for security or cryptography?",
+      "a": "No. Adler-32 is a non-cryptographic checksum meant to catch accidental errors, not to resist deliberate tampering. Use a cryptographic hash such as SHA-256 for security purposes."
+    },
+    {
+      "q": "What is the checksum of an empty input?",
+      "a": "An empty string produces the value 1 (hexadecimal 00000001), which is the defined Adler-32 result when no bytes are processed."
+    }
+  ]
+}

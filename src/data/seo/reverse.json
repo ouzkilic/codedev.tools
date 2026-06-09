@@ -1,0 +1,32 @@
+{
+  "intro": "Reverse Text flips your input backwards by characters, words, or lines, all in your browser. It's handy when you need to mirror a string, invert the order of words in a sentence, or flip the order of lines in a list or log. Pick the unit you want to reverse and the result updates instantly.",
+  "useCases": [
+    "Reverse a string character by character to test palindromes or mirror text",
+    "Flip the order of words in a sentence while keeping the spacing intact",
+    "Reverse the order of lines in a list, log file, or CSV column",
+    "Quickly invert a sequence of items without writing a one-off script",
+    "Create simple obfuscated or mirrored text for examples and demos"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Reverse Text runs entirely in your browser and nothing is uploaded. Your text never leaves your device."
+    },
+    {
+      "q": "What reverse modes are supported?",
+      "a": "Three: by characters (the whole string is reversed character by character), by words (the order of words is reversed while whitespace is preserved), and by lines (the order of lines, split on newlines, is reversed)."
+    },
+    {
+      "q": "Does word mode keep the original spacing?",
+      "a": "Yes. Word mode splits on whitespace and reverses both the words and the gaps, so the spacing between items is preserved in the flipped output."
+    },
+    {
+      "q": "How does line mode decide where a line ends?",
+      "a": "Line mode splits the input on newline characters and reverses that order, so the last line becomes the first. It does not change the content within each line."
+    },
+    {
+      "q": "Are emoji and other multi-byte characters handled correctly in character mode?",
+      "a": "Character mode reverses by Unicode code points, so most emoji and accented characters stay intact rather than being split into broken byte sequences."
+    }
+  ]
+}

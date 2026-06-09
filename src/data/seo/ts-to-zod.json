@@ -1,0 +1,32 @@
+{
+  "intro": "TypeScript to Zod converts a single TypeScript interface or type-object into a matching Zod validation schema right in your browser. Paste an interface like `interface User { id: number; name: string }` and get back ready-to-use `z.object()` code with a `import { z } from \"zod\"` line and an exported schema. It is handy when you want runtime validation that mirrors your existing TypeScript types without writing the Zod schema by hand.",
+  "useCases": [
+    "Turn an API response interface into a Zod schema for validating untrusted input at runtime",
+    "Bootstrap form or request-body validation from types you already have",
+    "Convert optional fields (`field?: type`) into `.optional()` Zod chains automatically",
+    "Map string literal unions like `'a' | 'b'` to `z.enum([...])` for safe state values",
+    "Generate a starting point for nested object and array types, then refine the schema by hand"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored anywhere. The whole site is client-side and open source so you can verify it."
+    },
+    {
+      "q": "What TypeScript constructs are supported?",
+      "a": "A single `interface Name { ... }` or `type Name = { ... }` (optionally prefixed with `export`). It handles string, number, boolean, null, any/unknown, arrays (`T[]` and `Array<T>`), inline nested objects, unions, optional members with `?`, and string-literal unions which become `z.enum`."
+    },
+    {
+      "q": "How are unknown or custom types handled?",
+      "a": "Types it does not recognize (such as custom interfaces, Date, or generics) are mapped to `z.unknown()`. Replace those with the correct schema after generating, since the tool does not resolve references to other types."
+    },
+    {
+      "q": "Can I convert multiple interfaces at once?",
+      "a": "No. The tool parses exactly one interface or type-object per run. Convert each type separately and combine the resulting schemas in your code."
+    },
+    {
+      "q": "Why does it fail to parse my input?",
+      "a": "Parsing requires a complete interface or type-object declaration; bare object bodies, enums, function types, or multiple declarations are not accepted. Each member must be in `field: type` form, or the tool throws an error."
+    }
+  ]
+}

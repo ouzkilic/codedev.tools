@@ -1,0 +1,32 @@
+{
+  "intro": "Backslash Escape converts plain text into its escaped form and back, handling newlines, carriage returns, tabs, and backslashes. In Escape mode it turns line breaks, tabs, and backslash characters into the sequences \\n, \\r, \\t, and \\\\ so you can safely embed multi-line text in source code or config files. In Unescape mode it reverses those sequences back into real characters, making it handy for reading log lines, JSON fragments, or string literals copied out of code.",
+  "useCases": [
+    "Turn a multi-line block of text into a single escaped string you can paste into source code",
+    "Unescape a JSON or log string so you can read the real line breaks and tabs",
+    "Clean up string literals copied from code that contain \\n, \\t, or \\\\ sequences",
+    "Convert pasted text with literal tabs into \\t before storing it in a config value",
+    "Quickly check how a string will look once its escape sequences are expanded"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser using JavaScript, and nothing you type or paste is uploaded anywhere. The whole site is open source so you can verify this yourself."
+    },
+    {
+      "q": "Which escape sequences does it handle?",
+      "a": "Escape mode converts newlines to \\n, carriage returns to \\r, tabs to \\t, and backslashes to \\\\. Unescape mode reverses those and additionally turns \\\" and \\' back into a double and single quote."
+    },
+    {
+      "q": "Does Escape mode add quote escaping?",
+      "a": "No. Escape mode only handles backslashes, newlines, carriage returns, and tabs; it does not escape quote characters. Unescape mode does recognize \\\" and \\' when expanding text back."
+    },
+    {
+      "q": "Does it support Unicode escapes like \\u00e9 or hex escapes?",
+      "a": "No. It only processes \\\\, \\n, \\r, and \\t (plus \\\" and \\' on unescape). Sequences such as \\u or \\x are left unchanged."
+    },
+    {
+      "q": "What happens to an unknown escape sequence when unescaping?",
+      "a": "Any backslash sequence that isn't one of the recognized ones is left exactly as it is, so unrelated text passes through untouched."
+    }
+  ]
+}

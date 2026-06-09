@@ -1,0 +1,32 @@
+{
+  "intro": "CSS Minify strips comments and collapses unneeded whitespace from your stylesheets to make them smaller. Paste in your CSS and it removes /* */ comments, extra spaces and line breaks, the whitespace around braces, colons, semicolons and commas, and trailing semicolons before a closing brace. It is handy for quickly compressing CSS by hand when you don't want to wire up a full build step.",
+  "useCases": [
+    "Shrink a stylesheet before pasting it inline into an HTML email or a quick prototype",
+    "Compress a small CSS snippet for a code embed or documentation example",
+    "Reduce file size of hand-maintained CSS that isn't already processed by a bundler",
+    "Clean up CSS copied from a formatted source by removing comments and excess whitespace",
+    "Quickly check how much smaller a stylesheet gets after stripping comments and spacing"
+  ],
+  "faq": [
+    {
+      "q": "Is my CSS sent to a server?",
+      "a": "No. CSS Minify runs entirely in your browser and nothing is uploaded. Your stylesheet never leaves your device."
+    },
+    {
+      "q": "What exactly does the minifier remove?",
+      "a": "It deletes /* */ comments, collapses runs of whitespace into a single space, removes whitespace around { } : ; and , characters, and drops a trailing semicolon right before a closing brace."
+    },
+    {
+      "q": "Does it rename selectors, merge rules, or optimize values?",
+      "a": "No. It is a whitespace and comment minifier only. It does not parse the CSS, shorten hex colors, merge duplicate rules, or reorder anything, so your selectors and declarations stay intact."
+    },
+    {
+      "q": "Is it safe to use with comments that contain code or special characters?",
+      "a": "Standard /* ... */ comment blocks are removed safely. Because the tool uses simple text replacement rather than a full CSS parser, content inside string values or url() that resembles comment markers could be affected, so review the output for unusual cases."
+    },
+    {
+      "q": "Is there a size limit on the CSS I can paste?",
+      "a": "There is no fixed limit; processing happens locally in your browser, so very large stylesheets are bounded only by your device's memory and performance."
+    }
+  ]
+}

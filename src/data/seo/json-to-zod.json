@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to Zod generates a Zod schema from a sample of JSON data, turning real values into a typed validation schema you can drop straight into your TypeScript project. Paste any JSON object or array and you get a ready-to-use schema, complete with the `import { z } from \"zod\"` line, so you can validate API responses, form payloads, or config at runtime. It is handy whenever you want type-safe validation derived from example data instead of writing the schema by hand.",
+  "useCases": [
+    "Bootstrap a Zod schema from a sample API response so you can validate and parse it in your app",
+    "Generate runtime validation for request or form payloads from example JSON",
+    "Create a starting point for a schema you will refine, rather than writing every field manually",
+    "Turn a config file's JSON into a Zod schema to catch shape mismatches at load time",
+    "Quickly infer the shape of unfamiliar JSON by reading the generated schema"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server. The tool is open source so you can verify this yourself."
+    },
+    {
+      "q": "What does the generated output look like?",
+      "a": "It exports a schema named `schema` and includes the `import { z } from \"zod\"` statement at the top, so the output is ready to paste into a TypeScript file."
+    },
+    {
+      "q": "What input does it accept?",
+      "a": "It accepts any valid JSON, including objects, arrays, and nested structures. The input is parsed with JSON.parse, so it must be well-formed JSON; invalid JSON will produce a parse error."
+    },
+    {
+      "q": "Does the schema match exactly what my data can contain?",
+      "a": "The schema is inferred from the single sample you provide, so it reflects the types present in that example. Fields that are optional, nullable, or can hold other types in practice may need manual adjustment after generation."
+    },
+    {
+      "q": "Which Zod version does the output target?",
+      "a": "The output uses standard `z` builder syntax that works with current Zod releases. You import Zod from your own project's dependency, so install the version your project uses."
+    }
+  ]
+}

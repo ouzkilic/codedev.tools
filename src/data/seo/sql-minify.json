@@ -1,0 +1,32 @@
+{
+  "intro": "SQL Minify compresses SQL queries by stripping out comments and collapsing extra whitespace into a single compact line. It removes both block comments (/* ... */) and single-line comments (-- ...), then squeezes all runs of spaces, tabs, and newlines down to one space. This is handy when you want to shrink a query for logging, embedding in code, or sharing without the clutter of formatting and notes.",
+  "useCases": [
+    "Shrink a formatted SQL query into a single line before embedding it in source code or a config file",
+    "Strip developer comments from a query so they are not exposed in logs or shared snippets",
+    "Reduce the size of long SQL statements stored as string literals",
+    "Normalize inconsistent indentation and line breaks into a uniform single-spaced statement",
+    "Quickly clean up a query copied from a SQL editor or migration file before pasting it elsewhere"
+  ],
+  "faq": [
+    {
+      "q": "Is my SQL sent to a server?",
+      "a": "No. SQL Minify runs entirely in your browser using client-side JavaScript, and nothing is uploaded or stored on any server. The whole codedev.tools site is open source so you can verify this."
+    },
+    {
+      "q": "What kinds of comments does it remove?",
+      "a": "It removes block comments wrapped in /* and */ as well as single-line comments that start with -- and run to the end of the line. Both styles are stripped before whitespace is collapsed."
+    },
+    {
+      "q": "Does it reformat or validate my SQL?",
+      "a": "No. The tool only removes comments and collapses whitespace into single spaces; it does not parse, validate, or pretty-print the SQL, and it does not check whether the query is syntactically correct."
+    },
+    {
+      "q": "Will it break string literals that contain -- or comment-like text?",
+      "a": "Possibly. The minifier uses simple text replacement and does not parse string boundaries, so a literal containing -- or /* could be altered. Review the output when your query contains such literals."
+    },
+    {
+      "q": "Does it change the line breaks inside my query?",
+      "a": "Yes. All whitespace, including newlines and tabs, is collapsed into single spaces and leading and trailing spaces are trimmed, so the result is a single compact line."
+    }
+  ]
+}

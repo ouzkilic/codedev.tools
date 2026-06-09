@@ -1,0 +1,33 @@
+{
+  "intro": "JSON Patch (RFC 6902) applies a sequence of patch operations to a JSON document and returns the updated result, formatted with two-space indentation. Paste your source JSON and an array of operations to add, remove, replace, move, copy, or test values addressed by JSON Pointer paths. It's handy for testing patch payloads, debugging PATCH API requests, and previewing how a diff transforms a document.",
+  "useCases": [
+    "Preview the result of an RFC 6902 patch before sending it to a PATCH endpoint",
+    "Debug failing API requests by applying the exact operations array locally",
+    "Verify a document's state with a 'test' operation before mutating it",
+    "Reorder or restructure JSON using move and copy operations addressed by JSON Pointer",
+    "Append items to arrays with the '-' index or insert at a specific position",
+    "Validate that a hand-written patch produces the expected output"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser using JavaScript, and your JSON document and patch are never uploaded or sent anywhere."
+    },
+    {
+      "q": "Which operations are supported?",
+      "a": "All six RFC 6902 operations are supported: add, remove, replace, move, copy, and test. The patch must be a JSON array of operation objects."
+    },
+    {
+      "q": "How do I append to an array?",
+      "a": "Use the '-' token as the array index in an 'add' operation path (for example, /items/-) to append the value to the end of the array. A numeric index from 0 up to the array length inserts at that position instead."
+    },
+    {
+      "q": "What happens if a path or operation is invalid?",
+      "a": "The tool throws a descriptive error, such as an invalid JSON Pointer, an out-of-range array index, or a missing object key. A failed 'test' operation also reports the path where the comparison did not match."
+    },
+    {
+      "q": "What if I leave the patch empty?",
+      "a": "If the patch field is empty, the tool simply parses and re-formats your JSON document with two-space indentation, leaving its contents unchanged."
+    }
+  ]
+}

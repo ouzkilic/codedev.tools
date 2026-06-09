@@ -1,0 +1,32 @@
+{
+  "intro": "The Meta Tag Generator builds the HTML meta and Open Graph tags you paste into a page's <head> for better SEO and social sharing. Fill in a title, description, URL, image, and content type, and it outputs the matching <title>, <meta name=\"description\">, Open Graph (og:title, og:description, og:type, og:url, og:image), and Twitter Card tags. It's handy when you want consistent link previews on platforms like Facebook, LinkedIn, and X without writing the markup by hand.",
+  "useCases": [
+    "Generate Open Graph and Twitter Card tags so a page shows a proper title, description, and preview image when shared on social media",
+    "Quickly scaffold the SEO <title> and meta description for a new landing page or blog post",
+    "Mark up an article with og:type=\"article\" versus a standard website page",
+    "Produce ready-to-paste head tags for static sites where you maintain HTML directly",
+    "Check what tags a page needs before testing it in a social link-preview debugger"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser, so the title, description, URL, and image values you type never leave your device and nothing is uploaded."
+    },
+    {
+      "q": "Which tags does it generate?",
+      "a": "It outputs <title>, <meta name=\"description\">, og:title, og:description, og:type, and twitter:card with twitter:title. og:url and og:image are only added when you provide a URL or image value."
+    },
+    {
+      "q": "Does it escape special characters?",
+      "a": "Yes. The &, <, >, and \" characters in your values are HTML-escaped so the generated tags stay valid even if your title or description contains them."
+    },
+    {
+      "q": "What is the Type option for?",
+      "a": "It sets the og:type value, with website and article as the choices. Use article for blog posts or news content and website for general pages; it defaults to website."
+    },
+    {
+      "q": "Why does the Twitter card use summary_large_image?",
+      "a": "The output always sets twitter:card to summary_large_image, which renders a large preview image on X when an og:image is present. Note that only twitter:card and twitter:title are emitted, so add any other Twitter-specific tags manually if you need them."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "The ROT13 / Caesar Cipher tool applies a letter-rotation shift to your text directly in the browser. By default it uses ROT13 (a shift of 13), but you can set any shift value to encode or decode classic Caesar ciphers. It's handy for quickly obscuring spoilers, puzzle text, or sample data, and for learning how simple substitution ciphers work.",
+  "useCases": [
+    "Encode or decode ROT13 text shared in forums, emails, or comments to hide spoilers or answers",
+    "Apply a custom Caesar shift to solve or create cryptography puzzles and CTF challenges",
+    "Quickly decrypt Caesar-ciphered strings by entering the negative shift value",
+    "Teach or demonstrate how substitution ciphers rotate letters of the alphabet",
+    "Lightly obfuscate sample text without leaving the page"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The ROT13 / Caesar shift runs entirely in your browser using local JavaScript. Your text is never uploaded or stored on any server."
+    },
+    {
+      "q": "What does the default ROT13 shift do?",
+      "a": "ROT13 rotates each letter 13 places in the alphabet. Because the alphabet has 26 letters, applying ROT13 a second time returns the original text, so the same operation both encodes and decodes."
+    },
+    {
+      "q": "Can I use a shift other than 13?",
+      "a": "Yes. Enter any number in the Shift field to apply a general Caesar cipher. The value is reduced modulo 26, and negative shifts are supported, so you can decode by entering the opposite of the encoding shift."
+    },
+    {
+      "q": "Are non-letter characters changed?",
+      "a": "No. Only ASCII letters A-Z and a-z are rotated, and letter case is preserved. Digits, spaces, punctuation, and other characters are left exactly as they are."
+    },
+    {
+      "q": "Does it handle accented or non-Latin letters?",
+      "a": "No. The tool only shifts the 26 basic Latin letters. Accented characters like é, as well as non-Latin scripts, pass through unchanged."
+    }
+  ]
+}

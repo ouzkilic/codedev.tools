@@ -1,0 +1,32 @@
+{
+  "intro": "This bcrypt hash and verify tool generates a bcrypt password hash from any text input, or checks whether a password matches an existing bcrypt hash. It's handy when you need to seed a database with a hashed password, debug an authentication flow, or confirm that a stored hash corresponds to a given password. You can pick the cost factor (rounds) when hashing, and everything runs locally in your browser using bcryptjs.",
+  "useCases": [
+    "Generate a bcrypt hash to manually insert a user or admin password into a database",
+    "Verify that a plaintext password matches a stored bcrypt hash from your app",
+    "Adjust the cost factor (rounds) to compare hashing strength and speed",
+    "Create test fixtures with known bcrypt hashes for unit or integration tests",
+    "Debug a login flow by reproducing what your backend's bcrypt library produces"
+  ],
+  "faq": [
+    {
+      "q": "Is my password or hash sent to a server?",
+      "a": "No. The tool runs entirely in your browser using the bcryptjs library, and nothing you type is uploaded or stored remotely. The page is part of an open-source, fully client-side site so you can audit the behavior yourself."
+    },
+    {
+      "q": "What does the Rounds option control?",
+      "a": "Rounds is the bcrypt cost factor, used as the salt work factor when hashing. Higher values make hashing slower and more resistant to brute force; if you leave it blank or enter an invalid value, the tool defaults to 10."
+    },
+    {
+      "q": "How do I verify a password against an existing hash?",
+      "a": "Switch the Mode to Verify, type the plaintext password in the main input, and paste the existing bcrypt hash into the 'Hash to verify against' field. The tool returns '✓ Match' or '✗ No match'."
+    },
+    {
+      "q": "Which bcrypt hash formats are supported?",
+      "a": "Verification works with standard bcrypt hashes such as those starting with $2a$, $2b$, or $2y$, since the salt and cost are read from the hash itself. Hashing produces a bcryptjs-generated hash in the same format."
+    },
+    {
+      "q": "Why does each hash of the same password look different?",
+      "a": "Bcrypt generates a random salt for every hash, so the output changes each time even for identical input. Verification still succeeds because the salt is embedded in the hash and reused during comparison."
+    }
+  ]
+}

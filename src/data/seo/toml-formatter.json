@@ -1,0 +1,32 @@
+{
+  "intro": "The TOML Formatter parses your TOML configuration and re-serializes it into clean, consistent output, so you can format, beautify, and validate TOML in one step. If the input isn't valid TOML, it reports the parser error instead of producing output, making it useful for catching mistakes in config files. Everything runs in your browser, so it's a quick way to tidy up TOML without installing anything.",
+  "useCases": [
+    "Reformat a messy or hand-edited TOML config into a consistent, readable layout",
+    "Validate that a TOML file parses correctly before committing it to a project",
+    "Clean up TOML pasted from documentation, issues, or chat that has inconsistent spacing",
+    "Normalize TOML used by tools like Cargo, pyproject.toml, or other config files",
+    "Quickly check why a TOML file is being rejected by reading the parser error message"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The TOML Formatter runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server. The whole site is open source and client-side by design."
+    },
+    {
+      "q": "Does it validate my TOML?",
+      "a": "Yes. The tool parses your input first, so if the TOML is invalid it shows the parser's error message instead of formatted output. Valid TOML is re-serialized into clean output."
+    },
+    {
+      "q": "Will it preserve my comments and original formatting?",
+      "a": "No. The tool parses the TOML into data and then re-serializes it, so comments, blank lines, and your original key ordering details are not preserved. The output reflects the parsed structure in a normalized form."
+    },
+    {
+      "q": "What TOML version does it support?",
+      "a": "It uses the smol-toml parser, which targets the TOML 1.0 specification. Standard TOML 1.0 features such as tables, arrays, inline tables, and typed values are supported."
+    },
+    {
+      "q": "Is there a file size limit?",
+      "a": "There is no fixed limit, but because formatting happens in your browser, very large files depend on your device's memory and CPU. Typical config files format instantly."
+    }
+  ]
+}

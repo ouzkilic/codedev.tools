@@ -1,0 +1,32 @@
+{
+  "intro": "Remove Invisible Characters strips zero-width and other invisible Unicode characters from text, including ZWSP (U+200B), ZWNJ (U+200C), ZWJ (U+200D), the byte order mark (U+FEFF), soft hyphens (U+00AD), and directional marks. Paste your text and it deletes every occurrence in place, which is handy when copied content carries hidden characters that break comparisons, validation, or formatting.",
+  "useCases": [
+    "Clean text copied from websites, PDFs, or chat apps that secretly contains zero-width spaces",
+    "Remove a leftover byte order mark (BOM) that appears at the start of pasted content",
+    "Strip soft hyphens (U+00AD) that cause unexpected word breaks in code or data",
+    "Fix string equality checks that fail because of invisible characters you cannot see",
+    "Sanitize identifiers, keys, or config values before committing them to a repository"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and nothing you paste is uploaded or stored anywhere. The text never leaves your device."
+    },
+    {
+      "q": "Which characters does it remove?",
+      "a": "It removes zero-width space (U+200B), zero-width non-joiner (U+200C), zero-width joiner (U+200D), left-to-right and right-to-left marks (U+200E, U+200F), the byte order mark / zero-width no-break space (U+FEFF), the soft hyphen (U+00AD), and the word joiner (U+2060)."
+    },
+    {
+      "q": "Does it remove regular spaces, tabs, or line breaks?",
+      "a": "No. Only the listed invisible Unicode characters are stripped; ordinary spaces, tabs, and newlines are left untouched."
+    },
+    {
+      "q": "Will it touch emoji that use the zero-width joiner?",
+      "a": "Yes, be aware that the zero-width joiner (U+200D) is removed, so multi-part emoji sequences such as family or skin-tone combinations may be split into their separate base characters."
+    },
+    {
+      "q": "Does it modify visible characters or change my text otherwise?",
+      "a": "No. It only deletes the targeted invisible characters and leaves all visible text exactly as it was."
+    }
+  ]
+}

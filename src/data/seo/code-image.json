@@ -1,0 +1,32 @@
+{
+  "intro": "Code to Image renders a code snippet to a downloadable PNG right in your browser. Paste any code, pick a dark or light theme and font size, and get a clean monospace screenshot you can save and share. It's handy when you want a quick image of code for docs, slides, or social posts without installing anything or signing up.",
+  "useCases": [
+    "Turn a code snippet into a PNG to embed in slides, blog posts, or documentation",
+    "Create a shareable code screenshot for social media or chat without taking a manual screen capture",
+    "Generate consistent, high-resolution code images at 2x scale for retina displays",
+    "Switch between dark and light backgrounds to match the theme of your article or presentation",
+    "Bump the font size up or down so the snippet stays readable when scaled in a thumbnail"
+  ],
+  "faq": [
+    {
+      "q": "Is my code sent to a server?",
+      "a": "No. The entire conversion runs in your browser using a canvas element, and the PNG is generated locally. Your code is never uploaded or stored anywhere."
+    },
+    {
+      "q": "What format does the tool export?",
+      "a": "It exports a PNG image, downloaded as code.png. The image is rendered at 2x scale for crisp output on high-density screens."
+    },
+    {
+      "q": "Does it add syntax highlighting?",
+      "a": "No. Code is drawn as plain monospace text in a single foreground color over a solid background. You can choose a dark or light theme, but tokens are not colorized."
+    },
+    {
+      "q": "Can I change the font size?",
+      "a": "Yes. Set the font size in the options; values are clamped between 8 and 48 pixels, and anything outside that range or left blank falls back to a sensible default."
+    },
+    {
+      "q": "How is the image size determined?",
+      "a": "The width and height are calculated automatically from the longest line and the number of lines, plus padding. There is a minimum canvas size so very short snippets still produce a usable image."
+    }
+  ]
+}

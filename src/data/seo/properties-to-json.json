@@ -1,0 +1,32 @@
+{
+  "intro": "The .properties to JSON converter turns a Java .properties config file into a flat JSON object directly in your browser. Each key/value line becomes a JSON string property, making it easy to inspect, reuse, or migrate Java application settings into JSON-based tooling. It handles both = and : separators and ignores comment lines, so you can paste raw config and get clean output instantly.",
+  "useCases": [
+    "Migrate a Java application.properties or messages.properties file into a JSON config",
+    "Convert i18n message bundles into JSON for use in a JavaScript or web frontend",
+    "Quickly inspect a large .properties file as structured, readable JSON",
+    "Prepare configuration values for tools or scripts that expect JSON input",
+    "Spot malformed property lines, since lines without a separator raise a clear error"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored anywhere. The whole site is open source so you can verify this."
+    },
+    {
+      "q": "Which separators between key and value are supported?",
+      "a": "Both = and : are supported. The tool splits on whichever separator appears first in the line, then trims whitespace around the key and value."
+    },
+    {
+      "q": "Are comment lines handled?",
+      "a": "Yes. Blank lines and lines starting with # or ! are skipped, matching the comment conventions of Java .properties files."
+    },
+    {
+      "q": "What type are the values in the output JSON?",
+      "a": "Every value is emitted as a JSON string. The tool does not infer numbers, booleans, or nested objects from dotted keys; keys are kept exactly as written."
+    },
+    {
+      "q": "What happens if a line has no separator?",
+      "a": "The tool throws an error naming the offending line, so a property line missing both = and : will stop the conversion until you fix it. Multi-line value continuations and escape sequences are not specially processed."
+    }
+  ]
+}

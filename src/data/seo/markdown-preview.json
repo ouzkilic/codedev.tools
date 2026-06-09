@@ -1,0 +1,32 @@
+{
+  "intro": "Markdown Preview renders your Markdown to HTML live as you type, with a source editor on one side and the rendered output on the other. It is handy for drafting README files, documentation, comments, or chat messages and checking how the formatting will look before you publish. The Markdown is parsed with the marked library and the resulting HTML is sanitized, so the preview reflects standard Markdown syntax.",
+  "useCases": [
+    "Drafting and proofreading a README.md before committing it to a repository",
+    "Checking how headings, lists, links, and code blocks render while writing documentation",
+    "Previewing Markdown for GitHub issues, pull request descriptions, or comments",
+    "Quickly converting a Markdown snippet to HTML mentally by seeing the rendered result",
+    "Verifying tables, blockquotes, and inline code formatting before pasting into a platform that supports Markdown"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and nothing you type is uploaded. The Markdown is parsed and rendered locally on your device."
+    },
+    {
+      "q": "Which Markdown features are supported?",
+      "a": "It uses the marked parser with its default settings, so common Markdown is supported: headings, bold and italic, lists, links, images, blockquotes, inline code, fenced code blocks, and tables. There are no custom extensions beyond what marked provides by default."
+    },
+    {
+      "q": "Is the rendered HTML safe?",
+      "a": "Yes. After Markdown is converted to HTML, the output is sanitized with DOMPurify before it is shown, which strips potentially dangerous content such as inline scripts."
+    },
+    {
+      "q": "Why does the preview update with a slight delay?",
+      "a": "The preview is debounced by about 200 milliseconds, so it waits briefly after you stop typing before re-rendering. This keeps the editor responsive while you type continuously."
+    },
+    {
+      "q": "Can I export the rendered HTML or a file?",
+      "a": "The tool shows a live rendered preview from your Markdown source but does not provide a built-in export or download. You can copy the rendered content from the preview pane if you need it elsewhere."
+    }
+  ]
+}

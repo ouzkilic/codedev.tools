@@ -1,0 +1,32 @@
+{
+  "intro": "Lorem Ipsum is a placeholder text generator that produces classic lorem ipsum filler by words, sentences, or paragraphs. Pick a unit and a count, and it builds dummy text from the standard lorem ipsum word list for mockups, layouts, and design previews. It runs entirely in your browser, so it works offline and never sends anything anywhere.",
+  "useCases": [
+    "Filling UI mockups and wireframes with realistic-length placeholder copy",
+    "Generating dummy paragraphs to test typography, spacing, and line wrapping",
+    "Producing seed content for CMS entries, blog templates, or database fixtures",
+    "Checking how a component handles short word lists versus long multi-paragraph blocks",
+    "Creating quick filler text for slide decks, PDFs, or print layout proofs"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser using JavaScript, and no text or settings are ever uploaded. It works offline once the page has loaded."
+    },
+    {
+      "q": "What units can I generate?",
+      "a": "You can generate words, sentences, or paragraphs. Choose the unit and enter how many of that unit you want."
+    },
+    {
+      "q": "How long are the generated sentences and paragraphs?",
+      "a": "Each sentence is a random 6 to 13 words, and each paragraph is a random 3 to 6 sentences. Words are drawn at random from the standard lorem ipsum vocabulary."
+    },
+    {
+      "q": "Is there a limit on the count?",
+      "a": "Yes. The count is clamped between 1 and 1000; values below 1, above 1000, or non-numeric entries fall back to the valid range (the default is 3)."
+    },
+    {
+      "q": "Does the output always start with \"Lorem ipsum dolor sit amet\"?",
+      "a": "No. Words are selected randomly each time, so the text varies on every generation. The first letter of the output is capitalized, but the exact wording is not fixed."
+    }
+  ]
+}

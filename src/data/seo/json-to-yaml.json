@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to YAML converts a JSON document into equivalent YAML right in your browser. Paste any valid JSON and get clean YAML output, which is handy when you need to move data into config files for tools like Kubernetes, Docker Compose, GitHub Actions, or Ansible. It's a quick way to turn JSON API responses or settings into the more readable YAML (.yml) format without leaving your editor.",
+  "useCases": [
+    "Turn a JSON config into a YAML file for Kubernetes, Docker Compose, or CI pipelines",
+    "Convert a JSON API response into YAML for documentation or fixtures",
+    "Translate package or app settings from JSON into a more readable YAML form",
+    "Generate YAML test data from existing JSON objects",
+    "Quickly inspect nested JSON in YAML's indentation-based layout"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on a server. The site is open source so you can verify this yourself."
+    },
+    {
+      "q": "What input does this tool accept?",
+      "a": "It expects valid JSON. The input is parsed with JSON.parse, so standard JSON rules apply: double-quoted keys and strings, no trailing commas, and no comments. Invalid JSON will produce a parse error."
+    },
+    {
+      "q": "Which YAML format does it produce?",
+      "a": "It uses the js-yaml library's default dump settings, generating standard YAML 1.1 output with two-space indentation. Block style is used for nested structures rather than inline flow style."
+    },
+    {
+      "q": "How are data types handled?",
+      "a": "JSON types map directly to their YAML equivalents: objects become mappings, arrays become sequences, and strings, numbers, booleans, and null are preserved. Since the input is JSON, dates remain plain strings rather than YAML timestamps."
+    },
+    {
+      "q": "Can it convert YAML back to JSON?",
+      "a": "No, this tool only converts JSON into YAML in one direction. For the reverse, use a dedicated YAML to JSON tool."
+    }
+  ]
+}

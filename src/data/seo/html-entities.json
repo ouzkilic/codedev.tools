@@ -1,0 +1,32 @@
+{
+  "intro": "HTML Entity Encode / Decode escapes text into HTML entities or decodes entities back into plain text, right in your browser. Encoding converts the five characters that matter for safe HTML output (&, <, >, \", and ') into their entity equivalents, while decoding turns named and numeric entities back into the characters they represent. It is handy whenever you need to escape or unescape HTML for templates, snippets, or debugging.",
+  "useCases": [
+    "Escape user-supplied text before embedding it in HTML to avoid breaking markup or introducing injection",
+    "Encode code samples so angle brackets and ampersands render literally inside a <pre> or <code> block",
+    "Decode HTML entities found in scraped pages, API responses, or log output back into readable text",
+    "Convert decimal (&#169;) or hexadecimal (&#xA9;) numeric character references into their actual Unicode characters",
+    "Quickly check how special characters like quotes and apostrophes will look once escaped"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encoding and decoding run entirely in your browser with JavaScript, and nothing you type is uploaded or stored anywhere."
+    },
+    {
+      "q": "Which characters does encoding escape?",
+      "a": "Encoding escapes the five HTML-sensitive characters: & becomes &amp;, < becomes &lt;, > becomes &gt;, \" becomes &quot;, and ' becomes &#39;. Other characters are left as-is."
+    },
+    {
+      "q": "Which named entities can it decode?",
+      "a": "Decoding recognizes the common named entities &amp;, &lt;, &gt;, &quot;, &apos;, and &nbsp;. Named entities outside this set are left unchanged so you don't lose data."
+    },
+    {
+      "q": "Does it support numeric character references?",
+      "a": "Yes. Decoding handles both decimal references like &#169; and hexadecimal references like &#xA9;, converting them to the matching Unicode character. Invalid numeric codes are left untouched."
+    },
+    {
+      "q": "How do I switch between encoding and decoding?",
+      "a": "Use the Mode option to pick Encode (escape) or Decode (unescape). Encode is the default."
+    }
+  ]
+}

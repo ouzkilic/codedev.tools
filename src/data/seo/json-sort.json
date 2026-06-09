@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Sort Keys recursively reorders the keys of a JSON object into alphabetical order, walking through nested objects and the objects inside arrays. The result is re-serialized with 2-space indentation, giving you a consistent, canonical key order. It's handy when you want to compare two JSON files, reduce noisy diffs, or normalize output whose key order is otherwise unpredictable.",
+  "useCases": [
+    "Produce a canonical, alphabetically ordered version of a JSON payload so two files diff cleanly in git or a review",
+    "Normalize API responses or config files whose key order varies between runs or environments",
+    "Make large JSON objects easier to scan by finding keys in a predictable alphabetical position",
+    "Standardize fixtures and snapshot test data so reordered keys don't cause false failures",
+    "Pretty-print and reformat minified JSON with consistent 2-space indentation while sorting keys"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored anywhere. The whole site is open source and 100% client-side."
+    },
+    {
+      "q": "Does it sort the items inside arrays?",
+      "a": "No. Array element order is preserved exactly as-is; only the keys of objects are sorted. Objects nested inside arrays do have their own keys sorted."
+    },
+    {
+      "q": "How are nested objects handled?",
+      "a": "Sorting is recursive, so keys at every level of nesting are reordered alphabetically, including objects found inside arrays."
+    },
+    {
+      "q": "How are keys compared when sorting?",
+      "a": "Keys are sorted using JavaScript's default string comparison, which orders by Unicode code points. This means uppercase letters sort before lowercase ones (for example, \"Name\" comes before \"name\")."
+    },
+    {
+      "q": "What does the output look like, and what if my input is invalid?",
+      "a": "Valid input is re-serialized as JSON with 2-space indentation. If the input isn't valid JSON, parsing fails and you'll get an error rather than sorted output."
+    }
+  ]
+}

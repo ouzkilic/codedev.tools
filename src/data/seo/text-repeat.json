@@ -1,0 +1,32 @@
+{
+  "intro": "Text Repeater takes the text you paste in and repeats it a set number of times, joining the copies with the separator you choose. It's handy for quickly generating repeated lines, filler content, or duplicated values without writing a script or a loop by hand. Pick a count, choose how the copies are separated, and the multiplied text appears instantly.",
+  "useCases": [
+    "Generate placeholder or filler text by repeating a sample line many times",
+    "Create repeated rows or values for testing how an app handles bulk input",
+    "Duplicate a snippet several times separated by commas to build a quick list",
+    "Produce a block of identical lines for seeding logs, fixtures, or mock data",
+    "Repeat a string a fixed number of times when prototyping without writing code"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Text Repeater runs entirely in your browser and nothing you type is uploaded or stored remotely. The repetition happens locally on your device."
+    },
+    {
+      "q": "How do I control how the copies are separated?",
+      "a": "Use the Separator option to join the repeated copies with a newline, a comma, a space, or nothing at all (None). Newline is the default."
+    },
+    {
+      "q": "Is there a maximum repeat count?",
+      "a": "Yes. The count is clamped between 1 and 10,000, so very large or out-of-range values are capped to that range."
+    },
+    {
+      "q": "What happens if I enter an invalid count?",
+      "a": "If the count field is empty or not a valid number, it falls back to 1. Decimal input is truncated to a whole number when parsed."
+    },
+    {
+      "q": "Does it repeat the entire input or split it line by line?",
+      "a": "It repeats the whole input text as a single block, copying it the requested number of times and joining the copies with your chosen separator."
+    }
+  ]
+}

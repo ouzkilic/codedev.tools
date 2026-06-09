@@ -1,0 +1,33 @@
+{
+  "intro": "Text Diff compares two pieces of text and highlights the differences, showing exactly what was added and removed. You can diff line by line, word by word, or character by character, with options to ignore case or whitespace. It is handy whenever you need to spot changes between two versions of text, config, code, or logs.",
+  "useCases": [
+    "Compare two versions of a config file or snippet to see what changed",
+    "Review edits between a draft and a revised paragraph of text",
+    "Spot small character-level differences in IDs, tokens, or strings",
+    "Check word-level changes between two copies of documentation",
+    "Diff log output before and after a change to find new or removed lines",
+    "Verify that two values are identical when whitespace or case shouldn't matter"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The diff runs entirely in your browser using JavaScript, and neither text you paste is uploaded or stored anywhere. Nothing leaves your device."
+    },
+    {
+      "q": "What diff modes are available?",
+      "a": "Three modes: line, word, and character. Line mode compares whole lines, word mode breaks text into words, and character mode compares every individual character."
+    },
+    {
+      "q": "Can I ignore case or whitespace differences?",
+      "a": "You can ignore case in word and character modes, and ignore whitespace in line mode. Note that the ignore-case option does not apply to line mode, and ignore-whitespace only applies to line mode."
+    },
+    {
+      "q": "Does it show how many lines were added or removed?",
+      "a": "Yes. The tool reports a summary count of added and removed segments based on the selected diff mode, so you can quickly gauge the size of the change."
+    },
+    {
+      "q": "Is there a size limit on the text I can compare?",
+      "a": "There is no hard limit imposed by the tool, but since everything runs in the browser, very large inputs in character mode may be slower to process on your machine."
+    }
+  ]
+}

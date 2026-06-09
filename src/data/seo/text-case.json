@@ -1,0 +1,33 @@
+{
+  "intro": "Case Converter changes text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, Sentence case, lowercase and UPPERCASE. It splits your input into words by detecting camelCase boundaries, underscores, hyphens and whitespace, then re-joins them in the case style you pick. It is handy when renaming variables, generating identifiers, or normalizing strings across a codebase.",
+  "useCases": [
+    "Convert a variable name from snake_case to camelCase or PascalCase when moving code between languages",
+    "Turn a phrase or heading into a kebab-case slug for URLs or file names",
+    "Generate CONSTANT_CASE names for environment variables or enum members",
+    "Reformat database column names into Title Case or Sentence case labels for a UI",
+    "Quickly switch a block of text to all lowercase or UPPERCASE",
+    "Normalize mixed-style identifiers (spaces, dashes, underscores) into one consistent case"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser with JavaScript, and nothing you type is uploaded or stored remotely."
+    },
+    {
+      "q": "Which case formats are supported?",
+      "a": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, Sentence case, lowercase and UPPERCASE."
+    },
+    {
+      "q": "How does it decide where words begin and end?",
+      "a": "It treats a lowercase-to-uppercase transition (like myValue), underscores, hyphens, and whitespace as word boundaries, then collapses repeated separators."
+    },
+    {
+      "q": "How are numbers and acronyms handled?",
+      "a": "Numbers stay attached to the word they follow rather than starting a new word, and acronyms are not detected specially, so a run of capitals like 'JSONData' is split only at the J-to-S style boundary, which may not match your expectation for all-caps groups."
+    },
+    {
+      "q": "What do lowercase and UPPERCASE modes do differently?",
+      "a": "Unlike the other styles, lowercase and UPPERCASE do not re-split into words; they simply change the case of the entire input while keeping spaces and punctuation as-is."
+    }
+  ]
+}

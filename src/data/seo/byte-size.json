@@ -1,0 +1,32 @@
+{
+  "intro": "Byte Size Converter takes a raw byte count or a human-readable size like \"1.5 MB\" and converts it into both decimal (KB/MB/GB) and binary (KiB/MiB/GiB) units. It's handy when you need to reconcile file sizes, storage quotas, or memory figures that mix the 1000-based and 1024-based conventions. Paste a number or a value with a unit and you get the exact byte count alongside humanized decimal and binary representations.",
+  "useCases": [
+    "Converting a byte count from a log or API response into a readable KB/MB/GB figure",
+    "Checking whether a reported size uses decimal (MB) or binary (MiB) units",
+    "Translating a size like \"2.5 GB\" back into an exact byte count for config files",
+    "Comparing disk or storage quotas advertised in decimal against OS reports in binary",
+    "Sanity-checking memory or buffer sizes during debugging"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, and nothing you enter is uploaded or stored on any server."
+    },
+    {
+      "q": "Which input formats are accepted?",
+      "a": "You can enter a plain number (treated as bytes) or a number followed by a unit: B, KB, MB, GB, TB, or the binary units KiB, MiB, GiB, TiB. Input is case-insensitive and an optional space between number and unit is allowed."
+    },
+    {
+      "q": "What is the difference between the decimal and binary output?",
+      "a": "Decimal units (KB, MB, GB) use a base of 1000, while binary units (KiB, MiB, GiB) use a base of 1024. The tool shows both so you can see how the same byte count maps onto each convention."
+    },
+    {
+      "q": "How are the humanized values rounded?",
+      "a": "The decimal and binary results are rounded to at most two decimal places, while the raw byte count is always shown in full with no rounding."
+    },
+    {
+      "q": "What units does the output scale up to?",
+      "a": "Decimal output scales up to PB and binary output up to PiB, picking the largest unit where the value stays at or above the base."
+    }
+  ]
+}

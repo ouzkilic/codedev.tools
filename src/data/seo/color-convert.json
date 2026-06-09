@@ -1,0 +1,33 @@
+{
+  "intro": "The Color Converter takes a single color value in HEX, RGB, or HSL notation and converts it to HEX, RGB, HSL, HSV, and CMYK at once. It is handy when you have a color in one CSS format and need its equivalents for stylesheets, design handoffs, or print work without reaching for a separate tool. Paste a value like #3b82f6, rgb(59, 130, 246), or hsl(217, 91%, 60%) and get every common color model back instantly.",
+  "useCases": [
+    "Convert a HEX color from a design file into rgb() or hsl() for CSS variables",
+    "Get HSL values so you can tweak hue, saturation, or lightness for color variants",
+    "Translate a screen RGB color into CMYK percentages for print-oriented work",
+    "Normalize shorthand hex (#abc) to full six-digit hex output",
+    "Look up the HSV representation of a color for use in design or graphics tools",
+    "Quickly check the equivalent formats of a color while debugging UI styles"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The Color Converter runs entirely in your browser and nothing is uploaded. The color you enter never leaves your device."
+    },
+    {
+      "q": "Which input formats are supported?",
+      "a": "You can enter a HEX value (three- or six-digit, with or without #), an rgb()/rgba() value, or an hsl()/hsla() value. The converter parses these and outputs HEX, RGB, HSL, HSV, and CMYK."
+    },
+    {
+      "q": "Does it support alpha or transparency?",
+      "a": "No. It reads rgba() and hsla() inputs but uses only the red, green, and blue (or hue, saturation, lightness) channels; the alpha value is ignored and no alpha is included in the output."
+    },
+    {
+      "q": "Why are HSL, HSV, and CMYK values sometimes rounded?",
+      "a": "All percentage and degree values are rounded to whole numbers. Because of rounding, converting back and forth between formats can occasionally shift a channel by one unit."
+    },
+    {
+      "q": "What happens if I enter an invalid color?",
+      "a": "The tool shows an error and asks for a valid #hex, rgb(...), or hsl(...) value. RGB channels above 255 are also rejected."
+    }
+  ]
+}

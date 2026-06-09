@@ -1,0 +1,32 @@
+{
+  "intro": "Base58 Encode / Decode converts text to and from Base58 using the Bitcoin alphabet, the same character set used for Bitcoin addresses and keys. Switch between encode and decode modes to turn a string into a Base58 representation or read it back into the original text. It is handy whenever you need a compact, copy-paste-safe string that avoids easily confused characters like 0, O, I, and l.",
+  "useCases": [
+    "Encode a UTF-8 string into a Base58 value using the Bitcoin alphabet",
+    "Decode a Base58 string back into its original text",
+    "Inspect or learn how Base58 differs from Base64 (no +, /, or = padding)",
+    "Produce short identifiers or tokens without characters that are ambiguous when read aloud or written down",
+    "Quickly sanity-check Base58 data while working with Bitcoin or BTC-related formats"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encoding and decoding run entirely in your browser using local JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Which Base58 alphabet does this tool use?",
+      "a": "It uses the Bitcoin alphabet: 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz. The digit 0 and the letters O, I, and l are intentionally excluded to avoid visual confusion."
+    },
+    {
+      "q": "What happens if I decode an invalid Base58 string?",
+      "a": "Decoding fails with an error naming the first character that is not part of the Bitcoin Base58 alphabet. Leading and trailing whitespace is trimmed before decoding."
+    },
+    {
+      "q": "How are leading zero bytes handled?",
+      "a": "Leading zero bytes in the input are encoded as leading '1' characters, and leading '1' characters decode back into zero bytes, matching standard Base58 behavior."
+    },
+    {
+      "q": "Does the tool support binary data or only text?",
+      "a": "Input and output are treated as UTF-8 text: the string is encoded to bytes with TextEncoder and decoded back with TextDecoder, so it works with any text you can type or paste."
+    }
+  ]
+}

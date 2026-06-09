@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { orderedCategories } from './categories';
 import { meta as jsonFormatter } from './json-formatter/meta';
 import { meta as jsonMinify } from './json-minify/meta';
 import { meta as jsonValidate } from './json-validate/meta';
@@ -270,4 +271,16 @@ export const searchTools = (q: string) => {
   return tools.filter((t) =>
     [t.title, t.description, ...t.keywords].join(' ').toLowerCase().includes(query),
   );
+};
+
+/** Tools grouped by category, in display order. Empty categories are dropped. */
+export const toolsByCategory = orderedCategories
+  .map((cat) => ({ ...cat, items: tools.filter((t) => t.category === cat.key) }))
+  .filter((c) => c.items.length > 0);
+
+/** Other tools in the same category (for internal linking / "related" sections). */
+export const relatedTools = (id: string, limit = 6) => {
+  const tool = findTool(id);
+  if (!tool) return [];
+  return tools.filter((t) => t.category === tool.category && t.id !== id).slice(0, limit);
 };

@@ -1,0 +1,32 @@
+{
+  "intro": "SQL DDL to TypeScript turns a CREATE TABLE statement into a TypeScript interface right in your browser. Paste your SQL DDL and it reads the table name and columns, maps each SQL type to a TypeScript type, and generates a typed interface. It's handy when you want types that mirror your database schema without writing them by hand.",
+  "useCases": [
+    "Generate a TypeScript interface from an existing CREATE TABLE definition",
+    "Keep application types in sync with your database schema",
+    "Quickly scaffold types for a new table before wiring up a query layer",
+    "Convert columns into optional or required fields based on NOT NULL constraints",
+    "Map common SQL types (int, varchar, boolean, timestamp, jsonb) to their TypeScript equivalents"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser and nothing is uploaded. The tool is open source and fully client-side, so your SQL never leaves your machine."
+    },
+    {
+      "q": "Which SQL types are supported?",
+      "a": "Numeric types like int, integer, smallint, bigint, serial, numeric, decimal, real, float, double and money become number; varchar, char, text, uuid and citext become string; bool and boolean become boolean; date, time, timestamp, timestamptz and datetime become string. json and jsonb, along with any unrecognized type, become unknown."
+    },
+    {
+      "q": "How are optional fields decided?",
+      "a": "A column is marked required (no question mark) only when it includes NOT NULL. Every other column is generated as optional with a trailing question mark."
+    },
+    {
+      "q": "Are constraints and keys included in the interface?",
+      "a": "No. Top-level lines starting with PRIMARY, FOREIGN, UNIQUE, CONSTRAINT, CHECK or KEY are skipped, so only column definitions become interface properties."
+    },
+    {
+      "q": "How is the interface name chosen?",
+      "a": "The table name is converted to PascalCase for the interface name (for example, user_accounts becomes UserAccounts). Quotes, backticks and square brackets around identifiers are stripped automatically."
+    }
+  ]
+}

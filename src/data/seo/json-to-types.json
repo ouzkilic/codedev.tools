@@ -1,0 +1,33 @@
+{
+  "intro": "JSON to Types generates type definitions in many languages from a JSON sample, powered by quicktype. Paste a JSON object and pick a target language to get ready-to-use types for TypeScript, Go, Rust, Java, C#, Python, Swift, Kotlin, Dart, PHP, or C++. It is handy when you need to model an API response or config payload as strongly typed structs, classes, or interfaces without writing them by hand.",
+  "useCases": [
+    "Turn a JSON API response into Go structs or Rust structs before wiring up a client",
+    "Generate TypeScript interfaces from sample JSON for typed frontend code",
+    "Create Java or C# classes from a JSON payload to deserialize into",
+    "Produce Python or Kotlin types from JSON to model data structures",
+    "Scaffold Swift or Dart types from a JSON sample for a mobile app",
+    "Quickly inspect the inferred shape of an unfamiliar JSON document"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using quicktype, and your JSON is never uploaded or sent anywhere. Nothing leaves your device."
+    },
+    {
+      "q": "Which languages can it generate types for?",
+      "a": "TypeScript, Go, Rust, Java, C#, Python, Swift, Kotlin, Dart, PHP, and C++. Go is the default; choose a different target from the language selector."
+    },
+    {
+      "q": "Does it produce full classes with methods or just the types?",
+      "a": "It emits types only. The generator runs with the just-types option, so you get type definitions (structs, classes, interfaces) without serialization helpers or extra boilerplate."
+    },
+    {
+      "q": "How are the types inferred?",
+      "a": "Types are inferred from the JSON sample you provide, with the root type named Root. Because inference is based on the example, edge cases like optional fields or mixed types depend on what your sample includes."
+    },
+    {
+      "q": "What input does it expect?",
+      "a": "A single valid JSON sample. Invalid JSON will cause an error, so make sure the input parses before generating types."
+    }
+  ]
+}

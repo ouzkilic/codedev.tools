@@ -1,0 +1,32 @@
+{
+  "intro": "The CSS Gradient Generator builds a two-color CSS linear or radial gradient and shows a live preview as you adjust it. Pick the gradient type, set an angle (for linear) or shape (for radial), choose a start and end color, and copy the ready-to-use background declaration. It's handy when you need quick gradient backgrounds for buttons, cards, or hero sections without hand-writing the syntax.",
+  "useCases": [
+    "Generate a linear-gradient background for a hero section or banner",
+    "Create a radial-gradient for buttons, badges, or card accents",
+    "Tweak the angle of a linear gradient and preview it instantly",
+    "Copy a ready-made background: ... CSS declaration into a stylesheet",
+    "Experiment with start and end colors before settling on a palette"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser and nothing is uploaded. The gradient string is built locally from the options you enter."
+    },
+    {
+      "q": "What gradient types are supported?",
+      "a": "It supports CSS linear-gradient and radial-gradient. You select the type and the output uses the matching CSS function."
+    },
+    {
+      "q": "Does it support more than two color stops?",
+      "a": "No. The tool produces a simple two-stop gradient using a single From color and a single To color. For additional stops you would edit the generated CSS by hand."
+    },
+    {
+      "q": "What goes in the Angle/Shape field?",
+      "a": "For a linear gradient enter an angle like 90deg; for a radial gradient enter a shape such as circle. If you leave it blank it falls back to 90deg for linear and circle for radial."
+    },
+    {
+      "q": "What format is the output?",
+      "a": "It outputs a full CSS background declaration, for example background: linear-gradient(90deg, #ff6a00, #ee0979); which you can paste directly into your styles."
+    }
+  ]
+}

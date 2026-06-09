@@ -1,0 +1,32 @@
+{
+  "intro": "Excel to JSON converts the first sheet of an Excel file (.xlsx or .xls) into a JSON array, using the top row as object keys. It's handy when you need to turn spreadsheet data into a structured format for APIs, config files, or quick inspection. Everything runs in your browser, so you can convert a spreadsheet to JSON without uploading it anywhere.",
+  "useCases": [
+    "Turn a spreadsheet of records into a JSON array for seeding a database or mock API",
+    "Quickly inspect the contents of an Excel file as readable, indented JSON",
+    "Convert an exported .xls or .xlsx report into JSON for a script or pipeline",
+    "Hand off tabular data from a non-technical colleague as JSON your code can consume",
+    "Prototype with sample data by pasting a spreadsheet's rows into your app as JSON"
+  ],
+  "faq": [
+    {
+      "q": "Is my Excel file sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using a JavaScript library, and your file is never uploaded or transmitted anywhere."
+    },
+    {
+      "q": "Which file formats are supported?",
+      "a": "It reads common Excel workbook formats such as .xlsx and .xls. The file is parsed in-browser, so no installation of Excel is required."
+    },
+    {
+      "q": "What happens if my workbook has multiple sheets?",
+      "a": "Only the first sheet in the workbook is converted. Other sheets are ignored, so move the data you want to the first sheet before converting."
+    },
+    {
+      "q": "How are the JSON keys determined?",
+      "a": "The first row of the sheet is treated as the header, and its cell values become the keys for each JSON object. Each subsequent row becomes one object in the output array."
+    },
+    {
+      "q": "How is the output formatted?",
+      "a": "The result is a JSON array of objects, pretty-printed with 2-space indentation so it's easy to read and copy."
+    }
+  ]
+}

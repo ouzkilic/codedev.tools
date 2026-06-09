@@ -1,0 +1,32 @@
+{
+  "intro": "Keyboard Keycode looks up the JavaScript keyCode for a key you type in. Enter a single character like \"a\" or a named key such as \"Enter\", \"Tab\", or \"ArrowUp\", and it returns the matching numeric keyCode used in keyboard events. It's handy when you're wiring up key event handlers and need to confirm the right code without printing it from the console.",
+  "useCases": [
+    "Find the keyCode for a single character such as a letter or digit while writing keydown/keyup handlers",
+    "Look up codes for common named keys like Enter (13), Tab (9), Escape (27), or Space (32)",
+    "Get arrow key codes (ArrowUp 38, ArrowDown 40, ArrowLeft 37, ArrowRight 39) for navigation logic",
+    "Check modifier and editing key codes such as Shift (16), Control (17), Alt (18), Backspace (8), or Delete (46)",
+    "Quickly verify a keyCode in legacy code that still relies on event.keyCode instead of event.key"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The lookup runs entirely in your browser, and nothing you type is uploaded or stored anywhere."
+    },
+    {
+      "q": "What kinds of input does it accept?",
+      "a": "It accepts a single character (for example \"k\", which uses its uppercase character code) or a named key it knows about, such as Enter, Tab, Escape, Space, Backspace, Delete, the arrow keys, Shift, Control, Alt, CapsLock, Home, and End."
+    },
+    {
+      "q": "Is the input case-sensitive?",
+      "a": "Named keys are matched case-insensitively, so \"enter\", \"Enter\", and \"ENTER\" all work. For single characters the code is computed from the uppercase form, so \"a\" and \"A\" both return 65."
+    },
+    {
+      "q": "Why does it say \"Unknown key\" for some input?",
+      "a": "If the input is longer than one character and isn't one of the recognized named keys, the tool can't map it to a keyCode and reports it as unknown. Use a single character or one of the supported key names."
+    },
+    {
+      "q": "Should I use keyCode in new code?",
+      "a": "The keyCode property is deprecated in browsers in favor of KeyboardEvent.key and KeyboardEvent.code. This tool is mainly useful for understanding or maintaining existing code that still relies on numeric keyCodes."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "HTML Diff compares two HTML snippets and highlights what changed between them. It normalizes inter-tag whitespace before comparing, so differences in indentation or spacing between tags don't show up as noise, then reports the added and removed lines. It's handy when you need to spot the real difference between two pieces of markup quickly.",
+  "useCases": [
+    "Compare two versions of an HTML template to see exactly which tags or attributes changed",
+    "Review the output of a code generator or formatter against an expected baseline",
+    "Spot unintended markup changes after editing a snippet or migrating content",
+    "Check the difference between an original page fragment and a modified copy without being distracted by reformatted whitespace",
+    "Verify that two HTML strings are structurally equivalent ignoring spacing between tags"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. HTML Diff runs entirely in your browser; both snippets are compared locally in JavaScript and nothing is uploaded or stored on any server."
+    },
+    {
+      "q": "How does it handle whitespace between tags?",
+      "a": "Before comparing, it normalizes the markup by replacing whitespace between a closing '>' and an opening '<' with a line break. This means spacing and indentation between tags is ignored, so only meaningful differences are shown."
+    },
+    {
+      "q": "Does it compare line by line or character by character?",
+      "a": "It compares line by line after normalization, marking whole lines as added or removed. Differences inside a single line are reported as a replaced line rather than character-level highlights."
+    },
+    {
+      "q": "Does it validate or fix my HTML?",
+      "a": "No. It treats the input as plain text for diffing purposes and does not parse, validate, or correct your HTML; malformed markup is compared as-is."
+    },
+    {
+      "q": "Is whitespace inside a tag's text content ignored too?",
+      "a": "No. Only whitespace strictly between a closing tag and an opening tag is collapsed. Spacing within text content or inside attribute values is preserved and will count as a difference."
+    }
+  ]
+}

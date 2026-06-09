@@ -1,0 +1,32 @@
+{
+  "intro": "The Timezone Converter takes any date or time you enter and shows that exact instant in a timezone you pick, such as UTC, America/New_York, Europe/Istanbul, or Asia/Tokyo. It parses your input with the browser's native Date handling and formats the result using the IANA timezone you select, making it useful whenever you need to convert a timestamp or check what a given time looks like in another tz.",
+  "useCases": [
+    "Convert a UTC timestamp into local time for a specific city or region",
+    "Check what time a meeting, deploy, or event falls at across offices in different timezones",
+    "Verify how a date string is interpreted and rendered in a target timezone during debugging",
+    "Translate an ISO 8601 timestamp from a log or API response into a readable local time",
+    "Compare the same instant side by side across UTC, New York, London, Istanbul, Tokyo, and other zones"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using the built-in Date and Intl.DateTimeFormat APIs. Nothing you type is uploaded or stored on a server."
+    },
+    {
+      "q": "What input formats are supported?",
+      "a": "It accepts anything the browser's Date constructor can parse, including ISO 8601 strings like 2026-06-08T14:30:00Z and common date formats. If the input can't be parsed, you'll see an 'Invalid date input' error."
+    },
+    {
+      "q": "Which timezones can I convert to?",
+      "a": "You can select from a fixed list of IANA timezones: UTC, America/New_York, America/Los_Angeles, Europe/London, Europe/Istanbul, Europe/Paris, Asia/Tokyo, Asia/Shanghai, Asia/Kolkata, and Australia/Sydney. The default is Europe/Istanbul."
+    },
+    {
+      "q": "What does the output look like?",
+      "a": "The result is shown in 24-hour YYYY-MM-DD HH:MM:SS format followed by the selected timezone in parentheses, for example 2026-06-08 17:30:00 (Europe/Istanbul)."
+    },
+    {
+      "q": "Does it account for daylight saving time?",
+      "a": "Yes. Because it uses IANA timezone names with the browser's Intl.DateTimeFormat, daylight saving offsets are applied automatically based on the date and the selected zone's rules."
+    }
+  ]
+}

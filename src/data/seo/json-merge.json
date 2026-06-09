@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Merge deep-merges two JSON objects, recursively combining nested objects while values from the source override matching values in the target. It's useful when you need to combine, patch, or layer JSON data such as merging a base config with environment-specific overrides. The result is pretty-printed with 2-space indentation and runs entirely in your browser.",
+  "useCases": [
+    "Apply an override or patch object on top of a base configuration",
+    "Combine default settings with user-specific or environment-specific values",
+    "Merge a partial API response into an existing object before saving",
+    "Layer feature-flag or theme objects so the source wins on conflicting keys",
+    "Quickly preview how two JSON payloads combine without writing merge code"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The merge runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored anywhere."
+    },
+    {
+      "q": "How are conflicting keys resolved?",
+      "a": "The source object overrides the target. When both values for a key are plain objects they merge recursively; otherwise the source value replaces the target value."
+    },
+    {
+      "q": "How are arrays handled?",
+      "a": "Arrays are not merged element by element. An array in the source completely replaces the corresponding value in the target, just like primitives do."
+    },
+    {
+      "q": "What happens if I leave the source field empty?",
+      "a": "If no source JSON is provided, the tool simply re-formats and pretty-prints your target JSON with 2-space indentation."
+    },
+    {
+      "q": "Why do I get an error instead of a result?",
+      "a": "Both inputs must be valid JSON. If either the target or the source fails to parse, the merge cannot run, so check for issues like trailing commas or unquoted keys."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to .env converts a flat JSON object into dotenv-formatted environment variables, turning each key/value pair into a KEY=value line. It's handy when you have a config object and need a quick .env file for a project, container, or CI pipeline. Everything runs in your browser, so your config never leaves your machine.",
+  "useCases": [
+    "Turn a JSON config object into a .env file for a Node, Docker, or local development setup",
+    "Generate KEY=value lines to paste into CI/CD secrets or environment settings",
+    "Convert API response or settings JSON into environment variables for quick testing",
+    "Produce a starter .env from a JSON template shared by a teammate",
+    "Reformat scattered config values into the standard dotenv format"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored anywhere. The site is open source so you can verify this yourself."
+    },
+    {
+      "q": "What kind of JSON input does it accept?",
+      "a": "It expects a single flat JSON object, such as {\"PORT\": 3000, \"DEBUG\": true}. Top-level arrays or non-object values (like a bare string or number) are rejected with an error."
+    },
+    {
+      "q": "How are nested objects and arrays handled?",
+      "a": "If a value is itself an object or array, it is serialized back to a JSON string and used as the value. Only the top level is flattened into KEY=value lines; nested keys are not expanded into separate variables."
+    },
+    {
+      "q": "When are values wrapped in quotes?",
+      "a": "A value is wrapped in double quotes when it contains whitespace, a hash (#), a quote, or an equals sign. Any inner double quotes are escaped with a backslash so the resulting .env line stays valid."
+    },
+    {
+      "q": "What happens to null values?",
+      "a": "A null value becomes an empty assignment, so the key is written as KEY= with nothing after the equals sign. Booleans and numbers are written as their plain string form, like DEBUG=true or PORT=3000."
+    }
+  ]
+}

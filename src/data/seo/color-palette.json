@@ -1,0 +1,32 @@
+{
+  "intro": "Color Palette generates a list of random hex colors right in your browser. Set how many swatches you want and get that many random 6-digit hex codes (like #1a2b3c), one per line, ready to copy into your CSS, design mockups, or test fixtures. It's handy whenever you need quick, throwaway color values without opening a design tool.",
+  "useCases": [
+    "Generate placeholder colors for UI mockups, wireframes, or component prototypes",
+    "Create random hex values to seed test fixtures or sample data",
+    "Get a starting set of swatches to riff on when picking a theme",
+    "Produce distinct colors for charts, tags, or category labels during development",
+    "Quickly grab a few random hex codes without launching a full design app"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and generates colors locally. Nothing is uploaded or sent anywhere."
+    },
+    {
+      "q": "What format are the colors in?",
+      "a": "Each color is a 6-digit hex code prefixed with #, such as #0a1f9c. The output lists one hex code per line."
+    },
+    {
+      "q": "How many colors can I generate at once?",
+      "a": "You can request between 1 and 50 colors. The count is clamped to that range, and invalid or empty input falls back to a default of 5."
+    },
+    {
+      "q": "Are the colors truly random?",
+      "a": "Each hex value is picked using JavaScript's Math.random(), so colors are uniformly random across the full RGB range. They are not curated for harmony or contrast."
+    },
+    {
+      "q": "Will I get the same palette twice?",
+      "a": "Generation is random and not seeded, so each run produces a fresh, independent set of colors. There is no way to reproduce a previous palette."
+    }
+  ]
+}

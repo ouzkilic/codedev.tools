@@ -1,0 +1,32 @@
+{
+  "intro": "Base62 Encode / Decode converts text to and from Base62, an alphanumeric encoding that uses the 62 characters 0-9, A-Z, and a-z. It treats your input as UTF-8 bytes and represents them as a single big-integer in base 62, which is handy for compact, URL-safe identifiers and short string representations. Use it to encode arbitrary text into alphanumeric-only output or to decode a Base62 string back to its original text.",
+  "useCases": [
+    "Generate compact, URL-friendly identifiers that avoid special characters like + / and =",
+    "Encode short text or tokens into a purely alphanumeric form for use in URLs or filenames",
+    "Decode a Base62 string received from an API or short-link system back into readable text",
+    "Inspect or verify how a value looks after Base62 encoding while debugging",
+    "Produce shorter representations than Base64 for the same byte sequence in many cases"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encoding and decoding run entirely in your browser using JavaScript, and nothing you type is uploaded or stored remotely."
+    },
+    {
+      "q": "Which alphabet does this tool use?",
+      "a": "It uses the standard digit-first alphabet 0-9, then A-Z, then a-z. Because Base62 is case-sensitive, decoding requires the exact same casing that was used during encoding."
+    },
+    {
+      "q": "What happens if I decode an invalid string?",
+      "a": "Decoding accepts only characters from the 0-9A-Za-z alphabet. If it finds any other character it reports an error naming the invalid character, so make sure there are no spaces, punctuation, or +/= symbols in the input."
+    },
+    {
+      "q": "How is the input interpreted during encoding?",
+      "a": "Your text is first converted to UTF-8 bytes, then treated as one large integer and rewritten in base 62. Leading zero bytes are preserved as leading '0' characters, so encoding and decoding round-trip correctly."
+    },
+    {
+      "q": "Is this the same as Base64?",
+      "a": "No. Base62 omits the +, /, and = characters that Base64 uses, producing output that is purely alphanumeric and safe to drop into URLs or identifiers without escaping."
+    }
+  ]
+}

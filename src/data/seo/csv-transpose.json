@@ -1,0 +1,32 @@
+{
+  "intro": "CSV Transpose swaps the rows and columns of a CSV file, turning each row into a column and each column into a row. Paste your CSV and the tool flips its orientation in the browser, which is handy when a dataset arrives in the wrong layout for a spreadsheet, database import, or chart. It uses PapaParse to read and rebuild the CSV, so quoted fields and common delimiters are handled automatically.",
+  "useCases": [
+    "Convert a wide CSV with many columns into a tall layout where each original column becomes its own row",
+    "Reorient exported data so headers run down the first column instead of across the top",
+    "Reshape a small table to fit an import format expected by a database or another tool",
+    "Flip a key/value style sheet so labels and their values switch between rows and columns",
+    "Quickly preview how a dataset looks after transposing before committing to a script"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The transpose runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server. The whole site is open source so you can verify this yourself."
+    },
+    {
+      "q": "How does it handle rows with different numbers of columns?",
+      "a": "It finds the widest row and uses that as the number of output rows. Any cell that was missing in a shorter row is filled in as an empty value, so the result stays rectangular."
+    },
+    {
+      "q": "Are quoted fields and commas inside values preserved?",
+      "a": "Yes. Parsing and re-generation are done with PapaParse, so quoted fields, embedded commas, and similar CSV escaping are handled correctly on both input and output."
+    },
+    {
+      "q": "Does it keep my line endings?",
+      "a": "The output uses plain newline (\\n) line endings. Windows-style CRLF line breaks are normalized to LF in the generated CSV."
+    },
+    {
+      "q": "What happens if the input is empty or invalid?",
+      "a": "If there are no rows to process, the tool reports that there is no data to transpose. If PapaParse encounters a fatal parse error, that error message is shown instead of producing output."
+    }
+  ]
+}

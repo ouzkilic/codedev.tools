@@ -1,0 +1,32 @@
+{
+  "intro": "Binary ↔ Text converts text into 8-bit binary and back, using UTF-8 byte encoding. Encode mode turns each character into space-separated bytes, while decode mode reads space-separated binary groups and reconstructs the original text. It's handy for learning how characters map to bits, debugging byte-level data, or preparing simple binary representations.",
+  "useCases": [
+    "Encode a string into space-separated 8-bit binary to see its UTF-8 byte representation",
+    "Decode a binary sequence back into readable text",
+    "Inspect how multi-byte characters (emoji, accented letters) are encoded in UTF-8",
+    "Teach or learn the relationship between characters, bytes, and bits",
+    "Verify or hand-craft binary payloads while debugging low-level data"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using the standard TextEncoder and TextDecoder APIs. Nothing you type is uploaded or stored on a server."
+    },
+    {
+      "q": "What binary format does it produce?",
+      "a": "Encoding outputs each byte as exactly 8 bits, zero-padded, with bytes separated by a single space (for example 'A' becomes 01000001)."
+    },
+    {
+      "q": "How should input be formatted when decoding?",
+      "a": "Provide binary digits in groups separated by whitespace. Each group must contain 1 to 8 of only the characters 0 and 1; anything else triggers an 'Invalid binary byte' error."
+    },
+    {
+      "q": "How are non-ASCII characters like emoji handled?",
+      "a": "Text is encoded as UTF-8, so characters outside ASCII produce multiple bytes. For example a single emoji becomes several space-separated 8-bit groups."
+    },
+    {
+      "q": "Can I decode binary that isn't separated by spaces?",
+      "a": "No. Decoding splits on whitespace, so a continuous string of bits won't be parsed into bytes. Separate each byte with a space."
+    }
+  ]
+}

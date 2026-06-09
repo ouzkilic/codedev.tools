@@ -1,0 +1,33 @@
+{
+  "intro": "Date Info takes any date you enter and shows its calendar details: the weekday, the day of the year, the ISO week number, the calendar quarter, whether it falls in a leap year, and how many days are in that month. It's handy when you need quick date facts like the ISO week or day-of-year without pulling out a calendar or writing throwaway code. All calculations use UTC and run instantly in your browser.",
+  "useCases": [
+    "Look up the ISO 8601 week number for a given date when scheduling or labeling reports",
+    "Find the day-of-year (1-365/366) for date math or log filenames",
+    "Check which calendar quarter (Q1-Q4) a date falls into for financial or reporting periods",
+    "Confirm whether a year is a leap year before validating February dates",
+    "Get the number of days in a specific month for billing or calendar logic",
+    "Quickly identify the weekday for a past or future date"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Date Info runs entirely in your browser and nothing you type is uploaded or stored on any server. The site is fully client-side and open source, so you can verify this yourself."
+    },
+    {
+      "q": "What date formats can I enter?",
+      "a": "Any string that JavaScript's Date constructor accepts, such as ISO 8601 (2026-06-08), full date-times, or formats like \"June 8, 2026\". If the value can't be parsed it reports \"Invalid date.\""
+    },
+    {
+      "q": "Does it use my local timezone or UTC?",
+      "a": "All output is computed in UTC. A date without a time component is treated as midnight UTC, so the weekday and day-of-year reflect the UTC date rather than your local one."
+    },
+    {
+      "q": "How is the week number calculated?",
+      "a": "It uses the ISO 8601 week definition, where weeks start on Monday and the week containing the year's first Thursday is week 1. This can differ from week-numbering schemes that start the week on Sunday."
+    },
+    {
+      "q": "What information does it return?",
+      "a": "For each valid date it shows the weekday, day of year, ISO week number, calendar quarter, whether the year is a leap year, and the number of days in that month."
+    }
+  ]
+}

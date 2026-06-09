@@ -1,0 +1,32 @@
+{
+  "intro": "The robots.txt Generator builds a valid robots.txt file from a few simple options so you can tell search engine crawlers what they may access on your site. Choose whether to allow or block all crawlers, optionally add a Sitemap URL and a Crawl-delay, and copy the result straight into your site's root. It's handy whenever you need a quick, correctly formatted robots.txt for SEO without remembering the exact directive syntax.",
+  "useCases": [
+    "Generate an allow-all robots.txt that points crawlers to your sitemap.xml",
+    "Block all crawlers from a staging or pre-launch site with a single Disallow rule",
+    "Add a Crawl-delay directive to slow down aggressive bots hitting your server",
+    "Produce a baseline robots.txt to drop into a new project's public root",
+    "Quickly check the correct ordering and format of User-agent, Allow/Disallow, and Sitemap lines"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser and nothing you type is uploaded. The Sitemap URL, crawl delay, and access choice never leave your device."
+    },
+    {
+      "q": "What does the 'Allow all' versus 'Block all' option do?",
+      "a": "Both produce a single User-agent: * group. 'Allow all' emits Allow: / so crawlers may access the whole site, while 'Block all' emits Disallow: / to keep them out of everything."
+    },
+    {
+      "q": "Can I add my sitemap and a crawl delay?",
+      "a": "Yes. If you enter a Sitemap URL it is appended as a Sitemap: line after a blank line, and if you enter a crawl delay value it is added as a Crawl-delay: directive. Both fields are optional and are left out when empty."
+    },
+    {
+      "q": "Can I target specific bots or set per-path rules?",
+      "a": "Not with this tool. It always generates a single User-agent: * group, so it does not support multiple user-agent blocks or path-specific Allow/Disallow rules. You can hand-edit the output afterward if you need those."
+    },
+    {
+      "q": "Where do I put the generated file?",
+      "a": "Save the output as robots.txt in the root of your domain, for example https://example.com/robots.txt, so crawlers can find it."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "The GraphQL Formatter parses your GraphQL query or schema and prints it back with consistent indentation and spacing. It's handy when you want to beautify GraphQL written in a single line, normalize messy gql snippets, or quickly check that a query or SDL document is syntactically valid before using it.",
+  "useCases": [
+    "Pretty-print a minified or single-line GraphQL query into readable, indented form",
+    "Normalize the formatting of a GraphQL schema (SDL) for consistency across a codebase",
+    "Validate that a query, mutation, or schema parses correctly before pasting it into an app",
+    "Clean up gql template literals copied out of source code or network logs",
+    "Reformat fragments and operations so diffs stay small and predictable in version control"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The formatter runs entirely in your browser using the graphql-js library, and nothing you paste is uploaded or stored anywhere. You can confirm this in the open-source code."
+    },
+    {
+      "q": "Does it format both queries and schemas?",
+      "a": "Yes. It parses any valid GraphQL document, so queries, mutations, subscriptions, fragments, and schema definition language (SDL) all get reformatted with standard indentation."
+    },
+    {
+      "q": "What happens if my GraphQL is invalid?",
+      "a": "The document is parsed first, so if there's a syntax error the tool stops and shows the parser's error message instead of producing output. Fix the reported issue and run it again."
+    },
+    {
+      "q": "Will it preserve my comments?",
+      "a": "Comments (lines starting with #) are dropped because the formatter re-prints the parsed document, which does not retain comments. Descriptions written with string literals in schemas are kept."
+    },
+    {
+      "q": "Can I control the indentation style?",
+      "a": "No. The output uses the standard formatting produced by graphql-js's print function, which applies a fixed, consistent style and cannot be customized here."
+    }
+  ]
+}

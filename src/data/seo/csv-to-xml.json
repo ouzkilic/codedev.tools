@@ -1,0 +1,32 @@
+{
+  "intro": "CSV to XML converts CSV text with a header row into XML, wrapping each data row in a <row> element and each column value in a tag named after its header. It is useful when you need to feed tabular data into systems that expect XML, such as legacy APIs, config imports, or XML-based data pipelines. Parsing runs entirely in your browser, so you can convert CSV to XML without uploading anything.",
+  "useCases": [
+    "Turn a spreadsheet export into XML rows for a legacy system that only accepts XML input",
+    "Quickly preview how CSV data maps to a simple <rows>/<row> XML structure",
+    "Generate XML fixtures or sample payloads for testing data import features",
+    "Convert delimited data into XML for tools and parsers that don't read CSV directly",
+    "Reshape report data into XML before transforming it further with XSLT or other XML tooling"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and your CSV is never uploaded or stored anywhere."
+    },
+    {
+      "q": "Does my CSV need a header row?",
+      "a": "Yes. The first row is treated as headers, and each header becomes the XML tag name for the values in that column. Without a header row the data will be parsed using the first data line as tag names."
+    },
+    {
+      "q": "What happens to special characters in my data?",
+      "a": "The ampersand (&), less-than (<), and greater-than (>) characters in values are escaped to &amp;, &lt;, and &gt; so the output stays valid XML."
+    },
+    {
+      "q": "How are header names turned into XML tags?",
+      "a": "Any character that is not a letter or digit in a header is replaced with an underscore, since XML tag names cannot contain spaces or most symbols. For example, a column named \"First Name\" becomes the tag <First_Name>."
+    },
+    {
+      "q": "What does the output XML look like?",
+      "a": "All rows are wrapped in a single <rows> root element, each record becomes a <row> element, and every cell is a child tag named after its column header. Empty cells produce empty tags."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "intro": "The JSONPath Evaluator lets you query JSON with a JSONPath expression and instantly see the matching values. Paste your JSON, enter a path like $.store.book[*].author, and the tool returns every match formatted as pretty-printed JSON. It's handy for exploring API responses, filtering nested data, and testing JSONPath expressions before using them in code.",
+  "useCases": [
+    "Pull a specific nested field out of a large API response without manually scanning the JSON",
+    "Test and refine a JSONPath expression before embedding it in application code",
+    "Select all items from an array with a wildcard, e.g. $.items[*].id",
+    "Filter elements by condition using JSONPath filter syntax, e.g. $..book[?(@.price < 10)]",
+    "Explore the structure of unfamiliar JSON by querying different paths interactively",
+    "Extract matching values to copy into tests, fixtures, or documentation"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The evaluator runs entirely in your browser using the jsonpath-plus library. Your JSON is parsed and queried locally, and nothing is uploaded or stored on any server."
+    },
+    {
+      "q": "What JSONPath syntax is supported?",
+      "a": "It uses the jsonpath-plus library, which supports standard JSONPath features including the root $, child and recursive descent (.. ), wildcards [*], array slices, and filter expressions like [?(@.price < 10)]."
+    },
+    {
+      "q": "What does the result look like?",
+      "a": "Matches are collected into an array and returned as pretty-printed JSON with two-space indentation. If a query matches nothing, you get an empty array."
+    },
+    {
+      "q": "Why do I get an error when I run a query?",
+      "a": "The input must be valid JSON; the tool parses it first with JSON.parse, so malformed JSON will throw a parse error. Make sure the JSON is well-formed before evaluating a path."
+    },
+    {
+      "q": "What is the default query?",
+      "a": "The default path is $, which selects the root and returns the entire JSON document wrapped in an array. Replace it with your own expression to narrow the results."
+    }
+  ]
+}

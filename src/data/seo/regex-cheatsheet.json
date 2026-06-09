@@ -1,0 +1,32 @@
+{
+  "intro": "The Regex Cheatsheet is a quick reference for common regular expression tokens, including character classes, quantifiers, anchors, groups, and lookarounds. Type in the search box to filter the list down to the patterns you need, so you can recall the exact syntax without leaving your editor or hunting through docs.",
+  "useCases": [
+    "Looking up the syntax for a character class like \\d, \\w, or \\s while writing a pattern",
+    "Recalling quantifier notation such as *, +, ?, or {n,m} when building a match",
+    "Finding the right group syntax: capturing (...), non-capturing (?:...), or named (?<name>...)",
+    "Checking lookahead and lookbehind notation, including the negative variants",
+    "Filtering the token list by keyword (e.g. typing 'boundary' or 'group') to jump to a specific entry"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The cheatsheet and its search filter run entirely in your browser. Nothing you type is uploaded or stored anywhere."
+    },
+    {
+      "q": "What does the search box do?",
+      "a": "It filters the list of regex tokens, matching your text against both the token and its description. The match is case-insensitive, so 'GROUP' and 'group' return the same results."
+    },
+    {
+      "q": "Does this tool test or run regular expressions?",
+      "a": "No. It is a reference list of common regex tokens and their meanings, not a pattern tester. It shows syntax such as \\b for word boundary or (?=...) for lookahead, but does not evaluate patterns against input text."
+    },
+    {
+      "q": "Which regex flavor do these tokens apply to?",
+      "a": "The tokens listed are common across most modern regex engines, including JavaScript, where features like named groups (?<name>...) and lookbehind (?<=...) are supported. Exact support can vary by language and engine version."
+    },
+    {
+      "q": "Why does the cheatsheet use double backslashes like \\\\d?",
+      "a": "The double backslash reflects how a token like \\d is written inside a string literal in code. In a raw regex pattern you would write it with a single backslash as \\d."
+    }
+  ]
+}

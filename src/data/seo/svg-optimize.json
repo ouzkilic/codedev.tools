@@ -1,0 +1,32 @@
+{
+  "intro": "The SVG Optimizer minifies SVG markup directly in your browser, stripping out XML declarations, DOCTYPE lines, comments, and unnecessary whitespace. It's a quick way to compress and clean up SVG files before embedding them inline, shipping them in a bundle, or pasting them into code. Paste your SVG and get a smaller, single-line output without any setup.",
+  "useCases": [
+    "Shrink an SVG before inlining it directly into HTML or JSX/TSX components",
+    "Strip editor-generated comments, XML prolog, and DOCTYPE that exporters add to SVGs",
+    "Collapse indentation and line breaks to reduce the size of icon assets in a bundle",
+    "Clean up SVG snippets copied from design tools like Figma or Illustrator before committing them",
+    "Quickly compare original vs. minified size to decide if an asset needs further optimization"
+  ],
+  "faq": [
+    {
+      "q": "Is my SVG sent to a server?",
+      "a": "No. The optimizer runs entirely in your browser using client-side JavaScript, and nothing is uploaded or stored on any server. The whole site is open source so you can verify this yourself."
+    },
+    {
+      "q": "What exactly does this tool remove?",
+      "a": "It removes XML declarations (<?xml ... ?>), DOCTYPE declarations, and comments (<!-- ... -->), then collapses whitespace between tags and reduces any run of whitespace to a single space before trimming the result."
+    },
+    {
+      "q": "Does it change the paths, attributes, or visual appearance of my SVG?",
+      "a": "No. It only strips comments, declarations, and extra whitespace. Path data, attributes, and element structure are left untouched, so the rendered image stays the same."
+    },
+    {
+      "q": "Will it reduce numeric precision or merge paths like SVGO?",
+      "a": "No. This is a lightweight whitespace and comment minifier, not a full geometry optimizer. It does not round coordinates, remove unused attributes, or merge shapes."
+    },
+    {
+      "q": "Is there a file size limit?",
+      "a": "There is no fixed limit, but because everything runs in your browser, very large SVGs depend on your device's available memory and may process more slowly."
+    }
+  ]
+}

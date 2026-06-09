@@ -1,0 +1,32 @@
+{
+  "intro": "CSV to Table renders raw CSV text as a clean, column-aligned monospace table so you can read it without a spreadsheet. It pads each column to a consistent width, separates cells with a pipe character, and adds a divider line under the first row to mark it as a header. This is handy whenever you paste CSV from a log, an export, or an API response and just want to view and align the data quickly.",
+  "useCases": [
+    "Quickly inspecting a CSV export or log snippet without opening Excel or Google Sheets",
+    "Aligning messy comma-separated data into readable columns before pasting it into a ticket or chat",
+    "Eyeballing whether rows have a consistent number of columns",
+    "Reviewing CSV pulled from an API response or database dump",
+    "Pasting CSV into documentation or a code comment as a fixed-width ASCII table"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and parses the CSV locally. Nothing you paste is uploaded, stored, or sent anywhere."
+    },
+    {
+      "q": "Does it auto-detect the delimiter?",
+      "a": "Yes. Parsing is handled by PapaParse, which detects the delimiter automatically, so comma, semicolon, and tab-separated values all work without configuration."
+    },
+    {
+      "q": "Is the first row treated as a header?",
+      "a": "Visually, yes. The first row is rendered like the others, but a divider line is inserted directly beneath it to set it apart as a header."
+    },
+    {
+      "q": "What happens to empty lines or missing cells?",
+      "a": "Empty lines are skipped during parsing. Rows with fewer columns than the widest row are padded with blanks so every column stays aligned."
+    },
+    {
+      "q": "Why do I get an error instead of a table?",
+      "a": "If the input has no rows after trimming and skipping empty lines, you will see a \"No data to render\" message. Fatal parse errors from malformed CSV are also reported instead of producing partial output."
+    }
+  ]
+}

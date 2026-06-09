@@ -1,0 +1,32 @@
+{
+  "intro": "Emoji Picker is a simple emoji search tool that lets you find common emojis by name. Type a keyword like \"heart\", \"fire\", or \"rocket\" and it filters a curated list of frequently used Unicode emojis, showing each emoji alongside its descriptive keywords so you can copy the one you need. It's handy when you want to quickly grab an emoji for a commit message, README, chat, or UI string without leaving your browser.",
+  "useCases": [
+    "Finding the right emoji for a commit message or pull request description",
+    "Adding emojis to README files, changelogs, or documentation",
+    "Searching by feeling or concept (e.g. \"happy\", \"thumbs up\", \"celebrate\") to discover a matching emoji",
+    "Copying common reaction emojis like 🔥, ✅, or 🎉 into chat or UI text",
+    "Looking up an emoji's descriptive keywords to understand what it represents"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and the emoji list and search are built into the page. Nothing you type is uploaded or sent anywhere."
+    },
+    {
+      "q": "How does the search work?",
+      "a": "Your query is lowercased and matched as a substring against each emoji's keywords. For example, \"smile\" matches several smiling faces, and \"heart\" matches the heart emojis."
+    },
+    {
+      "q": "How many emojis are available?",
+      "a": "It includes a curated set of roughly 66 of the most common emojis, such as smileys, hearts, hands, and frequently used symbols. It is not a complete catalog of every Unicode emoji."
+    },
+    {
+      "q": "What does the output show for each emoji?",
+      "a": "Each line shows the emoji followed by its descriptive keywords, for example \"🔥  fire flame lit hot\". This makes it easy to scan results and copy the emoji you want."
+    },
+    {
+      "q": "What happens if nothing matches my search?",
+      "a": "If no emoji keyword contains your query, the tool shows \"No matches.\" Clearing the search box brings back the full list."
+    }
+  ]
+}

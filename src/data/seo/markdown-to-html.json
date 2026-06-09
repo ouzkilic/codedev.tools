@@ -1,0 +1,32 @@
+{
+  "intro": "Markdown to HTML converts your Markdown (md) into ready-to-use HTML directly in your browser. Paste a README, documentation, or any Markdown text and instantly get the rendered HTML markup. It's handy whenever you need to embed Markdown-authored content into a web page, CMS, or email template.",
+  "useCases": [
+    "Turn a project README or docs written in Markdown into HTML for a website or blog",
+    "Generate HTML snippets to paste into a CMS or email template that doesn't accept Markdown",
+    "Preview the exact HTML structure (headings, lists, links, code blocks) that a Markdown document produces",
+    "Convert Markdown notes into HTML for static site content",
+    "Quickly check how tables, blockquotes, or fenced code blocks translate to HTML tags"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you type or paste is uploaded anywhere. The whole site is open source so you can verify this yourself."
+    },
+    {
+      "q": "What Markdown features are supported?",
+      "a": "The tool uses the marked library, which supports CommonMark-style Markdown plus GitHub-flavored extras such as headings, lists, links, images, blockquotes, fenced code blocks, and tables. The output is the HTML markup these elements produce."
+    },
+    {
+      "q": "Does it render the HTML or show the source markup?",
+      "a": "It outputs the raw HTML source as text so you can copy it. It does not display a visual preview of the rendered page."
+    },
+    {
+      "q": "Is the generated HTML sanitized?",
+      "a": "No. marked passes through any inline HTML or scripts present in your Markdown as-is, so sanitize the output yourself before injecting it into a live page if the source is untrusted."
+    },
+    {
+      "q": "Is there a size limit on the input?",
+      "a": "There is no fixed limit; conversion is synchronous and happens locally, so very large documents are constrained only by your browser's available memory and processing speed."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Strip HTML Tags removes every HTML tag from your input and returns clean plain text. It also decodes the most common HTML entities (&nbsp;, &quot;, &#39;, &lt;, &gt;, &amp;) and collapses runs of blank lines, so pasted markup turns into readable text in one step.",
+  "useCases": [
+    "Convert a snippet of rendered HTML or email markup into plain text for a notes app or document",
+    "Clean up content copied from a web page so only the readable text remains",
+    "Extract the text body from a CMS or WYSIWYG editor output before further processing",
+    "Quickly preview what an HTML fragment says without the tag noise",
+    "Sanitize markup down to text when preparing sample data or test fixtures"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser using plain JavaScript, and nothing you paste is uploaded or stored anywhere."
+    },
+    {
+      "q": "Which HTML entities are decoded?",
+      "a": "It decodes &nbsp; (to a space), &quot;, &#39;, &lt;, &gt;, and &amp;. Other named or numeric entities are left as-is."
+    },
+    {
+      "q": "How are HTML tags removed?",
+      "a": "Anything between angle brackets is stripped via a regular expression. This is fast for general cleanup but does not parse a full DOM, so deliberately malformed or unclosed brackets may not be handled the way a browser would render them."
+    },
+    {
+      "q": "Does it keep the content inside script or style tags?",
+      "a": "The tag markers are removed, but the text between <script> or <style> tags is not specially detected, so that inner content will remain in the output. Remove those blocks beforehand if you don't want them."
+    },
+    {
+      "q": "What happens to blank lines and whitespace?",
+      "a": "Three or more consecutive blank lines are collapsed into a single blank line, and leading and trailing whitespace is trimmed from the final result."
+    }
+  ]
+}

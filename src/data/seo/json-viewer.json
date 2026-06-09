@@ -1,0 +1,32 @@
+{
+  "intro": "The JSON Tree Viewer renders any JSON document as a collapsible, navigable tree so you can explore nested objects and arrays without scrolling through raw text. Each object and array node shows a quick size summary like {3} or [2], and you can expand or collapse branches to inspect just the parts you care about. It's useful for reading API responses, config files, or deeply nested data structures where formatted text alone is hard to follow.",
+  "useCases": [
+    "Inspecting a large API response by collapsing branches and drilling into only the nested objects you need",
+    "Understanding the shape of an unfamiliar JSON payload at a glance using the per-node size summaries",
+    "Navigating deeply nested configuration or settings files without losing track of structure",
+    "Verifying that keys and values are nested correctly before using the data in code",
+    "Reading arrays of records by expanding individual items and collapsing the rest"
+  ],
+  "faq": [
+    {
+      "q": "Is my JSON sent to a server?",
+      "a": "No. The viewer parses and renders everything in your browser, and nothing is uploaded or transmitted. The site is fully client-side and open source, so you can verify this yourself."
+    },
+    {
+      "q": "What does the {3} or [2] label next to a node mean?",
+      "a": "It is a size summary for container nodes: {n} shows the number of keys in an object, and [n] shows the number of elements in an array. Leaf values such as strings, numbers, booleans, and null have no summary."
+    },
+    {
+      "q": "How are string values displayed in the tree?",
+      "a": "Strings are shown with surrounding quotes (JSON.stringify style), so you can tell them apart from numbers, booleans, and null. Non-string leaf values are rendered as their plain text representation."
+    },
+    {
+      "q": "Can it handle nested objects and arrays of any depth?",
+      "a": "Yes. Objects and arrays are both treated as containers, and each can be expanded or collapsed independently, so arbitrarily nested structures stay navigable."
+    },
+    {
+      "q": "Does the input need to be valid JSON?",
+      "a": "Yes. The viewer works on parsed JSON values, so the input must be syntactically valid JSON for the tree to render."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "File Hash computes the cryptographic checksum of a file directly in your browser, supporting SHA-1, SHA-256, SHA-384, and SHA-512. It's useful for verifying file integrity, confirming a download matches a published hash, or generating a fingerprint to detect whether two files are identical.",
+  "useCases": [
+    "Verify a downloaded file against a published SHA-256 checksum to confirm it wasn't corrupted or tampered with",
+    "Generate a SHA-512 fingerprint of a build artifact or release to share alongside it",
+    "Compare hashes of two files to check whether their contents are byte-for-byte identical",
+    "Produce a SHA-1 checksum when working with legacy systems or tooling that still expects it",
+    "Create a content fingerprint for caching, deduplication, or change detection"
+  ],
+  "faq": [
+    {
+      "q": "Is my file sent to a server?",
+      "a": "No. Hashing runs entirely in your browser using the built-in Web Crypto API, and the file never leaves your device or gets uploaded anywhere."
+    },
+    {
+      "q": "Which hash algorithms are supported?",
+      "a": "SHA-1, SHA-256, SHA-384, and SHA-512. If an unrecognized algorithm is requested, it falls back to SHA-256."
+    },
+    {
+      "q": "What format is the output hash in?",
+      "a": "The digest is returned as a lowercase hexadecimal string, with each byte rendered as two zero-padded hex characters."
+    },
+    {
+      "q": "Why isn't MD5 available?",
+      "a": "The tool relies on the browser's native Web Crypto API, which only provides SHA-1, SHA-256, SHA-384, and SHA-512. MD5 is not part of that API and is not offered."
+    },
+    {
+      "q": "Does the same file always produce the same hash?",
+      "a": "Yes. A given file and algorithm always produce the same hash, so you can reliably compare a computed value against a known checksum."
+    }
+  ]
+}

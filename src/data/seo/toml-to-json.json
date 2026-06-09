@@ -1,0 +1,32 @@
+{
+  "intro": "TOML to JSON converts TOML configuration into JSON, parsing your input and returning pretty-printed JSON with 2-space indentation. It's handy when you need to feed a TOML config file into a tool or API that expects JSON, or simply to inspect a TOML document's structure. Like every tool on codedev.tools, the conversion runs entirely in your browser.",
+  "useCases": [
+    "Convert a Cargo.toml, pyproject.toml, or other config file into JSON for inspection",
+    "Translate TOML settings into JSON to feed tools or APIs that only accept JSON",
+    "Quickly check how TOML tables, arrays, and nested values map to JSON structures",
+    "Generate JSON fixtures or test data from a TOML source",
+    "Validate that a TOML file parses correctly before using it elsewhere"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "What does the JSON output look like?",
+      "a": "The output is pretty-printed JSON indented with 2 spaces, reflecting the tables, arrays, and key-value pairs from your TOML input."
+    },
+    {
+      "q": "How are TOML dates and times handled?",
+      "a": "The parser follows the TOML specification, so offset and local date-time, date, and time values are recognized as TOML's native types and serialized to JSON as strings."
+    },
+    {
+      "q": "What happens if my TOML is invalid?",
+      "a": "If the input can't be parsed as valid TOML, the parser throws an error rather than producing output, so you'll know the document needs fixing."
+    },
+    {
+      "q": "Which TOML version is supported?",
+      "a": "Parsing is handled by the smol-toml library, which targets the TOML 1.0 specification, including nested tables, arrays of tables, and inline tables."
+    }
+  ]
+}

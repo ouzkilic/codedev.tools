@@ -1,0 +1,32 @@
+{
+  "intro": "HTML to Markdown converts a snippet or full page of HTML into clean Markdown right in your browser. Powered by the Turndown library, it maps elements like headings, links, lists, and code blocks to their Markdown equivalents, using ATX-style headings (#) and fenced code blocks (```). It is handy whenever you need to move web content into a README, wiki, or any Markdown-based editor.",
+  "useCases": [
+    "Turn copied HTML from a website or rich-text editor into Markdown for a README or docs page",
+    "Convert HTML email or CMS content into Markdown for a static site or blog",
+    "Migrate HTML notes into a Markdown-based knowledge base or wiki",
+    "Clean up exported HTML into plain Markdown before committing it to a repo",
+    "Quickly grab the Markdown form of a heading, list, or link without writing it by hand"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "What kind of Markdown does it produce?",
+      "a": "It uses ATX-style headings (# Heading) and fenced code blocks (delimited by triple backticks). Common elements such as paragraphs, links, emphasis, lists, and blockquotes are mapped to their standard Markdown forms."
+    },
+    {
+      "q": "What happens to HTML that has no Markdown equivalent?",
+      "a": "Turndown converts what it can to Markdown and generally passes through any HTML it cannot represent, since Markdown allows inline HTML. Complex tables or heavily styled markup may not translate cleanly."
+    },
+    {
+      "q": "Do I need to paste a full HTML document?",
+      "a": "No. You can paste a complete document or just a fragment, such as a single block of HTML copied from a page or editor."
+    },
+    {
+      "q": "Is there a size limit on the input?",
+      "a": "There is no fixed limit; conversion happens locally, so practical limits depend on your device's memory and how large the HTML is."
+    }
+  ]
+}

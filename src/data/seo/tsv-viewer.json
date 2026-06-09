@@ -1,0 +1,32 @@
+{
+  "intro": "TSV → Table converts tab-separated values into a clean, aligned text table you can read at a glance. Paste the output of a database query, a spreadsheet column copy, or any tab-delimited export, and the viewer pads each column to a consistent width and adds a header separator row. It is handy whenever raw TSV is too cramped to scan by eye and you want a quick, monospace-friendly view.",
+  "useCases": [
+    "Inspecting tab-separated query results copied from a SQL client or terminal",
+    "Reviewing data pasted directly from a spreadsheet, where cells are tab-delimited",
+    "Turning a messy TSV log or export into an aligned table for a code review or ticket",
+    "Quickly checking column alignment and row counts before importing TSV elsewhere",
+    "Sharing a readable snapshot of tabular data in plain-text channels like chat or commit messages"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. TSV → Table runs entirely in your browser, and the tool is open source so you can verify this. Nothing you paste is uploaded or stored remotely."
+    },
+    {
+      "q": "How is the table formatted?",
+      "a": "Each column is padded with spaces to the width of its longest value, columns are joined with ' | ', and a separator line of dashes is inserted after the first row, which is treated as the header."
+    },
+    {
+      "q": "What delimiter does it expect?",
+      "a": "It parses input strictly as tab-separated values. Comma- or semicolon-separated data will be read as a single column per line, so use a CSV tool for those."
+    },
+    {
+      "q": "How are empty lines and missing cells handled?",
+      "a": "Empty lines are skipped during parsing, and rows with fewer cells than the widest row are padded with blanks so columns stay aligned."
+    },
+    {
+      "q": "Why do I get an error on empty input?",
+      "a": "Leading and trailing whitespace is trimmed before parsing; if no rows remain, the tool reports that no rows were found. Provide at least one non-empty line of tab-separated data."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Image to Base64 converts an image (or any file) into a Base64-encoded data URI right in your browser. Drop in a file and you get a ready-to-paste data:<mime>;base64,... string, useful for embedding images directly in CSS, HTML, or JSON without a separate request. The tool reads the file's MIME type to build the data URI and shows a live preview for image files.",
+  "useCases": [
+    "Embed a small icon or logo inline in CSS or HTML as a data URI to avoid an extra HTTP request",
+    "Inline an image into JSON or a config file where you can't reference an external URL",
+    "Generate a data URI for use in an <img src> or background-image during prototyping",
+    "Encode a binary file to Base64 for pasting into an API payload or test fixture",
+    "Quickly inspect or copy the Base64 representation of an image without command-line tools"
+  ],
+  "faq": [
+    {
+      "q": "Is my image sent to a server?",
+      "a": "No. The image is read and encoded entirely in your browser using local JavaScript, and nothing is uploaded. The file never leaves your device."
+    },
+    {
+      "q": "What format is the output?",
+      "a": "The output is a full data URI in the form data:<mime-type>;base64,<encoded-data>. The MIME type comes from the file you select, and falls back to application/octet-stream if the type is unknown."
+    },
+    {
+      "q": "Can I convert files other than images?",
+      "a": "The encoding logic works on any file's bytes, so it can Base64-encode arbitrary files. The file picker is set to accept images, and the inline preview only appears for image data URIs."
+    },
+    {
+      "q": "Is there a file size limit?",
+      "a": "There is no fixed limit, but encoding happens in memory and Base64 increases the data size by roughly a third. Very large files can be slow or memory-heavy, so the tool is best suited to small to medium images."
+    },
+    {
+      "q": "Why is my data URI larger than the original file?",
+      "a": "Base64 encoding represents binary data using a 64-character text alphabet, which adds about 33% overhead. This is expected and is the trade-off for embedding the file directly as text."
+    }
+  ]
+}

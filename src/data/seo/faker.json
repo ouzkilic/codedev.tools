@@ -1,0 +1,32 @@
+{
+  "intro": "The Fake Data Generator produces random mock data such as names, emails, addresses, phone numbers, UUIDs, dates, and Lorem Ipsum text right in your browser. Pick a data type and a count, and it returns that many newline-separated fake values powered by Faker. It's handy whenever you need dummy or test data without writing a script or seeding a database by hand.",
+  "useCases": [
+    "Seed a development database or API mock with realistic-looking names, emails, and addresses",
+    "Generate a batch of UUIDs for test fixtures or sample records",
+    "Fill out UI mockups and form prototypes with placeholder names, companies, and job titles",
+    "Create sample sentences and paragraphs of Lorem Ipsum text for layout testing",
+    "Produce random numbers, booleans, dates, or RGB colors for unit-test inputs"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Everything runs entirely in your browser using the Faker library, and nothing is uploaded or stored on any server. The generated values never leave your device."
+    },
+    {
+      "q": "What data types can it generate?",
+      "a": "It supports full names, first names, emails, usernames, URLs, phone numbers, street addresses, cities, countries, companies, job titles, UUIDs, sentences, paragraphs, dates, numbers, booleans, and RGB colors."
+    },
+    {
+      "q": "How is the output formatted?",
+      "a": "Each generated value is placed on its own line, so the result is a plain newline-separated list of the chosen type. You can copy it directly into code, a spreadsheet, or a seed file."
+    },
+    {
+      "q": "What format do dates and numbers use?",
+      "a": "Dates are random past dates returned as ISO 8601 strings (for example 2023-04-12T09:31:00.000Z), and numbers are random integers between 0 and 100000. Colors are returned in RGB format."
+    },
+    {
+      "q": "Is the generated data unique?",
+      "a": "No, the values are random and not guaranteed to be unique. Types like UUIDs are extremely unlikely to collide, but for common fields such as names or numbers you may occasionally see repeats in large batches."
+    }
+  ]
+}

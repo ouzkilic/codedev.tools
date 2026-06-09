@@ -1,0 +1,32 @@
+{
+  "intro": "Text Statistics counts the characters, words, lines, and UTF-8 bytes in any text you paste in. It also reports a character count that ignores whitespace, so you can quickly check length, word totals, and byte size without leaving the browser. Useful whenever you need a fast, accurate measure of how long a piece of text really is.",
+  "useCases": [
+    "Check whether a string fits a length limit, like a meta description, tweet, or database column",
+    "Measure the UTF-8 byte size of text before storing or sending it",
+    "Get a quick word count for documentation, commit messages, or release notes",
+    "Count lines in a log snippet, config block, or pasted code",
+    "Compare character counts with and without whitespace when trimming content"
+  ],
+  "faq": [
+    {
+      "q": "Is my text sent to a server?",
+      "a": "No. Text Statistics runs entirely in your browser using the standard TextEncoder API, and nothing you type or paste is uploaded anywhere."
+    },
+    {
+      "q": "How are words counted?",
+      "a": "A word is any run of non-whitespace characters, matched with the pattern \\S+. So spaces, tabs, and newlines separate words, and punctuation attached to text does not split it."
+    },
+    {
+      "q": "What does 'Characters (no space)' measure?",
+      "a": "It is the total character count after removing all whitespace, including spaces, tabs, and line breaks. The plain 'Characters' count includes that whitespace."
+    },
+    {
+      "q": "Why might the byte count be larger than the character count?",
+      "a": "Bytes are measured as UTF-8, where non-ASCII characters such as accented letters or emoji take more than one byte. Plain ASCII text will have equal character and byte counts."
+    },
+    {
+      "q": "How are lines counted?",
+      "a": "Lines are counted by splitting on the newline character (\\n), so the total is the number of newline-separated segments. A single line of text with no line breaks counts as one line."
+    }
+  ]
+}

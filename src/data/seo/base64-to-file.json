@@ -1,0 +1,32 @@
+{
+  "intro": "Base64 to File decodes a Base64 string or a data URI back into a downloadable file. Paste a full data URI (such as data:image/png;base64,...) and the tool reads the embedded MIME type, or paste a bare Base64 string and it decodes the raw bytes for you. It is handy whenever you need to turn an encoded blob from code, JSON, or a CSS asset back into the original file.",
+  "useCases": [
+    "Recover an image saved as a data URI in HTML, CSS, or a JSON payload",
+    "Decode a Base64 attachment copied out of an email or API response into a real file",
+    "Inspect or download an embedded asset pulled from logs or a config file",
+    "Convert a Base64 string returned by a backend into a file to verify its contents",
+    "Extract a small PDF or font that was inlined as a data URI"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The decoding runs entirely in your browser using built-in JavaScript, so the Base64 string and the resulting file never leave your device and nothing is uploaded."
+    },
+    {
+      "q": "What input formats does it accept?",
+      "a": "It accepts a full data URI in the form data:<mime>;base64,<data>, a data URI without the ;base64 flag (URL-encoded text), or a bare Base64 string with no prefix."
+    },
+    {
+      "q": "How is the file type determined?",
+      "a": "If you paste a data URI, the MIME type is read from the prefix. For a bare Base64 string with no MIME information, it defaults to application/octet-stream."
+    },
+    {
+      "q": "Does whitespace in the Base64 string cause problems?",
+      "a": "No. Whitespace such as line breaks and spaces is stripped before decoding, so wrapped or pretty-printed Base64 still decodes correctly."
+    },
+    {
+      "q": "Is it limited to images?",
+      "a": "No. Any file type can be decoded since the tool works on raw bytes; the image category just reflects the most common use of turning a data URI back into a picture."
+    }
+  ]
+}

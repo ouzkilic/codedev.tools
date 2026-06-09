@@ -1,0 +1,32 @@
+{
+  "intro": "The Git Cheatsheet is a quick reference of common git commands grouped by task, from setup and committing to branching, remotes, history, undoing changes, and tagging. Type in the filter box to instantly narrow the list to commands matching your search, so you can find the syntax you need without leaving the browser. It is handy when you remember roughly what a git command does but not its exact flags.",
+  "useCases": [
+    "Looking up the exact syntax for a git command you use occasionally, like git rebase or git cherry-pick",
+    "Filtering the list to all 'branch' or 'stash' commands when you only recall the topic",
+    "Refreshing your memory on the difference between git reset --hard, --soft, and git revert",
+    "Onboarding teammates new to git with a compact, scannable command reference",
+    "Recalling remote workflow commands such as git push -u origin and git fetch"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The cheatsheet and the search filter run entirely in your browser, and nothing you type is uploaded or sent anywhere."
+    },
+    {
+      "q": "How does the search filter work?",
+      "a": "It does a case-insensitive substring match against each line of the cheatsheet, showing only the commands and section headers that contain your text. Clearing the box shows the full list again."
+    },
+    {
+      "q": "Which git topics are covered?",
+      "a": "The reference includes setup and config, basic snapshotting, branching and merging, sharing and updating with remotes, inspecting history, undoing and stashing, and tagging."
+    },
+    {
+      "q": "Can I run these git commands from this tool?",
+      "a": "No. It is a read-only reference that displays command syntax with short descriptions; you copy the commands and run them in your own terminal."
+    },
+    {
+      "q": "Does it cover every git command and option?",
+      "a": "No. It focuses on the most common day-to-day commands rather than being exhaustive, so advanced or rarely used flags may not appear. Use git help <command> in your terminal for the full documentation."
+    }
+  ]
+}

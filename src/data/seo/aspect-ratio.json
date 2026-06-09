@@ -1,0 +1,32 @@
+{
+  "intro": "Aspect Ratio takes a width and height like 1920x1080 and reduces it to its simplest aspect ratio (16:9) using the greatest common divisor, plus the exact decimal ratio. It is handy when you need to figure out the proportional ratio of a resolution, image, or video frame without doing the math by hand. Accepts the x, X, or : separator and works entirely in your browser.",
+  "useCases": [
+    "Convert a screen resolution such as 1920x1080 into its simplified 16:9 aspect ratio",
+    "Check whether two image or video sizes share the same proportions by comparing their ratios",
+    "Get the exact decimal ratio (width / height) for CSS or layout calculations",
+    "Verify a thumbnail or crop dimension matches a target aspect ratio before exporting",
+    "Quickly simplify odd resolutions like 1366x768 to compare them against standard formats"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and nothing is uploaded. The width and height you enter never leave your device."
+    },
+    {
+      "q": "What input format does it accept?",
+      "a": "Enter exactly two numbers separated by x, X, or a colon, for example 1920x1080, 1920X1080, or 1920:1080. Both values must be positive integers."
+    },
+    {
+      "q": "What does the output show?",
+      "a": "It returns two lines: the simplified ratio (for example 16:9) computed from the greatest common divisor, and the decimal ratio of width divided by height rounded to four decimal places."
+    },
+    {
+      "q": "Why do I get an error?",
+      "a": "You will see an error if the input does not contain exactly two parts split by x, X, or :, or if either value is not a positive whole number. Decimals, zero, and negative numbers are rejected."
+    },
+    {
+      "q": "Does it support decimal or fractional dimensions?",
+      "a": "No. Both width and height must be positive integers, so values like 1920.5 will produce an error."
+    }
+  ]
+}

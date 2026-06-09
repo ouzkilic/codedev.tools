@@ -1,0 +1,32 @@
+{
+  "intro": "The .env to JSON converter turns a dotenv-style environment file into a formatted JSON object, parsing each KEY=VALUE line into a key-value pair. It is handy when you need to migrate environment variables into a JSON config, inspect a .env file as structured data, or feed values into tooling that expects JSON. Paste your dotenv content and get a clean, indented JSON object back instantly in your browser.",
+  "useCases": [
+    "Convert a project's .env file into a JSON config object for tooling that reads JSON",
+    "Inspect environment variables as structured, readable JSON",
+    "Migrate dotenv values into a settings file or seed a secrets-management entry",
+    "Quickly strip comments and normalize KEY=VALUE pairs into JSON for review",
+    "Generate JSON from environment variables to paste into documentation or examples"
+  ],
+  "faq": [
+    {
+      "q": "Is my .env data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing is uploaded or stored on any server. Your environment variables and secrets never leave your device."
+    },
+    {
+      "q": "How are comments and blank lines handled?",
+      "a": "Empty lines and lines starting with # are skipped. Lines without an = sign are ignored as well."
+    },
+    {
+      "q": "Does it support the 'export' prefix used in shell scripts?",
+      "a": "Yes. A leading 'export ' on a key is stripped, so 'export KEY=value' becomes the key 'KEY' in the output."
+    },
+    {
+      "q": "What happens to quotes around values?",
+      "a": "If a value is wrapped in matching single or double quotes, the surrounding quotes are removed. The remaining content is kept as-is, without escape-sequence processing."
+    },
+    {
+      "q": "Are all values output as strings?",
+      "a": "Yes. Every value becomes a JSON string; numbers and booleans are not converted to their JSON types. Duplicate keys keep the last value seen."
+    }
+  ]
+}

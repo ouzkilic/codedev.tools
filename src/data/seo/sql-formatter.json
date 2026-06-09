@@ -1,0 +1,32 @@
+{
+  "intro": "SQL Formatter takes a raw, unformatted SQL query and rewrites it with consistent indentation and uppercased keywords so it's easier to read and review. It supports several dialects, including standard SQL, PostgreSQL, MySQL, SQLite, MariaDB, and BigQuery, making it handy for cleaning up queries copied from logs, ORMs, or one-liners. Use it to beautify and pretty-print queries before sharing them or committing to a repo.",
+  "useCases": [
+    "Reformat a long single-line SQL query into readable, indented lines",
+    "Standardize keyword casing by uppercasing SELECT, FROM, WHERE, and other keywords",
+    "Clean up queries dumped by an ORM or pulled from application logs before debugging",
+    "Format dialect-specific queries for PostgreSQL, MySQL, SQLite, MariaDB, or BigQuery",
+    "Tidy up SQL before pasting it into a pull request, ticket, or documentation"
+  ],
+  "faq": [
+    {
+      "q": "Is my SQL sent to a server?",
+      "a": "No. The formatter runs entirely in your browser using JavaScript, and your query never leaves your device. Nothing is uploaded or stored on any server."
+    },
+    {
+      "q": "Which SQL dialects are supported?",
+      "a": "You can choose from standard SQL, PostgreSQL, MySQL, SQLite, MariaDB, and BigQuery. Pick the dialect that matches your database for the most accurate formatting."
+    },
+    {
+      "q": "Does it change the casing of my keywords?",
+      "a": "Yes. SQL keywords such as SELECT, FROM, and WHERE are uppercased automatically. Table names, column names, and string values are left as you wrote them."
+    },
+    {
+      "q": "Will formatting change what my query does?",
+      "a": "No. The tool only adjusts whitespace, indentation, and keyword casing for readability. It does not rewrite or optimize the query logic."
+    },
+    {
+      "q": "What happens if my SQL has a syntax error?",
+      "a": "The formatter is lenient and will still attempt to lay out the query, but malformed SQL may produce unexpected indentation. For best results, format syntactically valid queries."
+    }
+  ]
+}

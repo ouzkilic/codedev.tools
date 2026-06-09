@@ -1,0 +1,32 @@
+{
+  "intro": "HTML to JSX converts plain HTML into JSX you can paste into a React component. It renames the attributes JSX requires (class becomes className, for becomes htmlFor), rewrites HTML comments into JSX comment syntax, and self-closes void elements like img and br. It runs entirely in your browser, so it's handy for quickly porting static markup or a design snippet into React without fixing every attribute by hand.",
+  "useCases": [
+    "Pasting a static HTML snippet into a React component and fixing class/for attributes automatically",
+    "Converting markup copied from a design tool or template into valid JSX",
+    "Self-closing void tags such as <img>, <br>, <input>, and <hr> so React doesn't complain",
+    "Turning HTML comments into JSX-style {/* ... */} comments",
+    "Migrating legacy HTML partials into a React/Next.js codebase"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser with JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "What exactly does the tool change?",
+      "a": "It renames class= to className= and for= to htmlFor=, converts HTML comments (<!-- ... -->) into JSX comments ({/* ... */}), and adds a self-closing slash to void elements like img, br, hr, input, and meta."
+    },
+    {
+      "q": "Does it convert inline style strings or other attributes into JSX objects?",
+      "a": "No. It only handles the attribute renames, comments, and void-element fixes listed above. Inline style=\"...\" strings, event handler casing, and other JSX-specific transforms are left unchanged, so review the output before using it."
+    },
+    {
+      "q": "Will it wrap the output in a single root element or a component?",
+      "a": "No. It performs text-level replacements only and does not add a wrapping element, fragment, or component boilerplate. JSX still requires a single root, so you may need to wrap multiple top-level tags yourself."
+    },
+    {
+      "q": "Does it validate that my HTML is well-formed?",
+      "a": "No. The tool uses pattern-based replacements rather than full parsing, so malformed or unusual markup is passed through largely as-is. Check the result if your input is not clean HTML."
+    }
+  ]
+}

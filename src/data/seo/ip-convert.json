@@ -1,0 +1,32 @@
+{
+  "intro": "IP ↔ Integer converts an IPv4 address to its 32-bit unsigned integer form and back again. Paste a dotted-quad address like 192.168.0.1 to get its numeric value, or enter an integer to recover the IPv4 address. It is handy whenever you need to store, compare, or transmit IPv4 addresses as plain numbers.",
+  "useCases": [
+    "Convert an IPv4 address to an integer for compact storage in a database column",
+    "Turn a stored integer back into a readable dotted-quad IPv4 address",
+    "Build or debug numeric IP range comparisons (e.g. BETWEEN queries) where addresses are kept as integers",
+    "Sanity-check values returned by functions like inet_aton / ip2long in your code",
+    "Quickly verify that an IPv4 address has valid octets in the 0–255 range"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you type is uploaded or stored remotely. The tool works offline once the page has loaded."
+    },
+    {
+      "q": "What integer range is valid?",
+      "a": "Integers must be whole numbers from 0 to 4294967295, which is the full range of a 32-bit unsigned value. Values outside this range, or non-integers, return an error."
+    },
+    {
+      "q": "How is the integer calculated?",
+      "a": "Each of the four octets is weighted by its position: octet1 × 16777216 + octet2 × 65536 + octet3 × 256 + octet4. For example 192.168.0.1 becomes 3232235521."
+    },
+    {
+      "q": "Does it support IPv6?",
+      "a": "No. This tool only handles IPv4 addresses. The input must be a dotted-quad with exactly four octets, each between 0 and 255."
+    },
+    {
+      "q": "What happens if I enter an invalid address?",
+      "a": "The tool validates the input and reports an error — for example an IPv4 address that does not have exactly four octets, or an octet outside the 0–255 range, is rejected rather than silently converted."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Slugify turns any text into a clean, URL-friendly slug, lowercasing the input, stripping accents, and replacing anything that isn't a letter or number with a single hyphen. It maps Turkish characters (ı, İ, ş, ğ, ü, ö, ç) to their ASCII equivalents and removes diacritics from accented letters, so titles and headings become safe permalinks. It's handy whenever you need a kebab-case slug for SEO URLs, blog post links, or filenames.",
+  "useCases": [
+    "Generate SEO-friendly permalinks from article or page titles",
+    "Convert Turkish or accented text into plain ASCII slugs for clean URLs",
+    "Create kebab-case identifiers for routes, anchors, or filenames",
+    "Normalize user-entered headings into consistent link slugs",
+    "Produce stable slugs for static site or CMS content"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Slugify runs entirely in your browser and nothing is uploaded. The text you paste never leaves your device."
+    },
+    {
+      "q": "What characters end up in the slug?",
+      "a": "Only lowercase ASCII letters (a-z), digits (0-9), and hyphens. Any other character, including spaces and punctuation, is collapsed into a single hyphen."
+    },
+    {
+      "q": "How does it handle Turkish and accented characters?",
+      "a": "Turkish letters such as ı, ş, ğ, ü, ö, and ç are mapped to their ASCII equivalents, and accents on letters like é or ñ are stripped via Unicode normalization so you get plain a-z output."
+    },
+    {
+      "q": "Will it leave hyphens at the start or end?",
+      "a": "No. Leading and trailing hyphens are trimmed, and runs of non-alphanumeric characters are reduced to one hyphen, so you won't get doubled or dangling dashes."
+    },
+    {
+      "q": "What happens to non-Latin scripts like Cyrillic or Chinese?",
+      "a": "Characters that have no ASCII a-z or 0-9 equivalent are treated as separators and replaced with hyphens, so text in those scripts may produce an empty or hyphen-only result."
+    }
+  ]
+}

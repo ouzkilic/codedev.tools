@@ -1,0 +1,32 @@
+{
+  "intro": "Relative Time converts a date into a human-readable phrase that shows how long ago or until that moment is, such as \"3 days ago\" or \"in 2 months\". Paste any date string the browser can parse and it computes the difference against the current time, choosing the largest fitting unit from years down to seconds. It's handy when you want to humanize timestamps or quickly sanity-check how far a date sits from now.",
+  "useCases": [
+    "Turn an ISO timestamp like 2026-01-15T10:00:00Z into a phrase such as \"5 months ago\"",
+    "Check how far in the future a scheduled deadline or expiry date is",
+    "Verify the age of a log entry or commit date while debugging",
+    "Preview how a date would read in a relative-time UI component",
+    "Quickly tell whether a parsed date resolves to the past or the future"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Relative Time runs entirely in your browser using the built-in Intl.RelativeTimeFormat API. Nothing you enter is uploaded or stored anywhere."
+    },
+    {
+      "q": "What date formats are accepted?",
+      "a": "Any string that JavaScript's Date constructor can parse, including ISO 8601 (e.g. 2026-01-15T10:00:00Z) and many common formats. If the value can't be parsed, you'll see a \"Could not parse the date.\" error."
+    },
+    {
+      "q": "Which time units does it use?",
+      "a": "It picks the largest single unit that fits the difference: year, month, week, day, hour, minute, or second. The result always uses one unit, so output is rounded rather than combined (for example \"in 1 month\" rather than \"in 1 month 3 days\")."
+    },
+    {
+      "q": "Does it handle future dates?",
+      "a": "Yes. Dates in the past show as \"X ago\" and dates in the future show as \"in X\", based on the difference from the current moment when you run it."
+    },
+    {
+      "q": "What time zone and language does the output use?",
+      "a": "The difference is computed against your device's current time, and dates without an explicit offset are interpreted by your local time zone. The phrasing is formatted in English."
+    }
+  ]
+}

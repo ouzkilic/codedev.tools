@@ -1,0 +1,32 @@
+{
+  "intro": "Char Codes converts text to and from decimal character codes, turning each character into its Unicode code point and back again. It uses real code points (not just ASCII), so emoji and other characters outside the Basic Multilingual Plane convert correctly. This is handy when you need to inspect, debug, or reconstruct text from numeric character codes.",
+  "useCases": [
+    "Find the decimal ASCII or Unicode code point of any character",
+    "Decode a space-separated list of character codes back into readable text",
+    "Inspect which code points make up an emoji or special symbol",
+    "Debug encoding issues by viewing the exact numeric value behind each character",
+    "Reconstruct strings from charcode arrays found in logs or source files"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Are the codes decimal, hexadecimal, or octal?",
+      "a": "Codes are decimal only. Encoding produces space-separated base-10 numbers, and decoding parses each number as base 10."
+    },
+    {
+      "q": "What format should the input use when decoding?",
+      "a": "Provide decimal code points separated by whitespace (spaces, tabs, or newlines). Each value is converted to its character; a value that is not a valid number produces an error."
+    },
+    {
+      "q": "Does it support Unicode and emoji?",
+      "a": "Yes. It uses full Unicode code points via codePointAt and fromCodePoint, so characters above the Basic Multilingual Plane such as emoji encode and decode as a single code point each."
+    },
+    {
+      "q": "Why are some characters represented by a large number?",
+      "a": "Characters outside the basic ASCII range, including accented letters and emoji, have higher Unicode code points, so their decimal values can be in the thousands or higher."
+    }
+  ]
+}

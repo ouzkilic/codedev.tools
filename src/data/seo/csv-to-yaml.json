@@ -1,0 +1,32 @@
+{
+  "intro": "CSV to YAML converts CSV text with a header row into a YAML list, where each row becomes a YAML object keyed by the column names. It auto-detects the delimiter, skips empty lines, and infers types so numbers and booleans are emitted as real YAML values instead of quoted strings. This is handy when you need to turn tabular data, spreadsheet exports, or reports into YAML for config files, fixtures, or seed data.",
+  "useCases": [
+    "Turn a spreadsheet or CSV export into YAML fixtures for tests or seed data",
+    "Convert tabular data into a YAML list for config or data files",
+    "Reshape CSV columns into structured YAML objects keyed by the header row",
+    "Quickly preview how CSV rows map to YAML before committing them to a repo",
+    "Prepare YAML payloads for tools that consume lists of records"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "Does my CSV need a header row?",
+      "a": "Yes. The first row is treated as the header and its values become the keys for each YAML object, so each data row turns into a keyed record."
+    },
+    {
+      "q": "How are numbers and booleans handled?",
+      "a": "Type inference is enabled, so values like \"1\" become the number 1 and \"true\" becomes the boolean true in the YAML output, rather than quoted strings."
+    },
+    {
+      "q": "What happens to empty lines and the delimiter?",
+      "a": "Empty lines are skipped automatically, and the delimiter (comma, tab, semicolon, etc.) is auto-detected, so single-column input still works without errors."
+    },
+    {
+      "q": "What does the output look like?",
+      "a": "It produces a YAML list where each CSV row is one item, with the column headers as the keys of each object."
+    }
+  ]
+}

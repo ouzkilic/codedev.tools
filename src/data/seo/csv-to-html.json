@@ -1,0 +1,32 @@
+{
+  "intro": "CSV to HTML Table converts CSV text into a clean HTML <table> with a <thead> for the first row and a <tbody> for the remaining rows. It's handy when you need to drop tabular data into a web page, email, or documentation without writing the markup by hand. Paste your CSV and copy the generated table markup.",
+  "useCases": [
+    "Embed a spreadsheet export as a static HTML table in a blog post or docs page",
+    "Generate table markup for an email or CMS that accepts raw HTML",
+    "Quickly preview how comma-separated data maps to header and body rows",
+    "Turn a small dataset into HTML for a prototype or mockup",
+    "Produce escaped, copy-paste-ready table markup without hand-typing tags"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing is uploaded or stored on any server. The site is open source so you can verify this."
+    },
+    {
+      "q": "How is the first row handled?",
+      "a": "The first CSV row becomes the table header inside <thead> using <th> cells. Every following row becomes a <tr> of <td> cells inside <tbody>."
+    },
+    {
+      "q": "Does it escape special HTML characters?",
+      "a": "Yes. The characters &, < and > in cell values are escaped to &amp;, &lt; and &gt; so the output is safe to drop into HTML and won't break the markup."
+    },
+    {
+      "q": "What delimiters and formats are supported?",
+      "a": "Parsing is done with PapaParse, which auto-detects the delimiter (such as commas, tabs, or semicolons) and handles quoted fields. Empty lines are skipped automatically."
+    },
+    {
+      "q": "What happens if the CSV is empty or invalid?",
+      "a": "If there are no rows after trimming and skipping empty lines, you'll see a \"No data to convert\" error. Fatal parse errors are also reported instead of producing broken output."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Hash Identifier guesses which hash algorithm a string is likely to be by inspecting its format and length. It recognizes bcrypt and Argon2 by their prefixes, and maps hexadecimal lengths to candidates like MD5, NTLM, SHA-1, SHA-256, and SHA-512. It is handy when you encounter an unlabeled hash and want a quick starting point for identifying or cracking it.",
+  "useCases": [
+    "Identify an unknown hash pulled from a database, log, or config file",
+    "Distinguish a bcrypt or Argon2 password hash from a plain hex digest",
+    "Narrow down candidates (MD5 vs SHA-1 vs SHA-256) before choosing a cracking tool",
+    "Spot-check whether a stored credential uses a modern algorithm like bcrypt or Argon2",
+    "Quickly tell whether a token is a recognized hex digest or something else entirely"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Hash Identifier runs entirely in your browser and nothing is uploaded. Any hash you paste stays on your device."
+    },
+    {
+      "q": "Which hashes can it detect?",
+      "a": "It detects bcrypt ($2a/$2b/$2y) and Argon2 ($argon2) by prefix, and maps hex lengths to candidates: 8 (CRC32/Adler-32), 32 (MD5/MD4/NTLM), 40 (SHA-1/RIPEMD-160), 56 (SHA-224), 64 (SHA-256/SHA3-256), 96 (SHA-384), and 128 (SHA-512/SHA3-512)."
+    },
+    {
+      "q": "Why does it return multiple possible algorithms?",
+      "a": "Many algorithms produce digests of the same length, so length alone cannot uniquely identify one. The tool lists all common algorithms that match a given length rather than guessing a single answer."
+    },
+    {
+      "q": "Why did I get \"Unknown\" for my hash?",
+      "a": "The input is treated as unrecognized if it contains characters outside 0-9 and a-f (and is not a bcrypt or Argon2 prefix), or if its hex length does not match any known mapping. Leading and trailing whitespace is trimmed before checking."
+    },
+    {
+      "q": "Does it crack or reverse the hash?",
+      "a": "No. It only identifies the likely algorithm based on format and length; it does not attempt to recover the original input."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "CSV Diff compares two CSV documents and highlights the lines that were added or removed between them. Before comparing, it parses and re-serializes both inputs so that differences in whitespace, trailing spaces, blank lines, and line endings don't create false positives. It's handy when you need to spot the real differences between two versions of tabular data without getting distracted by formatting noise.",
+  "useCases": [
+    "Comparing an exported CSV report against last week's version to see which rows changed",
+    "Reviewing changes in a CSV data file before committing it to version control",
+    "Verifying that a CSV transformation or migration produced the expected output",
+    "Checking two CSV exports from different tools for added or missing records",
+    "Confirming that re-running a job generated the same dataset, ignoring formatting differences"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. CSV Diff runs entirely in your browser, so both CSV documents are parsed and compared locally on your device. Nothing is uploaded or stored on a server."
+    },
+    {
+      "q": "Why do two CSVs that look different show no changes?",
+      "a": "Both inputs are parsed and re-serialized before comparison, which normalizes trailing whitespace, empty lines, and line endings (CRLF vs LF). If only those formatting details differ, the underlying data is identical and no diff is shown."
+    },
+    {
+      "q": "How are the differences calculated?",
+      "a": "After normalizing both inputs, the tool runs a line-by-line comparison and marks each line as added, removed, or unchanged. Each output line corresponds to one normalized CSV row."
+    },
+    {
+      "q": "Does it detect changes within a single cell or column reordering?",
+      "a": "No. The comparison works at the line level, so a modified row appears as one removed line and one added line rather than a cell-level edit, and reordered columns are treated as different lines."
+    },
+    {
+      "q": "Are empty rows and surrounding whitespace ignored?",
+      "a": "Yes. Empty lines are skipped during parsing and the input is trimmed, so blank rows and leading or trailing whitespace do not appear as differences."
+    }
+  ]
+}

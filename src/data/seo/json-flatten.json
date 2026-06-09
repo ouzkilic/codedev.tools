@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Flatten turns a deeply nested JSON object into a single-level map of path keys, using dot notation for object properties (a.b.c) and bracket notation for array items (a[0]). Each path points to a leaf primitive value, which makes nested data easier to read, diff, search, or feed into tools that expect flat key/value pairs. It is handy whenever you need to unnest JSON and inspect exactly where each value lives.",
+  "useCases": [
+    "Convert a nested config or API response into flat dot/bracket paths so you can grep or search for a specific value",
+    "Compare two JSON documents more easily by flattening both into single-level keys before diffing",
+    "Map deeply nested fields to flat keys for spreadsheets, env-style files, or form inputs",
+    "Quickly discover the exact path to a value inside a large, unfamiliar JSON payload",
+    "Audit which leaf values exist in a structure without manually walking nested objects and arrays"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. JSON Flatten runs entirely in your browser, so nothing is uploaded or stored remotely. Your JSON never leaves your device."
+    },
+    {
+      "q": "How are objects and arrays represented in the flattened keys?",
+      "a": "Object properties use dot notation (for example a.b.c) and array elements use bracket notation (for example items[0]). The two are combined as needed, such as user.roles[1]."
+    },
+    {
+      "q": "What happens to empty objects and empty arrays?",
+      "a": "They are preserved as leaf values rather than being expanded. An empty object stays as {} and an empty array stays as [] under their path key."
+    },
+    {
+      "q": "What if I paste a top-level primitive instead of an object?",
+      "a": "If the input is a single primitive like a number or string, it is surfaced under the key \"value\" in the output so it still appears as a proper key/value pair."
+    },
+    {
+      "q": "What if my JSON is invalid?",
+      "a": "The tool parses the input with the standard JSON parser, so malformed JSON will fail to parse and produce an error. Make sure the input is valid JSON before flattening."
+    }
+  ]
+}

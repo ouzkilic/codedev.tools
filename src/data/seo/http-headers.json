@@ -1,0 +1,32 @@
+{
+  "intro": "The HTTP Header Parser turns raw HTTP request or response headers into clean, formatted JSON. Paste headers copied from your browser's network tab, curl -v output, or a server log, and get each header name mapped to its value. It's handy when you need to inspect, compare, or feed HTTP headers into other tools as structured data.",
+  "useCases": [
+    "Convert headers copied from the browser DevTools Network panel into JSON",
+    "Parse the raw headers from `curl -v` or `curl -i` output",
+    "Inspect response headers like Content-Type, Cache-Control, or Set-Cookie as key/value pairs",
+    "Normalize pasted request headers before saving them in tests or fixtures",
+    "Quickly check which headers a server returns while debugging an API"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Parsing runs entirely in your browser and nothing is uploaded. The headers you paste never leave your device."
+    },
+    {
+      "q": "How does it handle the request or status line?",
+      "a": "Lines without a colon, or with a colon at the very start, are skipped. So a request line like `GET / HTTP/1.1` or a status line like `HTTP/1.1 200 OK` is ignored, and only real header lines are parsed."
+    },
+    {
+      "q": "What is the output format?",
+      "a": "The result is a pretty-printed JSON object (indented with two spaces) where each header name is a key and its value is the corresponding string."
+    },
+    {
+      "q": "What happens with duplicate header names?",
+      "a": "Each header is stored as a single JSON key, so if the same header name appears more than once, the last occurrence overwrites the earlier ones."
+    },
+    {
+      "q": "Why do I get a \"No headers found\" error?",
+      "a": "That error appears when no line contains a valid `Name: value` pair. Make sure each header is on its own line and includes a colon separating the name from the value."
+    }
+  ]
+}

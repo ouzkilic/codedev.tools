@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Schema to Sample generates an example JSON instance from a JSON Schema definition. Paste a schema and it walks the type, properties, and items to produce matching sample data, using any default, example, or enum value you've declared. It's handy for quickly seeing what a schema produces, seeding mock payloads, or sanity-checking the shape of an API contract.",
+  "useCases": [
+    "Generate a placeholder JSON payload from an API request or response schema",
+    "Produce sample data to seed tests or fixtures from an existing JSON Schema",
+    "Visualize the shape an object or array schema will produce, including nested properties",
+    "Verify that default, example, and enum values in a schema resolve as expected",
+    "Hand a frontend developer a concrete example object before the backend is ready"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on a server. The site is open source so you can verify this yourself."
+    },
+    {
+      "q": "How does it decide what value to use for each field?",
+      "a": "For each schema node it first uses a default value if present, then an example, then the first entry of an enum. Otherwise it falls back to the type: \"string\" for strings, 0 for number and integer, true for booleans, and null for null or unrecognized types."
+    },
+    {
+      "q": "How are objects and arrays handled?",
+      "a": "Objects produce a key for every entry in properties, with each value generated recursively. Arrays produce a single-element array whose item is built from the items schema."
+    },
+    {
+      "q": "Does it validate the schema or support all JSON Schema keywords?",
+      "a": "It only checks that the input is valid JSON; otherwise it reports an invalid schema. It reads type, properties, items, default, example, and enum, and ignores other keywords such as required, oneOf, allOf, $ref, and format."
+    },
+    {
+      "q": "What output format does it produce?",
+      "a": "It returns the generated instance as pretty-printed JSON indented with two spaces. An empty input produces empty output."
+    }
+  ]
+}

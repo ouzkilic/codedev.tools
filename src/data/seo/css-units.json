@@ -1,0 +1,32 @@
+{
+  "intro": "CSS Unit Converter turns a CSS length between px, rem and em based on a root font size you choose. Type a value like 24px, 1.5rem or 2em and it returns the equivalent in all three units. It is handy when translating fixed pixel designs into scalable rem/em values for responsive, accessible layouts.",
+  "useCases": [
+    "Convert pixel values from a design mockup into rem for a fluid, accessible type scale",
+    "Find the px equivalent of a 1.5rem spacing value when your base font size is 16px",
+    "Check how a font size changes when the root font size is something other than 16px (e.g. 18px or 20px)",
+    "Translate em-based spacing into px to debug unexpected sizing in a component",
+    "Build a consistent spacing or typography scale by converting round pixel steps into rem"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The converter runs entirely in your browser, so nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "What input formats are accepted?",
+      "a": "A single number optionally followed by px, rem or em, such as 24px, 1.5rem or 2em. If you omit the unit, the value is treated as px."
+    },
+    {
+      "q": "How does the root font size affect the result?",
+      "a": "The root font size (default 16px) is the px-per-unit factor used for rem and em. Changing it rescales the rem and em outputs, since px is multiplied by this base to and from rem/em."
+    },
+    {
+      "q": "Why do rem and em always show the same value here?",
+      "a": "This tool converts relative to the single root font size you set, so for a given base the rem and em results are identical. In real CSS, em is relative to the element's own font size, which can differ from the root."
+    },
+    {
+      "q": "How precise are the converted values?",
+      "a": "Results are rounded to up to four decimal places, with trailing zeros removed, so 16px at a base of 16 returns a clean 1rem."
+    }
+  ]
+}

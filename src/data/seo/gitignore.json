@@ -1,0 +1,32 @@
+{
+  "intro": "The .gitignore Generator creates a ready-to-use .gitignore file for common stacks straight in your browser. Pick a template for Node, Python, Java, Go, Rust, or macOS and get a sensible set of ignore rules covering dependencies, build output, environment files, and OS clutter. It is handy when starting a new repository or cleaning up an existing one without hunting down boilerplate ignore patterns.",
+  "useCases": [
+    "Bootstrap a .gitignore when starting a new Node, Python, Java, Go, or Rust project",
+    "Add macOS-specific ignores like .DS_Store to keep system files out of a repo",
+    "Get a quick reminder of which build, cache, and dependency directories to ignore for a stack",
+    "Generate a baseline ignore list to copy into an existing repository",
+    "Avoid committing .env and other local environment files in JavaScript or Python projects"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser and the templates are bundled with the page. Nothing you do is uploaded or sent anywhere."
+    },
+    {
+      "q": "Which templates are supported?",
+      "a": "Six templates are available: Node, Python, Java, Go, Rust, and macOS. Each produces a curated set of ignore rules for that stack."
+    },
+    {
+      "q": "Can I combine multiple templates or add my own rules?",
+      "a": "Not directly. The tool outputs one selected template at a time, so you would copy the result and merge or edit the rules manually if you need more than one stack."
+    },
+    {
+      "q": "Why is Cargo.lock commented out in the Rust template?",
+      "a": "Cargo.lock should be committed for libraries but can be ignored for executables, so the template leaves it commented out for you to decide. Uncomment the line if your project is a binary you want to exclude the lockfile from."
+    },
+    {
+      "q": "Does the output match GitHub's official gitignore templates exactly?",
+      "a": "No. These are concise, hand-picked rule sets covering the most common cases, not a copy of the full upstream GitHub templates."
+    }
+  ]
+}

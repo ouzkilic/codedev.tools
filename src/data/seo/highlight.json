@@ -1,0 +1,32 @@
+{
+  "intro": "The Syntax Highlighter takes a snippet of code and converts it into HTML markup using highlight.js, the same engine many blogs and documentation sites use. It can auto-detect the language or you can pick a specific one, then hand you back the highlighted HTML to paste into a page or CMS. It is handy whenever you need pre-rendered, styled code rather than relying on a runtime highlighter.",
+  "useCases": [
+    "Generate highlighted HTML for code blocks in a blog post or CMS that does not run a JS highlighter",
+    "Produce static, pre-highlighted code for documentation or README previews",
+    "Quickly check how highlight.js tokenizes a snippet in a given language",
+    "Convert JavaScript, TypeScript, JSON, Python, Go, Rust, SQL or other supported code into themeable HTML",
+    "Let auto-detect identify the language of an unlabeled snippet before highlighting it"
+  ],
+  "faq": [
+    {
+      "q": "Is my code sent to a server?",
+      "a": "No. Highlighting runs entirely in your browser using highlight.js loaded locally, so your code is never uploaded or sent anywhere."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "You can choose JavaScript, TypeScript, JSON, HTML, XML, CSS, Python, Bash, SQL, Go, Rust, or Java, or leave it on Auto-detect to let highlight.js guess the language."
+    },
+    {
+      "q": "What does the tool output?",
+      "a": "It returns HTML markup with tokens wrapped in highlight.js classes. You still need a matching highlight.js CSS theme on your page for the colors to appear."
+    },
+    {
+      "q": "How accurate is auto-detect?",
+      "a": "Auto-detect uses highlight.js's heuristics across many languages and works well for typical snippets, but it can misclassify very short or ambiguous code. Selecting the exact language gives the most reliable result."
+    },
+    {
+      "q": "Does it format or change my code?",
+      "a": "No. It only adds highlighting markup around your existing text; it does not reformat, indent, or alter the code itself."
+    }
+  ]
+}

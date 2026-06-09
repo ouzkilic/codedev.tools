@@ -1,0 +1,32 @@
+{
+  "intro": "Find & Replace lets you search text and substitute every match with new content directly in your browser. It supports plain text search, case-insensitive matching, and full regular expression mode for pattern-based replacements. Use it for quick one-off edits, cleaning up pasted data, or applying a regex substitution across a block of text without opening an editor.",
+  "useCases": [
+    "Replace every occurrence of a word or phrase across a pasted block of text",
+    "Strip or swap formatting characters using a regular expression pattern",
+    "Normalize inconsistent casing by matching with the ignore-case option",
+    "Reformat log lines or data dumps with regex capture group references like $1",
+    "Clean up copied configuration or code snippets before pasting elsewhere"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Find & Replace runs entirely in your browser using JavaScript's native string and RegExp operations. Nothing you type or paste is uploaded or stored on any server."
+    },
+    {
+      "q": "How does regex mode work?",
+      "a": "When Regex is enabled, your Find input is compiled as a JavaScript regular expression with the global flag, so every match is replaced. The Replace field supports standard JavaScript substitution patterns such as $1 for capture groups and $& for the full match."
+    },
+    {
+      "q": "What does the Ignore case option do?",
+      "a": "Ignore case makes matching case-insensitive. It works in both plain-text and regex mode by adding the case-insensitive flag, so 'Hello', 'hello', and 'HELLO' are all treated as matches."
+    },
+    {
+      "q": "Are special characters treated literally in plain-text mode?",
+      "a": "Yes. With Regex off, the Find string is matched literally, so characters like . * + ? have no special meaning. Enable Regex if you want them interpreted as pattern syntax."
+    },
+    {
+      "q": "What happens if my regular expression is invalid?",
+      "a": "The tool reports an 'Invalid regex' error with the underlying message instead of changing your text, so you can fix the pattern and try again."
+    }
+  ]
+}

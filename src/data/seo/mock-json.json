@@ -1,0 +1,32 @@
+{
+  "intro": "Mock JSON from Schema generates random sample JSON data from a JSON Schema you paste in. Give it a schema describing the shape you want and it walks the structure to produce a fake JSON instance, making it handy for prototyping APIs, seeding tests, or filling out UI mockups. Everything runs in your browser, so it works offline once loaded.",
+  "useCases": [
+    "Produce sample API response payloads while a backend is still being built",
+    "Generate fake fixture data for unit and integration tests",
+    "Fill placeholder content into a frontend that expects a known JSON shape",
+    "Quickly sanity-check that a JSON Schema describes the structure you intended",
+    "Create example request or response bodies for API documentation"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The schema you paste is parsed and the mock JSON is generated entirely in your browser using the Web Crypto API. Nothing is uploaded or stored on a server."
+    },
+    {
+      "q": "Which JSON Schema types are supported?",
+      "a": "It handles object, array, string, integer, number, boolean, and null types, plus enum (a random value is picked from the list). Object properties and array items are resolved recursively."
+    },
+    {
+      "q": "How are values generated for each type?",
+      "a": "Strings return a random word from a small lorem-ipsum set, integers are a random value from 0 to 1000, numbers are a random float from 0 up to 1000, booleans are random true/false, and arrays get 1 to 3 generated items. Randomness comes from crypto.getRandomValues."
+    },
+    {
+      "q": "What happens with unsupported keywords or types?",
+      "a": "Only type, enum, properties, and items are interpreted. Keywords like format, minimum, maximum, required, or pattern are ignored, and any unknown or missing type resolves to null."
+    },
+    {
+      "q": "Why does it say 'Invalid JSON Schema'?",
+      "a": "The input must be valid JSON. If the schema fails to parse, the tool reports an invalid JSON Schema error; an empty input simply produces no output."
+    }
+  ]
+}

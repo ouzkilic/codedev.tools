@@ -1,0 +1,32 @@
+{
+  "intro": "This Quoted-Printable tool encodes and decodes text using the Quoted-Printable (QP) MIME transfer encoding commonly seen in email headers and message bodies. Switch between encode and decode modes to convert UTF-8 text into the =XX hex form or to turn QP-encoded data back into readable text. It is handy whenever you need to inspect, produce, or debug MIME quoted-printable content from emails or MIME parts.",
+  "useCases": [
+    "Decode a Quoted-Printable email body or MIME part to read its original text",
+    "Encode UTF-8 text (including accented or non-ASCII characters) into the =XX form for MIME messages",
+    "Inspect how special characters like = are escaped when building or debugging email content",
+    "Verify that a mail client or library produced valid Quoted-Printable output",
+    "Convert QP-encoded snippets pasted from raw email source back into plain text"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encoding and decoding run entirely in your browser, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "Which characters are escaped during encoding?",
+      "a": "Printable ASCII characters (codes 33 to 126), plus space and tab, are kept as-is, except for the = character. Everything else, including the = sign and any non-ASCII bytes, is written as =XX using uppercase hexadecimal."
+    },
+    {
+      "q": "How does decoding handle soft line breaks?",
+      "a": "An = followed by a line break (=\\n or =\\r\\n) is treated as a soft line break and removed, joining the lines. A standalone = that is not part of a valid =XX sequence or a soft break is passed through unchanged."
+    },
+    {
+      "q": "Does it wrap lines at 76 characters?",
+      "a": "No. The encoder produces the =XX escapes but does not insert the 76-character line limit or soft line breaks that the MIME specification recommends, so add wrapping separately if your use case requires it."
+    },
+    {
+      "q": "Is non-ASCII text like accented characters supported?",
+      "a": "Yes. Input is encoded as UTF-8 bytes before being converted, so multi-byte characters are escaped byte by byte, and decoding reassembles the UTF-8 bytes back into text."
+    }
+  ]
+}

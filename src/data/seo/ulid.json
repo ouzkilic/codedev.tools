@@ -1,0 +1,32 @@
+{
+  "intro": "ULID Generator creates sortable, timestamp-based unique IDs (ULIDs) directly in your browser. Each ULID combines a millisecond timestamp with cryptographically random data, encoded in Crockford's Base32, so the IDs sort lexicographically by creation time. It's handy when you want unique identifiers that are more URL-friendly and time-ordered than UUIDs.",
+  "useCases": [
+    "Generating primary keys for database rows that should sort by insertion time",
+    "Creating identifiers for log entries or events so they order chronologically by string sort",
+    "Producing readable, case-insensitive IDs for URLs without ambiguous characters (no I, L, O, or U)",
+    "Bulk-generating a batch of test IDs for seeding fixtures or sample data",
+    "Replacing UUIDs where a sortable, timestamp-prefixed ID is preferable"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser and nothing is uploaded. The random portion is produced locally with the Web Crypto API (crypto.getRandomValues)."
+    },
+    {
+      "q": "What format does a generated ULID use?",
+      "a": "Each ULID is 26 characters: a 10-character timestamp followed by 16 random characters, all in Crockford's Base32 alphabet. That alphabet excludes the letters I, L, O, and U to avoid visual ambiguity."
+    },
+    {
+      "q": "How many ULIDs can I generate at once?",
+      "a": "You can set the Count field to generate a batch in one go. The count is clamped to a minimum of 1 and a maximum of 1000, with each ULID on its own line."
+    },
+    {
+      "q": "Are the ULIDs sortable?",
+      "a": "Yes. Because the timestamp comes first, ULIDs generated at different times sort lexicographically in chronological order. IDs created within the same millisecond share the timestamp prefix and differ only in the random suffix."
+    },
+    {
+      "q": "Is the random part secure?",
+      "a": "The 16 random characters are derived from crypto.getRandomValues, a cryptographically secure source. Note that values are taken modulo 32 per character, which is fine for collision-resistant IDs but is not intended for cryptographic key material."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "intro": "The Crontab Cheatsheet is a quick cron syntax reference that lays out the five schedule fields, the operators, the @-shortcuts, and a list of common crontab examples in one place. A search box lets you filter every line of the cheatsheet so you can jump straight to the pattern you need. It is handy whenever you are writing or reading a crontab entry and want to confirm the field order or copy a working schedule.",
+  "useCases": [
+    "Recall the order of the five cron fields: minute, hour, day-of-month, month, day-of-week",
+    "Look up operators like * (any), , (list), - (range), and / (step)",
+    "Find the meaning of special strings such as @reboot, @hourly, @daily, @weekly, @monthly, and @yearly",
+    "Copy a ready-made expression like */5 * * * * (every 5 minutes) or 0 9 * * 1-5 (weekdays at 9am)",
+    "Filter the reference to a specific keyword, for example typing 'midnight' or 'week' to narrow the list",
+    "Double-check that day-of-week 0 means Sunday before saving a schedule"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The cheatsheet runs entirely in your browser, and the search filter only matches text against a built-in list of cron lines. Nothing is uploaded or sent anywhere."
+    },
+    {
+      "q": "Does this tool validate or run my cron expression?",
+      "a": "No. It is a read-only reference and example list, not a validator or scheduler. It does not parse, check, or execute any cron expression you might have."
+    },
+    {
+      "q": "How does the search box work?",
+      "a": "Typing in the search box filters the cheatsheet to only the lines that contain your text, matched case-insensitively. Clearing the box shows the full reference again."
+    },
+    {
+      "q": "What does day-of-week 0 mean?",
+      "a": "In the cron format shown here, day-of-week ranges from 0 to 6 where 0 is Sunday, and the names SUN-SAT can also be used. Months use 1-12 or the names JAN-DEC."
+    },
+    {
+      "q": "What do the special strings like @daily expand to?",
+      "a": "The cheatsheet lists the equivalents: @hourly is 0 * * * *, @daily is 0 0 * * *, @weekly is 0 0 * * 0, @monthly is 0 0 1 * *, @yearly is 0 0 1 1 *, and @reboot runs once at startup."
+    }
+  ]
+}

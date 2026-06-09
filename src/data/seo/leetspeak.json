@@ -1,0 +1,32 @@
+{
+  "intro": "Leetspeak converts text to and from basic 1337 (leet) using a small letter-to-number substitution. In encode mode it replaces a/e/i/o/s/t with 4/3/1/0/5/7, and in decode mode it reverses those numbers back to letters. It is handy for quick fun text styling, generating playful handles, or decoding simple leetspeak you come across.",
+  "useCases": [
+    "Encode a username or display name into a leetspeak style for gaming or chat",
+    "Decode short leetspeak strings back into readable text",
+    "Generate playful headers or labels for a side project",
+    "Quickly transform sample text when testing how mixed letters and digits render",
+    "Show what a phrase looks like in classic 1337 substitution"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "Which characters does it convert?",
+      "a": "Encoding maps a, e, i, o, s, and t to 4, 3, 1, 0, 5, and 7. Decoding maps 4, 3, 1, 0, 5, and 7 back to a, e, i, o, s, and t."
+    },
+    {
+      "q": "Is the conversion case sensitive?",
+      "a": "Encoding lowercases each character before matching, so both uppercase and lowercase vowels and the supported letters are converted to the same digit."
+    },
+    {
+      "q": "Why is decoding not always identical to the original text?",
+      "a": "Decoding only knows the six number-to-letter mappings, and encoding loses original casing. So decoding produces lowercase letters, and any digits in your original text that match the map will also be turned into letters."
+    },
+    {
+      "q": "Are characters that have no mapping changed?",
+      "a": "No. Any character without a matching entry, such as punctuation, spaces, or unsupported letters, is passed through unchanged."
+    }
+  ]
+}

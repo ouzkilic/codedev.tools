@@ -1,0 +1,32 @@
+{
+  "intro": "CSV to JSON converts CSV text with a header row into a JSON array of objects, using the header names as keys. It's handy when you need to turn spreadsheet exports or tabular data into structured JSON for APIs, config files, or quick inspection. The conversion runs entirely in your browser, so you can parse CSV into JSON without uploading anything.",
+  "useCases": [
+    "Turn a CSV export from a spreadsheet or database into a JSON array for use in code or an API request",
+    "Quickly inspect tabular data as structured objects keyed by column name",
+    "Prepare seed or fixture data in JSON from a CSV file",
+    "Convert numbers and booleans stored as CSV text into proper JSON types automatically",
+    "Reformat a single-column CSV list into JSON objects"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored anywhere."
+    },
+    {
+      "q": "Does my CSV need a header row?",
+      "a": "Yes. The first row is treated as column names and becomes the object keys for every JSON entry, so include a header row."
+    },
+    {
+      "q": "Are numbers and booleans converted to real JSON types?",
+      "a": "Yes. Dynamic typing is enabled, so values like \"1\" become the number 1 and \"true\" becomes the boolean true instead of staying strings."
+    },
+    {
+      "q": "What happens to empty lines in the input?",
+      "a": "Empty lines are skipped during parsing, so blank rows won't show up as empty objects in the JSON output."
+    },
+    {
+      "q": "What if my CSV is malformed?",
+      "a": "If parsing hits a fatal error, the tool reports the message and the affected row number. Delimiter auto-detection warnings (common with single-column input) are ignored and won't block conversion."
+    }
+  ]
+}

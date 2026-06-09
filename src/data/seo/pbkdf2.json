@@ -1,0 +1,32 @@
+{
+  "intro": "This PBKDF2 tool derives a cryptographic key from a password using the Web Crypto API, right in your browser. Enter a password as the input, set a salt, iteration count, hash function, and key length, and it returns the derived key as a lowercase hex string. It's handy for understanding password-based key derivation (KDF), generating test vectors, or reproducing a derived key for debugging.",
+  "useCases": [
+    "Derive a key from a password to compare against a server-side PBKDF2 implementation",
+    "Generate PBKDF2 test vectors with a known salt and iteration count",
+    "Experiment with how iteration count and hash choice (SHA-256, SHA-1, SHA-384, SHA-512) affect the output",
+    "Produce a hex-encoded derived key for use in documentation or test fixtures",
+    "Check that two PBKDF2 configurations produce the same key for a given password and salt"
+  ],
+  "faq": [
+    {
+      "q": "Is my password or data sent to a server?",
+      "a": "No. Key derivation runs entirely in your browser using the Web Crypto API. Your password, salt, and the derived key never leave your device and are not uploaded anywhere."
+    },
+    {
+      "q": "What parameters can I configure?",
+      "a": "You can set the salt (plain text), the iteration count (default 100000), the hash function (SHA-256, SHA-1, SHA-384, or SHA-512), and the key length in bits (default 256). The password is the main input."
+    },
+    {
+      "q": "What format is the output in?",
+      "a": "The derived key is returned as a lowercase hexadecimal string, with each byte shown as two hex characters. A 256-bit key produces 64 hex characters."
+    },
+    {
+      "q": "How are the password and salt encoded?",
+      "a": "Both the password and the salt are encoded as UTF-8 bytes before derivation. If you need a different byte representation, encode it accordingly before entering it."
+    },
+    {
+      "q": "Why does a higher iteration count matter?",
+      "a": "More iterations make brute-forcing a password slower, which is the point of PBKDF2. Changing the iteration count changes the derived key, so it must match on both sides if you are comparing outputs."
+    }
+  ]
+}

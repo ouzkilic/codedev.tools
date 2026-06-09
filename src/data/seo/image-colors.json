@@ -1,0 +1,32 @@
+{
+  "intro": "The Image Color Extractor pulls a dominant color palette out of any image right in your browser. It counts how often each color appears, groups similar shades together, and returns the most common colors as hex codes. It's handy when you need to sample colors from a screenshot, photo, or design mockup without opening a full image editor.",
+  "useCases": [
+    "Sample brand or theme colors from a logo or screenshot to reuse in CSS",
+    "Build a quick color palette from a reference photo for a design",
+    "Grab hex codes from a mockup when you don't have the original design file",
+    "Check which colors dominate an image before using it as a background",
+    "Generate a starting palette for charts, UI themes, or illustrations"
+  ],
+  "faq": [
+    {
+      "q": "Is my image sent to a server?",
+      "a": "No. The extractor runs entirely in your browser and reads the image's pixel data locally. Nothing is uploaded and no data leaves your device."
+    },
+    {
+      "q": "How many colors does it return?",
+      "a": "By default it returns the six most common colors, sorted from most to least frequent."
+    },
+    {
+      "q": "Why are similar shades grouped into one color?",
+      "a": "Each color channel is quantized to its high 4 bits before counting, so very close shades are merged into the same bucket. This keeps the palette compact instead of listing near-duplicate colors."
+    },
+    {
+      "q": "How are transparent areas handled?",
+      "a": "Fully transparent pixels (alpha of 0) are skipped, so they don't affect the palette. Partially transparent pixels are still counted by their RGB values."
+    },
+    {
+      "q": "What format are the colors returned in?",
+      "a": "Each color is returned as a standard 6-digit hex string in the form #rrggbb, ready to paste into CSS or design tools."
+    }
+  ]
+}

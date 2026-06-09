@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to Protobuf infers a proto3 message definition from a JSON sample, so you can turn an example payload into a starting .proto schema without writing it by hand. It walks the JSON object, maps each field to a scalar or nested message type, and outputs a syntax = \"proto3\" definition with sequential field numbers. It's useful when you're moving an existing JSON API toward gRPC or Protocol Buffers and want a quick first draft of the message structure.",
+  "useCases": [
+    "Bootstrap a proto3 .proto file from a sample JSON API response before migrating to gRPC",
+    "Generate nested Protobuf message types from deeply structured JSON objects",
+    "Get a starting schema for an existing JSON payload so you can refine types and field numbers manually",
+    "Quickly inspect how a JSON shape maps to Protobuf scalar and repeated fields",
+    "Prototype message contracts during early API design without hand-writing boilerplate"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser and nothing is uploaded. Your JSON never leaves your device."
+    },
+    {
+      "q": "What proto syntax does it generate?",
+      "a": "It always emits proto3, prefixing the output with syntax = \"proto3\";. Field numbers are assigned sequentially starting from 1 in the order the JSON keys appear."
+    },
+    {
+      "q": "How are JSON types mapped to Protobuf types?",
+      "a": "Booleans become bool, strings become string, integers become int64, and other numbers become double. Nested objects become their own message types, and arrays become repeated fields based on their first element."
+    },
+    {
+      "q": "What does it do with null values or empty arrays?",
+      "a": "Null values are typed as string, since the real type can't be inferred. An empty array is treated as a repeated string field because there's no element to inspect."
+    },
+    {
+      "q": "Does the input have to be a JSON object?",
+      "a": "Yes. The top-level input must be a JSON object; a bare array, primitive, or null is rejected. Invalid JSON also produces an error message."
+    }
+  ]
+}

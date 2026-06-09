@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to TOML converts a JSON object into TOML, the configuration format used by tools like Cargo, pip, and many Go and Rust projects. Paste your JSON, and the tool parses it and stringifies it as valid TOML in the browser. It is handy when you want to migrate API responses or generated JSON into a human-readable config file.",
+  "useCases": [
+    "Turn a JSON config blob into a TOML file for a Rust Cargo.toml or Python pyproject.toml",
+    "Convert settings exported as JSON into TOML for tools that expect that format",
+    "Quickly preview how a nested JSON structure maps onto TOML tables and arrays",
+    "Generate TOML fixtures or sample config for documentation and tests",
+    "Migrate configuration between projects that use different formats"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using a client-side library, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "What input does the tool accept?",
+      "a": "It expects valid JSON whose top level is an object. A top-level array, string, number, or null is rejected because TOML requires a top-level table."
+    },
+    {
+      "q": "Why do I get a \"TOML requires a top-level JSON object\" error?",
+      "a": "TOML documents must start with key-value pairs, so the tool only accepts a JSON object at the root. Wrap your array or scalar value in an object before converting."
+    },
+    {
+      "q": "How is invalid JSON handled?",
+      "a": "The input is parsed with JSON.parse, so malformed JSON throws a parse error and no TOML is produced until the input is valid."
+    },
+    {
+      "q": "Does it support nested objects and arrays?",
+      "a": "Yes. Nested objects become TOML tables and arrays are emitted as TOML arrays, following the smol-toml serializer's output."
+    }
+  ]
+}

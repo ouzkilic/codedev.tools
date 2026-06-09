@@ -1,0 +1,32 @@
+{
+  "intro": "Punycode converts internationalized domain names (IDNs) between their Unicode form and the ASCII-compatible encoding defined in RFC 3492. Encode mode turns labels containing non-ASCII characters into their xn-- prefixed form, and decode mode reverses any xn-- label back to readable Unicode. It is handy whenever you need to inspect, validate, or troubleshoot how a domain with accented or non-Latin characters is represented on the wire.",
+  "useCases": [
+    "Convert a domain like münchen.de into its xn-- ASCII form for DNS records or registrars",
+    "Decode an xn--prefixed hostname seen in logs, certificates, or email headers back to readable Unicode",
+    "Inspect IDN homograph or lookalike domains during phishing or security reviews",
+    "Verify how a CDN, browser, or DNS provider will store an internationalized domain",
+    "Debug URL parsing where a host appears in Punycode but you expect Unicode"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using a client-side RFC 3492 implementation, and nothing you type or paste is uploaded anywhere."
+    },
+    {
+      "q": "How does it handle a full domain with multiple labels?",
+      "a": "The input is split on dots and each label is processed independently. When encoding, only labels containing non-ASCII characters get the xn-- prefix; when decoding, only labels starting with xn-- are converted, and the rest are left unchanged."
+    },
+    {
+      "q": "Why does my decoded label come back in lowercase or unchanged?",
+      "a": "Decode mode checks for the xn-- prefix case-insensitively, so XN-- works too. Labels without that prefix are passed through as-is, since they are already plain ASCII."
+    },
+    {
+      "q": "What happens with invalid Punycode input?",
+      "a": "Decoding reports an error for malformed input, such as a non-ASCII character in the basic segment, an invalid digit, an unexpected end of input, or an integer overflow per the RFC 3492 limits."
+    },
+    {
+      "q": "Does it apply IDNA rules like normalization or nameprep?",
+      "a": "No. This tool performs only the Punycode encode and decode step. It does not run Unicode normalization, case folding, or full IDNA mapping, so prepare your labels accordingly before encoding."
+    }
+  ]
+}

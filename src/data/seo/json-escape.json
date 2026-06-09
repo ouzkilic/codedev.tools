@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Escape / Unescape converts raw text into a valid JSON string literal, or takes a quoted JSON string and turns it back into the original text. Escaping wraps your input in double quotes and escapes characters like quotes, backslashes, and newlines so it can be safely embedded inside JSON; unescaping parses a JSON string literal and returns its plain contents. It's handy whenever you need to paste multi-line text or special characters into a JSON value without breaking the format.",
+  "useCases": [
+    "Embed a multi-line code snippet or log message inside a JSON config or payload by escaping it first",
+    "Turn arbitrary text containing quotes, backslashes, or tabs into a safe JSON string value",
+    "Unescape a JSON string literal copied from an API response to read its real, formatted content",
+    "Recover newlines and unicode escapes (like \\n or \\u00e9) from a quoted string back into plain text",
+    "Prepare a string for inclusion in a hand-written JSON file or test fixture"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The escaping and unescaping run entirely in your browser using the built-in JSON parser. Nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "What does Escape mode do exactly?",
+      "a": "It passes your input to JSON.stringify, which wraps the text in double quotes and escapes characters such as quotes, backslashes, newlines, and tabs. The result is a single valid JSON string literal you can drop into any JSON value."
+    },
+    {
+      "q": "What input does Unescape mode expect?",
+      "a": "Unescape expects a complete JSON string literal wrapped in double quotes, for example \"hello\\nworld\". If the input parses to something other than a string (like a number, object, or unquoted text), it returns an error."
+    },
+    {
+      "q": "Why do I get an error when unescaping?",
+      "a": "The input must be valid JSON that evaluates to a string. Missing surrounding double quotes, invalid escape sequences, or pasting a whole object instead of a string literal will cause a parse error."
+    },
+    {
+      "q": "Does it handle unicode and special characters?",
+      "a": "Yes. Escaping produces valid JSON escapes for control characters and quotes, and unescaping resolves sequences like \\n, \\t, and \\uXXXX back to their original characters."
+    }
+  ]
+}

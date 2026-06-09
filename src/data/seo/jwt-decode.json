@@ -1,0 +1,32 @@
+{
+  "intro": "The JWT Decoder splits a JSON Web Token on its dots and base64url-decodes the header and payload into readable, pretty-printed JSON. It's handy when you need to inspect a bearer token's claims, algorithm, and expiry while debugging authentication flows. Note that it decodes only and does not verify the signature, so no secret or key is required.",
+  "useCases": [
+    "Inspect the claims in a JWT, such as iss, sub, aud, exp, and iat, while debugging auth",
+    "Check the header to see which signing algorithm (alg) and key id (kid) a token uses",
+    "Confirm a token's expiry by reading the exp and iat timestamps in the payload",
+    "Quickly read a bearer token copied from a request header or login response",
+    "Decode tokens during local development without running a backend verification step"
+  ],
+  "faq": [
+    {
+      "q": "Is my token sent to a server?",
+      "a": "No. Decoding runs entirely in your browser using built-in atob and TextDecoder APIs, so nothing is uploaded and the token never leaves your device."
+    },
+    {
+      "q": "Does this verify the token's signature?",
+      "a": "No. It only decodes the header and payload; the signature is not checked and no secret or key is needed. A decoded payload does not mean the token is valid or trusted."
+    },
+    {
+      "q": "What input format does it expect?",
+      "a": "A JWT in the standard header.payload.signature form, separated by dots. The decoder reads the first two parts (header and payload); at least two parts are required or it reports an invalid JWT."
+    },
+    {
+      "q": "Why do I get an error on a valid-looking token?",
+      "a": "The header and payload must be valid base64url-encoded JSON. If a segment is truncated, malformed, or not JSON once decoded, parsing fails and an error is shown."
+    },
+    {
+      "q": "Does it handle base64url encoding and padding?",
+      "a": "Yes. It converts the URL-safe characters (- and _) back to standard base64 and re-adds the missing = padding before decoding, so unpadded JWT segments work."
+    }
+  ]
+}

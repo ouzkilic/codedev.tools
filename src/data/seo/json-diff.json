@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Diff compares two JSON documents and highlights the lines that were added or removed. Before comparing, it normalizes both sides by sorting object keys recursively and pretty-printing them, so differences in key order or formatting don't show up as changes. This makes it useful for spotting the structural differences between two JSON payloads, config files, or API responses.",
+  "useCases": [
+    "Compare two API responses to find which fields actually changed",
+    "Diff two versions of a JSON config file regardless of how they were formatted",
+    "Check whether two objects are structurally equal even when their keys are in a different order",
+    "Review changes in a JSON fixture or snapshot during testing",
+    "Verify that a JSON transformation or migration only changed the values you expected"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The comparison runs entirely in your browser and nothing is uploaded. Both JSON inputs stay on your device."
+    },
+    {
+      "q": "Does key order affect the diff?",
+      "a": "No. Both documents have their object keys sorted alphabetically before comparison, so two objects with the same keys in a different order are treated as identical."
+    },
+    {
+      "q": "Does formatting or indentation count as a difference?",
+      "a": "No. Each side is re-serialized with consistent 2-space indentation before diffing, so whitespace, line breaks, and original indentation are ignored."
+    },
+    {
+      "q": "How are the differences shown?",
+      "a": "The tool produces a line-by-line diff of the two normalized documents, marking lines as added or removed. It does not report a structured field-by-field summary."
+    },
+    {
+      "q": "What happens if my JSON is invalid?",
+      "a": "Both inputs must be valid JSON. If either side cannot be parsed, the comparison cannot run, so make sure each document parses correctly first."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Base64 Encode / Decode converts text to Base64 and decodes Base64 strings back to readable text, all in your browser. Encoding uses UTF-8, so accented characters, emoji, and other non-ASCII text are handled correctly rather than breaking like a raw btoa/atob call would. Switch between encode and decode mode to quickly inspect or generate Base64 payloads.",
+  "useCases": [
+    "Encode a configuration value or token into Base64 before pasting it into a YAML, JSON, or environment file",
+    "Decode a Base64 string from an API response, HTTP header, or log line to read its plain text contents",
+    "Inspect the payload of a JWT or other Base64-encoded segment by decoding it to UTF-8 text",
+    "Embed small snippets of text as Base64 in data URIs or HTML attributes",
+    "Verify that UTF-8 text with emoji or accented characters survives a Base64 round trip"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Encoding and decoding run entirely in your browser using the built-in btoa, atob, TextEncoder, and TextDecoder APIs. Nothing you paste is uploaded or stored on a server."
+    },
+    {
+      "q": "Does it handle non-ASCII characters like emoji or accented letters?",
+      "a": "Yes. Text is encoded as UTF-8 before being converted to Base64, and decoded back from UTF-8, so emoji and accented characters survive the round trip correctly."
+    },
+    {
+      "q": "What happens if I try to decode an invalid Base64 string?",
+      "a": "The browser's atob function will throw an error if the input is not valid Base64. Leading and trailing whitespace is trimmed automatically before decoding, but the remaining characters must be a valid Base64 string."
+    },
+    {
+      "q": "Can it encode files or binary data?",
+      "a": "No. This tool works with text input only. It encodes UTF-8 text to Base64 and decodes Base64 back to UTF-8 text; it does not accept file uploads."
+    },
+    {
+      "q": "Does it produce URL-safe Base64?",
+      "a": "No. It produces standard Base64 (using the + and / characters and = padding), not the URL-safe variant that replaces those characters with - and _."
+    }
+  ]
+}

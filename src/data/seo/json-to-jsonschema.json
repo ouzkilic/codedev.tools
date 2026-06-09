@@ -1,0 +1,36 @@
+{
+  "intro": "JSON to JSON Schema infers a draft-07 JSON Schema from a sample JSON document. Paste a representative object or array and it generates a schema with inferred types, object properties, and required fields. It is handy when you want a starting point for validation or API documentation without writing the schema by hand.",
+  "useCases": [
+    "Bootstrap a draft-07 schema from an existing API response to validate later payloads",
+    "Document the shape of a config file or fixture for teammates",
+    "Generate a baseline schema you can refine with constraints like enums or formats",
+    "Inspect the inferred types of a nested JSON structure at a glance",
+    "Create validation rules for a request body using a real example as the source"
+  ],
+  "faq": [
+    {
+      "q": "Is my JSON sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JSON.parse and a local inference function. Nothing is uploaded, and your data never leaves your device."
+    },
+    {
+      "q": "Which JSON Schema version does it produce?",
+      "a": "It always emits draft-07, setting $schema to http://json-schema.org/draft-07/schema#."
+    },
+    {
+      "q": "How are arrays handled?",
+      "a": "The schema infers the item type from the first element of an array only, so mixed-type arrays are not merged. An empty array produces just {\"type\": \"array\"} with no items."
+    },
+    {
+      "q": "How does it decide between integer and number?",
+      "a": "Whole numbers like 42 are typed as integer, while values with a fractional part like 3.14 are typed as number. This is based on the sample value, not on any declared type."
+    },
+    {
+      "q": "Are all object keys marked as required?",
+      "a": "Yes. Every key present in the sample object is added to the required array. The tool does not detect optional fields, so remove any that should be optional after generating the schema."
+    },
+    {
+      "q": "What happens if my JSON is invalid?",
+      "a": "The input is parsed with JSON.parse, so malformed JSON will raise a parse error instead of producing a schema. Make sure the input is valid JSON first."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "List Compare runs set operations on two lists of lines: intersection, union, difference, and symmetric difference. Paste one item per line into list A and list B, pick an operation, and get the matching lines back. It is handy whenever you need to diff or merge two text lists without writing a script.",
+  "useCases": [
+    "Find items that appear in both lists (intersection), for example shared user IDs, emails, or SKUs",
+    "Merge two lists into one deduplicated set with the union operation",
+    "Find entries that exist only in list A or only in list B to spot what was added or removed",
+    "Get the symmetric difference to see items present in exactly one list but not both",
+    "Deduplicate and compare exported data such as allowlists, feature flags, or config keys"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. List Compare runs entirely in your browser and nothing is uploaded. Both lists stay on your device."
+    },
+    {
+      "q": "How should I format the two lists?",
+      "a": "Enter one item per line in each list. Each line is trimmed of surrounding whitespace, and empty lines are ignored."
+    },
+    {
+      "q": "Does it remove duplicate entries?",
+      "a": "Yes. The result is deduplicated, so each matching item appears only once regardless of how many times it occurs in the input."
+    },
+    {
+      "q": "Is the comparison case-sensitive?",
+      "a": "Yes. Items are compared as exact strings after trimming, so \"Apple\" and \"apple\" are treated as different entries."
+    },
+    {
+      "q": "What operations are supported?",
+      "a": "Five set operations: in both (intersection), in either (union), only in A, only in B, and in one but not both (symmetric difference)."
+    }
+  ]
+}

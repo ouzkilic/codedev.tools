@@ -1,0 +1,32 @@
+{
+  "intro": "JSONL → JSON converts newline-delimited JSON (also called NDJSON or JSON Lines) into a single JSON array. Paste your JSONL where each line is one JSON value, and the tool parses every line and returns a pretty-printed array. It's handy when a log file, export, or streaming API gives you one JSON object per line but you need a normal JSON array to load into another tool or paste into code.",
+  "useCases": [
+    "Turning a .jsonl log or event export into a JSON array you can open in an editor or viewer",
+    "Converting NDJSON output from a streaming API or CLI into a single array for further processing",
+    "Preparing JSON Lines data for tools or libraries that expect a JSON array instead of one object per line",
+    "Quickly inspecting line-delimited records as a formatted, indented array",
+    "Spotting a malformed record by line number before importing the data elsewhere"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "What input format does it expect?",
+      "a": "It expects newline-delimited JSON (NDJSON / JSON Lines), where each non-empty line is a single valid JSON value such as an object, array, number, string, or boolean. Lines are trimmed and blank lines are ignored."
+    },
+    {
+      "q": "What happens if a line is not valid JSON?",
+      "a": "The tool stops and reports an error naming the specific line number, for example \"Invalid JSON on line 3.\", so you can find and fix the malformed record."
+    },
+    {
+      "q": "How is the output formatted?",
+      "a": "Each line becomes one element of a JSON array, and the result is pretty-printed with 2-space indentation."
+    },
+    {
+      "q": "Does it support comments or trailing commas in the input?",
+      "a": "No. Each line must be strict JSON parseable by the standard JSON parser, so comments, trailing commas, and unquoted keys are not allowed."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "MD5 Hash computes the MD5 digest of any text you paste in, returning the standard 32-character lowercase hexadecimal checksum. It's handy for generating quick checksums, comparing values, or working with legacy systems that still rely on MD5. Note that MD5 is non-cryptographic and should not be used for password storage or security-sensitive hashing.",
+  "useCases": [
+    "Generate a checksum to compare two pieces of text for equality",
+    "Reproduce or verify MD5 digests expected by a legacy API or database column",
+    "Create cache keys or deduplication identifiers from string content",
+    "Debug code that produces MD5 hashes by checking the expected output for a known input",
+    "Compute ETag-style or fingerprint values for short strings during development"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The MD5 hash is calculated entirely in your browser using a JavaScript implementation, and nothing you type is uploaded or stored anywhere."
+    },
+    {
+      "q": "What format is the output?",
+      "a": "The result is the MD5 digest as a 32-character lowercase hexadecimal string, which is the conventional MD5 representation."
+    },
+    {
+      "q": "Is MD5 secure for passwords?",
+      "a": "No. MD5 is considered cryptographically broken and is unsuitable for passwords or security-sensitive use. It remains useful only for non-cryptographic purposes like checksums, fingerprints, and legacy compatibility."
+    },
+    {
+      "q": "Does it hash files or only text?",
+      "a": "This tool hashes the text you enter in the input field. It treats the input as a string and returns the MD5 digest of that text."
+    },
+    {
+      "q": "Why isn't this using the Web Crypto API?",
+      "a": "MD5 is not provided by the browser's built-in Web Crypto API, so the tool uses a small pure-JavaScript MD5 implementation that still runs fully client-side."
+    }
+  ]
+}

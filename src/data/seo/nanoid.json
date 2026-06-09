@@ -1,0 +1,32 @@
+{
+  "intro": "The NanoID Generator creates compact, URL-safe random IDs right in your browser. Set the length and how many IDs you want, and it produces short, collision-resistant identifiers using a 64-character URL-safe alphabet. It's a quick way to generate random IDs for database keys, tokens, or short links without reaching for a CLI or library.",
+  "useCases": [
+    "Generating short, URL-safe unique IDs for database records or API resources",
+    "Creating identifiers for short links or slugs that are safe to drop straight into a URL",
+    "Seeding test data with batches of random IDs (up to 1000 at a time)",
+    "Producing tokens or keys for client-side prototypes and quick scripts",
+    "Generating an alternative to UUIDs when you want shorter strings"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser and uses the built-in crypto.getRandomValues API to produce randomness. Nothing is uploaded or transmitted anywhere."
+    },
+    {
+      "q": "What characters can appear in the generated IDs?",
+      "a": "IDs use a fixed 64-character URL-safe alphabet: A-Z, a-z, 0-9, plus the hyphen (-) and underscore (_). Every character is safe to use in URLs without encoding."
+    },
+    {
+      "q": "What length and count limits apply?",
+      "a": "Length can be from 1 to 512 characters and defaults to 21. Count can be from 1 to 1000 and defaults to 5. Values outside those ranges are clamped, and invalid input falls back to the default."
+    },
+    {
+      "q": "Are the IDs cryptographically random?",
+      "a": "Yes. Each ID is built from bytes produced by the browser's crypto.getRandomValues, a cryptographically secure random source. Because the alphabet is exactly 64 characters, each byte maps uniformly to one character."
+    },
+    {
+      "q": "How are multiple IDs returned?",
+      "a": "When you generate more than one ID, they are returned one per line, so you can copy the whole block or split it however you need."
+    }
+  ]
+}

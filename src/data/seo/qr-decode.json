@@ -1,0 +1,32 @@
+{
+  "intro": "QR Code Reader decodes the text content of a QR code from an image file directly in your browser. Upload a PNG, JPG, or other image containing a QR code and the tool scans it and returns the embedded text, which you can copy with one click. It is handy whenever you have a QR code as a picture or screenshot and need its raw value without reaching for a phone camera.",
+  "useCases": [
+    "Recover the URL or text inside a QR code from a screenshot or saved image",
+    "Read a Wi-Fi, contact (vCard), or payment QR code's raw payload during development",
+    "Verify what a generated QR code actually encodes before publishing it",
+    "Extract an OTP/2FA setup secret (otpauth:// URI) from a QR code image",
+    "Inspect QR codes in design mockups or documents without scanning them by phone"
+  ],
+  "faq": [
+    {
+      "q": "Is my image sent to a server?",
+      "a": "No. The image is read and decoded entirely in your browser using JavaScript, and nothing is uploaded. The tool is open source so you can verify that no data leaves your device."
+    },
+    {
+      "q": "What image formats can I use?",
+      "a": "Any image format your browser can render works, including PNG, JPG, GIF, WebP, and BMP. The file is drawn to a canvas and the QR code is decoded from its pixel data."
+    },
+    {
+      "q": "Why does it say no QR code was found?",
+      "a": "Decoding can fail if the QR code is blurry, low-contrast, heavily cropped, rotated at an extreme angle, or too small in the image. Try a clearer or higher-resolution picture where the full QR code is visible."
+    },
+    {
+      "q": "Can it read more than one QR code in a single image?",
+      "a": "No. The tool decodes a single QR code per image and returns the first one it detects. Split images with multiple codes into separate files."
+    },
+    {
+      "q": "Does it scan from my webcam?",
+      "a": "No. It only decodes QR codes from image files you upload; there is no live camera scanning."
+    }
+  ]
+}

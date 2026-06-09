@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to XML converts a JSON document into formatted XML right in your browser. Keys prefixed with @_ are emitted as XML attributes, and the output is pretty-printed with two-space indentation. It is handy when you need to feed XML-based APIs, configuration files, or legacy systems from data you already have as JSON.",
+  "useCases": [
+    "Transform JSON API responses into XML for systems or services that only accept XML",
+    "Generate XML configuration or data files from JSON during development",
+    "Produce XML payloads for SOAP or other XML-based endpoints from JSON examples",
+    "Convert JSON objects into XML with attributes by using the @_ key prefix",
+    "Quickly preview how a JSON structure maps to a nested XML tree"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you paste is uploaded or stored on any server."
+    },
+    {
+      "q": "How do I create XML attributes instead of elements?",
+      "a": "Prefix the JSON key with @_, for example {\"item\": {\"@_id\": \"1\"}} becomes <item id=\"1\">. Keys without the prefix become regular XML elements."
+    },
+    {
+      "q": "How is the output formatted?",
+      "a": "The XML is pretty-printed with two-space indentation, and trailing whitespace at the end is trimmed."
+    },
+    {
+      "q": "What happens if my JSON is invalid?",
+      "a": "The input is parsed with JSON.parse, so malformed JSON throws a parse error and no XML is produced. Fix the JSON syntax and try again."
+    },
+    {
+      "q": "Does it add an XML declaration or root wrapper?",
+      "a": "No declaration is added automatically, and the JSON structure is converted as-is. If your JSON has multiple top-level keys, wrap them in a single object key first to get one root element."
+    }
+  ]
+}

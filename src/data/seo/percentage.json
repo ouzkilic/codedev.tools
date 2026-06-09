@@ -1,0 +1,32 @@
+{
+  "intro": "The Percentage Calculator handles the common percentage calculations between two numbers right in your browser. Choose a mode to find A% of B, work out what percent A is of B, or measure the percentage change from A to B. It's a quick way to get accurate percent and ratio results without reaching for a spreadsheet or formula.",
+  "useCases": [
+    "Calculate a discount or tax amount as A% of a base value B",
+    "Find what percentage one number represents of another (A is what % of B)",
+    "Measure growth or decline as the percentage change from an old value A to a new value B",
+    "Sanity-check percentages in invoices, reports, or test data",
+    "Convert a raw ratio of two figures into a clean percentage"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The calculator runs entirely in your browser and nothing you type is uploaded. All math happens locally on your device."
+    },
+    {
+      "q": "What are the three modes?",
+      "a": "\"A% of B\" returns (A / 100) * B, \"A is what % of B\" returns (A / B) * 100, and \"% change from A to B\" returns ((B - A) / A) * 100. You pick the mode from the dropdown and enter both values."
+    },
+    {
+      "q": "How are results rounded?",
+      "a": "Results are rounded to a maximum of four decimal places. Trailing zeros are dropped, so a clean number like 25 shows as 25 rather than 25.0000."
+    },
+    {
+      "q": "Why do I sometimes get an error about a value being zero?",
+      "a": "In \"A is what % of B\" mode, B cannot be zero because it is the divisor. In \"% change from A to B\" mode, A cannot be zero for the same reason. You will also see an error if either value is not a valid number."
+    },
+    {
+      "q": "Can I enter decimals or negative numbers?",
+      "a": "Yes. Both values are parsed as floating-point numbers, so decimals and negatives are accepted as long as the divisor in your chosen mode is not zero."
+    }
+  ]
+}

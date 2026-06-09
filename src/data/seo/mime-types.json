@@ -1,0 +1,32 @@
+{
+  "intro": "MIME Types is a quick reference for looking up the content-type of a file by its extension, or finding which extensions map to a given media type. Type an extension like \"png\" or \".json\" to get its MIME type, or enter part of a content-type such as \"image\" or \"application\" to list every matching extension. It is handy whenever you need to set a correct Content-Type header, validate uploads, or configure static file serving.",
+  "useCases": [
+    "Find the right Content-Type header to send for a file from your server or API",
+    "Look up the MIME type for a file extension when configuring uploads or downloads",
+    "Search by a partial media type (e.g. \"image\" or \"font\") to see all matching extensions",
+    "Confirm the correct content-type for web assets like js, css, svg, woff2, or wasm",
+    "Double-check the media type for documents and archives such as pdf, zip, doc, or xls"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The lookup runs entirely in your browser against a built-in table, and nothing you type is uploaded or stored anywhere."
+    },
+    {
+      "q": "How do I search by extension versus by MIME type?",
+      "a": "Enter an extension (with or without a leading dot, like \"json\" or \".json\") to get its single MIME type. If your input is not a known extension, it is treated as a substring match against MIME types and returns every extension whose content-type contains it."
+    },
+    {
+      "q": "Which extensions are supported?",
+      "a": "The tool covers a curated set of common web, image, audio, video, font, document, and archive formats, including json, html, css, js, png, jpg, svg, mp3, mp4, woff2, wasm, pdf, zip, doc, and xls. It is not an exhaustive list of every registered media type."
+    },
+    {
+      "q": "Is the input case-sensitive?",
+      "a": "No. Input is trimmed and lowercased before lookup, so \"PNG\", \".Png\", and \"png\" all return the same result."
+    },
+    {
+      "q": "What happens if there is no match?",
+      "a": "If the input is neither a known extension nor a substring of any MIME type, the tool reports that no matching MIME type or extension was found."
+    }
+  ]
+}

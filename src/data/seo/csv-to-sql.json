@@ -1,0 +1,32 @@
+{
+  "intro": "CSV to SQL Insert converts CSV rows into SQL INSERT statements you can run against a database. Paste your CSV, set a target table name, and it generates one INSERT per row using the header line as column names. It's handy for seeding tables, migrating spreadsheet data, or turning an exported CSV into a runnable SQL script.",
+  "useCases": [
+    "Seed a development or test database from a CSV export",
+    "Turn a spreadsheet saved as CSV into runnable INSERT statements",
+    "Generate bulk INSERT scripts for a specific table without writing them by hand",
+    "Quickly load sample or fixture data into a new table",
+    "Move data between systems when only CSV export is available"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored anywhere."
+    },
+    {
+      "q": "Where do the column names come from?",
+      "a": "The first row of your CSV is treated as the header and its fields become the column names, each wrapped in double quotes in the generated INSERT statements."
+    },
+    {
+      "q": "How are values quoted and escaped?",
+      "a": "Numbers and booleans are written unquoted, empty cells and missing values become NULL, and everything else is treated as a string wrapped in single quotes with embedded single quotes doubled to escape them."
+    },
+    {
+      "q": "Can I set the table name?",
+      "a": "Yes. There is a table name option (default my_table) that is used in every generated INSERT INTO statement."
+    },
+    {
+      "q": "What happens if the CSV is empty or malformed?",
+      "a": "If no data rows are found you get a \"No data rows found.\" error, and a fatal parsing error will surface its message; minor delimiter detection warnings are ignored."
+    }
+  ]
+}

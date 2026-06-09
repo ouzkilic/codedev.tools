@@ -1,0 +1,32 @@
+{
+  "intro": "Deduplicate Lines removes duplicate lines from a block of text, keeping the first occurrence of each unique line and discarding the rest. It's handy for cleaning up lists, log files, word lists, or any line-based data where you need distinct entries. Optional toggles let you trim surrounding whitespace and compare lines case-insensitively before deciding what counts as a duplicate.",
+  "useCases": [
+    "Cleaning up a list of emails, URLs, or IDs so each value appears only once",
+    "Removing repeated lines from log output or command results",
+    "Deduplicating a word list or dictionary file while preserving original order",
+    "Tidying CSV or config rows that accumulated duplicate entries",
+    "Collapsing pasted text where the same line was copied multiple times"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. This tool runs entirely in your browser and nothing is uploaded. Your text never leaves your device."
+    },
+    {
+      "q": "Does it keep the original order of lines?",
+      "a": "Yes. It keeps the first occurrence of each unique line in the order it appears and removes later duplicates, so the surviving lines stay in their original sequence."
+    },
+    {
+      "q": "What does the 'Trim lines' option do?",
+      "a": "When enabled, leading and trailing whitespace is stripped from each line before comparison, so lines that differ only by surrounding spaces or tabs are treated as duplicates. The trimmed version is what appears in the output."
+    },
+    {
+      "q": "How does case-insensitive matching work?",
+      "a": "With 'Case-insensitive' on, lines are compared after lowercasing, so \"Hello\" and \"hello\" count as the same. The first occurrence is kept with its original casing."
+    },
+    {
+      "q": "How are lines determined?",
+      "a": "Lines are split on newline characters. Empty lines count as content, so multiple blank lines are also deduplicated down to a single blank line."
+    }
+  ]
+}

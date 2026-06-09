@@ -1,0 +1,32 @@
+{
+  "intro": "Number to Words converts an integer into its English words spelling, turning a value like 1234 into \"one thousand two hundred thirty-four\". It handles positive and negative whole numbers and runs entirely in your browser, which is handy when you need to spell out amounts for checks, invoices, legal text, or accessibility labels.",
+  "useCases": [
+    "Spell out monetary amounts in words for checks, invoices, or contracts",
+    "Generate written number labels for accessibility and screen-reader text",
+    "Verify how a large integer reads aloud before printing or displaying it",
+    "Create test fixtures or example data that pairs digits with their English wording",
+    "Convert negative integers into words such as \"negative forty-two\""
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "What range of numbers is supported?",
+      "a": "Integers from 0 up to 999,999,999,999 in absolute value (the billions range). Numbers larger than that return an out-of-range error."
+    },
+    {
+      "q": "Can it convert decimals or fractions?",
+      "a": "No. The input must be a whole integer; values with a decimal point, fractions, or any non-digit characters are rejected with a \"must be a valid integer\" error."
+    },
+    {
+      "q": "Does it handle negative numbers?",
+      "a": "Yes. A leading minus sign is accepted, and the output is prefixed with the word \"negative\", for example \"negative one hundred\"."
+    },
+    {
+      "q": "What language are the words in?",
+      "a": "English only. It uses the short scale (thousand, million, billion) and hyphenates compound tens like \"twenty-one\"."
+    }
+  ]
+}

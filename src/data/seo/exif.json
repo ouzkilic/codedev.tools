@@ -1,0 +1,32 @@
+{
+  "intro": "EXIF Viewer reads the EXIF metadata embedded in a photo and lists it as plain key-value text, so you can inspect details like camera make and model, exposure settings, orientation, and GPS coordinates. Drop in an image and the tool parses it directly in your browser, showing a preview alongside the extracted metadata. It is handy whenever you need to quickly check what information a photo or image file is carrying.",
+  "useCases": [
+    "Check whether a photo contains GPS coordinates before sharing it publicly",
+    "Inspect camera settings such as exposure, aperture, ISO, and focal length from a shot",
+    "Verify the make, model, and date/time recorded by the device that took an image",
+    "Debug image orientation issues by reading the EXIF orientation flag",
+    "Confirm what metadata a file still carries after editing or exporting"
+  ],
+  "faq": [
+    {
+      "q": "Is my image sent to a server?",
+      "a": "No. The image is read and parsed entirely in your browser, and nothing is uploaded. The file and its metadata never leave your device."
+    },
+    {
+      "q": "Which image formats are supported?",
+      "a": "It accepts any image file your browser allows and parses EXIF using the exifr library, which works with common formats such as JPEG, TIFF, HEIC, and PNG. Files without EXIF metadata will simply show \"No EXIF metadata found.\""
+    },
+    {
+      "q": "Why does it say no EXIF metadata was found?",
+      "a": "Many images have no EXIF block, or it was stripped during editing, exporting, or upload by some apps and platforms. In that case there is nothing to display."
+    },
+    {
+      "q": "Can it read GPS location data?",
+      "a": "Yes. If the photo stores GPS coordinates in its EXIF data, they appear in the output along with the other fields."
+    },
+    {
+      "q": "Does it modify or remove metadata from my photo?",
+      "a": "No. The tool is read-only; it only displays the metadata and a preview, and does not change or strip anything from the original file."
+    }
+  ]
+}

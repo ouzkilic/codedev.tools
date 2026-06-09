@@ -1,0 +1,33 @@
+{
+  "intro": "Random Generator creates random integers, floats, hex strings, and alphanumeric strings directly in your browser. Pick a type, set a range or length, choose how many values you want, and get one result per line. It's handy for quick test data, sample IDs, throwaway tokens, and seeding fixtures without leaving your editor or a browser tab.",
+  "useCases": [
+    "Generate random integers within a min/max range for test data or sampling",
+    "Produce random floating-point numbers (rounded to 4 decimals) for mock datasets",
+    "Create random hex strings of a chosen length for color values or placeholder identifiers",
+    "Make random alphanumeric strings for test usernames, slugs, or sample tokens",
+    "Generate a batch of values at once (up to 1000) for seeding fixtures or stress data",
+    "Quickly grab a single random value for ad-hoc debugging or scratch work"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The generator runs entirely in your browser and nothing is uploaded. It uses the browser's built-in crypto.getRandomValues, so no input or output ever leaves your device."
+    },
+    {
+      "q": "What types of random values can it generate?",
+      "a": "Four types: integers (inclusive of min and max), floats (formatted to 4 decimal places), hex strings, and alphanumeric strings. Hex and alphanumeric outputs use the Length option, while integers and floats use the Min and Max range."
+    },
+    {
+      "q": "Are the random values cryptographically secure?",
+      "a": "The values are sourced from the Web Crypto API (crypto.getRandomValues), which provides cryptographically strong randomness. Note that integer and float generation map that randomness onto a range, which can introduce slight modulo bias for very large spans."
+    },
+    {
+      "q": "How many values can I generate at once, and how long can strings be?",
+      "a": "Count is clamped between 1 and 1000 values per run, and string Length is clamped between 1 and 4096 characters. Out-of-range or invalid inputs fall back to the defaults."
+    },
+    {
+      "q": "What happens if I enter an invalid min or max?",
+      "a": "Non-numeric Min or Max values fall back to 0. For integers the range is treated as inclusive, and min/max are normalized so order doesn't matter."
+    }
+  ]
+}

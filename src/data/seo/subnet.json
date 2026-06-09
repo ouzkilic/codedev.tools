@@ -1,0 +1,32 @@
+{
+  "intro": "The Subnet Calculator takes an IPv4 address in CIDR notation (for example 192.168.1.0/24) and computes the network address, netmask, broadcast address, total IP count, and the usable host range. It's handy whenever you're planning IP ranges, configuring routers or firewalls, or double-checking how a /24 or /30 subnet breaks down.",
+  "useCases": [
+    "Find the network and broadcast address for a given CIDR block like 10.0.0.0/16",
+    "Determine the netmask (dotted-decimal) that corresponds to a prefix length",
+    "Count total and usable host addresses before assigning IPs in a subnet",
+    "Identify the first and last usable host IP when planning static address ranges",
+    "Verify subnet boundaries while configuring routers, firewalls, or VPC/VLAN settings"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The calculation runs entirely in your browser using local JavaScript, and the IP address you enter is never uploaded or transmitted anywhere."
+    },
+    {
+      "q": "What input format does it expect?",
+      "a": "It expects standard CIDR notation: an IPv4 address followed by a slash and a prefix length between 0 and 32, such as 192.168.1.0/24. Invalid octets or a missing prefix produce an error message."
+    },
+    {
+      "q": "Why does a /31 or /32 show zero usable hosts?",
+      "a": "Usable hosts are calculated as the total addresses minus the network and broadcast addresses. For /31 and /32 prefixes there are not enough addresses left for hosts, so the count is zero and no first/last host range is shown."
+    },
+    {
+      "q": "Does it support IPv6?",
+      "a": "No. This calculator handles IPv4 addresses only, with prefix lengths from 0 to 32."
+    },
+    {
+      "q": "How are total and usable addresses computed?",
+      "a": "Total IPs equal 2 to the power of (32 minus the prefix). Usable hosts equal the total minus 2 (for the network and broadcast addresses), except for /31 and /32 where the usable count is 0."
+    }
+  ]
+}

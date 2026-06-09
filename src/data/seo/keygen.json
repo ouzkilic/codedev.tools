@@ -1,0 +1,32 @@
+{
+  "intro": "The Key Pair Generator creates RSA and EC (ECDSA) key pairs and outputs them in PEM format directly in your browser using the Web Crypto API. It supports RSA-2048, RSA-4096, EC P-256, and EC P-384, returning a matching public and private key you can copy or download. It's handy when you need a quick keypair for testing, prototyping signing flows, or setting up local development credentials.",
+  "useCases": [
+    "Generate an RSA or ECDSA keypair for testing JWT or token signing locally",
+    "Create a PEM public/private key pair for prototyping authentication flows",
+    "Produce EC P-256 or P-384 keys for ECDSA signature experiments",
+    "Get a quick RSA-2048 or RSA-4096 keypair without installing OpenSSL",
+    "Generate disposable keys for local development and integration tests"
+  ],
+  "faq": [
+    {
+      "q": "Is my key data sent to a server?",
+      "a": "No. Key generation runs entirely in your browser via the Web Crypto API, and the generated keys never leave your device or get uploaded anywhere."
+    },
+    {
+      "q": "Which algorithms and key sizes are supported?",
+      "a": "You can generate RSA keys (RSA-2048 or RSA-4096, using RSASSA-PKCS1-v1_5 with SHA-256) and EC keys (P-256 or P-384, using ECDSA)."
+    },
+    {
+      "q": "What output format are the keys in?",
+      "a": "Keys are exported as PEM text: the public key uses an SPKI structure wrapped in PUBLIC KEY headers, and the private key uses a PKCS#8 structure wrapped in PRIVATE KEY headers."
+    },
+    {
+      "q": "Are the generated keys intended for production use?",
+      "a": "The keys are produced with the browser's standard cryptographic generator, but they are best suited for testing, prototyping, and local development; evaluate your own security requirements before relying on browser-generated keys in production."
+    },
+    {
+      "q": "Can I generate keys for encryption?",
+      "a": "The keys are generated for signing and verification (sign/verify usages). They are configured for signature algorithms (RSASSA-PKCS1-v1_5 and ECDSA), not for encryption."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Roman Numerals is a free converter that turns regular numbers into Roman numerals and parses Roman numerals back into numbers. It supports the standard range from 1 to 3999, validating input in both directions so you only get well-formed results. Pick a direction and convert values like 2024 to MMXXIV or read a numeral such as MCMLXXXIV back to its decimal value.",
+  "useCases": [
+    "Convert a year like 2024 into MMXXIV for copyright lines, book chapters, or movie credits",
+    "Decode an unfamiliar Roman numeral such as MCMXCIV back into a plain number",
+    "Verify that a Roman numeral string is valid and uses standard subtractive notation",
+    "Generate numeral labels for outlines, appendices, or clock faces",
+    "Check classic-style date formatting on monuments, certificates, or logos"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "What number range is supported?",
+      "a": "Numbers from 1 to 3999 (integers only). Values outside that range, decimals, or non-numeric input produce an error message because standard Roman numerals do not include zero, negatives, or values of 4000 and above."
+    },
+    {
+      "q": "Which characters are valid for Roman input?",
+      "a": "Only the letters M, D, C, L, X, V, and I are accepted, in any letter case. Input is trimmed and uppercased automatically, but any other character is rejected as invalid."
+    },
+    {
+      "q": "Why does my Roman numeral show as invalid even though it only uses valid letters?",
+      "a": "The tool enforces standard subtractive notation, so it round-trips your input and rejects non-canonical forms. For example IIII, VV, or IC are invalid because the correct numerals are IV, X, and XCIX respectively."
+    },
+    {
+      "q": "How do I switch between converting to and from Roman numerals?",
+      "a": "Use the Mode option to choose Number to Roman or Roman to Number, then enter your value. The conversion updates based on the selected direction."
+    }
+  ]
+}

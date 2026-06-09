@@ -1,0 +1,32 @@
+{
+  "intro": "Excel to CSV converts the first sheet of an Excel file (.xlsx or .xls) into comma-separated values, right in your browser. It's handy when you need to feed spreadsheet data into scripts, databases, or APIs that expect plain CSV rather than a binary workbook. Powered by SheetJS, the conversion is instant and works without any upload or sign-up.",
+  "useCases": [
+    "Turning an exported .xlsx report into CSV for import into a database or data pipeline",
+    "Preparing spreadsheet data for command-line tools, scripts, or version control where plain text is preferred",
+    "Quickly extracting tabular data from a legacy .xls file shared by a colleague",
+    "Converting a single-sheet workbook into CSV for use with pandas, R, or other data tools",
+    "Sanity-checking spreadsheet contents as readable text before further processing"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using SheetJS, and your file is never uploaded or stored anywhere. Nothing leaves your device."
+    },
+    {
+      "q": "Which file formats are supported?",
+      "a": "It accepts the formats SheetJS can parse, including modern .xlsx and older .xls workbooks. The file is read as a binary array buffer and parsed locally."
+    },
+    {
+      "q": "What happens if my workbook has multiple sheets?",
+      "a": "Only the first sheet in the workbook is converted to CSV. Other sheets are ignored, so move the data you need to the first sheet before converting."
+    },
+    {
+      "q": "How are the CSV values delimited?",
+      "a": "Values are separated by commas, following the standard CSV format produced by SheetJS. Fields containing commas, quotes, or line breaks are quoted automatically."
+    },
+    {
+      "q": "What if the file has no sheets?",
+      "a": "If the workbook contains no sheets, the conversion fails with an error indicating that no sheets were found. Make sure your file has at least one populated sheet."
+    }
+  ]
+}

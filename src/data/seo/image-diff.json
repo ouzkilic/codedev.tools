@@ -1,0 +1,32 @@
+{
+  "intro": "Image Diff compares two images pixel by pixel and reports how many pixels changed between them. It reads each image's RGBA values and flags a pixel as different when any color channel exceeds an adjustable threshold or when the alpha channels don't match, giving you a changed-pixel count and a percentage. It's useful when you need a quick, objective measure of the visual difference between two images, such as catching unintended rendering changes.",
+  "useCases": [
+    "Spotting visual regressions between a baseline screenshot and a new build",
+    "Confirming whether an export or re-encode altered an image's actual pixels",
+    "Measuring how much two design variants or icon revisions differ",
+    "Checking that a lossless edit left the unaffected regions untouched",
+    "Quantifying the difference percentage between before and after compression"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Image Diff runs entirely in your browser, decoding and comparing pixels locally. The images you load are never uploaded or sent anywhere."
+    },
+    {
+      "q": "When is a pixel counted as changed?",
+      "a": "A pixel is counted as changed if any of its red, green, or blue channels differs by more than the threshold you set, or if its alpha (transparency) channel differs at all. With a threshold of 0, any color difference counts."
+    },
+    {
+      "q": "What does the threshold setting do?",
+      "a": "The threshold is the maximum per-channel color difference that is still treated as unchanged. Raising it lets you ignore minor color variations, such as those introduced by lossy compression."
+    },
+    {
+      "q": "What happens if the two images aren't the same size?",
+      "a": "The overlapping pixels are compared normally, and every extra pixel in the larger image is counted as changed. As a result, comparing different-sized images will report a high difference."
+    },
+    {
+      "q": "How is the difference percentage calculated?",
+      "a": "It is the number of changed pixels divided by the total pixel count of the first image, rounded to two decimal places. If the first image has no pixels, the percentage is reported as 0."
+    }
+  ]
+}

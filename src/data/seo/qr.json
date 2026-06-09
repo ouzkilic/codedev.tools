@@ -1,0 +1,32 @@
+{
+  "intro": "QR Code Generator turns any text or URL into a scannable QR code right in your browser. Type or paste your content and the QR code is generated as a PNG image you can preview and download. It is handy whenever you need a quick QR code without installing software or uploading data to an online service.",
+  "useCases": [
+    "Encode a URL so people can open a link by scanning it with a phone camera",
+    "Generate a QR code for Wi-Fi details, contact info, or any plain text payload",
+    "Create a printable QR code (PNG) for posters, business cards, or product packaging",
+    "Add a QR code to slides or documentation that points to a docs page or repo",
+    "Pick a higher error correction level when the code may be printed small or partly obscured by a logo"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The QR code is generated entirely in your browser using a JavaScript library, and the text you enter never leaves your device. Nothing is uploaded."
+    },
+    {
+      "q": "What can I encode in the QR code?",
+      "a": "Any text or URL works, since the input is treated as a plain string. Whether a scanner does something special with it (open a link, join Wi-Fi, etc.) depends on the format you type, not the generator."
+    },
+    {
+      "q": "What do the error correction levels mean?",
+      "a": "Error correction (Low, Medium, Quartile, High) controls how much of the code can be damaged or obscured while still scanning. Higher levels add redundancy and make the code denser; the default is Medium."
+    },
+    {
+      "q": "What format and size is the downloaded image?",
+      "a": "The download is a PNG file named qrcode.png, rendered at 320 pixels wide with a small quiet-zone margin around it."
+    },
+    {
+      "q": "Why does my QR code fail to generate or stay blank?",
+      "a": "An empty input produces no code, and very long text can exceed the QR capacity for the chosen settings, which shows an error. Shorten the input or lower the error correction level and try again."
+    }
+  ]
+}

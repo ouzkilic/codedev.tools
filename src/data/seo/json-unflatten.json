@@ -1,0 +1,32 @@
+{
+  "intro": "JSON Unflatten rebuilds nested JSON from a flat object whose keys are dot and bracket paths. Paste a flat map like {\"a.b[0].c\": 1} and the tool expands it back into nested objects and arrays. It is handy whenever you have config values, query results, or form data stored as path-to-value pairs and need the original nested structure.",
+  "useCases": [
+    "Convert flat config or environment-style keys (a.b.c) back into a nested JSON object",
+    "Reconstruct nested JSON after a flatten step in a data pipeline or export",
+    "Turn dot/bracket path maps from analytics or logging tools into structured JSON",
+    "Rebuild arrays from indexed keys such as items[0].name and items[1].name",
+    "Inspect and edit flattened key-value data by expanding it into readable nested form"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The tool runs entirely in your browser and nothing is uploaded. Your JSON is parsed and rebuilt locally, so no data leaves your device."
+    },
+    {
+      "q": "What path syntax does it understand?",
+      "a": "It splits keys on dots for object properties and on [n] for numeric array indices, so a key like a.b[0].c becomes {\"a\":{\"b\":[{\"c\":...}]}}. Numeric segments in brackets create arrays; everything else creates object keys."
+    },
+    {
+      "q": "What input does it expect?",
+      "a": "A single flat JSON object whose keys are paths and whose values are the leaf values. If the input is not an object (for example an array or a primitive), it reports that the input must be a flat JSON object of path-to-value pairs."
+    },
+    {
+      "q": "How does it decide between an array and an object at the root?",
+      "a": "The first key's leading token determines the root type: if it is a numeric bracket index the root becomes an array, otherwise it becomes an object. An empty input object produces {}."
+    },
+    {
+      "q": "Is the output formatted?",
+      "a": "Yes. The rebuilt JSON is returned with two-space indentation so it is easy to read and copy."
+    }
+  ]
+}

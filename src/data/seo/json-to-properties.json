@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to .properties converts a JSON object into the Java .properties format, flattening nested objects and arrays into dotted keys (for example, db.host=localhost or items.0=apple). It is useful when you need to turn configuration data from a JSON file into the key=value format expected by Java applications, Spring Boot, or any tool that reads .properties files. Everything runs in your browser, so it is handy for quick config conversions without leaving your machine.",
+  "useCases": [
+    "Migrate a JSON config file into a Java application.properties or config.properties file",
+    "Flatten nested JSON configuration into dotted keys like server.port=8080",
+    "Convert API response or settings JSON into key=value pairs for a Spring Boot app",
+    "Generate .properties entries from JSON during a manual config migration",
+    "Inspect how nested objects and arrays map to flattened property keys"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using client-side JavaScript, and nothing you paste is uploaded or stored anywhere. The site is open source so you can verify this yourself."
+    },
+    {
+      "q": "How are nested objects and arrays handled?",
+      "a": "Nested objects are flattened into dotted keys, so {\"db\":{\"host\":\"x\"}} becomes db.host=x. Array elements use their numeric index as the key segment, so {\"items\":[\"a\",\"b\"]} becomes items.0=a and items.1=b."
+    },
+    {
+      "q": "What kind of JSON input is accepted?",
+      "a": "The input must be a JSON object at the top level. A top-level array, string, number, null, or any invalid JSON is rejected with an error message."
+    },
+    {
+      "q": "How are values converted?",
+      "a": "Each leaf value (string, number, boolean, or null) is converted to its string form on the right of the equals sign. For example a null value becomes key=null and a boolean becomes key=true."
+    },
+    {
+      "q": "Does it escape special characters like colons or unicode for .properties?",
+      "a": "No. The tool writes plain key=value lines joined by newlines and does not perform .properties-specific escaping of characters such as colons, spaces, or non-ASCII. Review the output if your keys or values contain reserved characters."
+    }
+  ]
+}

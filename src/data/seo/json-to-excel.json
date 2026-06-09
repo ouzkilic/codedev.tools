@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to Excel converts a JSON array of objects into a downloadable .xlsx spreadsheet file directly in your browser. Paste your JSON, and the tool maps object keys to column headers and each array item to a row, then generates an Excel workbook you can open in Excel, Google Sheets, or LibreOffice Calc. It's handy whenever you need to turn API responses, exported records, or log data into a spreadsheet for review or sharing.",
+  "useCases": [
+    "Turn a JSON API response into an .xlsx file to share with non-technical teammates",
+    "Convert exported database records or query results into a spreadsheet for review",
+    "Prepare JSON data for import into Excel, Google Sheets, or LibreOffice Calc",
+    "Quickly build a tabular report from an array of objects without writing export code",
+    "Inspect structured JSON data in a familiar grid layout"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using a JavaScript library, and the .xlsx file is generated locally. Your JSON is never uploaded or sent anywhere."
+    },
+    {
+      "q": "What JSON format does the tool expect?",
+      "a": "It expects a JSON array of objects, for example [{\"name\": \"Ann\"}, {\"name\": \"Bob\"}]. The object keys become column headers and each array element becomes a row. A single object or a non-array value will produce an error."
+    },
+    {
+      "q": "What happens if my objects have different keys?",
+      "a": "The spreadsheet includes a column for every key that appears across the objects. Rows missing a given key simply leave that cell blank."
+    },
+    {
+      "q": "How are nested objects or arrays handled?",
+      "a": "The tool maps each top-level key to a single column, so it works best with flat objects. Deeply nested values may not produce clean cells, so flatten your data first if you need a tidy table."
+    },
+    {
+      "q": "What file format do I get?",
+      "a": "You get a standard .xlsx workbook with a single sheet named Sheet1, which opens in Excel, Google Sheets, and LibreOffice Calc."
+    }
+  ]
+}

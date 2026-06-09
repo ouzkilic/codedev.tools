@@ -1,0 +1,32 @@
+{
+  "intro": "The Number Formatter adds thousands separators to a plain number so large values are easier to read. Type a number and choose whether to group the integer digits with a comma, space, dot, or no separator at all. It's handy when you need a quick, readable representation of figures while writing docs, configs, or test fixtures.",
+  "useCases": [
+    "Make a long integer like 1000000 readable as 1,000,000",
+    "Group digits with a space (1 000 000) or dot (1.000.000) to match a locale's convention",
+    "Format negative numbers and decimals while keeping the fractional part intact",
+    "Prepare readable figures for documentation, changelogs, or comments",
+    "Quickly sanity-check a numeric value before pasting it elsewhere"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The Number Formatter runs entirely in your browser and nothing you type is uploaded or stored remotely. All formatting happens client-side."
+    },
+    {
+      "q": "Which separators can I choose?",
+      "a": "You can group the integer digits with a comma, a space, a dot, or select None to apply no separator. The comma is used by default."
+    },
+    {
+      "q": "Does it handle decimals and negative numbers?",
+      "a": "Yes. Only the integer part is grouped, while the fractional part after the decimal point is left unchanged, and a leading minus sign is preserved."
+    },
+    {
+      "q": "What happens if I enter something that isn't a number?",
+      "a": "The input must be a valid number (optional minus sign, digits, and an optional decimal part). Anything else, such as letters or existing separators, produces an 'Input is not a valid number' error."
+    },
+    {
+      "q": "Does the separator affect the decimal point?",
+      "a": "No. The decimal point is always a dot in the output, even if you pick the dot as the thousands separator, so the integer and fractional parts stay clearly distinguished."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "intro": "Hex ↔ Text is a free converter that turns plain text into hexadecimal bytes and decodes hex back into readable text. It encodes using UTF-8, so each character becomes one or more two-digit hex bytes, which is handy when inspecting byte-level data or preparing hex literals. Everything runs in your browser, making it useful for quick encode/decode tasks without leaving the page.",
+  "useCases": [
+    "Convert a string to its UTF-8 hexadecimal byte representation for debugging",
+    "Decode a hex dump or hex literal back into readable text",
+    "Inspect how multi-byte or non-ASCII characters are encoded as bytes",
+    "Prepare hex-encoded values to paste into code, configs, or protocol tests",
+    "Verify byte sequences when comparing hashes, payloads, or wire formats"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using the built-in TextEncoder and TextDecoder APIs, and nothing you type is uploaded or stored on any server."
+    },
+    {
+      "q": "What character encoding does it use?",
+      "a": "It uses UTF-8. Text is encoded to UTF-8 bytes before conversion to hex, and hex is decoded back through UTF-8, so non-ASCII characters may map to multiple bytes."
+    },
+    {
+      "q": "Does it accept hex with spaces or whitespace?",
+      "a": "Yes. When decoding, all whitespace is stripped before parsing, so you can paste hex separated by spaces or newlines."
+    },
+    {
+      "q": "Why do I get an error when decoding?",
+      "a": "Decoding fails if the cleaned hex string has an odd number of digits or contains characters outside 0-9 and a-f (case-insensitive), since each byte requires exactly two valid hex digits."
+    },
+    {
+      "q": "Is the hex output upper or lower case?",
+      "a": "Encoded output is lower-case, with each byte zero-padded to two digits. For decoding, both upper and lower case hex digits are accepted."
+    }
+  ]
+}

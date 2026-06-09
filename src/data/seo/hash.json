@@ -1,0 +1,32 @@
+{
+  "intro": "Hash (SHA) computes the SHA-1, SHA-256, SHA-384, or SHA-512 digest of any text you paste in. It returns the hash as a lowercase hexadecimal string using the browser's built-in Web Crypto API, so it's handy whenever you need a quick checksum or digest while developing or debugging.",
+  "useCases": [
+    "Generate a SHA-256 checksum to verify that a string or config value hasn't changed",
+    "Compute a SHA-1 digest to compare against a value produced by another system",
+    "Produce SHA-384 or SHA-512 hashes for stronger fingerprints of text content",
+    "Create a deterministic hash key for caching or deduplicating identical strings",
+    "Quickly check expected hash output while writing or testing hashing code"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Hashing runs entirely in your browser using the Web Crypto API (crypto.subtle.digest). The text you enter is never uploaded or sent anywhere."
+    },
+    {
+      "q": "Which hash algorithms are supported?",
+      "a": "SHA-1, SHA-256, SHA-384, and SHA-512. SHA-256 is the default; pick a different one from the Algorithm option."
+    },
+    {
+      "q": "What format is the output in?",
+      "a": "The digest is returned as a lowercase hexadecimal string, with each byte represented by two hex characters."
+    },
+    {
+      "q": "Can I hash files or only text?",
+      "a": "This tool hashes text input. The text is UTF-8 encoded before hashing, so identical text always produces the same digest."
+    },
+    {
+      "q": "Is MD5 supported?",
+      "a": "No. The Web Crypto API only provides SHA-1, SHA-256, SHA-384, and SHA-512, so MD5 is not available here."
+    }
+  ]
+}

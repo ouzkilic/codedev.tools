@@ -1,0 +1,32 @@
+{
+  "intro": "Date Difference calculates the duration between two dates and shows the result in milliseconds, seconds, minutes, hours, days, and weeks. Enter a start date and an end date and it computes the absolute difference, so the order of the dates does not change the result. It is handy whenever you need to know how much time elapsed between two points or convert that gap into different units.",
+  "useCases": [
+    "Find the number of days between a start date and a deadline",
+    "Convert a span between two timestamps into hours or minutes",
+    "Check how many weeks are left until a release or event",
+    "Verify the elapsed time between two log entries or records",
+    "Quickly sanity-check date math without writing throwaway code"
+  ],
+  "faq": [
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Date Difference runs entirely in your browser using the native JavaScript Date object. The dates you enter are never uploaded or sent anywhere."
+    },
+    {
+      "q": "Which date formats are accepted?",
+      "a": "Any string the browser's Date constructor can parse, such as ISO 8601 dates like 2024-12-31 or full date-time values. If a date cannot be parsed you will get an error asking you to fix the start or end date."
+    },
+    {
+      "q": "Does the order of the two dates matter?",
+      "a": "No. The tool reports the absolute difference between the start and end dates, so swapping them produces the same positive result."
+    },
+    {
+      "q": "Why are the day and week values shown with decimals?",
+      "a": "All units except milliseconds are derived from the raw millisecond gap and rounded to two decimal places, so partial days or weeks appear as fractions rather than being truncated to whole numbers."
+    },
+    {
+      "q": "How are months and years handled?",
+      "a": "The tool only outputs milliseconds, seconds, minutes, hours, days, and weeks. It does not compute calendar months or years, since their length varies."
+    }
+  ]
+}

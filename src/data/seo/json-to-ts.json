@@ -1,0 +1,32 @@
+{
+  "intro": "JSON to TypeScript generates TypeScript interfaces from a JSON sample, inferring the types of each field so you don't have to write them by hand. Paste a JSON object or array and it produces named interfaces (and a Root type alias for array or primitive roots) that you can drop straight into your code. It is handy when you receive an API response and need matching TypeScript types quickly.",
+  "useCases": [
+    "Turn a sample API response into TypeScript interfaces for typed client code",
+    "Bootstrap types for a JSON config file or fixture",
+    "Generate nested interfaces from deeply structured JSON without writing them manually",
+    "Create a starting point for response types when an API has no published schema",
+    "Quickly check what shape and field types a JSON payload actually has"
+  ],
+  "faq": [
+    {
+      "q": "Is my JSON sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript, and nothing is uploaded or stored remotely. Your JSON never leaves your device."
+    },
+    {
+      "q": "What does it generate for arrays or primitive values at the root?",
+      "a": "If the top-level value is an array or a primitive, it emits an export type Root alias describing that value, plus any interfaces for the array's element objects. A plain object root produces named interfaces directly, with the root interface first."
+    },
+    {
+      "q": "How are field types inferred?",
+      "a": "Types are inferred from the sample you provide: strings become string, numbers become number, booleans become boolean, and null becomes null. Object fields become nested interfaces and arrays are typed from their first element, so an empty array becomes unknown[]."
+    },
+    {
+      "q": "What happens with field names that aren't valid identifiers?",
+      "a": "Keys that are valid TypeScript identifiers are used as-is, while keys with characters like spaces or dashes are quoted as string literal property names. Interface names are derived in PascalCase from the field name, with a numeric suffix added if a name would otherwise collide."
+    },
+    {
+      "q": "Does it handle invalid JSON?",
+      "a": "The input must be valid JSON since it is parsed with JSON.parse. If the input cannot be parsed, you will get a parse error instead of generated types, so check that your sample is well-formed JSON."
+    }
+  ]
+}

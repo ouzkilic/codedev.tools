@@ -1,0 +1,32 @@
+{
+  "intro": "The Image Format Converter turns an image into PNG, JPEG or WebP right in your browser. Drop in any image your browser can decode, pick the target format, optionally set a quality value, and download the converted file. It is handy whenever you need to switch image formats quickly without installing software or uploading files to an online service.",
+  "useCases": [
+    "Convert a PNG screenshot to WebP to reduce file size before adding it to a web page",
+    "Turn a transparent PNG into a JPEG for tools or platforms that do not accept PNG",
+    "Re-encode a JPEG as WebP and tune the quality value to balance size and clarity",
+    "Produce a PNG copy of an image when you need a lossless format",
+    "Quickly change an image's format on a machine where you cannot install image editing software"
+  ],
+  "faq": [
+    {
+      "q": "Is my image uploaded to a server?",
+      "a": "No. Conversion happens entirely in your browser using the HTML canvas API, and the image never leaves your device. Nothing is uploaded, so it works offline once the page is loaded."
+    },
+    {
+      "q": "Which formats can I convert between?",
+      "a": "You can export to PNG, JPEG or WebP. The input can be any image format your browser is able to decode, since the file is loaded through the browser's built-in image decoder."
+    },
+    {
+      "q": "What does the quality setting do?",
+      "a": "The quality value is a number between 0 and 1 (default 0.92) passed to the encoder. It affects lossy formats like JPEG and WebP, where lower values produce smaller files with more compression. It has no effect on lossless PNG output."
+    },
+    {
+      "q": "What happens to transparency when I convert to JPEG?",
+      "a": "JPEG does not support an alpha channel, so transparent areas are flattened when you export to JPEG. Use PNG or WebP if you need to keep transparency."
+    },
+    {
+      "q": "Does converting change the image dimensions?",
+      "a": "No. The image is drawn to a canvas at its natural width and height, so the output keeps the original pixel dimensions and only the encoding format changes."
+    }
+  ]
+}

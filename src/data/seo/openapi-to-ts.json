@@ -1,0 +1,32 @@
+{
+  "intro": "OpenAPI to TypeScript turns the schema definitions in an OpenAPI or Swagger spec into TypeScript interfaces. Paste a JSON or YAML document and it reads the model schemas (from components.schemas in OpenAPI 3 or definitions in Swagger 2) and emits exported interfaces with the right property types. It is handy when you want typed models for an API client without pulling in a code generator or build step.",
+  "useCases": [
+    "Generate TypeScript interfaces from an OpenAPI 3 components.schemas section to type your API responses",
+    "Convert Swagger 2.0 definitions into interfaces for an older API",
+    "Quickly turn a single schema snippet into a typed model while writing frontend code",
+    "Map $ref references between schemas to named TypeScript types",
+    "Produce union types from string or numeric enums defined in a spec"
+  ],
+  "faq": [
+    {
+      "q": "Is my OpenAPI spec sent to a server?",
+      "a": "No. The conversion runs entirely in your browser and nothing is uploaded. Your spec never leaves your machine."
+    },
+    {
+      "q": "What input formats are supported?",
+      "a": "Both JSON and YAML are accepted. The tool first tries to parse the input as JSON and falls back to YAML if that fails."
+    },
+    {
+      "q": "Which part of the spec does it read?",
+      "a": "It reads model schemas from components.schemas (OpenAPI 3) or definitions (Swagger 2.0). Paths, operations, parameters, and responses are not converted, so only your data models become interfaces."
+    },
+    {
+      "q": "How are references and enums handled?",
+      "a": "A $ref is converted to the referenced schema's name as a TypeScript type. Enums become a union of their literal values, for example \"a\" | \"b\"."
+    },
+    {
+      "q": "How are required and optional properties determined?",
+      "a": "Properties listed in a schema's required array are emitted as required, and any others are marked optional with a question mark. Integer and number types both map to number."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "intro": "cURL to Code converts a curl command into ready-to-use JavaScript HTTP code, either a fetch call or an axios request. It parses the URL, request method, headers (-H), and request body (-d, --data, --data-raw, --data-binary, --data-ascii) and emits a clean code snippet you can paste straight into your project. It's handy when you've copied a curl command from API docs, a browser's network tab, or Postman and want the equivalent JavaScript.",
+  "useCases": [
+    "Turn a curl command copied from API documentation into a working fetch or axios call",
+    "Convert a 'Copy as cURL' request from your browser's network tab into JavaScript",
+    "Quickly scaffold an HTTP request with the right method, headers, and body for a Node.js or browser script",
+    "Translate shared curl examples from a teammate or chat into code without parsing flags by hand",
+    "Switch a request between the fetch and axios styles to match your codebase",
+    "Default the method to GET, or POST automatically when a body is present, without specifying -X"
+  ],
+  "faq": [
+    {
+      "q": "Is my curl command sent to a server?",
+      "a": "No. The conversion runs entirely in your browser using local JavaScript. Nothing you paste is uploaded or transmitted anywhere."
+    },
+    {
+      "q": "Which curl flags are supported?",
+      "a": "It recognizes the URL, -X/--request for the method, -H/--header for headers, and -d/--data, --data-raw, --data-binary, and --data-ascii for the request body. Other flags are ignored rather than translated."
+    },
+    {
+      "q": "How is the HTTP method determined?",
+      "a": "If you pass -X or --request, that method is used. Otherwise it defaults to GET, or to POST when the command includes a request body."
+    },
+    {
+      "q": "What output formats can it produce?",
+      "a": "You can choose between a fetch call or an axios request using the Output option. Both include the method, any headers, and the body when present."
+    },
+    {
+      "q": "Does it handle quotes and line continuations in the command?",
+      "a": "Yes. The parser respects single and double quotes and handles backslash line continuations, so multi-line curl commands copied from docs are tokenized correctly."
+    }
+  ]
+}
