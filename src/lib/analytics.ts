@@ -23,9 +23,13 @@ export function initAnalytics() {
   document.head.appendChild(s);
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
+  // gtag.js only processes the queue when each entry is the `arguments` object —
+  // pushing a real array (e.g. [...args]) silently breaks it, so no hits are sent.
+  function gtag() {
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer.push(arguments);
+  }
+  window.gtag = gtag as (...args: unknown[]) => void;
   window.gtag('js', new Date());
   // send_page_view: false — page views are sent manually via the router.
   window.gtag('config', GA_ID, { send_page_view: false, anonymize_ip: true });
