@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Zap, Code2 } from 'lucide-react';
-import { tools, toolsByCategory } from '@/tools/registry';
+import { ShieldCheck, Zap, Code2, Clock } from 'lucide-react';
+import { tools, toolsByCategory, findTool } from '@/tools/registry';
 import { useDocumentMeta } from '@/hooks/useDocumentMeta';
+import { useRecentTools } from '@/hooks/useRecentTools';
 
 export function HomePage() {
   useDocumentMeta(
@@ -9,6 +10,8 @@ export function HomePage() {
     'Free, open-source formatters, parsers, converters and generators for JSON, XML, CSV, YAML, schemas and more. Everything runs in your browser — no data is ever sent to a server.',
     '/',
   );
+
+  const recent = useRecentTools().map(findTool).filter((t) => t !== undefined);
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-12">
@@ -33,6 +36,30 @@ export function HomePage() {
           <span className="opacity-70">Press ⌘K to search</span>
         </div>
       </header>
+
+      {recent.length > 0 && (
+        <section aria-labelledby="cat-recent" className="mb-12">
+          <div className="mb-3 flex items-center gap-2">
+            <Clock className="size-4 text-muted-foreground" />
+            <h2 id="cat-recent" className="text-sm font-semibold tracking-tight">Recently used</h2>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {recent.map((t) => {
+              const ToolIcon = t.icon;
+              return (
+                <Link
+                  key={t.id}
+                  to={`/tool/${t.id}`}
+                  className="group inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm transition-colors hover:bg-muted/40"
+                >
+                  <ToolIcon className="size-3.5 text-muted-foreground transition-colors group-hover:text-foreground" />
+                  {t.title}
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <div className="space-y-12">
         {toolsByCategory.map((cat) => {

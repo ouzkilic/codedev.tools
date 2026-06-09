@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   CommandDialog, CommandInput, CommandList, CommandItem, CommandEmpty, CommandGroup,
 } from '@/components/ui/command';
-import { tools } from '@/tools/registry';
+import { toolsByCategory } from '@/tools/registry';
 
 export function CommandPalette() {
   const [open, setOpen] = useState(false);
@@ -30,18 +30,20 @@ export function CommandPalette() {
       <CommandInput placeholder="Search tools… (Cmd/Ctrl + K)" />
       <CommandList>
         <CommandEmpty>No results.</CommandEmpty>
-        <CommandGroup heading="Tools">
-          {tools.map((t) => (
-            <CommandItem
-              key={t.id}
-              value={`${t.title} ${t.keywords.join(' ')}`}
-              onSelect={() => { navigate(`/tool/${t.id}`); setOpen(false); }}
-            >
-              <t.icon className="mr-2 size-4" />
-              {t.title}
-            </CommandItem>
-          ))}
-        </CommandGroup>
+        {toolsByCategory.map((cat) => (
+          <CommandGroup key={cat.key} heading={cat.label}>
+            {cat.items.map((t) => (
+              <CommandItem
+                key={t.id}
+                value={`${t.title} ${t.keywords.join(' ')}`}
+                onSelect={() => { navigate(`/tool/${t.id}`); setOpen(false); }}
+              >
+                <t.icon className="mr-2 size-4" />
+                {t.title}
+              </CommandItem>
+            ))}
+          </CommandGroup>
+        ))}
       </CommandList>
     </CommandDialog>
   );

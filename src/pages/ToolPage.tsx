@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { findTool } from '@/tools/registry';
@@ -7,11 +7,17 @@ import { ToolShell } from '@/components/tool/ToolShell';
 import { ToolContent } from '@/components/tool/ToolContent';
 import { RelatedTools } from '@/components/tool/RelatedTools';
 import { StructuredData } from '@/components/seo/StructuredData';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { useDocumentMeta } from '@/hooks/useDocumentMeta';
+import { recordRecent } from '@/hooks/useRecentTools';
 
 export function ToolPage() {
   const { toolId } = useParams();
   const tool = toolId ? findTool(toolId) : undefined;
+
+  useEffect(() => {
+    if (tool) recordRecent(tool.id);
+  }, [tool]);
 
   useDocumentMeta(
     tool ? tool.title : 'Tool not found',
@@ -41,9 +47,11 @@ export function ToolPage() {
 
       <div className="min-h-[70vh] flex-1">
         <ToolShell title={tool.title} description={tool.description}>
-          <Suspense fallback={<div className="text-sm">Loading…</div>}>
-            <Component />
-          </Suspense>
+          <ErrorBoundary resetKey={tool.id}>
+            <Suspense fallback={<div className="text-sm">Loading…</div>}>
+              <Component />
+            </Suspense>
+          </ErrorBoundary>
         </ToolShell>
       </div>
 
