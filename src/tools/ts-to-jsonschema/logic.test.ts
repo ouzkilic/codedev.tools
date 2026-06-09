@@ -109,14 +109,6 @@ describe('tsToJsonSchemaLogic', () => {
     });
   });
 
-  it('does not treat a purely double-quoted union as an enum (single-quote-gated detection)', () => {
-    // Union detection is gated on the presence of a single quote (`'`), so a union built
-    // solely from double-quoted literals is not recognized and falls through to the
-    // primitive switch, which rejects it. (See suspectedBugs.)
-    expect(() => tsToJsonSchemaLogic.transform('interface X { mode: "on" | "off" }')).toThrow(
-      /Unsupported type/,
-    );
-  });
 
   it('supports unicode/emoji property names and literal values', () => {
     const parsed = JSON.parse(
@@ -159,5 +151,15 @@ describe('tsToJsonSchemaLogic', () => {
     expect(Object.keys(parsed.properties)).toHaveLength(50);
     expect(parsed.required).toHaveLength(50);
     expect(parsed.properties.f49).toEqual({ type: 'string' });
+  });
+
+  it('maps double-quoted string-literal unions to an enum', () => {
+    const out = tsToJsonSchemaLogic.transform('interface X { mode: "on" | "off" }');
+    expect(JSON.parse(out).properties.mode.enum).toEqual(['on', 'off']);
+  });
+
+  it('maps mixed single/double-quoted unions to an enum', () => {
+    const out = tsToJsonSchemaLogic.transform("interface X { v: 'a' | \"b\" }");
+    expect(JSON.parse(out).properties.v.enum).toEqual(['a', 'b']);
   });
 });

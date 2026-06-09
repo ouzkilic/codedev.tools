@@ -11,8 +11,8 @@ type JsonSchema = {
 function mapType(raw: string): JsonSchema {
   const type = raw.trim();
 
-  // string-literal union: 'a' | 'b'
-  if (type.includes('|') && /'/.test(type)) {
+  // string-literal union: 'a' | 'b' or "a" | "b"
+  if (type.includes('|') && /['"]/.test(type)) {
     const parts = type
       .split('|')
       .map((p) => p.trim())
