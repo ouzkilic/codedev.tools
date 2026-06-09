@@ -76,8 +76,16 @@ describe('htmlEntities — decode', () => {
     expect(dec('&#65;&#x42;')).toBe('AB');
   });
 
-  it('does not decode uppercase X hex entities (regex only admits lowercase x)', () => {
-    expect(dec('&#X41;')).toBe('&#X41;');
+  it('decodes uppercase X hex entities (per HTML spec)', () => {
+    expect(dec('&#X41;')).toBe('A');
+  });
+
+  it('decodes uppercase X hex entities with hex digit letters', () => {
+    expect(dec('&#X1F600;')).toBe('\u{1F600}');
+  });
+
+  it('still decodes lowercase x hex entities', () => {
+    expect(dec('&#x42;')).toBe('B');
   });
 
   it('unescapes a numeric entity outside the BMP (emoji)', () => {

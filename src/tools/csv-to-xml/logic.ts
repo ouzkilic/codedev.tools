@@ -5,8 +5,9 @@ function escapeXml(value: string): string {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function toTag(name: string): string {
-  return name.replace(/[^a-zA-Z0-9]/g, '_');
+function toTag(name: string, index: number): string {
+  const sanitized = name.replace(/[^a-zA-Z0-9]/g, '_');
+  return sanitized === '' ? `column_${index}` : sanitized;
 }
 
 export const csvToXmlLogic: ToolLogic = {
@@ -23,8 +24,9 @@ export const csvToXmlLogic: ToolLogic = {
     let out = '<rows>\n';
     for (const obj of result.data) {
       out += '  <row>\n';
+      let index = 0;
       for (const [key, raw] of Object.entries(obj)) {
-        const tag = toTag(key);
+        const tag = toTag(key, index++);
         const value = raw == null ? '' : String(raw);
         out += '    <' + tag + '>' + escapeXml(value) + '</' + tag + '>\n';
       }

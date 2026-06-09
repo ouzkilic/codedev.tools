@@ -216,4 +216,23 @@ describe('dateInfoLogic.transform', () => {
       'Invalid date.',
     );
   });
+
+  // --- Rollover guard: impossible day-of-month must not be silently accepted ---
+  it('throws on a non-existent February day in a leap year (2024-02-30)', () => {
+    expect(() => dateInfoLogic.transform('2024-02-30')).toThrow(
+      'Invalid date.',
+    );
+  });
+
+  it('throws on a 31st in a 30-day month (2024-04-31)', () => {
+    expect(() => dateInfoLogic.transform('2024-04-31')).toThrow(
+      'Invalid date.',
+    );
+  });
+
+  it('throws on Feb 29 in a non-leap year (2023-02-29)', () => {
+    expect(() => dateInfoLogic.transform('2023-02-29')).toThrow(
+      'Invalid date.',
+    );
+  });
 });

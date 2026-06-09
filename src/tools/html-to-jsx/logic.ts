@@ -10,7 +10,7 @@ export const htmlToJsxLogic: ToolLogic = {
       .replace(/\bfor=/g, 'htmlFor=')
       .replace(/<!--([\s\S]*?)-->/g, '{/*$1*/}')
       .replace(
-        new RegExp(`<(${VOID_ELEMENTS})((?:[^>]*?))(?<!/)>`, 'gi'),
+        new RegExp(`<(${VOID_ELEMENTS})\\b((?:[^>]*?))(?<!/)>`, 'gi'),
         '<$1$2 />',
       );
   },

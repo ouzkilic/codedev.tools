@@ -53,9 +53,20 @@ describe('contrastRatio', () => {
     expect(contrastRatio('#ff0000', '#ffffff')).toBeCloseTo(3.9984767, 5);
   });
 
-  it('clamps nothing: rgb values above 255 still compute a (high) ratio', () => {
-    // rgb(300,...) is treated literally; channel f() grows past 1, producing ratio > 21.
-    expect(contrastRatio('rgb(300,300,300)', '#000')).toBeGreaterThan(21);
+  it('clamps rgb channels above 255 so the ratio never exceeds 21', () => {
+    // rgb(300,300,300) clamps to white; vs black this is the physical max of 21:1.
+    expect(contrastRatio('rgb(300,300,300)', '#000')).toBeCloseTo(21, 5);
+  });
+
+  it('clamps over-range rgb equivalently to fully-white rgb(255,255,255)', () => {
+    expect(contrastRatio('rgb(999,300,256)', '#000')).toBeCloseTo(
+      contrastRatio('rgb(255,255,255)', '#000'),
+      10,
+    );
+  });
+
+  it('never produces a contrast ratio above the WCAG maximum of 21', () => {
+    expect(contrastRatio('rgb(500,500,500)', 'rgb(0,0,0)')).toBeLessThanOrEqual(21);
   });
 
   it('always returns a ratio >= 1', () => {

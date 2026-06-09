@@ -18,7 +18,10 @@ export async function formatCode(input: string, lang: string): Promise<string> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const plugins: any[] = [];
 
-  if (['javascript', 'typescript', 'json', 'html'].includes(lang)) {
+  // The babel parser (used by javascript/json and as the unknown-language
+  // fallback) needs both the babel and estree plugins. Key off the resolved
+  // parser, not `lang`, so the fallback also gets them loaded.
+  if (parser === 'babel' || ['typescript', 'json', 'html'].includes(lang)) {
     plugins.push((await import('prettier/plugins/babel')).default);
     plugins.push((await import('prettier/plugins/estree')).default);
   }

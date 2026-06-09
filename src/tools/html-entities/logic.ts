@@ -17,7 +17,7 @@ function escapeHtml(input: string): string {
 }
 
 function unescapeHtml(input: string): string {
-  return input.replace(/&(#x?[0-9a-fA-F]+|[a-zA-Z]+);/g, (match, body: string) => {
+  return input.replace(/&(#[xX]?[0-9a-fA-F]+|[a-zA-Z]+);/g, (match, body: string) => {
     if (body[0] === '#') {
       const code = body[1] === 'x' || body[1] === 'X'
         ? parseInt(body.slice(2), 16)

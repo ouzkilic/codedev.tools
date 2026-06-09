@@ -8,7 +8,7 @@ export const charInfoLogic: ToolLogic = {
     else if (/^\d+$/.test(raw)) code = parseInt(raw, 10);
     else code = [...raw][0]?.codePointAt(0);
 
-    if (code === undefined || Number.isNaN(code)) {
+    if (code === undefined || Number.isNaN(code) || code < 0 || code > 0x10ffff) {
       throw new Error('Enter a character, a decimal code, or 0x-prefixed hex.');
     }
 

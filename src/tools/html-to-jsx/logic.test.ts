@@ -110,6 +110,12 @@ describe('htmlToJsxLogic', () => {
     expect(t('<for>')).toBe('<for>');
   });
 
+  it('does not self-close tags that merely start with a void element name', () => {
+    expect(t('<inputx value="1">')).toBe('<inputx value="1">');
+    expect(t('<linker>')).toBe('<linker>');
+    expect(t('<brick>')).toBe('<brick>');
+  });
+
   // --- combinations ---
   it('applies class conversion and void self-closing together', () => {
     expect(t('<img class="hero" src="a.png">')).toBe(

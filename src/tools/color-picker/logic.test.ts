@@ -37,20 +37,30 @@ describe('hexToRgb', () => {
     expect(hexToRgb('#808080')).toEqual({ r: 128, g: 128, b: 128 });
   });
 
-  it('yields NaN channels for non-hex characters (no throw)', () => {
-    const rgb = hexToRgb('#zzzzzz');
-    expect(Number.isNaN(rgb.r)).toBe(true);
-    expect(Number.isNaN(rgb.g)).toBe(true);
-    expect(Number.isNaN(rgb.b)).toBe(true);
+  it('throws on non-hex characters instead of returning NaN', () => {
+    expect(() => hexToRgb('#zzzzzz')).toThrow();
   });
 
-  it('yields NaN for empty input', () => {
-    const rgb = hexToRgb('');
-    expect(Number.isNaN(rgb.r)).toBe(true);
+  it('throws on empty input', () => {
+    expect(() => hexToRgb('')).toThrow();
   });
 
   it('ignores extra characters beyond the first six', () => {
     expect(hexToRgb('#ff0000ffff')).toEqual({ r: 255, g: 0, b: 0 });
+  });
+
+  it('expands 3-digit shorthand hex (#fff -> white)', () => {
+    expect(hexToRgb('#fff')).toEqual({ r: 255, g: 255, b: 255 });
+    expect(hexToRgb('#fff')).toEqual(hexToRgb('#ffffff'));
+  });
+
+  it('expands shorthand without hash and mixed channels', () => {
+    expect(hexToRgb('#0f8')).toEqual({ r: 0, g: 255, b: 136 });
+    expect(hexToRgb('abc')).toEqual({ r: 0xaa, g: 0xbb, b: 0xcc });
+  });
+
+  it('throws on malformed lengths (not 3 or 6 valid digits)', () => {
+    expect(() => hexToRgb('#ff')).toThrow();
   });
 });
 

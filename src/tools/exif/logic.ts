@@ -6,7 +6,7 @@ export function formatExif(data: Record<string, unknown> | undefined | null): st
     if (v === undefined) continue;
     let value: string;
     if (v instanceof Date) {
-      value = v.toISOString();
+      value = Number.isNaN(v.getTime()) ? 'Invalid Date' : v.toISOString();
     } else if (v !== null && typeof v === 'object') {
       value = JSON.stringify(v);
     } else {

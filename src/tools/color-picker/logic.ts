@@ -1,7 +1,13 @@
 export interface Rgb { r: number; g: number; b: number; }
 
 export function hexToRgb(hex: string): Rgb {
-  const h = hex.replace('#', '');
+  let h = hex.replace('#', '');
+  if (h.length === 3 && /^[0-9a-fA-F]{3}$/.test(h)) {
+    h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+  }
+  if (!/^[0-9a-fA-F]{6}/.test(h)) {
+    throw new Error(`Geçersiz HEX renk: "${hex}". Örnek: #ff0000 veya #fff`);
+  }
   return { r: parseInt(h.slice(0, 2), 16), g: parseInt(h.slice(2, 4), 16), b: parseInt(h.slice(4, 6), 16) };
 }
 

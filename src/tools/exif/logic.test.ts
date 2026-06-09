@@ -106,9 +106,22 @@ describe('formatExif', () => {
     expect(formatExif({ When: d })).toBe('When: 1999-12-31T23:59:59.000Z');
   });
 
-  it('renders Invalid Date as ISO call would throw? -> uses toISOString', () => {
-    // An invalid Date is still instanceof Date; toISOString throws RangeError.
-    expect(() => formatExif({ Bad: new Date('not-a-date') })).toThrow(RangeError);
+  it('renders an Invalid Date gracefully instead of throwing', () => {
+    // An invalid Date is still instanceof Date; guard avoids toISOString RangeError.
+    expect(formatExif({ Bad: new Date('not-a-date') })).toBe('Bad: Invalid Date');
+  });
+
+  it('does not throw for an Invalid Date', () => {
+    expect(() => formatExif({ Bad: new Date(NaN) })).not.toThrow();
+  });
+
+  it('keeps formatting other keys when one value is an Invalid Date', () => {
+    const out = formatExif({
+      Make: 'Canon',
+      Bad: new Date('nope'),
+      ISO: 100,
+    });
+    expect(out).toBe('Make: Canon\nBad: Invalid Date\nISO: 100');
   });
 
   it('skips only undefined among a mix, keeping null', () => {

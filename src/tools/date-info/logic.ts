@@ -49,6 +49,19 @@ export const dateInfoLogic: ToolLogic = {
     if (Number.isNaN(d.getTime())) {
       throw new Error('Invalid date.');
     }
+    // Guard against JS Date rollover (e.g. '2024-02-30' -> Mar 1): when the input
+    // carries explicit Y-M-D components, they must round-trip to the parsed date.
+    const ymd = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (ymd) {
+      const [, y, m, day] = ymd;
+      if (
+        Number(y) !== d.getUTCFullYear() ||
+        Number(m) !== d.getUTCMonth() + 1 ||
+        Number(day) !== d.getUTCDate()
+      ) {
+        throw new Error('Invalid date.');
+      }
+    }
     const year = d.getUTCFullYear();
     const month = d.getUTCMonth();
     const quarter = Math.floor(month / 3) + 1;

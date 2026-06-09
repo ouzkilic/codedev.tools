@@ -84,10 +84,15 @@ describe('boxShadow', () => {
       );
     });
 
-    it('empty color stays empty (no fallback on empty)', () => {
-      // color uses ?? only, not || fallback, so '' trims to '' and is kept
+    it('empty color falls back to default', () => {
       expect(buildShadow({ x: '0', y: '0', blur: '0', spread: '0', color: '', inset: false })).toBe(
-        '0px 0px 0px 0px ',
+        '0px 0px 0px 0px rgba(0,0,0,0.25)',
+      );
+    });
+
+    it('whitespace-only color falls back to default', () => {
+      expect(buildShadow({ x: '0', y: '0', blur: '0', spread: '0', color: '   ', inset: false })).toBe(
+        '0px 0px 0px 0px rgba(0,0,0,0.25)',
       );
     });
   });
@@ -117,10 +122,15 @@ describe('boxShadow', () => {
       ).toBe('999999px 1000000px 500000px 0px #000');
     });
 
-    it('does not strip units already present (passes through raw)', () => {
-      // user typing "5px" produces "5pxpx" since logic always appends px
+    it('does not append px to values that already include a unit', () => {
       expect(buildShadow({ x: '5px', y: '0', blur: '0', spread: '0', color: '#000', inset: false })).toBe(
-        '5pxpx 0px 0px 0px #000',
+        '5px 0px 0px 0px #000',
+      );
+    });
+
+    it('preserves non-px units verbatim', () => {
+      expect(buildShadow({ x: '1em', y: '2rem', blur: '0', spread: '0', color: '#000', inset: false })).toBe(
+        '1em 2rem 0px 0px #000',
       );
     });
   });
@@ -138,9 +148,14 @@ describe('boxShadow', () => {
       );
     });
 
-    it('truthy string "false" is still treated as inset (truthy)', () => {
-      // options.inset ? ... : '' — non-empty string is truthy, so 'false' enables inset
-      expect(buildShadow({ x: '0', y: '0', blur: '0', spread: '0', color: '#000', inset: 'false' })).toMatch(
+    it('string "false" is treated as disabled (no inset)', () => {
+      expect(buildShadow({ x: '0', y: '0', blur: '0', spread: '0', color: '#000', inset: 'false' })).not.toContain(
+        'inset',
+      );
+    });
+
+    it('string "true" enables inset', () => {
+      expect(buildShadow({ x: '0', y: '0', blur: '0', spread: '0', color: '#000', inset: 'true' })).toMatch(
         /^inset /,
       );
     });

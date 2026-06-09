@@ -205,6 +205,36 @@ describe('jsonSchemaToTsLogic', () => {
     expect(out).toContain('___?: Field;');
   });
 
+  // --- name collision de-duplication ---
+
+  it('de-duplicates interface names when two keys PascalCase to the same name', () => {
+    const out = t(
+      '{"properties":{"user_info":{"type":"object","properties":{"a":{"type":"string"}}},"user-info":{"type":"object","properties":{"b":{"type":"string"}}}}}',
+    );
+    expect(out).toContain('export interface UserInfo {');
+    expect(out).toContain('export interface UserInfo2 {');
+    // exactly two distinct interface declarations, not two with the same name
+    expect(out.match(/export interface UserInfo \{/g)?.length).toBe(1);
+    expect(out.match(/export interface UserInfo2 \{/g)?.length).toBe(1);
+  });
+
+  it('references the de-duplicated name on the colliding property', () => {
+    const out = t(
+      '{"properties":{"user_info":{"type":"object","properties":{"a":{"type":"string"}}},"user-info":{"type":"object","properties":{"b":{"type":"string"}}}}}',
+    );
+    expect(out).toContain('user_info?: UserInfo;');
+    expect(out).toContain('user-info?: UserInfo2;');
+  });
+
+  it('does not collide a nested object name with the literal Root name', () => {
+    const out = t(
+      '{"properties":{"root":{"type":"object","properties":{"v":{"type":"string"}}}}}',
+    );
+    expect(out).toContain('export interface Root {');
+    expect(out).toContain('export interface Root2 {');
+    expect(out).toContain('root?: Root2;');
+  });
+
   // --- ordering ---
 
   it('emits the Root interface before nested interfaces', () => {

@@ -174,8 +174,22 @@ describe('charInfo', () => {
   });
 
   it('throws when given a decimal code point above the Unicode maximum', () => {
-    // 1114112 (U+10FFFF + 1) passes the NaN guard but String.fromCodePoint rejects it.
-    expect(() => charInfoLogic.transform('1114112')).toThrow();
+    // 1114112 (U+10FFFF + 1) is out of range; we throw the friendly validation error.
+    expect(() => charInfoLogic.transform('1114112')).toThrow(
+      'Enter a character, a decimal code, or 0x-prefixed hex.',
+    );
+  });
+
+  it('throws the friendly error on a hex code point above the Unicode maximum', () => {
+    expect(() => charInfoLogic.transform('0x110000')).toThrow(
+      'Enter a character, a decimal code, or 0x-prefixed hex.',
+    );
+  });
+
+  it('throws the friendly error on a wildly large decimal code point', () => {
+    expect(() => charInfoLogic.transform('99999999')).toThrow(
+      'Enter a character, a decimal code, or 0x-prefixed hex.',
+    );
   });
 
   it('handles a large but valid input string by only reading its first code point', () => {

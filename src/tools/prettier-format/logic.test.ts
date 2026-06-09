@@ -54,15 +54,18 @@ describe('formatCode — happy paths per language', () => {
 });
 
 describe('formatCode — parser selection branches', () => {
-  it('falls back to babel parser for an unknown language', async () => {
-    // PARSERS[lang] is undefined -> 'babel'; babel/estree plugins are NOT pushed
-    // for unknown langs, but prettier/standalone still needs a plugin. The known
-    // behavior: babel parser without its plugin should fail to load the parser.
-    await expect(formatCode('const x={a:1}', 'totally-unknown')).rejects.toThrow();
+  it('falls back to babel parser for an unknown language and formats with it', async () => {
+    // PARSERS[lang] is undefined -> 'babel'; the babel/estree plugins must be
+    // loaded for the fallback so prettier can resolve the parser and format.
+    expect(await formatCode('const x={a:1}', 'totally-unknown')).toBe('const x = { a: 1 };\n');
   });
 
-  it('treats empty lang string as babel fallback (no babel plugin pushed) -> throws', async () => {
-    await expect(formatCode('const x={a:1}', '')).rejects.toThrow();
+  it('treats empty lang string as babel fallback and formats with it', async () => {
+    expect(await formatCode('const x={a:1}', '')).toBe('const x = { a: 1 };\n');
+  });
+
+  it('still rejects invalid JS when falling back to babel for an unknown language', async () => {
+    await expect(formatCode('const = =', 'unknown-lang')).rejects.toThrow();
   });
 });
 

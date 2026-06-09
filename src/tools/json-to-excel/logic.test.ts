@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import * as XLSX from 'xlsx';
 import { jsonToXlsx } from './logic';
 
-// jsonToXlsx returns an ArrayBuffer at runtime (XLSX.write type:'array').
+// jsonToXlsx returns a Uint8Array (XLSX.write type:'array' yields an ArrayBuffer
+// which the logic wraps so the runtime value matches the declared type).
 type Bytes = Awaited<ReturnType<typeof jsonToXlsx>>;
 
 // Helper: turn the produced bytes back into rows for round-trip assertions.
@@ -27,6 +28,19 @@ describe('jsonToXlsx', () => {
       { name: 'Ada', age: 36 },
       { name: 'Bob', age: 40 },
     ]);
+  });
+
+  it('returns a Uint8Array (not a bare ArrayBuffer)', async () => {
+    const bytes = await jsonToXlsx('[{"a":1}]');
+    expect(bytes).toBeInstanceOf(Uint8Array);
+  });
+
+  it('returns a value with an indexable length matching byteLength', async () => {
+    const bytes = await jsonToXlsx('[{"a":1}]');
+    // A bare ArrayBuffer has no `length` and is not indexable; a Uint8Array does.
+    expect(bytes.length).toBe(bytes.byteLength);
+    expect(bytes.length).toBeGreaterThan(0);
+    expect(typeof bytes[0]).toBe('number');
   });
 
   it('returns non-empty binary output', async () => {

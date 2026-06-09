@@ -130,6 +130,22 @@ describe('csvToXmlLogic', () => {
     expect(out).toContain('<___>x</___>');
   });
 
+  it('falls back to a generated tag name for a blank header (no empty <> tag)', () => {
+    const out = t('a,,c\n1,2,3');
+    expect(out).not.toContain('<>');
+    expect(out).not.toContain('</>');
+    expect(out).toContain('<a>1</a>');
+    expect(out).toContain('<column_1>2</column_1>');
+    expect(out).toContain('<c>3</c>');
+  });
+
+  it('falls back for a trailing-comma header producing a blank column', () => {
+    const out = t('name,\nAda,x');
+    expect(out).not.toContain('<></>');
+    expect(out).toContain('<name>Ada</name>');
+    expect(out).toContain('<column_1>x</column_1>');
+  });
+
   it('does not escape ampersand more than once (single pass)', () => {
     const out = t('h\n&amp;');
     // raw text "&amp;" -> only the leading & is escaped

@@ -5,7 +5,10 @@ interface Rgb { r: number; g: number; b: number; }
 function parseColor(input: string): Rgb {
   const s = input.trim().toLowerCase();
   const rgbMatch = s.match(/^rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
-  if (rgbMatch) return { r: +rgbMatch[1], g: +rgbMatch[2], b: +rgbMatch[3] };
+  if (rgbMatch) {
+    const clamp = (n: number) => Math.min(255, Math.max(0, n));
+    return { r: clamp(+rgbMatch[1]), g: clamp(+rgbMatch[2]), b: clamp(+rgbMatch[3]) };
+  }
   let h = s.replace('#', '');
   if (h.length === 3) h = h.split('').map((c) => c + c).join('');
   if (!/^[0-9a-f]{6}$/.test(h)) throw new Error(`Invalid color: ${input}`);

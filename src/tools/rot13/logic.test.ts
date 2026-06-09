@@ -30,9 +30,16 @@ describe('rot13Logic', () => {
     expect(run('abc', 'xyz')).toBe('nop');
   });
 
-  it('treats shift "0" as 13 because of the || 13 falsy fallback', () => {
-    // parseInt('0') -> 0 which is falsy, so it becomes 13 (NOT identity)
-    expect(run('abc', '0')).toBe('nop');
+  it('treats shift "0" as no rotation (identity), not 13', () => {
+    expect(run('abc', '0')).toBe('abc');
+  });
+
+  it('shift "0" is identity for mixed content', () => {
+    expect(run('Hello, World!', '0')).toBe('Hello, World!');
+  });
+
+  it('still falls back to 13 when shift is empty (NaN), not treating it as 0', () => {
+    expect(run('abc', '')).toBe('nop');
   });
 
   it('uses the default shift of 13 when ctx is omitted', () => {

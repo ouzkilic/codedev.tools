@@ -10,9 +10,12 @@ export const SHADOW_OPTIONS: ToolOption[] = [
 ];
 
 export function buildShadow(options: ToolOptions): string {
-  const px = (k: string, d: string) => `${(String(options[k] ?? d).trim() || d)}px`;
-  const color = String(options.color ?? 'rgba(0,0,0,0.25)').trim();
-  const inset = options.inset ? 'inset ' : '';
+  const px = (k: string, d: string) => {
+    const v = String(options[k] ?? d).trim() || d;
+    return /^[+-]?(\d+\.?\d*|\.\d+)$/.test(v) ? `${v}px` : v;
+  };
+  const color = String(options.color ?? 'rgba(0,0,0,0.25)').trim() || 'rgba(0,0,0,0.25)';
+  const inset = options.inset === true || options.inset === 'true' ? 'inset ' : '';
   return `${inset}${px('x', '0')} ${px('y', '4')} ${px('blur', '12')} ${px('spread', '0')} ${color}`;
 }
 

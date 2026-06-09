@@ -20,10 +20,23 @@ function pascalCase(key: string): string {
   return /^[0-9]/.test(joined) ? `_${joined}` : joined;
 }
 
+function uniqueName(base: string, used: Set<string>): string {
+  if (!used.has(base)) {
+    used.add(base);
+    return base;
+  }
+  let i = 2;
+  while (used.has(`${base}${i}`)) i++;
+  const name = `${base}${i}`;
+  used.add(name);
+  return name;
+}
+
 function mapType(
   key: string,
   schema: JsonSchema,
   nested: GeneratedInterface[],
+  used: Set<string>,
 ): string {
   if (Array.isArray(schema.enum)) {
     if (schema.enum.every((v) => typeof v === 'string')) {
@@ -45,15 +58,15 @@ function mapType(
       return 'null';
     case 'array': {
       const itemType = schema.items
-        ? mapType(key, schema.items, nested)
+        ? mapType(key, schema.items, nested, used)
         : 'unknown';
       return `${itemType}[]`;
     }
     case 'object':
     default:
       if (schema.properties) {
-        const name = pascalCase(key);
-        buildInterface(name, schema, nested);
+        const name = uniqueName(pascalCase(key), used);
+        buildInterface(name, schema, nested, used);
         return name;
       }
       return 'unknown';
@@ -64,6 +77,7 @@ function buildInterface(
   name: string,
   schema: JsonSchema,
   nested: GeneratedInterface[],
+  used: Set<string>,
 ): void {
   const required = new Set(schema.required ?? []);
   const props = schema.properties ?? {};
@@ -71,7 +85,7 @@ function buildInterface(
 
   for (const [key, propSchema] of Object.entries(props)) {
     const optional = required.has(key) ? '' : '?';
-    const tsType = mapType(key, propSchema, nested);
+    const tsType = mapType(key, propSchema, nested, used);
     lines.push(`  ${key}${optional}: ${tsType};`);
   }
 
@@ -93,7 +107,8 @@ export const jsonSchemaToTsLogic: ToolLogic = {
     }
 
     const nested: GeneratedInterface[] = [];
-    buildInterface('Root', schema, nested);
+    const used = new Set<string>(['Root']);
+    buildInterface('Root', schema, nested, used);
 
     // 'Root' was pushed last by buildInterface; emit it first, then the rest.
     const root = nested.find((i) => i.name === 'Root');

@@ -70,8 +70,8 @@ describe('ipConvert to-int (IP -> Integer)', () => {
     expect(() => conv('1.2.5', 'to-int')).toThrow('Invalid IPv4 address.');
   });
 
-  it('throws on a scientific-notation octet that exceeds 255', () => {
-    // Number('1e3') === 1000 which is > 255 -> Invalid octet
+  it('throws on a scientific-notation octet', () => {
+    // '1e3' is not 1-3 decimal digits -> Invalid octet
     expect(() => conv('1e3.0.0.0', 'to-int')).toThrow('Invalid octet');
   });
 
@@ -92,14 +92,13 @@ describe('ipConvert to-int (IP -> Integer)', () => {
   });
 
   it('throws on an empty octet from a double dot', () => {
-    // "1.2..4" -> parts length 4 but "" -> Number('') === 0, integer & in range -> NO throw.
-    // This is the documented quirk: empty middle octet is treated as 0.
-    expect(conv('1.2..4', 'to-int')).toBe(String(1 * 16777216 + 2 * 65536 + 0 * 256 + 4));
+    // "1.2..4" -> empty middle octet must be rejected (no longer treated as 0).
+    expect(() => conv('1.2..4', 'to-int')).toThrow('Invalid octet');
   });
 
-  it('treats hex-looking octet via Number coercion (0x... parses)', () => {
-    // Number('0x10') === 16, integer in [0,255] -> accepted
-    expect(conv('0x10.0.0.0', 'to-int')).toBe(String(16 * 16777216));
+  it('throws on a hex-looking octet', () => {
+    // '0x10' is not 1-3 decimal digits -> rejected (no Number coercion to 16)
+    expect(() => conv('0x10.0.0.0', 'to-int')).toThrow('Invalid octet');
   });
 });
 
@@ -124,12 +123,12 @@ describe('ipConvert to-ip (Integer -> IP)', () => {
     expect(conv('  2130706433  ', 'to-ip')).toBe('127.0.0.1');
   });
 
-  it('treats empty input as 0 -> zero address (Number("") === 0)', () => {
-    expect(conv('', 'to-ip')).toBe('0.0.0.0');
+  it('throws on empty input (no longer coerced to 0)', () => {
+    expect(() => conv('', 'to-ip')).toThrow('Invalid integer.');
   });
 
-  it('treats whitespace-only input as 0 -> zero address', () => {
-    expect(conv('   ', 'to-ip')).toBe('0.0.0.0');
+  it('throws on whitespace-only input (no longer coerced to 0)', () => {
+    expect(() => conv('   ', 'to-ip')).toThrow('Invalid integer.');
   });
 
   it('throws on a negative integer', () => {
@@ -150,6 +149,14 @@ describe('ipConvert to-ip (Integer -> IP)', () => {
 
   it('throws on an emoji / unicode value', () => {
     expect(() => conv('🚀', 'to-ip')).toThrow('Invalid integer.');
+  });
+
+  it('throws on scientific-notation input (no Number coercion)', () => {
+    expect(() => conv('1e3', 'to-ip')).toThrow('Invalid integer.');
+  });
+
+  it('throws on hex-looking input (no Number coercion)', () => {
+    expect(() => conv('0x10', 'to-ip')).toThrow('Invalid integer.');
   });
 });
 
