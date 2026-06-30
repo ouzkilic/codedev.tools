@@ -1,0 +1,40 @@
+{
+  "intro": "Markdown to PDF renders your Markdown (md) into a clean, paginated document and exports it as a PDF — all in your browser. Paste a README, notes, or documentation, preview the formatted result, pick a page size and margins, then export. The conversion uses your browser's built-in print engine, so the PDF has crisp, selectable text rather than a blurry screenshot.",
+  "useCases": [
+    "Turn a project README or CHANGELOG into a shareable PDF for clients or reviewers",
+    "Export meeting notes, specs, or documentation written in Markdown as a printable document",
+    "Produce a tidy PDF of release notes or a runbook to attach to a ticket or email",
+    "Generate a formatted PDF résumé or cover letter authored in Markdown",
+    "Save rendered Markdown (headings, tables, code blocks) as an archival, offline-readable file"
+  ],
+  "faq": [
+    {
+      "q": "How do I save the result as a PDF?",
+      "a": "Click Export PDF. Your browser's print dialog opens — choose \"Save as PDF\" (or \"Microsoft Print to PDF\" on Windows) as the destination and click Save. You can also send it straight to a physical printer from the same dialog."
+    },
+    {
+      "q": "Is my data sent to a server?",
+      "a": "No. Markdown is rendered and the PDF is produced entirely in your browser using JavaScript and the browser's own print engine. Nothing you type or paste is uploaded anywhere. The whole site is open source so you can verify this yourself."
+    },
+    {
+      "q": "Will the PDF have selectable text or is it an image?",
+      "a": "It contains real, selectable and searchable text. Because it goes through the browser's print engine rather than a screenshot library, headings, paragraphs, links, and code stay as crisp vector text."
+    },
+    {
+      "q": "Can I control the page size and margins?",
+      "a": "Yes. Choose A4, Letter, or Legal for the page size and Narrow, Normal, Wide, or None for the margins before exporting. The margin setting controls the white space around your content on every page."
+    },
+    {
+      "q": "Does the PDF show the page URL, date, title, or page numbers?",
+      "a": "No. The document is generated with zero page margins reserved for browser chrome, so most browsers print clean pages with no URL, date, title, or page number along the edges. If you ever do see them, they come from your browser's own \"Headers and footers\" option — open \"More settings\" in the print dialog and turn it off."
+    },
+    {
+      "q": "Which Markdown features are supported?",
+      "a": "The tool uses the marked library with GitHub-flavored Markdown, so headings, lists, links, images, blockquotes, fenced code blocks, tables, and strikethrough all render. The output is sanitized before display for safety."
+    },
+    {
+      "q": "Why does it open the print dialog instead of downloading a file directly?",
+      "a": "Generating a true, high-quality PDF with selectable text and proper pagination is exactly what the browser's print engine does best. Routing through \"Save as PDF\" keeps everything client-side, avoids bulky PDF libraries, and gives you control over the destination, margins, and scale."
+    }
+  ]
+}
