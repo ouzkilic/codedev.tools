@@ -36,6 +36,7 @@ import { meta as jsonToToml } from './json-to-toml/meta';
 // Markdown
 import { meta as markdownToHtml } from './markdown-to-html/meta';
 import { meta as htmlToMarkdown } from './html-to-markdown/meta';
+import { meta as markdownToPdf } from './markdown-to-pdf/meta';
 // CSV
 import { meta as csvToJson } from './csv-to-json/meta';
 import { meta as jsonToCsv } from './json-to-csv/meta';
@@ -237,7 +238,7 @@ const metas = [
   textDiff, jsonDiff, xmlDiff, yamlDiff, csvDiff, htmlDiff, listCompare,
   xmlFormatter, xmlMinify, xmlToJson, jsonToXml, xmlValidate, xmlToYaml, yamlToXml, xpath,
   yamlToJson, jsonToYaml, yamlValidate, tomlToJson, jsonToToml, yamlFormatter, yamlToToml, tomlToYaml, tomlFormatter,
-  markdownToHtml, htmlToMarkdown, markdownPreview,
+  markdownToHtml, htmlToMarkdown, markdownPreview, markdownToPdf,
   csvToJson, jsonToCsv, csvToMarkdown, csvToSql, csvTsv, excelToCsv, excelToJson, jsonToExcel, csvToHtml, csvToXml, csvToYaml, csvTranspose, csvValidate, csvViewer, tsvViewer,
   base64, urlEncode, htmlEntities, hex, jwtDecode, binary, base32, base58, base62, base64url, quotedPrintable, unicodeEscape, charcode, punycode,
   hash, hmac, md5, fileHash, crc32, adler32, pbkdf2, aes, bcrypt, argon2, hashId, keygen, imageBase64, base64ToFile,
